@@ -3,15 +3,17 @@ export const GCMS = [
     projectName: 'GCMS',
     projectDescription:
       '광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다',
-    imageURL: 'https://github.com/Junho-06.png',
+    imageURL:
+      'https://drive.google.com/open?id=1QaOoCRDwwSCwDaJBY5MG8CzOjCFzuDVP',
     createrDescription:
       'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
     projectUrl:
       'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
     githubRepoURL:
       'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
+    githubURL:
+      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS',
+    createrName: 'MSG',
     categories: 'React, Spring, Kotlin, Swift',
   },
 ];
@@ -78,11 +80,10 @@ export const MSGLayout = [
       'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
     projectUrl:
       'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
-    githubRepoURL:
-      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
-    categories: 'React, Spring, Kotlin, Swift',
+    githubRepoURL: 'https://github.com/GSM-MSG/MSGLayout',
+    githubURL: 'https://github.com/baekteun',
+    createrName: '최형우',
+    categories: 'Swift, AutoLayout, NSLayoutConstraints, DSL',
   },
 ];
 
@@ -90,17 +91,15 @@ export const Moordinator = [
   {
     projectName: 'Moordinator',
     projectDescription:
-      '광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다',
-    imageURL: 'https://github.com/Junho-06.png',
-    createrDescription:
-      'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
-    projectUrl:
-      'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
-    githubRepoURL:
-      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
-    categories: 'React, Spring, Kotlin, Swift',
+      'iOS Application을 위한 Combine기반 coordinator 패턴을 구현하는 Navigation Framework입니다. RxFlow에서 영감을 받아서 만든 라이브러리입니다.',
+    imageURL:
+      'https://drive.google.com/open?id=17cF7UCmF3tq6CkWIFPVDnvoxcGbk2pMp',
+    createrDescription: 'https://baegteun.com',
+    projectUrl: 'https://github.com/GSM-MSG/Moordinator.git',
+    githubRepoURL: 'https://github.com/GSM-MSG/Moordinator',
+    githubURL: 'https://github.com/baekteun',
+    createrName: 'https://github.com/baekteun',
+    categories: '최형우',
   },
 ];
 
@@ -108,17 +107,16 @@ export const Miniature = [
   {
     projectName: 'Miniature',
     projectDescription:
-      '광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다',
-    imageURL: 'https://github.com/Junho-06.png',
+      'Swift에서 Repository Pattern을 구현할 때 쉽게 구현할 수 있도록 하는 라이브러리입니다. escaping closure, RxSwift, Combine, Swift Concurrency를 지원합니다.',
+    imageURL:
+      'https://drive.google.com/open?id=1Urr2_goqKN4h-cvO569FD4vAFnIJYN69',
     createrDescription:
-      'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
-    projectUrl:
-      'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
-    githubRepoURL:
-      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
-    categories: 'React, Spring, Kotlin, Swift',
+      'https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95',
+    projectUrl: 'https://github.com/GSM-MSG/Miniature.git',
+    githubRepoURL: 'https://github.com/GSM-MSG/Miniature',
+    githubURL: 'https://github.com/baekteun',
+    createrName: 'MSG',
+    categories: 'Swift, Repository Pattern',
   },
 ];
 
@@ -126,35 +124,34 @@ export const Emdpoint = [
   {
     projectName: 'Emdpoint',
     projectDescription:
-      '광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다',
-    imageURL: 'https://github.com/Junho-06.png',
+      'Swift에서 HTTP 네트워크 레이어를 추상화하여 요청 할 수 있는 라이브러리입니다.',
+    imageURL:
+      'https://drive.google.com/open?id=109CRTI6jcdwY-pgdumoQ2JN2e_MObrPN',
     createrDescription:
-      'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
-    projectUrl:
-      'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
+      'https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95',
+    projectUrl: 'https://gauth.co.kr',
     githubRepoURL:
-      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
-    categories: 'React, Spring, Kotlin, Swift',
+      'https://github.com/GSM-MSG/GAUTH-frontend, https://github.com/GSM-MSG/GAUTH_BackEnd',
+    githubURL: 'https://github.com/GSM-MSG',
+    createrName: 'MSG',
+    categories: 'Spring boot, Kotlin, TypeScript, React, NextJS',
   },
 ];
 
 export const GAuth = [
   {
     projectName: 'GAuth',
-    projectDescription:
-      '광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다',
-    imageURL: 'https://github.com/Junho-06.png',
+    projectDescription: 'GSM 교내 계정 통합 소셜 로그인 서비스.',
+    imageURL:
+      'https://drive.google.com/open?id=1ZQQTFEWhjTHuMKSqqiLCCHFbygrpHLIf',
     createrDescription:
-      'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
-    projectUrl:
-      'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
-    githubRepoURL:
-      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
-    categories: 'React, Spring, Kotlin, Swift',
+      'https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95',
+    projectUrl: 'https://github.com/GSM-MSG/GAuthSignin-Swift.git',
+    githubRepoURL: 'https://github.com/GSM-MSG/GAuthSignin-Swift',
+    githubURL: 'https://github.com/GSM-MSG',
+    createrName: 'MSG',
+    categories:
+      'Swift, URLSession, Combine, Swift Concurrency Java, Jitpack, Gradle, OAuth Kotlin, Android',
   },
 ];
 
@@ -162,16 +159,15 @@ export const Macaroni = [
   {
     projectName: 'Macaroni',
     projectDescription:
-      '광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다',
-    imageURL: 'https://github.com/Junho-06.png',
+      'Android에서 로컬에 값을 저장하고, 서버로 값을 불러와 해당 정보로 업데이트를 도와주는 라이브러리입니다. Coroutine Flow에서 지원합니다.',
+    imageURL:
+      'https://drive.google.com/open?id=1E7Q-l-bDNoq-tosX8iGn6ZmWYcAbptEE',
     createrDescription:
-      'https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4',
-    projectUrl:
-      'https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms',
-    githubRepoURL:
-      'https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ',
-    githubURL: 'https://github.com/Junho-06',
-    createrName: 'https://github.com/GSM-MSG',
-    categories: 'React, Spring, Kotlin, Swift',
+      'https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95',
+    projectUrl: 'https://jitpack.io/#GSM-MSG/Macaroni',
+    githubRepoURL: 'https://github.com/GSM-MSG/Macaroni',
+    githubURL: 'https://github.com/GSM-MSG',
+    createrName: 'MSG',
+    categories: 'Android, Kotlin, Coroutine Flow, JitPack',
   },
 ];
