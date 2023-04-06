@@ -1,5 +1,5 @@
 {
-  "GSMS": {
+  "GCMS": {
     "projectName": "GCMS",
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
     "imageURL": "https://drive.google.com/open?id=1QaOoCRDwwSCwDaJBY5MG8CzOjCFzuDVP",
@@ -20,7 +20,7 @@
     "githubRepoURL": "https://github.com/baekteun/TodayWhat-new",
     "githubURL": "https://github.com/baekteun",
     "createrName": "최형우",
-    "categories": "Swift, SwiftUI, Swift Package Manager, Modular Architecture, The Composable Architecture, Watch Connectivity"
+    "categories": "Swift"
   },
 
   "GRIG-iOS": {
@@ -32,7 +32,7 @@
     "githubRepoURL": "https://github.com/baekteun/GRIG-iOS",
     "githubURL": "https://github.com/baekteun",
     "createrName": "최형우",
-    "categories": "Swift, UIKit, RIBs, Tuist, Clean Architecture, RxSwift, "
+    "categories": "Swift , iOS"
   },
 
   "GAuth": {
@@ -44,6 +44,18 @@
     "githubRepoURL": "https://github.com/GSM-MSG/GAuthSignin-Swift",
     "githubURL": "https://github.com/GSM-MSG",
     "createrName": "MSG",
-    "categories": "Swift, URLSession, Combine, Swift Concurrency Java, Jitpack, Gradle, OAuth Kotlin, Android"
+    "categories": "Swift, Kotlin, Android"
+  },
+
+  "Hello, GSM": {
+    "projectName": "Hello, GSM",
+    "projectDescription": "Hello, GSM은 광주소프트웨어마이스터고등학교 입학 지원시스템입니다.",
+    "imageURL": "https://drive.google.com/open?id=1_oUbT4XPQUBTd1pGBtoLMEtw9hh3ZMu5",
+    "createrDescription": "https://themoment-team.notion.site/2b3875e62b2a4002beb9db71c85db262",
+    "projectUrl": "https://www.hellogsm.kr",
+    "githubRepoURL": "https://github.com/themoment-team/hello-gsm-about",
+    "githubURL": "https://github.com/themoment-team",
+    "createrName": "더모먼트",
+    "categories": "Next.js, Nest.js, React"
   }
 }
