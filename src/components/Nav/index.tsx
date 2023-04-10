@@ -5,21 +5,14 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const Nav = () => {
-  const [domLoaded, setDomLoaded] = useState(false);
-
-  useEffect(() => {
-    setDomLoaded(true);
-  }, []);
   return (
     <>
-      {domLoaded && (
-        <S.NavContainer>
-          <S.IconContainer>
-            <Image src={I.LogoIcon} alt="" />
-            <S.Title>EveryGSM</S.Title>
-          </S.IconContainer>
-        </S.NavContainer>
-      )}
+      <S.NavContainer>
+        <S.IconContainer>
+          <Image src={I.LogoIcon} alt="" />
+          <S.Title>EveryGSM</S.Title>
+        </S.IconContainer>
+      </S.NavContainer>
     </>
   );
 };
