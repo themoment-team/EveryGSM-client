@@ -1,4 +1,5 @@
 import './globals.css';
+import * as C from 'src/components';
 
 export const metadata = {
   title: 'EveryGSM',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <C.Nav />
+        {children}
+      </body>
     </html>
   );
 }
