@@ -16,6 +16,7 @@ export default function RootLayout({
       <body>
         <C.Nav />
         {children}
+        <C.Footer />
       </body>
     </html>
   );
