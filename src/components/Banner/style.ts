@@ -16,7 +16,7 @@ export const SmallText = styled.p`
 `;
 
 export const BigText = styled.p`
-  margin-top: 4rem;
+  margin-top: 3.25rem;
   font-size: 5.3125rem;
 `;
 
