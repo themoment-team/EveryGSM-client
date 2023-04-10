@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${P.gray2};
+  background-color: ${P.gray[1]};
 `;
 
 export const FootText = styled.p`
@@ -19,5 +19,5 @@ export const FootText = styled.p`
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
-  color: ${P.gray3};
+  color: ${P.gray[3]};
 `;

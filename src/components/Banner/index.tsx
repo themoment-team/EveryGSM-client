@@ -8,7 +8,7 @@ const Home = () => {
     <S.BannerContainer>
       <S.TextContainer>
         <S.SmallText className="roboto">
-          GSM의 모든 프로젝트를 한곳에
+          GSM의 모든 프로젝트를 한 곳에
         </S.SmallText>
         <S.BigText className="roboto">EveryGSM</S.BigText>
       </S.TextContainer>

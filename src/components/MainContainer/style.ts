@@ -8,7 +8,7 @@ export const MainBox = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 3.25rem;
-  background-color: ${P.gray4};
+  background-color: ${P.gray[0]};
 `;
 
 export const CardContainer = styled.div`
