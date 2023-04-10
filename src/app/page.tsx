@@ -1,7 +1,7 @@
 import React from 'react';
 import * as C from 'src/components';
 
-type Props = {};
+interface Props {}
 
 function Home({}: Props) {
   return (
