@@ -1,5 +1,5 @@
-{
-  "GCMS": {
+[
+  {
     "projectName": "GCMS",
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
     "imageURL": "https://drive.google.com/open?id=1QaOoCRDwwSCwDaJBY5MG8CzOjCFzuDVP",
@@ -10,8 +10,7 @@
     "createrName": "MSG",
     "categories": "React, Spring, Kotlin, Swift"
   },
-
-  "오늘 뭐임": {
+  {
     "projectName": "오늘 뭐임",
     "projectDescription": "애플워치, 아이폰/맥의 위젯, 맥의 Menubar에서도 편리하게 급식/시간표를 확인할 수 있는 서비스",
     "imageURL": "https://drive.google.com/open?id=1dlgOCyAgsC_9QKHXWjkuibywttGNyv7L",
@@ -22,8 +21,7 @@
     "createrName": "최형우",
     "categories": "Swift"
   },
-
-  "GRIG-iOS": {
+  {
     "projectName": "GRIG-iOS",
     "projectDescription": "Github Rank In GSM - GRIG Open API를 사용하여 만든 iOS 앱입니다. GSM 학생들의 깃허브 활동으로 랭킹을 세워놓았으며 이를 iOS에서 볼 수 있습니다",
     "imageURL": "https://drive.google.com/open?id=1-QK1wsWfhJWznjQZg_EUqp_c771j73_C",
@@ -34,8 +32,7 @@
     "createrName": "최형우",
     "categories": "Swift , iOS"
   },
-
-  "GAuth": {
+  {
     "projectName": "GAuth",
     "projectDescription": "GSM 교내 계정 통합 소셜 로그인 서비스.",
     "imageURL": "https://drive.google.com/open?id=1ZQQTFEWhjTHuMKSqqiLCCHFbygrpHLIf",
@@ -46,8 +43,7 @@
     "createrName": "MSG",
     "categories": "Swift, Kotlin, Android"
   },
-
-  "Hello, GSM": {
+  {
     "projectName": "Hello, GSM",
     "projectDescription": "Hello, GSM은 광주소프트웨어마이스터고등학교 입학 지원시스템입니다.",
     "imageURL": "https://drive.google.com/open?id=1_oUbT4XPQUBTd1pGBtoLMEtw9hh3ZMu5",
@@ -58,7 +54,7 @@
     "createrName": "더모먼트",
     "categories": "Next.js, Nest.js, React"
   },
-  "DOTORI": {
+  {
     "projectName": "DOTORI",
     "projectDescription": "DOTORI는 GSM 기숙사 관리 시스템으로, 학생들이 주체적으로 개발한 웹사이트입니다. 광주 소프트웨어마이스터고등학교 앰퍼샌드 동아리 부원들이 직접 개발하여, 효율적인 서비스 제공을 목적으로 합니다. 이 작은 서비스가 우리 학교의 인식을 바꿀 좋은 마케팅 거리가 될 수 있도록 만들어졌습니다.",
     "imageURL": "https://drive.google.com/open?id=1Uie5mfqIFbyBOmwPMGJfQHAlT2toZXRm",
@@ -69,4 +65,4 @@
     "createrName": "&mpersand",
     "categories": "SpringBoot, Kotlin, Next.js, TypeScript"
   }
-}
+]
