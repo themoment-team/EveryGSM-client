@@ -57,5 +57,16 @@
     "githubURL": "https://github.com/themoment-team",
     "createrName": "더모먼트",
     "categories": "Next.js, Nest.js, React"
+  },
+  "DOTORI": {
+    "projectName": "DOTORI",
+    "projectDescription": "DOTORI는 GSM 기숙사 관리 시스템으로, 학생들이 주체적으로 개발한 웹사이트입니다. 광주 소프트웨어마이스터고등학교 앰퍼샌드 동아리 부원들이 직접 개발하여, 효율적인 서비스 제공을 목적으로 합니다. 이 작은 서비스가 우리 학교의 인식을 바꿀 좋은 마케팅 거리가 될 수 있도록 만들어졌습니다.",
+    "imageURL": "https://drive.google.com/open?id=1Uie5mfqIFbyBOmwPMGJfQHAlT2toZXRm",
+    "createrDescription": "코드짜는 기계적인 개발자가 되기보다는 생각하고 사고하는 진짜 쿨한 개발자가 되기 위해 다수 사람에게 도움을 줄 수 있는 프로젝트를 개발하며 그 과정에서 서로 지식을 공유하는 동아리로서 커뮤니케이션과 전공 능력 향상을 이룰 수 있는 팀입니다.",
+    "projectUrl": "https://dotori-gsm.com",
+    "githubRepoURL": "https://github.com/Team-Ampersand/Dotori-client-v2.git, https://github.com/Team-Ampersand/Dotori-server-V2.git",
+    "githubURL": "https://github.com/Team-Ampersand",
+    "createrName": "&mpersand",
+    "categories": "SpringBoot, Kotlin, Next.js, TypeScript"
   }
 }
