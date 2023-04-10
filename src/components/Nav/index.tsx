@@ -1,6 +1,6 @@
 'use client';
 import * as S from './style';
-import * as I from 'src/assets/svgs';
+import * as I from '@/assets/imgs';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 

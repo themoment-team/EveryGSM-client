@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import P from 'src/assets/palette';
 
 export const FooterContainer = styled.footer`
+  position: absolute;
+  bottom: 0;
   width: 100vw;
   height: 80px;
   border: 0;
