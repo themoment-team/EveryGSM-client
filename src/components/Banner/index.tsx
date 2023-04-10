@@ -15,9 +15,9 @@ const Home = () => {
       <Image
         src={I.Rocket}
         style={{
-          width: '350px',
-          height: '310px',
-          marginRight: '20px',
+          width: '21.875rem',
+          height: '19.375rem',
+          marginRight: '1.25rem',
         }}
         alt="Rocket"
       />

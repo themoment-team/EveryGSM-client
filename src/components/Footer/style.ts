@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
   position: absolute;
   bottom: 0;
   width: 100vw;
-  height: 80px;
+  height: 5rem;
   border: 0;
   display: flex;
   align-items: center;
@@ -16,8 +16,8 @@ export const FooterContainer = styled.footer`
 export const FootText = styled.p`
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
   letter-spacing: -0.03em;
   color: ${P.gray3};
 `;
