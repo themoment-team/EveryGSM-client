@@ -1,23 +1,26 @@
 'use client';
-import styled from '@emotion/styled';
 import * as C from 'src/components';
-import P from '@/assets/palette';
-
-const MainBox = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3.25rem;
-  background-color: ${P.gray4};
-`;
+import * as S from './style';
+import { Vector } from '@/assets/imgs';
+import Image from 'next/image';
 
 const MainContainer = () => {
   return (
-    <MainBox>
+    <S.MainBox>
       <C.Banner />
-    </MainBox>
+      <S.CardContainer>
+        <Image src={Vector} style={{ marginRight: '50px' }} alt="" />
+        <S.Cards></S.Cards>
+        <Image
+          src={Vector}
+          alt=""
+          style={{
+            transform: 'matrix(-1, 0, 0, 1, 0, 0)',
+            marginLeft: '50px',
+          }}
+        />
+      </S.CardContainer>
+    </S.MainBox>
   );
 };
 
