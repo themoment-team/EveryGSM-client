@@ -1,9 +1,14 @@
 import React from 'react';
+import * as C from 'components';
 
-type Props = {};
+interface Props {}
 
 function Home({}: Props) {
-  return <div>Home</div>;
+  return (
+    <div>
+      <C.MainContainer></C.MainContainer>
+    </div>
+  );
 }
 
 export default Home;
