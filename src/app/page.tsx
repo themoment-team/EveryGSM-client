@@ -1,6 +1,6 @@
 'use client';
 import * as C from 'components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Container } from './style';
 import React from 'react';
 

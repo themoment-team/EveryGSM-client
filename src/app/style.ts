@@ -10,6 +10,6 @@ export const Container = styled.div`
     color: white;
   }
   .dark footer {
-    background-color: ${theme.color.gray[3]} !important;
+    background-color: ${theme.color.gray[3]};
   }
 `;
