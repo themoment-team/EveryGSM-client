@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import theme from 'src/assets/palette';
+import theme from 'assets/palette';
 
 export const FooterContainer = styled.footer`
   position: absolute;

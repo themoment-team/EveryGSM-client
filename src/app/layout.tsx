@@ -1,5 +1,5 @@
 import './globals.css';
-import * as C from 'src/components';
+import * as C from 'components';
 
 export const metadata = {
   title: 'EveryGSM',

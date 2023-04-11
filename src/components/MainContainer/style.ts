@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import theme from 'src/assets/palette';
+import theme from 'assets/palette';
 
 export const MainBox = styled.div`
   width: 100vw;

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as C from 'src/components';
+import * as C from 'components';
 
 interface Props {}
 
