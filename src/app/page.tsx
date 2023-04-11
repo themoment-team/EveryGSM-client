@@ -4,10 +4,6 @@ import { useEffect, useState } from 'react';
 import { Container } from './style';
 import React from 'react';
 
-interface Props {
-  isDark: boolean;
-}
-
 function Home() {
   const [isDark, setIsDark] = useState<boolean>(false);
   return (

@@ -4,8 +4,8 @@ import theme from 'assets/palette';
 
 export const NavContainer = styled.nav`
   width: 100vw;
-  height: 116px;
-  border: 1px solid rgba(153, 153, 153, 0.5);
+  height: 7.25rem;
+  border: 0.0625rem solid rgba(153, 153, 153, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@ export const NavContainer = styled.nav`
 `;
 
 export const ItemContainer = styled.div`
-  width: 1136px;
+  width: 71rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,34 +27,34 @@ export const IconContainer = styled.div`
 export const Title = styled.h2`
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
-  line-height: 33px;
+  font-size: 1.75rem;
+  line-height: 2.0625rem;
   letter-spacing: -0.03em;
-  margin-top: 11px;
+  margin-top: 0.6875rem;
   transition: ease-in-out 0.3s;
 `;
 
 export const ToggleButton = styled.div`
-  width: 75px;
-  height: 36px;
+  width: 4.6875rem;
+  height: 2.25rem;
   background-color: ${theme.color.gray[1]};
-  border-radius: 50px;
+  border-radius: 3.125rem;
   display: flex;
   align-items: center;
-  padding: 0 4px;
+  padding: 0 0.25rem;
   cursor: pointer;
   .dark {
-    translate: 39px;
+    translate: 2.4375rem;
   }
 `;
 
 export const ToggleIcon = styled.div`
-  width: 28px;
-  height: 28px;
+  width: 1.75rem;
+  height: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-radius: 14px;
+  border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
 `;
