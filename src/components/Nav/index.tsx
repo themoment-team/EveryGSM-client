@@ -2,7 +2,7 @@
 import * as S from './style';
 import * as I from 'assets/imgs';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface Props {
   isDark: boolean;
@@ -15,8 +15,10 @@ const Nav = ({ isDark, setIsDark }: Props) => {
     localStorage.setItem('dark', String(isDark));
   };
 
-  const darkOption = localStorage.getItem('dark') === 'false';
-  setIsDark(darkOption ?? true);
+  useEffect(() => {
+    const darkOption = localStorage.getItem('dark') === 'false';
+    setIsDark(darkOption ?? true);
+  }, []);
 
   return (
     <>

@@ -1,5 +1,4 @@
 import './globals.css';
-import { MainPage } from 'PageContainer';
 
 export const metadata = {
   title: 'EveryGSM',
@@ -13,9 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>
-        <MainPage>{children}</MainPage>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

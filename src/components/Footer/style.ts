@@ -11,6 +11,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   background-color: ${theme.color.gray[1]};
+  transition: ease-in-out 0.3s;
 `;
 
 export const FootText = styled.p`
@@ -19,5 +20,5 @@ export const FootText = styled.p`
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
-  color: ${theme.color.gray[3]};
+  color: ${theme.color.gray[4]};
 `;

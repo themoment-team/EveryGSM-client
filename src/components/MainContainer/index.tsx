@@ -4,9 +4,13 @@ import * as S from './style';
 import { Vector } from 'assets/imgs';
 import Image from 'next/image';
 
-const MainContainer = () => {
+interface Props {
+  isDark: boolean;
+}
+
+const MainContainer = ({ isDark }: Props) => {
   return (
-    <S.MainBox>
+    <S.MainBox className={String(isDark && 'dark')}>
       <C.Banner />
       <S.CardContainer>
         <Image src={Vector} style={{ marginRight: '3.125rem' }} alt="" />

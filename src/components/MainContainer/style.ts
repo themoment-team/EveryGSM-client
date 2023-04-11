@@ -9,6 +9,7 @@ export const MainBox = styled.div`
   align-items: center;
   padding-top: 3.25rem;
   background-color: ${theme.color.gray[0]};
+  transition: ease-in-out 0.3s;
 `;
 
 export const CardContainer = styled.div`
