@@ -8,5 +8,4 @@ export default interface DataType {
   githubRepoURL: string;
   githubURL: string;
   createrName: string;
-  categories: [string];
 }

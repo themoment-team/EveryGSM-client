@@ -8,8 +8,7 @@
     "projectUrl": "https://gcms.msg-team.com/, https://apps.apple.com/kr/app/gcms/id1616315883, https://play.google.com/store/apps/details?id=com.msg.gcms",
     "githubRepoURL": "https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS ",
     "githubURL": "https://github.com/GSM-MSG/MSG-BackEnd-V2, https://github.com/GSM-MSG/MSG-Front, https://github.com/GSM-MSG/GCMS-Android, https://github.com/GSM-MSG/GCMS-iOS",
-    "createrName": "MSG",
-    "categories": "React, Spring, Kotlin, Swift"
+    "createrName": "MSG"
   },
   {
     "id": "1",
@@ -20,8 +19,7 @@
     "projectUrl": "https://apps.apple.com/app/id1629567018",
     "githubRepoURL": "https://github.com/baekteun/TodayWhat-new",
     "githubURL": "https://github.com/baekteun",
-    "createrName": "최형우",
-    "categories": "Swift"
+    "createrName": "최형우"
   },
   {
     "id": "2",
@@ -32,8 +30,7 @@
     "projectUrl": "https://apps.apple.com/kr/app/gri-g/id1622010590",
     "githubRepoURL": "https://github.com/baekteun/GRIG-iOS",
     "githubURL": "https://github.com/baekteun",
-    "createrName": "최형우",
-    "categories": "Swift , iOS"
+    "createrName": "최형우"
   },
   {
     "id": "3",
@@ -44,8 +41,7 @@
     "projectUrl": "https://github.com/GSM-MSG/GAuthSignin-Swift.git",
     "githubRepoURL": "https://github.com/GSM-MSG/GAuthSignin-Swift",
     "githubURL": "https://github.com/GSM-MSG",
-    "createrName": "MSG",
-    "categories": "Swift, Kotlin, Android"
+    "createrName": "MSG"
   },
   {
     "id": "4",
@@ -56,8 +52,7 @@
     "projectUrl": "https://www.hellogsm.kr",
     "githubRepoURL": "https://github.com/themoment-team/hello-gsm-about",
     "githubURL": "https://github.com/themoment-team",
-    "createrName": "더모먼트",
-    "categories": "Next.js, Nest.js, React"
+    "createrName": "더모먼트"
   },
   {
     "id": "5",
@@ -68,7 +63,6 @@
     "projectUrl": "https://dotori-gsm.com",
     "githubRepoURL": "https://github.com/Team-Ampersand/Dotori-client-v2.git, https://github.com/Team-Ampersand/Dotori-server-V2.git",
     "githubURL": "https://github.com/Team-Ampersand",
-    "createrName": "&mpersand",
-    "categories": "SpringBoot, Kotlin, Next.js, TypeScript"
+    "createrName": "&mpersand"
   }
 ]
