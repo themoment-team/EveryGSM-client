@@ -3,14 +3,16 @@ import * as C from 'src/components';
 import * as S from './style';
 import { Vector } from '@/assets/imgs';
 import Image from 'next/image';
-
+import project from 'public/data/project.json';
 const MainContainer = () => {
   return (
     <S.MainBox>
       <C.Banner />
       <S.CardContainer>
         <Image src={Vector} style={{ marginRight: '3.125rem' }} alt="" />
-        <S.Cards></S.Cards>
+        <S.Cards>
+          <C.Card data={project} />
+        </S.Cards>
         <Image
           src={Vector}
           alt=""
