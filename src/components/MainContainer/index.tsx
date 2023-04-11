@@ -1,7 +1,7 @@
 'use client';
 import * as C from 'components';
 import * as S from './style';
-import { Vector } from '@/assets/imgs';
+import { Vector } from 'assets/imgs';
 import Image from 'next/image';
 
 const MainContainer = () => {
