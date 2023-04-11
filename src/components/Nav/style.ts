@@ -9,6 +9,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: ease-in-out 0.3s;
 `;
 
 export const ItemContainer = styled.div`
@@ -30,6 +31,7 @@ export const Title = styled.h2`
   line-height: 33px;
   letter-spacing: -0.03em;
   margin-top: 11px;
+  transition: ease-in-out 0.3s;
 `;
 
 export const ToggleButton = styled.div`
@@ -41,6 +43,9 @@ export const ToggleButton = styled.div`
   align-items: center;
   padding: 0 4px;
   cursor: pointer;
+  .dark {
+    translate: 39px;
+  }
 `;
 
 export const ToggleIcon = styled.div`
@@ -51,4 +56,5 @@ export const ToggleIcon = styled.div`
   justify-content: center;
   background-color: white;
   border-radius: 14px;
+  transition: ease-in-out 0.3s;
 `;
