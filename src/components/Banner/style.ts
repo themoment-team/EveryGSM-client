@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import theme from 'assets/palette';
 
 export const TextContainer = styled.div`
   letter-spacing: 0.08em;
@@ -27,4 +28,8 @@ export const BannerContainer = styled.div`
   border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;
+
+  @media screen and ((max-width: ${theme.breakPoint.width[1]})) {
+    width: 95vw;
+  }
 `;
