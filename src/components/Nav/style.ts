@@ -1,6 +1,5 @@
 'use client';
 import styled from '@emotion/styled';
-import theme from 'assets/theme';
 
 export const NavContainer = styled.nav`
   width: 100vw;
@@ -37,7 +36,7 @@ export const Title = styled.h2`
 export const ToggleButton = styled.div`
   width: 4.6875rem;
   height: 2.25rem;
-  background-color: ${theme.color.gray[1]};
+  background-color: ${props => props.theme.color.gray[1]};
   border-radius: 3.125rem;
   display: flex;
   align-items: center;

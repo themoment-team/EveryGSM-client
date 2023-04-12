@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import theme from 'assets/theme';
 
 export const MainBox = styled.div`
   width: 100vw;
@@ -8,7 +7,7 @@ export const MainBox = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 3.25rem;
-  background-color: ${theme.color.gray[0]};
+  background-color: ${props => props.theme.color.gray[0]};
   transition: ease-in-out 0.3s;
 `;
 
