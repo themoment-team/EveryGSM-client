@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as C from 'components';
 import * as S from './style';
 import { Vector } from 'assets/imgs';

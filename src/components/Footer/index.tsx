@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import * as S from './style';
 import theme from 'styles/theme';
 import { css } from '@emotion/react';
