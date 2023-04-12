@@ -1,8 +1,11 @@
+/** @jsxImportSource @emotion/react */
 'use client';
 import * as S from './style';
 import * as I from 'assets/imgs';
 import Image from 'next/image';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { css } from '@emotion/react';
+import theme from 'styles/theme';
 
 interface Props {
   isDark: boolean;
@@ -20,16 +23,33 @@ const Nav = ({ isDark, setIsDark }: Props) => {
     setIsDark(darkOption ?? true);
   }, []);
 
+  const dark = theme.dark.dark_div;
+  const darkText = theme.dark.dark_text;
+
   return (
     <>
-      <S.NavContainer className={String(isDark && 'dark')}>
+      <S.NavContainer
+        css={css`
+          ${isDark && dark}
+        `}
+      >
         <S.ItemContainer>
           <S.IconContainer>
             <Image src={I.LogoIcon} alt="" />
-            <S.Title>EveryGSM</S.Title>
+            <S.Title
+              css={css`
+                ${isDark && darkText}
+              `}
+            >
+              EveryGSM
+            </S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
-            <S.ToggleIcon className={String(isDark && 'dark')}>
+            <S.ToggleIcon
+              css={css`
+                ${isDark && dark}
+              `}
+            >
               <Image src={isDark ? I.Moon : I.Sun} alt="" />
             </S.ToggleIcon>
           </S.ToggleButton>

@@ -1,16 +1,25 @@
+/** @jsxImportSource @emotion/react */
 'use client';
 import * as C from 'components';
 import * as S from './style';
 import { Vector } from 'assets/imgs';
 import Image from 'next/image';
+import { css } from '@emotion/react';
+import theme from 'styles/theme';
 
 interface Props {
   isDark: boolean;
 }
 
 const MainContainer = ({ isDark }: Props) => {
+  const dark = theme.dark.dark_div;
+
   return (
-    <S.MainBox className={String(isDark && 'dark')}>
+    <S.MainBox
+      css={css`
+        ${isDark && dark}
+      `}
+    >
       <C.Banner />
       <S.CardContainer>
         <Image src={Vector} style={{ marginRight: '3.125rem' }} alt="" />
