@@ -1,8 +1,8 @@
 import '@emotion/react';
-import { theme } from './theme';
+import { ThemeType } from './theme';
 
-const Type: typeof theme = theme;
+// const ThemeType: typeof theme = theme;
 
 declare module '@emotion/react' {
-  export interface Theme extends Type {}
+  export interface Theme extends ThemeType {}
 }

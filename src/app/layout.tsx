@@ -1,6 +1,6 @@
 import './globals.css';
 import { ThemeProvider } from '@emotion/react';
-import theme from 'assets/palette';
+import theme from 'assets/theme';
 
 export const metadata = {
   title: 'EveryGSM',

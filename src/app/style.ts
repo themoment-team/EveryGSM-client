@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import theme from 'assets/palette';
+import theme from 'assets/theme';
 
 export const Container = styled.div`
   .dark {

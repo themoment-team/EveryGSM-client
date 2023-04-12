@@ -1,6 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
-import theme from 'assets/palette';
+import theme from 'assets/theme';
 
 export const NavContainer = styled.nav`
   width: 100vw;
