@@ -1,21 +1,30 @@
 export interface ThemeType {
   color: {
     gray: readonly string[];
+    primary: {
+      magenta: string;
+      pale_yellow: string;
+    };
+    secondary: {
+      vivid_yellow: string;
+      dusty_blue: string;
+      navy_blue: string;
+    };
   };
   breakPoint: {};
   dark: {
-    dark_div: {
-      background: string;
+    color: {
+      charcoal: string;
+      slate_gray: string;
+      white: string;
     };
-    dark_toggle: {
-      background: string;
-      translate: string;
-    };
-    dark_text: {
-      color: string;
-    };
-    dark_footer: {
-      background: string;
+  };
+  basic: {
+    color: {
+      white: string;
+      light_gray: string;
+      light_silver: string;
+      charcoal: string;
     };
   };
   otherProp?: any;
@@ -24,22 +33,32 @@ export interface ThemeType {
 const theme: ThemeType = {
   color: {
     gray: ['#F1F1F5', '#E3E3E3', '#999999', '#636363', '#191919'],
+    primary: {
+      magenta: '#E23C96',
+      pale_yellow: '#FFE870',
+    },
+    secondary: {
+      vivid_yellow: '#FFE900',
+      dusty_blue: '#7090B0',
+      navy_blue: '#225087',
+    },
   },
   breakPoint: {},
   dark: {
-    dark_div: {
-      background: '#191919',
+    color: {
+      charcoal: '#191919',
+      slate_gray: '#636363',
+      white: '#FFFFFF',
     },
-    dark_toggle: {
-      background: '#191919',
-      translate: '2.4375rem',
-    },
-    dark_text: {
-      color: 'white',
-    },
-    dark_footer: {
-      background: '#636363',
+  },
+  basic: {
+    color: {
+      white: '#FFFFFF',
+      light_gray: '#F1F1F5',
+      light_silver: '#E3E3E3',
+      charcoal: '#191919',
     },
   },
 } as const;
+
 export default theme;
