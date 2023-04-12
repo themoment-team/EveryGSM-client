@@ -1,8 +1,10 @@
 'use client';
 import * as S from './style';
-import categoryData from 'src/interface/categoriesData';
-const Category = () => {
-  return <S.Container></S.Container>;
+import React, { useEffect, useState } from 'react';
+const Category = ({ data }: { data: any }) => {
+  console.log(data);
+  const arr = [...data];
+  return <S.Container>{arr[0]}</S.Container>;
 };
 
 export default Category;

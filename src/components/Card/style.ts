@@ -8,6 +8,8 @@ export const Card = styled.div`
   display: flex;
   border-radius: 16px;
   box-shadow: rgba(112, 144, 176, 0.2);
+  margin-top: 92px;
+  margin-right: 28px;
 `;
 
 export const Logo = styled.img`
@@ -22,16 +24,16 @@ export const Logo = styled.img`
 export const Desc = styled.div`
   width: 100px;
   height: 21px;
-  position: absolute;
-  left: 300px;
-  bottom: 630px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   color: #999999;
   font-size: 18px;
-  align-items: center;
   font-weight: 200;
   font-size: 18px;
-  justify-content: space-around;
+  position: absolute;
+  margin-left: 220px;
+  margin-top: 30px;
 `;
 
 export const Title = styled.div`
@@ -54,4 +56,11 @@ export const Creater = styled.div`
   color: #999999;
   font-size: 20px;
   font-weight: 600;
+`;
+
+export const Categories = styled.div`
+  position: absolute;
+  width: 302px;
+  height: 28px;
+  margin-top: 200px;
 `;

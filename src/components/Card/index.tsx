@@ -1,6 +1,7 @@
 'use client';
 import * as S from './style';
 import * as I from '@/assets/imgs';
+import * as C from 'src/components';
 import Image from 'next/image';
 import projectData from 'src/interface/projectData';
 import React, { useEffect, useState } from 'react';
@@ -16,8 +17,8 @@ const Card = ({ data }: { data: any }) => {
             <Image
               src={I.Vector}
               style={{
-                width: '25px',
-                height: '24px',
+                width: '6.25px',
+                height: '12.5px',
                 transform: 'rotateY(180deg)',
               }}
               alt="Vector"
@@ -39,6 +40,15 @@ const Card = ({ data }: { data: any }) => {
               <S.Creater>{data.createrName}</S.Creater>
             </S.Create>
           </div>
+          <S.Categories>
+            {projectList.map((data, i) => {
+              return (
+                <div key={i}>
+                  <C.Category data={data.categories} />
+                </div>
+              );
+            })}
+          </S.Categories>
         </S.Card>
       ))}
     </div>
