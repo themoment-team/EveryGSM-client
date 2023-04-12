@@ -7,6 +7,10 @@ export interface ThemeType {
     dark_div: {
       background: string;
     };
+    dark_toggle: {
+      background: string;
+      translate: string;
+    };
     dark_text: {
       color: string;
     };
@@ -25,6 +29,10 @@ const theme: ThemeType = {
   dark: {
     dark_div: {
       background: '#191919',
+    },
+    dark_toggle: {
+      background: '#191919',
+      translate: '2.4375rem',
     },
     dark_text: {
       color: 'white',

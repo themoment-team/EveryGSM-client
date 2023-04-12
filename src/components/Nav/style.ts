@@ -42,9 +42,6 @@ export const ToggleButton = styled.div`
   align-items: center;
   padding: 0 0.25rem;
   cursor: pointer;
-  .dark {
-    translate: 2.4375rem;
-  }
 `;
 
 export const ToggleIcon = styled.div`

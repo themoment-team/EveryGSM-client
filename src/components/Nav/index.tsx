@@ -25,6 +25,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
 
   const dark = theme.dark.dark_div;
   const darkText = theme.dark.dark_text;
+  const darkToggle = theme.dark.dark_toggle;
 
   return (
     <>
@@ -47,7 +48,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon
               css={css`
-                ${isDark && dark}
+                ${isDark && darkToggle}
               `}
             >
               <Image src={isDark ? I.Moon : I.Sun} alt="" />

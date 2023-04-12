@@ -11,12 +11,13 @@ const Footer = ({ isDark }: Props) => {
   const dark = theme.dark.dark_footer;
   const darkText = theme.dark.dark_text;
   return (
-    <div
-      css={css`
-        ${isDark && dark}
-      `}
-    >
-      <S.FooterContainer id="footer">
+    <div>
+      <S.FooterContainer
+        css={css`
+          ${isDark && dark}
+        `}
+        id="footer"
+      >
         <S.FootText
           css={css`
             ${isDark && darkText}
