@@ -22,15 +22,14 @@ const Nav = ({ isDark, setIsDark }: Props) => {
     setIsDark(darkOption ?? true);
   }, []);
 
-  const dark = theme.dark.dark_div;
-  const darkText = theme.dark.dark_text;
-  const darkToggle = theme.dark.dark_toggle;
+  const dark = theme.dark.color;
+  const basic = theme.basic.color;
 
   return (
     <>
       <S.NavContainer
         css={css`
-          ${isDark && dark}
+          background-color: ${isDark ? dark.charcoal : basic.white};
         `}
       >
         <S.ItemContainer>
@@ -38,16 +37,22 @@ const Nav = ({ isDark, setIsDark }: Props) => {
             <Image src={I.LogoIcon} alt="" />
             <S.Title
               css={css`
-                ${isDark && darkText}
+                color: ${isDark ? dark.white : basic.black};
               `}
             >
               EveryGSM
             </S.Title>
           </S.IconContainer>
-          <S.ToggleButton onClick={handleClick}>
+          <S.ToggleButton
+            css={css`
+              background-color: ${isDark ? dark.slate_gray : basic.light_gray};
+            `}
+            onClick={handleClick}
+          >
             <S.ToggleIcon
               css={css`
-                ${isDark && darkToggle}
+                background-color: ${isDark ? dark.medium_gray : basic.white};
+                translate: ${isDark ? '2.4375rem' : '0'};
               `}
             >
               <Image src={isDark ? I.Moon : I.Sun} alt="" />

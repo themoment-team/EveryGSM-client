@@ -35,7 +35,6 @@ export const Title = styled.h2`
 export const ToggleButton = styled.div`
   width: 4.6875rem;
   height: 2.25rem;
-  background-color: ${props => props.theme.color.gray[1]};
   border-radius: 3.125rem;
   display: flex;
   align-items: center;
@@ -49,7 +48,6 @@ export const ToggleIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
 `;

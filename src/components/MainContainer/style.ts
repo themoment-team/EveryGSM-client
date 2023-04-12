@@ -7,7 +7,6 @@ export const MainBox = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 3.25rem;
-  background-color: ${props => props.theme.color.gray[0]};
   transition: ease-in-out 0.3s;
 `;
 

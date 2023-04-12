@@ -11,12 +11,13 @@ interface Props {
 }
 
 const MainContainer = ({ isDark }: Props) => {
-  const dark = theme.dark.dark_div;
+  const dark = theme.dark.color;
+  const basic = theme.basic.color;
 
   return (
     <S.MainBox
       css={css`
-        ${isDark && dark}
+        background-color: ${isDark ? dark.charcoal : basic.light_gray};
       `}
     >
       <C.Banner />

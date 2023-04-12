@@ -9,7 +9,6 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme.color.gray[1]};
   transition: ease-in-out 0.3s;
 `;
 
@@ -19,5 +18,5 @@ export const FootText = styled.p`
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
-  color: ${props => props.theme.color.gray[4]};
+  transition: ease-in-out 0.3s;
 `;

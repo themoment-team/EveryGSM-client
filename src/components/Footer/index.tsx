@@ -8,19 +8,20 @@ interface Props {
 }
 
 const Footer = ({ isDark }: Props) => {
-  const dark = theme.dark.dark_footer;
-  const darkText = theme.dark.dark_text;
+  const dark = theme.dark.color;
+  const basic = theme.basic.color;
+
   return (
     <div>
       <S.FooterContainer
         css={css`
-          ${isDark && dark}
+          background-color: ${isDark ? dark.slate_gray : basic.light_silver};
         `}
         id="footer"
       >
         <S.FootText
           css={css`
-            ${isDark && darkText}
+            color: ${isDark ? dark.white : basic.charcoal};
           `}
         >
           Copyright 2022. the moment All rights reserved.

@@ -15,6 +15,7 @@ export interface ThemeType {
   dark: {
     color: {
       charcoal: string;
+      medium_gray: string;
       slate_gray: string;
       white: string;
     };
@@ -25,6 +26,7 @@ export interface ThemeType {
       light_gray: string;
       light_silver: string;
       charcoal: string;
+      black: string;
     };
   };
   otherProp?: any;
@@ -47,6 +49,7 @@ const theme: ThemeType = {
   dark: {
     color: {
       charcoal: '#191919',
+      medium_gray: '#999999',
       slate_gray: '#636363',
       white: '#FFFFFF',
     },
@@ -57,6 +60,7 @@ const theme: ThemeType = {
       light_gray: '#F1F1F5',
       light_silver: '#E3E3E3',
       charcoal: '#191919',
+      black: '000000',
     },
   },
 } as const;
