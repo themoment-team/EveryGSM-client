@@ -1,4 +1,6 @@
 import './globals.css';
+import { ThemeProvider } from '@emotion/react';
+import theme from 'assets/palette';
 
 export const metadata = {
   title: 'EveryGSM',
@@ -12,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

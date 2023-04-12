@@ -4,5 +4,4 @@ const theme = {
   },
   breakPoint: {},
 } as const;
-
 export default theme;
