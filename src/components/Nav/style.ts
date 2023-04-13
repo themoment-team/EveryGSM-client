@@ -8,6 +8,11 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and ((max-width: 720px)) {
+    background-color: #f1f1f5;
+    border: none;
+    height: 17vw;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -22,4 +27,24 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0.6rem;
+
+    font-size: 5vw;
+  }
+`;
+
+export const LogoImg = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 10vw;
+    height: 10vw;
+  }
 `;

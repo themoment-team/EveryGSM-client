@@ -9,7 +9,18 @@ const Nav = () => {
     <>
       <S.NavContainer>
         <S.IconContainer>
-          <Image src={LogoIcon} alt="" />
+          <S.LogoImg>
+            <Image
+              src={LogoIcon}
+              alt="Everygsm로고"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                position: 'relative',
+              }}
+            />
+          </S.LogoImg>
           <S.Title>EveryGSM</S.Title>
         </S.IconContainer>
       </S.NavContainer>

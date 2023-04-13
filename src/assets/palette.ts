@@ -3,7 +3,7 @@ const theme = {
     gray: ['#F1F1F5', '#E3E3E3', '#999999', '#191919'],
   },
   breakPoint: {
-    width: ['1282px', '1171px', '900px'],
+    width: ['1282px', '1171px', '900px', '845px', '770px'],
   },
 } as const;
 

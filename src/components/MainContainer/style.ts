@@ -9,6 +9,9 @@ export const MainBox = styled.div`
   align-items: center;
   padding-top: 3.25rem;
   background-color: ${theme.color.gray[0]};
+  @media screen and (max-width: 720px) {
+    padding-top: 0;
+  }
 `;
 
 export const CardContainer = styled.div`

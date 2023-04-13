@@ -11,6 +11,10 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   background-color: ${theme.color.gray[1]};
+
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const FootText = styled.p`
