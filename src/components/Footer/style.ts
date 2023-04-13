@@ -10,6 +10,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
+  background-color: ${({ theme: { mode } }) => mode.footer};
 `;
 
 export const FootText = styled.p`
@@ -19,4 +20,5 @@ export const FootText = styled.p`
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
   transition: ease-in-out 0.3s;
+  color: ${({ theme: { mode } }) => mode.text};
 `;

@@ -8,6 +8,7 @@ export const MainBox = styled.div`
   align-items: center;
   padding-top: 3.25rem;
   transition: ease-in-out 0.3s;
+  background-color: ${({ theme: { mode } }) => mode.body};
 `;
 
 export const CardContainer = styled.div`
