@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -19,5 +20,5 @@
     "react-dom": "^18.2.0",
     "typescript": "5.0.3"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "pnpm@8.2.0"
 }
