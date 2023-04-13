@@ -1,28 +1,43 @@
-'use client';
 import * as S from './style';
-import { LogoIcon } from 'assets/imgs';
+import * as I from 'assets/imgs';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { css } from '@emotion/react';
 
-const Nav = () => {
+interface Props {
+  isDark: boolean;
+  setIsDark: Function;
+}
+
+const Nav = ({ isDark, setIsDark }: Props) => {
+  const handleClick = () => {
+    setIsDark(!isDark);
+    localStorage.setItem('dark', String(isDark));
+  };
+
+  useEffect(() => {
+    const darkOption = localStorage.getItem('dark') === 'false';
+    setIsDark(darkOption ?? true);
+  }, []);
+
   return (
     <>
       <S.NavContainer>
-        <S.IconContainer>
-          <S.LogoImg>
-            <Image
-              src={LogoIcon}
-              alt="Everygsm로고"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                position: 'relative',
-              }}
-            />
-          </S.LogoImg>
-          <S.Title>EveryGSM</S.Title>
-        </S.IconContainer>
+        <S.ItemContainer>
+          <S.IconContainer>
+            <Image src={I.LogoIcon} alt="" />
+            <S.Title>EveryGSM</S.Title>
+          </S.IconContainer>
+          <S.ToggleButton onClick={handleClick}>
+            <S.ToggleIcon
+              css={css`
+                translate: ${isDark ? '2.4375rem' : '0'};
+              `}
+            >
+              <Image src={isDark ? I.Moon : I.Sun} alt="" />
+            </S.ToggleIcon>
+          </S.ToggleButton>
+        </S.ItemContainer>
       </S.NavContainer>
     </>
   );

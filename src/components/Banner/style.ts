@@ -5,7 +5,12 @@ import theme from 'assets/palette';
 export const BannerContainer = styled.div`
   width: 71rem;
   height: 18.75rem;
-  background: linear-gradient(275.95deg, #ffe870 -8.73%, #e23c96 102.76%);
+  background: linear-gradient(
+    275.95deg,
+    ${({ theme: { primary } }) =>
+      `${primary.pale_yellow} -8.73%, ${primary.magenta} 102.76%`}
+  );
+
   border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;

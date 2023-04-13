@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import theme from 'assets/palette';
 
 export const FooterContainer = styled.footer`
   position: absolute;
@@ -10,11 +9,12 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${theme.color.gray[1]};
 
   @media screen and (max-width: 720px) {
     display: none;
   }
+  transition: ease-in-out 0.3s;
+  background-color: ${({ theme: { mode } }) => mode.footer};
 `;
 
 export const FootText = styled.p`
@@ -23,5 +23,6 @@ export const FootText = styled.p`
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
-  color: ${theme.color.gray[3]};
+  transition: ease-in-out 0.3s;
+  color: ${({ theme: { mode } }) => mode.text};
 `;
