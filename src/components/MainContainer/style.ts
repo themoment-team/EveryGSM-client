@@ -8,9 +8,8 @@ export const MainBox = styled.div`
   align-items: center;
   padding-top: 3.25rem;
   @media screen and (max-width: 720px) {
-    padding-top: 0;
   }
-  transition: ease-in-out 0.3s;
+  /* transition: ease-in-out 0.3s; */
   background-color: ${({ theme: { mode } }) => mode.body};
 `;
 

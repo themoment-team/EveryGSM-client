@@ -9,7 +9,10 @@ export interface ThemeType {
     dusty_blue: string;
     navy_blue: string;
   };
-  breakPoint: {};
+  breakPoint: {
+    mobile: string;
+    tablet: string;
+  };
   mode: {
     nav: string;
     body: string;
@@ -32,7 +35,10 @@ export const theme: ThemeType = {
     dusty_blue: '#7090B0',
     navy_blue: '#225087',
   },
-  breakPoint: {},
+  breakPoint: {
+    mobile: '390px',
+    tablet: '834px',
+  },
   mode: {
     nav: '#ffffff',
     body: '#f1f1f5',
@@ -54,7 +60,10 @@ export const darktheme: ThemeType = {
     dusty_blue: '#7090B0',
     navy_blue: '#225087',
   },
-  breakPoint: {},
+  breakPoint: {
+    mobile: '390px',
+    tablet: '834px',
+  },
   mode: {
     nav: '#191919',
     body: '#191919',

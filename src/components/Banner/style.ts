@@ -1,30 +1,25 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import theme from 'assets/palette';
 
 export const BannerContainer = styled.div`
   width: 71rem;
   height: 18.75rem;
-  background: linear-gradient(
-    275.95deg,
-    ${({ theme: { primary } }) =>
-      `${primary.pale_yellow} -8.73%, ${primary.magenta} 102.76%`}
-  );
-
+  background: linear-gradient(275.95deg, #ffe870 -8.73%, #e23c96 102.76%);
   border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
-  @media screen and ((max-width: 1300px)) {
-    width: 90vw;
-    height: 25vw;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    position: relative;
+    width: 81vw;
+    height: 30vw;
   }
 
-  @media screen and ((max-width: 610px)) {
-    height: 9.5rem;
-  }
-
-  @media screen and ((max-width: 470px)) {
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    position: relative;
+    width: 87.6%;
+    height: 9.5rem !important;
   }
 `;
 
@@ -35,54 +30,45 @@ export const TextContainer = styled.div`
   font-style: normal;
   color: white;
   margin-left: 4.1875rem;
+  padding-top: 5%;
   /* margin-top: 4rem; */
 
-  @media screen and ((max-width: 1300px)) {
-    /* margin-top: 4vw; */
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    position: absolute;
+    margin: 0;
+    left: 7%;
+    top: 18%;
+    padding: 0;
   }
-
-  @media screen and ((max-width: 650px)) {
-    margin-left: 2rem;
-    /* margin-top: 2rem; */
-  }
-
-  @media screen and ((max-width: 430px)) {
-  }
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+  } ;
 `;
 
 export const SmallText = styled.p`
   font-size: 1.5rem;
 
-  @media screen and ((max-width: 900px)) {
-    font-size: 1.125rem;
-  }
-
-  @media screen and ((max-width: 720px)) {
-    font-size: 1.875rem;
-  }
-
-  @media screen and ((max-width: 650px)) {
-    font-size: 4vw;
-  }
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    font-size: 2vw !important;
+  } ;
 `;
 
 export const BigText = styled.p`
   margin-top: 3.25rem;
   font-size: 5.3125rem;
-
-  @media screen and ((max-width: 900px)) {
-    font-size: 4rem;
-    margin-top: 2rem;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    font-size: 8vw;
+    margin: 0;
   }
+`;
 
-  @media screen and ((max-width: 720px)) {
-    font-size: 1.875rem;
-    margin-top: 2.5rem;
-  }
+export const MobileText = styled.p`
+  line-height: 35px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 
-  @media screen and ((max-width: 650px)) {
-    margin-top: 10%;
-    font-size: 4vw;
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    font-size: 6vw;
   }
 `;
 
@@ -90,10 +76,22 @@ export const BannerImg = styled.div`
   width: 21.875rem;
   img {
     position: relative !important;
+    object-fit: contain;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    position: absolute;
+    right: 6.18px;
+    bottom: 11.8px;
+    width: 32%;
+    height: 84%;
     object-fit: cover;
   }
-  @media screen and (max-width: 1300px) {
-    width: 35%;
-    /* height: 100%; */
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 40.6%;
+    height: 74.3%;
+    position: absolute;
+    right: 0;
+    bottom: 7.5px !important;
   }
 `;
