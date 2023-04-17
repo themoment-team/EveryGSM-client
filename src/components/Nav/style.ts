@@ -9,6 +9,10 @@ export const NavContainer = styled.nav`
   justify-content: center;
   /* transition: ease-in-out 0.3s; */
   background-color: ${({ theme: { mode } }) => mode.nav};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    height: 88px;
+  }
 `;
 
 export const ItemContainer = styled.div`
@@ -16,6 +20,9 @@ export const ItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 81%;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -30,11 +37,6 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
-  @media screen and (max-width: 600px) {
-    margin-top: 0.6rem;
-
-    font-size: 5vw;
-  }
 `;
 
 export const LogoImg = styled.div`

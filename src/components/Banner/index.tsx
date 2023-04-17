@@ -1,7 +1,6 @@
 'use client';
 import * as S from './style';
 import { Rocket } from 'assets/imgs';
-import { Banner } from 'components';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 

@@ -22,7 +22,14 @@ const Nav = ({ isDark, setIsDark }: Props) => {
 
   return (
     <>
-      <S.NavContainer>
+      <S.NavContainer
+        css={css`
+          @media (max-width: 390) {
+            border: none;
+            background-color: ${isDark ? '#191919' : '#f1f1f5'};
+          }
+        `}
+      >
         <S.ItemContainer>
           <S.IconContainer>
             <Image src={I.LogoIcon} alt="" />

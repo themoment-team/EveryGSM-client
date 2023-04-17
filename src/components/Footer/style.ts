@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     display: none;
   }
   /* transition: ease-in-out 0.3s; */
