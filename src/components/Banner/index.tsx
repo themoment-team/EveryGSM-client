@@ -2,6 +2,7 @@
 import * as S from './style';
 import * as I from '@/assets/imgs';
 import Image from 'next/image';
+import Rocket from 'public/images/Rocket.png';
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
         <S.BigText className="roboto">EveryGSM</S.BigText>
       </S.TextContainer>
       <Image
-        src={I.Rocket}
+        src={Rocket}
         style={{
           width: '21.875rem',
           height: '19.375rem',

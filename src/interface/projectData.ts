@@ -7,6 +7,7 @@ export default interface DataType {
   projectUrl: string;
   githubRepoURL: string;
   githubURL: string;
+  githubProfileURL: string;
   createrName: string;
-  categories: any;
+  categories: any[];
 }

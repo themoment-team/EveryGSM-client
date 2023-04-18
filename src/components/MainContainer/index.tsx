@@ -9,7 +9,11 @@ const MainContainer = () => {
     <S.MainBox>
       <C.Banner />
       <S.CardContainer>
-        <Image src={Vector} style={{ marginRight: '3.125rem' }} alt="" />
+        <Image
+          src={Vector}
+          style={{ marginRight: '3.125rem', zIndex: '1000000000' }}
+          alt=""
+        />
         <S.Cards>
           <C.Card data={project} />
         </S.Cards>
@@ -19,6 +23,7 @@ const MainContainer = () => {
           style={{
             transform: 'matrix(-1, 0, 0, 1, 0, 0)',
             marginLeft: '3.125rem',
+            zIndex: '1000000000',
           }}
         />
       </S.CardContainer>
