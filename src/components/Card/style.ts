@@ -27,7 +27,7 @@ export const Card = styled.div`
 //   transform: ${props => (props.isFlip ? 'rotateX(-180deg)' : 'rotateY(0deg)')};
 // `;
 export const Cards = styled.div`
-  width: 1138px;
+  width: 1238px;
   height: 345px;
   display: flex;
   align-items: center;
@@ -114,7 +114,6 @@ export const Creater = styled.div`
 
 export const Categories = styled.div`
   width: 304px;
-  overflow: scroll;
   margin-top: 60px;
   height: 30px;
 `;
@@ -126,9 +125,4 @@ export const Description = styled.div`
 
 export const SlideBtn = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 1238px;
-  position: absolute;
-  bottom: 30%;
-  left: 300px;
 `;

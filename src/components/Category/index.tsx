@@ -1,6 +1,6 @@
 'use client';
 import * as S from './style';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 const Category = ({ data }: { data: any }) => {
   return (
     <S.Container>
