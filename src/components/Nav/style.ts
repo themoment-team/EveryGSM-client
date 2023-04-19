@@ -38,7 +38,7 @@ export const Title = styled.h2`
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
 
-  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     font-size: 24px;
   }
 
@@ -55,15 +55,6 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 40px;
-    height: 40px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 36px;
-    height: 36px;
-  }
   /* transition: ease-in-out 0.3s; */
   color: ${({ theme: { mode } }) => mode.title};
 `;
@@ -88,4 +79,23 @@ export const ToggleIcon = styled.div`
   border-radius: 0.875rem;
   /* transition: ease-in-out 0.3s; */
   background-color: ${({ theme: { mode } }) => mode.toggle};
+`;
+
+export const Dlwjddn = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 36px;
+    height: 36px;
+  }
 `;

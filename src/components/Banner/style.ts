@@ -10,10 +10,10 @@ export const BannerContainer = styled.div`
   justify-content: space-between;
   position: relative;
 
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet} )) {
     position: relative;
-    width: 81vw;
     height: 30vw;
+    width: 81%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -33,6 +33,10 @@ export const TextContainer = styled.div`
   padding-top: 5%;
   /* margin-top: 4rem; */
 
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    margin-left: 6%;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     position: absolute;
     margin: 0;
@@ -40,21 +44,20 @@ export const TextContainer = styled.div`
     top: 18%;
     padding: 0;
   }
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-  } ;
 `;
 
 export const SmallText = styled.p`
   font-size: 1.5rem;
 
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    font-size: 2vw !important;
-  } ;
+  @media ((max-width: 1150px)) {
+    font-size: 2vw;
+  }
 `;
 
 export const BigText = styled.p`
   margin-top: 3.25rem;
   font-size: 5.3125rem;
+
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 8vw;
     margin: 0;
@@ -77,6 +80,11 @@ export const BannerImg = styled.div`
   img {
     position: relative !important;
     object-fit: contain;
+  }
+
+  @media ((max-width: 1150px )) {
+    width: 29%;
+    height: 100%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {

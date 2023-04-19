@@ -32,7 +32,9 @@ const Nav = ({ isDark, setIsDark }: Props) => {
       >
         <S.ItemContainer>
           <S.IconContainer>
-            <Image src={I.LogoIcon} alt="" />
+            <S.Dlwjddn>
+              <Image src={I.LogoIcon} alt="" />
+            </S.Dlwjddn>
             <S.Title>EveryGSM</S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>

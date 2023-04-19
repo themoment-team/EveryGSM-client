@@ -37,7 +37,7 @@ export const theme: ThemeType = {
   },
   breakPoint: {
     mobile: '390px',
-    tablet: '834px',
+    tablet: '1150px',
   },
   mode: {
     nav: '#ffffff',
