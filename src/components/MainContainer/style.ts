@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import P from 'src/assets/palette';
+import theme from 'assets/palette';
 
 export const MainBox = styled.div`
   width: 100vw;
@@ -8,7 +8,7 @@ export const MainBox = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 3.25rem;
-  background-color: ${P.gray4};
+  background-color: ${theme.color.gray[0]};
 `;
 
 export const CardContainer = styled.div`

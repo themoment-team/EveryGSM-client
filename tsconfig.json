@@ -14,8 +14,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./",
     "types": ["@emotion/react/types/css-prop"],
+    "baseUrl": "./src",
     "plugins": [
       {
         "name": "next"

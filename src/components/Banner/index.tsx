@@ -1,6 +1,6 @@
 'use client';
 import * as S from './style';
-import * as I from '@/assets/imgs';
+import { Rocket } from 'assets/imgs';
 import Image from 'next/image';
 import Rocket from 'public/images/Rocket.png';
 
@@ -9,7 +9,7 @@ const Home = () => {
     <S.BannerContainer>
       <S.TextContainer>
         <S.SmallText className="roboto">
-          GSM의 모든 프로젝트를 한곳에
+          GSM의 모든 프로젝트를 한 곳에
         </S.SmallText>
         <S.BigText className="roboto">EveryGSM</S.BigText>
       </S.TextContainer>
