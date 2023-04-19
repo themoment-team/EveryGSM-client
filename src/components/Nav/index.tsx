@@ -24,7 +24,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
     <>
       <S.NavContainer
         css={css`
-          @media (max-width: 390) {
+          @media (max-width: 390px) {
             border: none;
             background-color: ${isDark ? '#191919' : '#f1f1f5'};
           }
@@ -41,7 +41,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
                 translate: ${isDark ? '2.4375rem' : '0'};
               `}
             >
-              <Image src={isDark ? I.Moon : I.Sun} alt="" />
+              <Image src={isDark ? I.Moon : I.Sun} alt="" fill />
             </S.ToggleIcon>
           </S.ToggleButton>
         </S.ItemContainer>

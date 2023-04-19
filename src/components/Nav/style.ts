@@ -37,6 +37,14 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    font-size: 24px;
+  }
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    font-size: 20px;
+  } ;
 `;
 
 export const LogoImg = styled.div`
@@ -47,9 +55,14 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  @media screen and (max-width: 500px) {
-    width: 10vw;
-    height: 10vw;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 36px;
+    height: 36px;
   }
   /* transition: ease-in-out 0.3s; */
   color: ${({ theme: { mode } }) => mode.title};
