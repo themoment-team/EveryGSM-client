@@ -13,18 +13,11 @@ export const MainBox = styled.div`
 
 export const CardContainer = styled.div`
   display: flex;
-  width: 1264px;
+  width: 1138px;
   height: 345px;
   align-items: center;
   height: 21.25rem;
   margin-top: 92px;
 `;
 
-export const Cards = styled.div`
-  width: 1138px;
-  height: 345px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-`;
+export const Cards = styled.div``;

@@ -17,8 +17,6 @@ const Modal = ({
   index: number;
 }) => {
   const selectedProject = project.find(item => item.id === `${index}`);
-  console.log(selectedProject);
-  console.log(index);
   return (
     <S.ModalContainer show={show}>
       <S.ModalContent>
@@ -27,15 +25,15 @@ const Modal = ({
         </S.Back>
         <S.Img>
           <Image
-            src={selectedProject.imageURL}
+            src={selectedProject?.imageURL ?? ''}
             width={80}
             height={80}
             alt="로고이미지"
             style={{ borderRadius: '100%' }}
           ></Image>
         </S.Img>
-        <S.Title>{selectedProject.projectName}</S.Title>
-        <S.Creater>{selectedProject.createrName}</S.Creater>
+        <S.Title>{selectedProject?.projectName}</S.Title>
+        <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
           <C.Category data={selectedProject}></C.Category>
         </S.Categories>
@@ -43,30 +41,29 @@ const Modal = ({
           <div
             style={{
               width: '350px',
-              textAlign: 'center',
-              wordBreak: 'keep-all',
+              textAlign: 'left',
             }}
           >
-            {selectedProject.projectDescription}
+            {selectedProject?.projectDescription}
           </div>
         </S.Desc>
         <S.Profile>
           <S.ProfileImg>
             <Image
-              src={selectedProject.githubProfileURL}
+              src={selectedProject?.githubProfileURL || ''}
               width={24}
               height={24}
               alt="로고이미지"
               style={{ borderRadius: '100%' }}
             ></Image>
           </S.ProfileImg>
-          <S.ProjectName>{selectedProject.projectName}</S.ProjectName>
+          <S.ProjectName>{selectedProject?.projectName}</S.ProjectName>
         </S.Profile>
         <S.GithubBox>
           {selectedProject?.githubRepoURL.map((data, i) => {
             return (
-              <Link href={data} target="_blank">
-                <S.Repo key={i}>{data}</S.Repo>
+              <Link href={data} target="_blank" key={i}>
+                <S.Repo>{data}</S.Repo>
               </Link>
             );
           })}

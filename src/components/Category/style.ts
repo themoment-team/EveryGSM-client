@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 
 export const Container = styled.div`
-  width: 380px;
-  height: 20px;
+  width: 300px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -20,6 +20,6 @@ export const Categories = styled.div`
   align-items: center;
   flex-wrap: wrap;
   padding: 0px 10px;
-  height: 28px;
+  height: 30px;
   color: #999999;
 `;

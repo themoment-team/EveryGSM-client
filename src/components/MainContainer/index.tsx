@@ -4,28 +4,18 @@ import * as S from './style';
 import { Vector } from '@/assets/imgs';
 import Image from 'next/image';
 import project from 'public/data/project.json';
+import React, { useRef, useState } from 'react';
+import { css } from '@emotion/react';
+// import Slide from './Slide';
+
 const MainContainer = () => {
   return (
     <S.MainBox>
       <C.Banner />
       <S.CardContainer>
-        <Image
-          src={Vector}
-          style={{ marginRight: '3.125rem', zIndex: '1000000000' }}
-          alt=""
-        />
         <S.Cards>
           <C.Card data={project} />
         </S.Cards>
-        <Image
-          src={Vector}
-          alt=""
-          style={{
-            transform: 'matrix(-1, 0, 0, 1, 0, 0)',
-            marginLeft: '3.125rem',
-            zIndex: '1000000000',
-          }}
-        />
       </S.CardContainer>
     </S.MainBox>
   );

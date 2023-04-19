@@ -54,7 +54,6 @@ export const Desc = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-weight: 300;
 `;
 export const Profile = styled.div`
@@ -104,12 +103,17 @@ export const Repo = styled.div`
   border: 1px solid #999999;
   border-radius: 10px;
   padding-left: 10px;
+  transition: ease-in-out 0.1s;
+  &:hover {
+    box-shadow: 0px 0px 3px 1px #f2f2f2;
+    border-color: #6e6e6e;
+  }
 `;
 
 export const Categories = styled.div`
   z-index: 10000000000000;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   width: 407px;
   margin: 24px 0px;

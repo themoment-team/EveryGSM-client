@@ -3,20 +3,44 @@ import Image from 'next/image';
 
 export const Card = styled.div`
   height: 340px;
-  width: 360px;
+  width: 350px;
   background-color: #ffffff;
   display: flex;
   border-radius: 16px;
   box-shadow: rgba(112, 144, 176, 0.2);
-  margin-right: 28px;
+  margin-right: 30px;
   flex-direction: column;
+  float: left;
 `;
+// export const Card = styled.div<{ isFlip: boolean }>`
+//   height: 340px;
+//   width: 350px;
+//   background-color: #ffffff;
+//   display: flex;
+//   border-radius: 16px;
+//   box-shadow: rgba(112, 144, 176, 0.2);
+//   margin-right: 30px;
+//   flex-direction: column;
+//   float: left;
+//   transform-style: preserve-3d;
+//   transition: 0.5s;
+//   transform: ${props => (props.isFlip ? 'rotateX(-180deg)' : 'rotateY(0deg)')};
+// `;
+export const Cards = styled.div`
+  width: 1138px;
+  height: 345px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+`;
+export const SlideBox = styled.div``;
 export const Desc = styled.div`
   color: #999999;
   font-size: 18px;
   font-weight: 200;
   font-size: 18px;
-  cursor: pointer;
   display: flex;
   justify-content: left;
   margin-top: 30px;
@@ -24,12 +48,13 @@ export const Desc = styled.div`
   margin-left: 32px;
 `;
 export const DetailBtn = styled.div`
-  width: 300px;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   cursor: pointer;
-  z-index: 100000000;
+  z-index: 10000000;
+  position: absolute;
+  left: 290px;
 `;
 export const CardContents = styled.div`
   width: 302px;
@@ -38,12 +63,12 @@ export const CardContents = styled.div`
   flex-direction: column;
   margin-top: 28px;
 `;
-// export const Front = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   backface-visibility: hidden;
-// `;
+export const Front = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+`;
 // export const Back = styled.div`
 //   width: 100%;
 //   height: 100%;
@@ -88,10 +113,22 @@ export const Creater = styled.div`
 `;
 
 export const Categories = styled.div`
+  width: 304px;
+  overflow: scroll;
   margin-top: 60px;
+  height: 30px;
 `;
 
 export const Description = styled.div`
   font-size: 22px;
   margin-top: 24px;
+`;
+
+export const SlideBtn = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 1238px;
+  position: absolute;
+  bottom: 30%;
+  left: 300px;
 `;

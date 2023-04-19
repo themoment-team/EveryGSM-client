@@ -28,3 +28,6 @@ a {
 .roboto {
   font-family: 'roboto';
 }
+::-webkit-scrollbar {
+  display: none;
+}

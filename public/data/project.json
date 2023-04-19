@@ -5,11 +5,7 @@
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
     "imageURL": "/images/GCMS.png",
     "createrDescription": "https://www.notion.so/matsogeum/MSG-7ac3204e54e0484c9b1a63f472aa3e95?pvs=4",
-    "projectUrl": [
-      "https://gcms.msg-team.com/",
-      " https://apps.apple.com/kr/app/gcms/id1616315883",
-      " https://play.google.com/store/apps/details?id=com.msg.gcms"
-    ],
+    "projectUrl": "https://gcms.msg-team.com/",
     "githubRepoURL": [
       "https://github.com/GSM-MSG/MSG-BackEnd-V2",
       "https://github.com/GSM-MSG/MSG-Front",
@@ -23,45 +19,6 @@
   },
   {
     "id": "1",
-    "projectName": "오늘 뭐임",
-    "projectDescription": "애플워치, 아이폰/맥의 위젯, 맥의 Menubar에서도 편리하게 급식/시간표를 확인할 수 있는 서비스",
-    "imageURL": "/images/오늘뭐임.png",
-    "createrDescription": "https://baegteun.com",
-    "projectUrl": "https://apps.apple.com/app/id1629567018",
-    "githubRepoURL": ["https://github.com/baekteun/TodayWhat-new"],
-    "githubURL": "https://github.com/baekteun",
-    "githubProfileURL": "https://github.com/baekteun.png",
-    "createrName": "최형우",
-    "categories": ["#Swift"]
-  },
-  {
-    "id": "2",
-    "projectName": "GRIG-iOS",
-    "projectDescription": "Github Rank In GSM - GRIG Open API를 사용하여 만든 iOS 앱입니다. GSM 학생들의 깃허브 활동으로 랭킹을 세워놓았으며 이를 iOS에서 볼 수 있습니다",
-    "imageURL": "/images/Grig.png",
-    "createrDescription": "https://baegteun.com",
-    "projectUrl": "https://apps.apple.com/kr/app/gri-g/id1622010590",
-    "githubRepoURL": ["https://github.com/baekteun/GRIG-iOS"],
-    "githubURL": "https://github.com/baekteun",
-    "githubProfileURL": "https://github.com/baekteun.png",
-    "createrName": "최형우",
-    "categories": ["#Swift", "#iOS"]
-  },
-  {
-    "id": "3",
-    "projectName": "GAuth",
-    "projectDescription": "GSM 교내 계정 통합 소셜 로그인 서비스.",
-    "imageURL": "/images/Gauth.png",
-    "createrDescription": "https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95",
-    "projectUrl": "https://github.com/GSM-MSG/GAuthSignin-Swift.git",
-    "githubRepoURL": ["https://github.com/GSM-MSG/GAuthSignin-Swift"],
-    "githubURL": "https://github.com/GSM-MSG",
-    "githubProfileURL": "https://github.com/GSM-MSG.png",
-    "createrName": "MSG",
-    "categories": ["#Swift", "#Kotlin", "#Android"]
-  },
-  {
-    "id": "4",
     "projectName": "Hello, GSM",
     "projectDescription": "Hello, GSM은 광주소프트웨어마이스터고등학교 입학 지원시스템입니다.",
     "imageURL": "/images/Hello,gsm.png",
@@ -74,7 +31,7 @@
     "categories": ["#Next.js", "#Nest.js", "#React"]
   },
   {
-    "id": "5",
+    "id": "2",
     "projectName": "DOTORI",
     "projectDescription": "DOTORI는 GSM 기숙사 관리 시스템으로, 학생들이 주체적으로 개발한 웹사이트입니다. 광주 소프트웨어마이스터고등학교 앰퍼샌드 동아리 부원들이 직접 개발하여, 효율적인 서비스 제공을 목적으로 합니다. 이 작은 서비스가 우리 학교의 인식을 바꿀 좋은 마케팅 거리가 될 수 있도록 만들어졌습니다.",
     "imageURL": "/images/DOTORI.png",
@@ -88,5 +45,83 @@
     "githubProfileURL": "https://github.com/Team-Ampersand.png",
     "createrName": "&mpersand",
     "categories": ["#SpringBoot", "#Kotlin", "#Next.js", "#TypeScript"]
+  },
+  {
+    "id": "3",
+    "projectName": "오늘 뭐임",
+    "projectDescription": "애플워치, 아이폰/맥의 위젯, 맥의 Menubar에서도 편리하게 급식/시간표를 확인할 수 있는 서비스",
+    "imageURL": "/images/오늘뭐임.png",
+    "createrDescription": "https://baegteun.com",
+    "projectUrl": "https://apps.apple.com/app/id1629567018",
+    "githubRepoURL": ["https://github.com/baekteun/TodayWhat-new"],
+    "githubURL": "https://github.com/baekteun",
+    "githubProfileURL": "https://github.com/baekteun.png",
+    "createrName": "최형우",
+    "categories": ["#Swift"]
+  },
+  {
+    "id": "4",
+    "projectName": "GRIG-iOS",
+    "projectDescription": "Github Rank In GSM - GRIG Open API를 사용하여 만든 iOS 앱입니다. GSM 학생들의 깃허브 활동으로 랭킹을 세워놓았으며 이를 iOS에서 볼 수 있습니다",
+    "imageURL": "/images/Grig.png",
+    "createrDescription": "https://baegteun.com",
+    "projectUrl": "https://apps.apple.com/kr/app/gri-g/id1622010590",
+    "githubRepoURL": ["https://github.com/baekteun/GRIG-iOS"],
+    "githubURL": "https://github.com/baekteun",
+    "githubProfileURL": "https://github.com/baekteun.png",
+    "createrName": "최형우",
+    "categories": ["#Swift", "#iOS"]
+  },
+  {
+    "id": "5",
+    "projectName": "GAuth",
+    "projectDescription": "GSM 교내 계정 통합 소셜 로그인 서비스.",
+    "imageURL": "/images/Gauth.png",
+    "createrDescription": "https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95",
+    "projectUrl": "https://github.com/GSM-MSG/GAuthSignin-Swift.git",
+    "githubRepoURL": ["https://github.com/GSM-MSG/GAuthSignin-Swift"],
+    "githubURL": "https://github.com/GSM-MSG",
+    "githubProfileURL": "https://github.com/GSM-MSG.png",
+    "createrName": "MSG",
+    "categories": ["#Swift", "#Kotlin", "#Android"]
+  },
+  {
+    "id": "6",
+    "projectName": "moip - 오늘 뭐 입지?",
+    "projectDescription": "MZ세대의 패션 동향을 파악하기 위한 서비스입니다.",
+    "imageURL": "/images/moip.png",
+    "createrDescription": "5기 프론트엔드 김형록입니다. 사용자 경험을 중요시합니다.",
+    "projectUrl": "https://www.moip.shop/",
+    "githubRepoURL": ["https://github.com/hyeongrok7874/moip"],
+    "githubURL": "https://github.com/hyeongrok7874",
+    "githubProfileURL": "https://github.com/hyeongrok7874.png",
+    "createrName": "김형록",
+    "categories": ["#React", "#Next.js"]
+  },
+  {
+    "id": "7",
+    "projectName": "world-quiz",
+    "projectDescription": "세계 여러 나라 국기에 해당하는 국가 이름을 맞추는 퀴즈 게임입니다. 재미있게 즐겨주세요~",
+    "imageURL": "/images/worldQuiz.png",
+    "createrDescription": "5기 프론트엔드 김형록입니다. 사용자 경험을 중요시합니다.",
+    "projectUrl": "https://world-quiz.vercel.app",
+    "githubRepoURL": ["https://github.com/hyeongrok7874/world-quiz"],
+    "githubURL": "https://github.com/hyeongrok7874",
+    "githubProfileURL": "https://github.com/hyeongrok7874.png",
+    "createrName": "김형록",
+    "categories": ["#React", "#Next.js", "#TypeScript", "#GraphQL"]
+  },
+  {
+    "id": "8",
+    "projectName": "포켓몬 퀴즈",
+    "projectDescription": "포켓몬들의 이름을 맞춰서 포켓몬에 대해 흥미를 깨우게 하는 프로젝트입니다.",
+    "imageURL": "/images/포켓몬퀴즈.png",
+    "createrDescription": "2학년 프론트엔드를 전공으로 하고있는 이정우입니다.",
+    "projectUrl": "https://gsmpokemonquiz.netlify.app/",
+    "githubRepoURL": ["https://github.com/handsomejeongwoo/PokemonQuiz"],
+    "githubURL": "https://github.com/handsomejeongwoo",
+    "githubProfileURL": "https://github.com/handsomejeongwoo.png",
+    "createrName": "이정우",
+    "categories": ["#React"]
   }
 ]
