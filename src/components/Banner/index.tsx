@@ -1,8 +1,7 @@
 'use client';
 import * as S from './style';
-import { Rocket } from 'assets/imgs';
 import Image from 'next/image';
-import Rocket from 'public/images/Rocket.png';
+import Rocket from '../../../public/images/Rocket.png';
 
 const Home = () => {
   return (

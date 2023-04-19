@@ -1,11 +1,11 @@
 'use client';
 import * as S from './style';
-import * as I from '@/assets/imgs';
-import * as C from 'src/components';
+import * as I from 'assets/imgs';
+import * as C from 'components';
 import Image from 'next/image';
-import projectData from 'src/interface/projectData';
+import projectData from 'interface/projectData';
 import React, { useState } from 'react';
-import { Detail, Vector } from '@/assets/imgs';
+import { Detail, Vector } from 'assets/imgs';
 import Link from 'next/link';
 const Card = ({ data }: { data: any }) => {
   const [projectList, setProjectList] = useState<projectData[]>(data);

@@ -3,9 +3,8 @@ import * as C from 'components';
 import * as S from './style';
 import { Vector } from 'assets/imgs';
 import Image from 'next/image';
-import project from 'public/data/project.json';
+import project from '../../../public/data/project.json';
 import React, { useRef, useState } from 'react';
-import { css } from '@emotion/react';
 // import Slide from './Slide';
 
 const MainContainer = () => {

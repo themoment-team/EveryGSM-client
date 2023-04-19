@@ -1,12 +1,12 @@
 'use client';
 import * as S from './style';
-import * as I from '@/assets/imgs';
-import * as C from 'src/components';
+import * as I from 'assets/imgs';
+import * as C from 'components';
 import Image from 'next/image';
 import React, { useCallback, useState } from 'react';
-import project from 'public/data/project.json';
+import project from '../../../public/data/project.json';
 import Link from 'next/link';
-import { Back } from '@/assets/imgs';
+import { Back } from 'assets/imgs';
 const Modal = ({
   show,
   onClose,
