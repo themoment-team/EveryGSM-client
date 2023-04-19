@@ -1,6 +1,19 @@
 [
   {
     "id": "0",
+    "projectName": "Hello, GSM",
+    "projectDescription": "Hello, GSM은 광주소프트웨어마이스터고등학교 입학 지원시스템입니다.",
+    "imageURL": "/images/Hello,gsm.png",
+    "createrDescription": "https://themoment-team.notion.site/2b3875e62b2a4002beb9db71c85db262",
+    "projectUrl": "https://www.hellogsm.kr",
+    "githubRepoURL": ["https://github.com/themoment-team/hello-gsm-about"],
+    "githubURL": "https://github.com/themoment-team",
+    "githubProfileURL": "https://github.com/themoment-team.png",
+    "createrName": "더모먼트",
+    "categories": ["#Next.js", "#Nest.js", "#React"]
+  },
+  {
+    "id": "1",
     "projectName": "GCMS",
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
     "imageURL": "/images/GCMS.png",
@@ -16,19 +29,6 @@
     "githubProfileURL": "https://github.com/GSM-MSG.png",
     "createrName": "MSG",
     "categories": ["#React", "#Spring", "#Kotlin", "#Swift"]
-  },
-  {
-    "id": "1",
-    "projectName": "Hello, GSM",
-    "projectDescription": "Hello, GSM은 광주소프트웨어마이스터고등학교 입학 지원시스템입니다.",
-    "imageURL": "/images/Hello,gsm.png",
-    "createrDescription": "https://themoment-team.notion.site/2b3875e62b2a4002beb9db71c85db262",
-    "projectUrl": "https://www.hellogsm.kr",
-    "githubRepoURL": ["https://github.com/themoment-team/hello-gsm-about"],
-    "githubURL": "https://github.com/themoment-team",
-    "githubProfileURL": "https://github.com/themoment-team.png",
-    "createrName": "더모먼트",
-    "categories": ["#Next.js", "#Nest.js", "#React"]
   },
   {
     "id": "2",
