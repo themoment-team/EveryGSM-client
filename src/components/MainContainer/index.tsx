@@ -1,4 +1,3 @@
-'use client';
 import * as C from 'components';
 import * as S from './style';
 import { Vector } from 'assets/imgs';
@@ -7,7 +6,11 @@ import project from '../../../public/data/project.json';
 import React, { useRef, useState } from 'react';
 // import Slide from './Slide';
 
-const MainContainer = () => {
+interface Props {
+  isDark: boolean;
+}
+
+const MainContainer = ({ isDark }: Props) => {
   return (
     <S.MainBox>
       <C.Banner />

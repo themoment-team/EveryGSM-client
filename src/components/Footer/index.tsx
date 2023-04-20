@@ -1,11 +1,16 @@
-'use client';
 import * as S from './style';
 
-const Footer = () => {
+interface Props {
+  isDark: boolean;
+}
+
+const Footer = ({ isDark }: Props) => {
   return (
-    <S.FooterContainer>
-      <S.FootText>Copyright 2022. the moment All rights reserved.</S.FootText>
-    </S.FooterContainer>
+    <div>
+      <S.FooterContainer id="footer">
+        <S.FootText>Copyright 2022. the moment All rights reserved.</S.FootText>
+      </S.FooterContainer>
+    </div>
   );
 };
 
