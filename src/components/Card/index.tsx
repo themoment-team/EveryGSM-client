@@ -79,22 +79,6 @@ const Card = ({ data }: { data: any }) => {
                         index={selectedId}
                       />
                     )}
-                    {/* <S.DetailBtn onClick={handleFlip}>
-                      <div>Back</div>
-                      <Image
-                      src={I.Vector}
-                      style={{
-                        width: '6.2496px',
-                        height: '12.5008px',
-                        transform: 'rotateY(180deg)',
-                        marginLeft: '12px',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                      }}
-                      alt="Vector"
-                      />
-                    </S.DetailBtn> */}
                     <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
                       <Image
                         src={I.Detail}
