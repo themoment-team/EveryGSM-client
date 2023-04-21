@@ -11,8 +11,8 @@ export const BannerContainer = styled.div`
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    height: 30vw;
     width: 81%;
+    height: 13.75rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -22,14 +22,13 @@ export const BannerContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  /* letter-spacing: 0.08em; */
-  /* line-height: 1.5625rem; */
+  letter-spacing: 0.08em;
+  line-height: 1.5625rem;
   font-weight: 700;
   font-style: normal;
   color: white;
   margin-left: 4.1875rem;
   padding-top: 5%;
-  /* margin-top: 4rem; */
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-left: 6%;
@@ -47,17 +46,22 @@ export const TextContainer = styled.div`
 export const SmallText = styled.p`
   font-size: 1.5rem;
 
-  @media ((max-width: 71.875rem)) {
-    font-size: 2vw;
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    font-size: 21px;
   }
 `;
 
 export const BigText = styled.p`
   margin-top: 3.25rem;
-  font-size: 5.3125rem;
+  font-size: 5rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    font-size: 8vw;
+    font-size: 52px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    font-size: 21px;
     margin: 0;
   }
 `;
@@ -80,11 +84,6 @@ export const BannerImg = styled.div`
     object-fit: contain;
   }
 
-  @media ((max-width: 71.875rem )) {
-    width: 29%;
-    height: 100%;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     position: absolute;
     right: 0.3862rem;
@@ -98,6 +97,6 @@ export const BannerImg = styled.div`
     height: 74.3%;
     position: absolute;
     right: 0;
-    bottom: 0.4688rem !important;
+    bottom: 0.4688rem;
   }
 `;
