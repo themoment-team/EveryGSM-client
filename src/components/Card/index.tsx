@@ -21,13 +21,16 @@ const Card = ({ data }: { data: any }) => {
   };
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
+      console.log(projectList.length);
       setSlideIndex(projectList.length - 1);
     } else {
+      console.log(projectList.length);
       setSlideIndex(slideIndex - 1);
     }
   };
   const handleNextSlide = () => {
     if (slideIndex === projectList.length - 1) {
+      console.log(projectList.length);
       setSlideIndex(0);
     } else {
       setSlideIndex(slideIndex + 1);
@@ -81,8 +84,8 @@ const Card = ({ data }: { data: any }) => {
                       <Image
                       src={I.Vector}
                       style={{
-                        width: '6.25px',
-                        height: '12.5px',
+                        width: '6.2496px',
+                        height: '12.5008px',
                         transform: 'rotateY(180deg)',
                         marginLeft: '12px',
                         display: 'flex',
@@ -96,8 +99,8 @@ const Card = ({ data }: { data: any }) => {
                       <Image
                         src={I.Detail}
                         style={{
-                          width: '19.5px',
-                          height: '19.5px',
+                          width: '19.5008px',
+                          height: '19.5008px',
                           marginLeft: '12px',
                           display: 'flex',
                           justifyContent: 'center',
@@ -106,35 +109,33 @@ const Card = ({ data }: { data: any }) => {
                         alt="Vector"
                       />
                     </S.DetailBtn>
-                    <Link href={data.projectUrl} target="_blank">
-                      <S.CardContents>
-                        <S.Logo>
-                          <Image
-                            src={data.imageURL}
-                            width={72}
-                            height={72}
-                            alt="로고이미지"
-                            style={{ borderRadius: '100%' }}
-                          ></Image>
-                        </S.Logo>
-                        <S.Title>{data.projectName}</S.Title>
-                        <S.Create style={{ display: 'flex' }}>
-                          <Image
-                            src={I.Person}
-                            style={{
-                              width: '25px',
-                              height: '24px',
-                              marginRight: '13px',
-                            }}
-                            alt="Person"
-                          />
-                          <S.Creater>{data.createrName}</S.Creater>
-                        </S.Create>
-                        <S.Categories>
-                          <C.Category data={data}></C.Category>
-                        </S.Categories>
-                      </S.CardContents>
-                    </Link>
+                    <S.CardContents>
+                      <S.Logo>
+                        <Image
+                          src={data.imageURL}
+                          width={72}
+                          height={72}
+                          alt="로고이미지"
+                          style={{ borderRadius: '100%' }}
+                        ></Image>
+                      </S.Logo>
+                      <S.Title>{data.projectName}</S.Title>
+                      <S.Create style={{ display: 'flex' }}>
+                        <Image
+                          src={I.Person}
+                          style={{
+                            width: '25px',
+                            height: '24px',
+                            marginRight: '13px',
+                          }}
+                          alt="Person"
+                        />
+                        <S.Creater>{data.createrName}</S.Creater>
+                      </S.Create>
+                      <S.Categories>
+                        <C.Category data={data}></C.Category>
+                      </S.Categories>
+                    </S.CardContents>
                   </S.Desc>
                 </S.Front>
                 {/* <S.Back>
@@ -145,8 +146,8 @@ const Card = ({ data }: { data: any }) => {
                   <Image
                   src={I.Vector}
                   style={{
-                    width: '6.25px',
-                    height: '12.5px',
+                    width: '6.2496px',
+                    height: '12.5008px',
                     transform: 'rotateY(180deg)',
                     marginLeft: '12px',
                     display: 'flex',

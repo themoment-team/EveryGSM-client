@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-
 export const Container = styled.div`
   display: flex;
-  width: 1265px;
+  width: 79.0625rem;
   justify-content: center;
   align-items: center;
 `;
@@ -13,8 +12,8 @@ export const SlideBtn = styled.div`
   justify-content: space-between;
 `;
 export const Cards = styled.div`
-  width: 1140px;
-  height: 345px;
+  width: 71.25rem;
+  height: 21.5625rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,27 +21,27 @@ export const Cards = styled.div`
   overflow: hidden;
 `;
 export const Card = styled.div`
-  height: 340px;
-  width: 360px;
+  height: 21.25rem;
+  width: 22.5rem;
   background-color: #ffffff;
   display: flex;
-  border-radius: 16px;
+  border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
   flex-direction: column;
   float: left;
 
   &:nth-child(3n + 3) {
-    margin-right: 25px;
+    margin-right: 1.5625rem;
   }
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
-//   height: 340px;
-//   width: 350px;
+//   height: 21.25rem;
+//   width: 21.875rem;
 //   background-color: #ffffff;
 //   display: flex;
-//   border-radius: 16px;
+//   border-radius: 1rem;
 //   box-shadow: rgba(112, 144, 176, 0.2);
-//   margin-right: 30px;
+//   margin-right: 1.875rem;
 //   flex-direction: column;
 //   float: left;
 //   transform-style: preserve-3d;
@@ -52,14 +51,14 @@ export const Card = styled.div`
 export const SlideBox = styled.div``;
 export const Desc = styled.div`
   color: #999999;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: flex;
   justify-content: left;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   width: 100%;
-  margin-left: 32px;
+  margin-left: 2rem;
 `;
 export const DetailBtn = styled.div`
   display: flex;
@@ -68,14 +67,14 @@ export const DetailBtn = styled.div`
   cursor: pointer;
   z-index: 10000000;
   position: absolute;
-  left: 290px;
+  left: 18.125rem;
 `;
 export const CardContents = styled.div`
-  width: 302px;
+  width: 18.875rem;
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 `;
 export const Front = styled.div`
   width: 100%;
@@ -92,47 +91,46 @@ export const Front = styled.div`
 //   position: absolute;
 //   backface-visibility: hidden;
 //   background: #ffff;
-//   border-radius: 16px;
+//   border-radius: 1rem;
 //   transform: rotateX(-180deg);
 //   text-align: center;
 // `;
 
 export const Logo = styled.div`
-  height: 72px;
-  width: 72px;
+  height: 4.5rem;
+  width: 4.5rem;
   position: relative;
   border-radius: 100%;
 `;
 
 export const Title = styled.div`
   color: black;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
-  margin-top: 16px;
+  margin-top: 1rem;
 `;
 
 export const Create = styled.div`
   display: flex;
   align-items: center;
-  width: 145px;
-  height: 24px;
-  margin-top: 24px;
+  width: 9.0625rem;
+  height: 1.5rem;
+  margin-top: 1.5rem;
 `;
 
 export const Creater = styled.div`
   color: #999999;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
 `;
 
 export const Categories = styled.div`
-  width: 300px;
   overflow: scroll;
-  margin-top: 60px;
-  height: 30px;
+  margin-top: 3.75rem;
+  height: 1.875rem;
 `;
 
 export const Description = styled.div`
-  font-size: 22px;
-  margin-top: 24px;
+  font-size: 1.375rem;
+  margin-top: 1.5rem;
 `;

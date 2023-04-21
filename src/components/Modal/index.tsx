@@ -44,7 +44,7 @@ const Modal = ({
         <S.Desc>
           <div
             style={{
-              width: '350px',
+              width: '21.875rem',
               textAlign: 'left',
             }}
           >

@@ -15,43 +15,43 @@ export const ModalContainer = styled.div<{ show: boolean }>`
 `;
 export const ModalContent = styled.div`
   background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  width: 520px;
-  border-radius: 20px;
+  border-radius: 0.3125rem;
+  padding: 1.25rem;
+  width: 32.5rem;
+  border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
-  height: 800px;
+  height: 50rem;
 `;
 
 export const Title = styled.div`
   font-family: Pretendard;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 25px;
+  line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
   color: #000000;
-  margin-top: 30px;
+  margin-top: 1.875rem;
 `;
 export const Creater = styled.span`
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bolder;
   background-image: linear-gradient(94.02deg, #e23c96 5.03%, #ffe870 117.47%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  margin-top: 21px;
+  margin-top: 1.3125rem;
 `;
 
 export const Desc = styled.div`
-  width: 408px;
-  height: 204px;
+  width: 25.5rem;
+  height: 12.75rem;
   background-color: #f1f1f5;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,24 +59,24 @@ export const Desc = styled.div`
 `;
 export const Profile = styled.div`
   display: flex;
-  margin-top: 44px;
-  width: 411px;
+  margin-top: 2.75rem;
+  width: 25.6875rem;
 `;
 export const ProfileImg = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 100%;
   background-color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 `;
 export const ProjectName = styled.div`
   font-family: Pretendard;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
   color: #000000;
@@ -84,29 +84,29 @@ export const ProjectName = styled.div`
 export const GithubBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 411px;
+  width: 25.6875rem;
 `;
 
 export const Img = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 100%;
   background-color: lightgray;
-  margin-top: 44px;
+  margin-top: 2.75rem;
 `;
 
 export const Repo = styled.div`
-  margin: 5px 0px;
+  margin: 0.3125rem 0rem;
   display: flex;
   align-items: center;
-  width: 412px;
-  height: 40px;
-  border: 1px solid #999999;
-  border-radius: 10px;
-  padding-left: 10px;
+  width: 25.75rem;
+  height: 2.5rem;
+  border: 0.0625rem solid #999999;
+  border-radius: 0.625rem;
+  padding-left: 0.625rem;
   transition: ease-in-out 0.1s;
   &:hover {
-    box-shadow: 0px 0px 3px 1px #f2f2f2;
+    box-shadow: 0rem 0rem 0.1875rem 0.0625rem #f2f2f2;
     border-color: #6e6e6e;
   }
 `;
@@ -116,14 +116,16 @@ export const Categories = styled.div`
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 407px;
-  margin: 24px 0px;
+  width: 25.4375rem;
+  margin: 1.5rem 0rem;
+  position: relative;
+  overflow: scroll;
 `;
 
 export const Back = styled.div`
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 1.25rem;
+  top: 1.25rem;
   z-index: 1000000000000;
   cursor: pointer;
 `;
