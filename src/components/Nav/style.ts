@@ -11,7 +11,7 @@ export const NavContainer = styled.nav`
   background-color: ${({ theme: { mode } }) => mode.nav};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    height: 88px;
+    height: 5.5rem;
   }
 `;
 
@@ -39,11 +39,11 @@ export const Title = styled.h2`
   margin-top: 0.6875rem;
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
-    font-size: 20px;
+    font-size: 1.25rem;
   } ;
 `;
 
@@ -110,12 +110,12 @@ export const Dlwjddn = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
   }
 `;
