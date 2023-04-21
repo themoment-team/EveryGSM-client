@@ -1,10 +1,6 @@
 import * as S from './style';
 
-interface Props {
-  isDark: boolean;
-}
-
-const Footer = ({ isDark }: Props) => {
+const Footer = () => {
   return (
     <div>
       <S.FooterContainer id="footer">

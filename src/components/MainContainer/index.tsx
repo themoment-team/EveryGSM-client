@@ -3,11 +3,7 @@ import * as S from './style';
 import { Vector } from 'assets/imgs';
 import Image from 'next/image';
 
-interface Props {
-  isDark: boolean;
-}
-
-const MainContainer = ({ isDark }: Props) => {
+const MainContainer = () => {
   return (
     <S.MainBox>
       <C.Banner />
