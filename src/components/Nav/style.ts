@@ -7,7 +7,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.nav};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
@@ -55,7 +55,7 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   color: ${({ theme: { mode } }) => mode.title};
 `;
 
@@ -68,6 +68,16 @@ export const ToggleButton = styled.div`
   padding: 0 0.25rem;
   cursor: pointer;
   background-color: ${({ theme: { mode } }) => mode.footer};
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    width: 4.125rem;
+    height: 2rem;
+  }
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    width: 3.625rem;
+    height: 1.75rem;
+  }
 `;
 
 export const ToggleIcon = styled.div`
@@ -77,8 +87,18 @@ export const ToggleIcon = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 0.875rem;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.toggle};
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
 `;
 
 export const Dlwjddn = styled.div`

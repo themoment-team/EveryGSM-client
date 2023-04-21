@@ -13,7 +13,7 @@ export const FooterContainer = styled.footer`
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     display: none;
   }
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.footer};
 `;
 
@@ -23,6 +23,6 @@ export const FootText = styled.p`
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   color: ${({ theme: { mode } }) => mode.text};
 `;

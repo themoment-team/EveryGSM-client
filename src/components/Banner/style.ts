@@ -10,16 +10,14 @@ export const BannerContainer = styled.div`
   justify-content: space-between;
   position: relative;
 
-  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet} )) {
-    position: relative;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     height: 30vw;
     width: 81%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    position: relative;
     width: 87.6%;
-    height: 9.5rem !important;
+    height: 9.5rem;
   }
 `;
 
