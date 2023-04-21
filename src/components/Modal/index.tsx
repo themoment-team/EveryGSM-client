@@ -33,9 +33,11 @@ const Modal = ({
           ></Image>
         </S.Img>
         <S.Title>{selectedProject?.projectName}</S.Title>
-        <Link href={selectedProject?.projectDescription || ''}>
-          <S.Creater>{selectedProject?.createrName}</S.Creater>
-        </Link>
+        <S.Creater>
+          <Link href={selectedProject?.projectDescription || ''}>
+            {selectedProject?.createrName}
+          </Link>
+        </S.Creater>
         <S.Categories>
           <C.Category data={selectedProject}></C.Category>
         </S.Categories>

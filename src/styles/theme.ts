@@ -17,6 +17,9 @@ export interface ThemeType {
     toggle: string;
     title: string;
     text: string;
+    card: string;
+    modal: string;
+    category: string;
   };
   otherProp?: any;
 }
@@ -40,6 +43,9 @@ export const theme: ThemeType = {
     toggle: '#ffffff',
     title: '#000000',
     text: '#191919',
+    card: '#ffffff',
+    modal: '#FFFFFF',
+    category: '#999999',
   },
 } as const;
 
@@ -62,5 +68,8 @@ export const darktheme: ThemeType = {
     toggle: '#999999',
     title: '#ffffff',
     text: '#ffffff',
+    card: '#484848',
+    modal: '#191919',
+    category: '#636363',
   },
 } as const;

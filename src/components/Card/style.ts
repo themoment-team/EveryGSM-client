@@ -1,16 +1,39 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
+export const Container = styled.div`
+  display: flex;
+  width: 1265px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SlideBtn = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+export const Cards = styled.div`
+  width: 1140px;
+  height: 345px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+`;
 export const Card = styled.div`
   height: 340px;
-  width: 350px;
+  width: 360px;
   background-color: #ffffff;
   display: flex;
   border-radius: 16px;
   box-shadow: rgba(112, 144, 176, 0.2);
-  margin-right: 30px;
   flex-direction: column;
   float: left;
+
+  &:nth-child(3n) {
+    margin-right: 25px;
+  }
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 340px;
@@ -26,15 +49,6 @@ export const Card = styled.div`
 //   transition: 0.5s;
 //   transform: ${props => (props.isFlip ? 'rotateX(-180deg)' : 'rotateY(0deg)')};
 // `;
-export const Cards = styled.div`
-  width: 1238px;
-  height: 345px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-`;
 export const SlideBox = styled.div``;
 export const Desc = styled.div`
   color: #999999;
@@ -61,13 +75,12 @@ export const CardContents = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin-top: 28px;
+  margin-top: 10px;
 `;
 export const Front = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  backface-visibility: hidden;
 `;
 // export const Back = styled.div`
 //   width: 100%;
@@ -113,7 +126,8 @@ export const Creater = styled.div`
 `;
 
 export const Categories = styled.div`
-  width: 304px;
+  width: 300px;
+  overflow: scroll;
   margin-top: 60px;
   height: 30px;
 `;
@@ -121,8 +135,4 @@ export const Categories = styled.div`
 export const Description = styled.div`
   font-size: 22px;
   margin-top: 24px;
-`;
-
-export const SlideBtn = styled.div`
-  display: flex;
 `;

@@ -123,5 +123,18 @@
     "githubProfileURL": "https://github.com/handsomejeongwoo.png",
     "createrName": "이정우",
     "categories": ["#React"]
+  },
+  {
+    "id": "9",
+    "projectName": "GFC",
+    "projectDescription": "키보드로 간단히 조작하여 즐길 수 있는 PC용 웹 파이팅게임 입니다. Next.JS, Typescript를 사용하였습니다.",
+    "imageURL": "/images/Glub.png",
+    "createrDescription": "2학년 프론트엔드를 전공하고 있는 이승제입니다.",
+    "projectUrl": "https://gsm-fc.vercel.app/",
+    "githubRepoURL": ["https://github.com/Lee-Seungje/FightGame"],
+    "githubURL": "https://github.com/Lee-Seungje",
+    "githubProfileURL": "https://github.com/handsomejeongwoo.png",
+    "createrName": "이승제",
+    "categories": ["#React", "#Next.js", "#Typescript"]
   }
 ]

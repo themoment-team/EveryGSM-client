@@ -40,31 +40,18 @@ const Card = ({ data }: { data: any }) => {
   // };
   // const [isFlip, setIsFlip] = useState(false);
   return (
-    <div>
+    <S.Container>
+      <Image
+        src={Vector}
+        style={{
+          marginRight: '3.125rem',
+          zIndex: '1000000000',
+          cursor: 'pointer',
+        }}
+        alt=""
+        onClick={handlePrevSlide}
+      />
       <S.Cards>
-        <S.SlideBtn>
-          <Image
-            src={Vector}
-            style={{
-              marginRight: '3.125rem',
-              zIndex: '1000000000',
-              cursor: 'pointer',
-            }}
-            alt=""
-            onClick={handlePrevSlide}
-          />
-          <Image
-            src={Vector}
-            alt=""
-            style={{
-              transform: 'matrix(-1, 0, 0, 1, 0, 0)',
-              marginLeft: '3.125rem',
-              zIndex: '1000000000',
-              cursor: 'pointer',
-            }}
-            onClick={handleNextSlide}
-          />
-        </S.SlideBtn>
         <S.SlideBox
           style={{
             display: 'flex',
@@ -172,7 +159,18 @@ const Card = ({ data }: { data: any }) => {
           ))}
         </S.SlideBox>
       </S.Cards>
-    </div>
+      <Image
+        src={Vector}
+        alt=""
+        style={{
+          transform: 'matrix(-1, 0, 0, 1, 0, 0)',
+          marginLeft: '3.125rem',
+          zIndex: '1000000000',
+          cursor: 'pointer',
+        }}
+        onClick={handleNextSlide}
+      />
+    </S.Container>
   );
 };
 

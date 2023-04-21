@@ -15,9 +15,7 @@ const MainContainer = ({ isDark }: Props) => {
     <S.MainBox>
       <C.Banner />
       <S.CardContainer>
-        <S.Cards>
-          <C.Card data={project} />
-        </S.Cards>
+        <C.Card data={project} />
       </S.CardContainer>
     </S.MainBox>
   );

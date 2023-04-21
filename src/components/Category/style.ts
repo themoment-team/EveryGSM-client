@@ -2,10 +2,9 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 
 export const Container = styled.div`
-  width: 304px;
+  width: 400px;
   height: 30px;
   position: relative;
-  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: left;
