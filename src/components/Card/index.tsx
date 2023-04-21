@@ -15,7 +15,6 @@ const Card = ({ data }: { data: any }) => {
   const handleOpenModal = (id: number) => {
     setSelectedId(id);
     setShowModal(true);
-    console.log('click');
   };
   const handleCloseModal = () => {
     setShowModal(false);
@@ -63,7 +62,11 @@ const Card = ({ data }: { data: any }) => {
         >
           {projectList.map((data, i) => (
             <div key={i} /* style={{ perspective: '10000px' }}*/>
-              <S.Card /* isFlip={isFlip}*/>
+              <S.Card
+                /* isFlip={isFlip}*/ style={{
+                  marginRight: (i + 1) % 3 === 0 ? '3px' : '25px',
+                }}
+              >
                 <S.Front>
                   <S.Desc>
                     {showModal && selectedId === data.id && (

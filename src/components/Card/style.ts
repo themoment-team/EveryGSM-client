@@ -31,7 +31,7 @@ export const Card = styled.div`
   flex-direction: column;
   float: left;
 
-  &:nth-child(3n) {
+  &:nth-child(3n + 3) {
     margin-right: 25px;
   }
 `;
