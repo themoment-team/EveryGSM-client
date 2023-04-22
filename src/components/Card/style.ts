@@ -29,10 +29,6 @@ export const Card = styled.div`
   box-shadow: rgba(112, 144, 176, 0.2);
   flex-direction: column;
   float: left;
-
-  &:nth-child(3n + 3) {
-    margin-right: 1.5625rem;
-  }
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
