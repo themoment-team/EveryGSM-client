@@ -16,7 +16,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: left;
   white-space: nowrap;
-  animation: ${slider} 60s linear infinite;
+  animation: ${slider} 5s linear infinite;
 `;
 
 export const Categories = styled.div`

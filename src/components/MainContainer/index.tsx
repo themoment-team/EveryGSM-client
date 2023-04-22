@@ -4,7 +4,6 @@ import { Vector } from 'assets/imgs';
 import Image from 'next/image';
 import project from '../../../public/data/project.json';
 import React, { useRef, useState } from 'react';
-// import Slide from './Slide';
 
 interface Props {
   isDark: boolean;
