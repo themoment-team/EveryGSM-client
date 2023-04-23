@@ -2,13 +2,7 @@
 import * as S from './style';
 import React, { useState } from 'react';
 const Category = ({ data }: { data: any }) => {
-  return (
-    <S.Container>
-      {data.categories.map((i: number) => {
-        return <S.Categories key={i}>{i}</S.Categories>;
-      })}
-    </S.Container>
-  );
+  return <S.Categories>{data}</S.Categories>;
 };
 
 export default Category;

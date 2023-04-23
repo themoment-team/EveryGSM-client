@@ -1,12 +1,11 @@
 'use client';
 import * as S from './style';
-import * as I from 'assets/imgs';
 import * as C from 'components';
 import Image from 'next/image';
-import React, { useCallback, useState } from 'react';
 import project from '../../../public/data/project.json';
 import Link from 'next/link';
 import { Back } from 'assets/imgs';
+import { css } from '@emotion/react';
 const Modal = ({
   show,
   onClose,
@@ -14,7 +13,7 @@ const Modal = ({
 }: {
   show: boolean;
   onClose: () => void;
-  index: number;
+  index: string;
 }) => {
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
@@ -29,24 +28,26 @@ const Modal = ({
             width={80}
             height={80}
             alt="로고이미지"
-            style={{ borderRadius: '100%' }}
+            css={css`
+              border-radius: 100%;
+            `}
           ></Image>
         </S.Img>
         <S.Title>{selectedProject?.projectName}</S.Title>
-        <S.Creater>
-          <Link href={selectedProject?.projectDescription || ''}>
-            {selectedProject?.createrName}
-          </Link>
-        </S.Creater>
+        <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
-          <C.Category data={selectedProject}></C.Category>
+          {selectedProject?.categories.map(category => (
+            <div key={category}>
+              <C.Category data={category} />
+            </div>
+          ))}
         </S.Categories>
         <S.Desc>
           <div
-            style={{
-              width: '21.875rem',
-              textAlign: 'left',
-            }}
+            css={css`
+              width: 21.875rem;
+              text-align: left;
+            `}
           >
             {selectedProject?.projectDescription}
           </div>
@@ -58,7 +59,9 @@ const Modal = ({
               width={24}
               height={24}
               alt="로고이미지"
-              style={{ borderRadius: '100%' }}
+              css={css`
+                border-radius: 100%;
+              `}
             ></Image>
           </S.ProfileImg>
           <S.ProjectName>{selectedProject?.projectName}</S.ProjectName>

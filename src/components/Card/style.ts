@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 export const Container = styled.div`
   display: flex;
-  width: 79.0625rem;
   justify-content: center;
   align-items: center;
+  width: 79.0625rem;
 `;
 
 export const SlideBtn = styled.div`
@@ -124,6 +124,7 @@ export const Categories = styled.div`
   overflow: scroll;
   margin-top: 3.75rem;
   height: 1.875rem;
+  display: flex;
 `;
 
 export const Description = styled.div`
