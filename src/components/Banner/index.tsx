@@ -2,7 +2,6 @@
 import * as S from './style';
 import Image from 'next/image';
 import { Rocket } from 'assets/imgs';
-import { css } from '@emotion/react';
 
 const Home = () => {
   return (
@@ -15,11 +14,11 @@ const Home = () => {
       </S.TextContainer>
       <Image
         src={Rocket}
-        css={css`
-          width: '21.875rem';
-          height: '19.375rem';
-          margin-right: '1.25rem';
-        `}
+        style={{
+          width: '21.875rem',
+          height: '19.375rem',
+          marginRight: '1.25rem',
+        }}
         alt="Rocket"
       />
     </S.BannerContainer>

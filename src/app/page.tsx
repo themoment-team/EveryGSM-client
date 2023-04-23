@@ -10,7 +10,7 @@ function Home() {
     <ThemeProvider theme={isDark ? darktheme : theme}>
       <C.Nav isDark={isDark} setIsDark={setIsDark} />
       <C.MainContainer />
-      <C.Footer />
+      <C.Footer isDark={isDark} />
     </ThemeProvider>
   );
 }

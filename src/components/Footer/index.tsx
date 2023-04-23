@@ -1,10 +1,12 @@
 import * as S from './style';
 
-const Footer = () => {
+const Footer = ({ isDark }: { isDark: boolean }) => {
   return (
     <div>
       <S.FooterContainer id="footer">
-        <S.FootText>Copyright 2022. the moment All rights reserved.</S.FootText>
+        <S.FootText isDark={isDark}>
+          Copyright 2022. the moment All rights reserved.
+        </S.FootText>
       </S.FooterContainer>
     </div>
   );

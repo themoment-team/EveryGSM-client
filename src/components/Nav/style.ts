@@ -8,7 +8,8 @@ export const NavContainer = styled.nav`
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
-  background-color: ${({ theme: { gray } }) => gray[7]};
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#191919' : '#ffffff'};
 `;
 
 export const ItemContainer = styled.div`
@@ -31,7 +32,7 @@ export const Title = styled.h2`
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
   transition: ease-in-out 0.3s;
-  color: ${({ theme: { gray } }) => gray[9]};
+  color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
 `;
 
 export const ToggleButton = styled.div`
@@ -53,5 +54,7 @@ export const ToggleIcon = styled.div`
   justify-content: center;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
-  background-color: ${({ theme: { gray } }) => gray[8]};
+  translate: ${({ isDark }: { isDark: boolean }) => isDark && '2.4375rem'};
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#999999' : '#ffffff'};
 `;

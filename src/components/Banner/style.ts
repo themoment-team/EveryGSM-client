@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
 
 export const TextContainer = styled.div`
   letter-spacing: 0.08em;

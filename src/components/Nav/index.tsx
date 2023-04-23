@@ -22,18 +22,14 @@ const Nav = ({ isDark, setIsDark }: Props) => {
 
   return (
     <>
-      <S.NavContainer>
+      <S.NavContainer isDark={isDark}>
         <S.ItemContainer>
           <S.IconContainer>
             <Image src={I.LogoIcon} alt="" />
-            <S.Title>EveryGSM</S.Title>
+            <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
-            <S.ToggleIcon
-              css={css`
-                translate: ${isDark ? '2.4375rem' : '0'};
-              `}
-            >
+            <S.ToggleIcon isDark={isDark}>
               <Image src={isDark ? I.Moon : I.Sun} alt="" />
             </S.ToggleIcon>
           </S.ToggleButton>
