@@ -36,7 +36,7 @@ export const theme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {
-    mobile: '620px',
+    mobile: '38.75rem',
     tablet: '71.875rem',
   },
   mode: {
@@ -61,7 +61,7 @@ export const darktheme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {
-    mobile: '620px',
+    mobile: '38.75rem',
     tablet: '71.875rem',
   },
   mode: {
