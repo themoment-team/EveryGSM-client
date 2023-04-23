@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <S.BannerContainer>
       <S.TextContainer>
-        {windowWidth > 390 ? (
+        {windowWidth > 620 ? (
           <>
             <S.SmallText className="roboto">
               GSM의 모든 프로젝트를 한 곳에

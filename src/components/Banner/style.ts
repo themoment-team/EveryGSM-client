@@ -36,9 +36,9 @@ export const TextContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     position: absolute;
-    margin: 0;
     left: 7%;
     top: 18%;
+    margin: 0;
     padding: 0;
   }
 `;
@@ -47,7 +47,7 @@ export const SmallText = styled.p`
   font-size: 1.5rem;
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
-    font-size: 21px;
+    font-size: 1rem;
   }
 `;
 
@@ -56,12 +56,12 @@ export const BigText = styled.p`
   font-size: 5rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    font-size: 52px;
-    margin-top: 24px;
+    font-size: 3.25rem;
+    margin-top: 1.5rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    font-size: 21px;
+    font-size: 1.3125rem;
     margin: 0;
   }
 `;
@@ -73,12 +73,18 @@ export const MobileText = styled.p`
   letter-spacing: -0.03em;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    font-size: 1.3125rem;
+  }
+
+  @media (max-width: 390px) {
     font-size: 6vw;
   }
 `;
 
 export const BannerImg = styled.div`
   width: 21.875rem;
+  height: 100%;
+
   img {
     position: relative !important;
     object-fit: contain;
@@ -86,17 +92,22 @@ export const BannerImg = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     position: absolute;
-    right: 0.3862rem;
-    bottom: 0.7375rem;
-    width: 32%;
-    height: 84%;
+    right: 0rem;
+    width: 13.75rem;
+    height: 13.75rem;
     object-fit: cover;
   }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 40.6%;
-    height: 74.3%;
+    width: 9.5rem;
+    height: 9.5rem;
     position: absolute;
     right: 0;
+  }
+
+  @media (max-width: 390px) {
+    width: 40.6%;
+    height: 74.3%;
     bottom: 0.4688rem;
   }
 `;

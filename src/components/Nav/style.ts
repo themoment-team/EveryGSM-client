@@ -7,7 +7,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.nav};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
@@ -55,7 +55,7 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   color: ${({ theme: { mode } }) => mode.title};
 `;
 
@@ -80,28 +80,31 @@ export const ToggleButton = styled.div`
   }
 `;
 
-export const ToggleIcon = styled.div`
+export const ToggleIcon = styled.div<{ isDark: boolean }>`
   width: 1.75rem;
   height: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.875rem;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.toggle};
+  translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    translate: ${({ isDark }) => isDark && '2.125rem'};
     width: 1.5rem;
     height: 1.5rem;
   }
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    translate: ${({ isDark }) => isDark && '1.75rem'};
     width: 1.375rem;
     height: 1.375rem;
   }
 `;
 
-export const Dlwjddn = styled.div`
+export const LogoContainer = styled.div`
   img {
     width: 100%;
     height: 100%;
@@ -117,5 +120,19 @@ export const Dlwjddn = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 2.25rem;
     height: 2.25rem;
+  }
+`;
+
+export const ToggleContainer = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  object-fit: cover;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 1.0313rem;
+    height: 1.0313rem;
   }
 `;

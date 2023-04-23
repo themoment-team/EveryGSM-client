@@ -24,7 +24,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
     <>
       <S.NavContainer
         css={css`
-          @media (max-width: 24.375rem) {
+          @media (max-width: 620px) {
             border: none;
             background-color: ${isDark ? '#191919' : '#f1f1f5'};
           }
@@ -32,17 +32,13 @@ const Nav = ({ isDark, setIsDark }: Props) => {
       >
         <S.ItemContainer>
           <S.IconContainer>
-            <S.Dlwjddn>
+            <S.LogoContainer>
               <Image src={I.LogoIcon} alt="" />
-            </S.Dlwjddn>
+            </S.LogoContainer>
             <S.Title>EveryGSM</S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
-            <S.ToggleIcon
-              css={css`
-                translate: ${isDark ? '2.4375rem' : '0'};
-              `}
-            >
+            <S.ToggleIcon isDark={isDark}>
               <Image src={isDark ? I.Moon : I.Sun} alt="" fill />
             </S.ToggleIcon>
           </S.ToggleButton>
