@@ -9,8 +9,8 @@ function Home() {
   return (
     <ThemeProvider theme={isDark ? darktheme : theme}>
       <C.Nav isDark={isDark} setIsDark={setIsDark} />
-      <C.MainContainer isDark={isDark}></C.MainContainer>
-      <C.Footer isDark={isDark} />
+      <C.MainContainer />
+      <C.Footer />
     </ThemeProvider>
   );
 }

@@ -28,7 +28,6 @@ export const BannerContainer = styled.div`
     ${({ theme: { primary } }) =>
       `${primary.pale_yellow} -8.73%, ${primary.magenta} 102.76%`}
   );
-
   border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;

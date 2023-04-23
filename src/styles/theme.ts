@@ -48,18 +48,6 @@ export const theme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {},
-  // mode: {
-  // nav: '#ffffff',
-  // body: '#f1f1f5',
-  // footer: '#e3e3e3',
-  // toggle: '#ffffff',
-  // title: '#000000',
-  // text: '#191919',
-  // card: '#ffffff',
-  // tag: '#f1f1f5',
-  // tag_text: '#999999',
-  // icon: '#D9D9D9',
-  // },
 } as const;
 
 export const darktheme: ThemeType = {
@@ -85,16 +73,4 @@ export const darktheme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {},
-  // mode: {
-  // nav: '#191919',
-  // body: '#191919',
-  // footer: '#636363',
-  // toggle: '#999999',
-  // title: '#ffffff',
-  // text: '#ffffff',
-  // card: '#484848',
-  // tag: '#636363',
-  // tag_text: '#ffffff',
-  // icon: '#e3e3e3',
-  // },
 } as const;
