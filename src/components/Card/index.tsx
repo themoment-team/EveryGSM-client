@@ -43,6 +43,7 @@ const Card = ({
           <S.Desc>
             {showModal && selectedId === data.id && (
               <C.Modal
+                isDark={isDark}
                 show={showModal}
                 onClose={handleCloseModal}
                 index={selectedId}

@@ -10,10 +10,12 @@ const Modal = ({
   show,
   onClose,
   index,
+  isDark,
 }: {
   show: boolean;
   onClose: () => void;
   index: string;
+  isDark: boolean;
 }) => {
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
@@ -38,7 +40,7 @@ const Modal = ({
         <S.Categories>
           {selectedProject?.categories.map(category => (
             <div key={category}>
-              <C.Category data={category} />
+              <C.Category isDark={isDark} data={category} />
             </div>
           ))}
         </S.Categories>
