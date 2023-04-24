@@ -1,8 +1,6 @@
 import * as S from './style';
-import * as I from 'assets/imgs';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import { css } from '@emotion/react';
 
 interface Props {
   isDark: boolean;
@@ -25,12 +23,22 @@ const Nav = ({ isDark, setIsDark }: Props) => {
       <S.NavContainer isDark={isDark}>
         <S.ItemContainer>
           <S.IconContainer>
-            <Image src={I.LogoIcon} alt="" />
+            <Image
+              src="/images/LogoIcon.svg"
+              width={44}
+              height={44}
+              alt="logo"
+            />
             <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
-              <Image src={isDark ? I.Moon : I.Sun} alt="" />
+              <Image
+                src={isDark ? '/images/Moon.svg' : '/images/Sun.svg'}
+                alt=""
+                width={20}
+                height={20}
+              />
             </S.ToggleIcon>
           </S.ToggleButton>
         </S.ItemContainer>

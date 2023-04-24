@@ -4,7 +4,6 @@ import * as C from 'components';
 import Image from 'next/image';
 import project from '../../../public/data/project.json';
 import Link from 'next/link';
-import { Back } from 'assets/imgs';
 import { css } from '@emotion/react';
 const Modal = ({
   show,
@@ -22,7 +21,12 @@ const Modal = ({
     <S.ModalContainer show={show}>
       <S.ModalContent isDark={isDark}>
         <S.Back onClick={onClose}>
-          <Image src={Back} width={18} height={18} alt="로고이미지" />
+          <Image
+            src="/images/Back.svg"
+            width={18}
+            height={18}
+            alt="로고이미지"
+          />
         </S.Back>
         <S.Img>
           <Image

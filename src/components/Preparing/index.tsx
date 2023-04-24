@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import { LogoIcon } from 'assets/imgs';
 import Image from 'next/image';
 
 export default function preparing() {
@@ -17,9 +16,10 @@ export default function preparing() {
         css={css`
           margin-bottom: 20px;
         `}
-        src={LogoIcon}
+        src="/images/LogoIcon.png"
         alt="logo"
         width={200}
+        height={200}
       />
       <p>반응형은 정식 버전에서 구현 예정입니다.</p>
       <p>감사합니다</p>

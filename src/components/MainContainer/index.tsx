@@ -2,7 +2,6 @@ import * as C from 'components';
 import * as S from './style';
 import project from '../../../public/data/project.json';
 import Image from 'next/image';
-import { Vector } from 'assets/imgs';
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 
@@ -36,7 +35,9 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
       <S.CardContainer>
         <S.Container>
           <Image
-            src={Vector}
+            src="/images/Vector.svg"
+            width={16}
+            height={34}
             css={css`
               margin-right: 3.125rem;
               z-index: 1000000000;
@@ -63,7 +64,9 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
             </S.SlideBox>
           </S.Cards>
           <Image
-            src={Vector}
+            src="/images/Vector.svg"
+            width={16}
+            height={34}
             alt=""
             css={css`
               transform: matrix(-1, 0, 0, 1, 0, 0);

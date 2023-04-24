@@ -12,7 +12,7 @@ const Home = () => {
         <S.BigText className="roboto">EveryGSM</S.BigText>
       </S.TextContainer>
       <Image
-        src="/images/Rocket.png"
+        src="/images/projects/Rocket.png"
         width={323}
         height={268}
         style={{
