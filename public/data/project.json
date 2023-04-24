@@ -136,5 +136,18 @@
     "githubProfileURL": "https://github.com/Lee-Seungje.png",
     "createrName": "이승제",
     "categories": ["#React", "#Next.js", "#Typescript"]
+  },
+  {
+    "id": "10",
+    "projectName": "GGV",
+    "projectDescription": "Gsm Golden Village, 해외 영화 소개 서비스입니다. ",
+    "imageURL": "/images/projects/GGV.png",
+    "createrDescription": "GSM 최고 디자이너 김준과 유시온",
+    "projectUrl": "https://gsm-golden-village.vercel.app/",
+    "githubRepoURL": ["https://github.com/yoosion030/GGV"],
+    "githubURL": "https://github.com/yoosion030",
+    "githubProfileURL": "https://github.com/yoosion030.png",
+    "createrName": "유시온, 김준",
+    "categories": ["#Next, #TypeScript"]
   }
 ]
