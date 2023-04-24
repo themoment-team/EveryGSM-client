@@ -1,7 +1,6 @@
 'use client';
 import * as S from './style';
 import Image from 'next/image';
-import { Rocket } from 'assets/imgs';
 
 const Home = () => {
   return (
@@ -13,10 +12,10 @@ const Home = () => {
         <S.BigText className="roboto">EveryGSM</S.BigText>
       </S.TextContainer>
       <Image
-        src={Rocket}
+        src="/images/Rocket.png"
+        width={323}
+        height={268}
         style={{
-          width: '21.875rem',
-          height: '19.375rem',
           marginRight: '1.25rem',
         }}
         alt="Rocket"

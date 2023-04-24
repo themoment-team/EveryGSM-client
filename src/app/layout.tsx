@@ -1,5 +1,4 @@
 'use client';
-import Head from 'next/head';
 import './globals.css';
 
 export default function RootLayout({
@@ -9,10 +8,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <title>Every GSM</title>
-      <Head>
-        <meta property="og:title" content="Every GSM" key="title" />
-      </Head>
+      <title>EveryGSM</title>
+      <link rel="icon" href="https://ifh.cc/g/YmvWVp.png" />
       <body>{children}</body>
     </html>
   );
