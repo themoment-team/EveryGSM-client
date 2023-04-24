@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <title>EveryGSM</title>
-      <link rel="icon" href="https://ifh.cc/g/YmvWVp.png" />
+      <link rel="icon" href="/images/Favicon.png" />
       <body>{children}</body>
     </html>
   );
