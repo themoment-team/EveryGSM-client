@@ -1,5 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
+
 export const ModalContainer = styled.div<{ show: boolean }>`
   display: flex;
   justify-content: center;
@@ -13,6 +14,7 @@ export const ModalContainer = styled.div<{ show: boolean }>`
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 `;
+
 export const ModalContent = styled.div`
   border-radius: 0.3125rem;
   padding: 1.25rem;
@@ -39,6 +41,7 @@ export const Title = styled.div`
   color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#ffffff' : '#000000'};
 `;
+
 export const Creater = styled.span`
   font-size: 1.125rem;
   font-weight: bolder;
@@ -62,11 +65,13 @@ export const Desc = styled.div`
   justify-content: center;
   font-weight: 300;
 `;
+
 export const Profile = styled.div`
   display: flex;
   margin-top: 2.75rem;
   width: 25.6875rem;
 `;
+
 export const ProfileImg = styled.div`
   width: 1.5rem;
   height: 1.5rem;
@@ -77,6 +82,7 @@ export const ProfileImg = styled.div`
   justify-content: center;
   margin-right: 0.625rem;
 `;
+
 export const ProjectName = styled.div`
   font-family: Pretendard;
   font-size: 1.125rem;
@@ -87,6 +93,7 @@ export const ProjectName = styled.div`
   color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#f1f1f5' : '#000000'};
 `;
+
 export const GithubBox = styled.div`
   display: flex;
   flex-direction: column;

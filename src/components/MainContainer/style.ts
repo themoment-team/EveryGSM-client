@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const MainBox = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;

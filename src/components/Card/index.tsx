@@ -7,6 +7,7 @@ import projectData from 'interface/projectData';
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
+
 const Card = ({
   data,
   index,
