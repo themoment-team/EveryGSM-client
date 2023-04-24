@@ -6,7 +6,7 @@ import { Vector } from 'assets/imgs';
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 
-const MainContainer = () => {
+const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [projectLength, setProjectLength] = useState<number>(
     Math.floor(project.length / 3),
@@ -57,7 +57,7 @@ const MainContainer = () => {
             >
               {project.map((data, slideIndex) => (
                 <div key={slideIndex}>
-                  <C.Card data={data} index={slideIndex} />
+                  <C.Card isDark={isDark} data={data} index={slideIndex} />
                 </div>
               ))}
             </S.SlideBox>

@@ -7,7 +7,15 @@ import projectData from 'interface/projectData';
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
-const Card = ({ data, index }: { data: projectData; index: number }) => {
+const Card = ({
+  data,
+  index,
+  isDark,
+}: {
+  data: projectData;
+  index: number;
+  isDark: boolean;
+}) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const handleOpenModal = (id: string) => {
@@ -25,6 +33,7 @@ const Card = ({ data, index }: { data: projectData; index: number }) => {
   return (
     <div /* style={{ perspective: '10000px' }}*/>
       <S.Card
+        isDark={isDark}
         /* isFlip={isFlip}*/
         css={css`
           margin-right: ${(index + 1) % 3 === 0 ? '3px' : '25px'};
@@ -66,23 +75,15 @@ const Card = ({ data, index }: { data: projectData; index: number }) => {
                     `}
                   ></Image>
                 </S.Logo>
-                <S.Title>{data.projectName}</S.Title>
+                <S.Title isDark={isDark}>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
-                  <Image
-                    src={I.Person}
-                    css={css`
-                      width: 25px;
-                      height: 24px;
-                      margin-right: 13px;
-                    `}
-                    alt="Person"
-                  />
-                  <S.Creater>{data.createrName}</S.Creater>
+                  <I.Person isDark={isDark} />
+                  <S.Creater isDark={isDark}>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
                   {data.categories.map(i => (
                     <div key={i}>
-                      <C.Category data={i} />
+                      <C.Category data={i} isDark={isDark} />
                     </div>
                   ))}
                 </S.Categories>

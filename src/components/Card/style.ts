@@ -29,6 +29,8 @@ export const Card = styled.div`
   box-shadow: rgba(112, 144, 176, 0.2);
   flex-direction: column;
   float: left;
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#505050' : '#ffffff'};
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
@@ -100,10 +102,11 @@ export const Logo = styled.div`
 `;
 
 export const Title = styled.div`
-  color: black;
   font-size: 2rem;
   font-weight: 600;
   margin-top: 1rem;
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#ffffff' : '#000000'};
 `;
 
 export const Create = styled.div`
@@ -118,6 +121,8 @@ export const Creater = styled.div`
   color: #999999;
   font-size: 1.25rem;
   font-weight: 600;
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#e3e3e3' : '#999999'};
 `;
 
 export const Categories = styled.div`

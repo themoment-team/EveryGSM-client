@@ -27,7 +27,7 @@ function Home() {
         }}
       />
       <C.Nav isDark={isDark} setIsDark={setIsDark} />
-      <C.MainContainer />
+      <C.MainContainer isDark={isDark} />
       <C.Footer isDark={isDark} />
     </ThemeProvider>
   );
