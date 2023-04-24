@@ -14,7 +14,6 @@ export const ModalContainer = styled.div<{ show: boolean }>`
   background: rgba(0, 0, 0, 0.3);
 `;
 export const ModalContent = styled.div`
-  background-color: white;
   border-radius: 0.3125rem;
   padding: 1.25rem;
   width: 32.5rem;
@@ -25,6 +24,8 @@ export const ModalContent = styled.div`
   align-items: center;
   position: absolute;
   height: 50rem;
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#191919' : '#FFFFFF'};
 `;
 
 export const Title = styled.div`
@@ -34,8 +35,9 @@ export const Title = styled.div`
   line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
-  color: #000000;
   margin-top: 1.875rem;
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#ffffff' : '#000000'};
 `;
 export const Creater = styled.span`
   font-size: 1.125rem;
@@ -50,7 +52,10 @@ export const Creater = styled.span`
 export const Desc = styled.div`
   width: 25.5rem;
   height: 12.75rem;
-  background-color: #f1f1f5;
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#636363' : '#f1f1f5'};
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#f1f1f5' : '#636363'};
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
@@ -79,7 +84,8 @@ export const ProjectName = styled.div`
   line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
-  color: #000000;
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#f1f1f5' : '#000000'};
 `;
 export const GithubBox = styled.div`
   display: flex;
@@ -114,7 +120,7 @@ export const Repo = styled.div`
 export const Categories = styled.div`
   z-index: 10000000000000;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   width: 25.4375rem;
   margin: 1.5rem 0rem;

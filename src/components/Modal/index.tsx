@@ -20,7 +20,7 @@ const Modal = ({
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
     <S.ModalContainer show={show}>
-      <S.ModalContent>
+      <S.ModalContent isDark={isDark}>
         <S.Back onClick={onClose}>
           <Image src={Back} width={18} height={18} alt="로고이미지" />
         </S.Back>
@@ -35,7 +35,7 @@ const Modal = ({
             `}
           ></Image>
         </S.Img>
-        <S.Title>{selectedProject?.projectName}</S.Title>
+        <S.Title isDark={isDark}>{selectedProject?.projectName}</S.Title>
         <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
           {selectedProject?.categories.map(category => (
@@ -44,7 +44,7 @@ const Modal = ({
             </div>
           ))}
         </S.Categories>
-        <S.Desc>
+        <S.Desc isDark={isDark}>
           <div
             css={css`
               width: 21.875rem;
@@ -66,7 +66,9 @@ const Modal = ({
               `}
             ></Image>
           </S.ProfileImg>
-          <S.ProjectName>{selectedProject?.projectName}</S.ProjectName>
+          <S.ProjectName isDark={isDark}>
+            {selectedProject?.projectName}
+          </S.ProjectName>
         </S.Profile>
         <S.GithubBox>
           {selectedProject?.githubRepoURL.map((data, i) => {
