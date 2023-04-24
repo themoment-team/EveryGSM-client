@@ -4,14 +4,17 @@ import { useEffect, useState } from 'react';
 import { ThemeProvider } from '@emotion/react';
 import { theme, darktheme } from 'styles/theme';
 import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/navigation';
 
 function Home() {
   const [isDark, setIsDark] = useState<boolean>(false);
 
+  const { replace } = useRouter();
+
   useEffect(() => {
-    window.innerWidth < 1300 && (window.location.href = '/preparing');
+    window.innerWidth < 1300 && replace('/preparing');
     window.onresize = () => {
-      window.innerWidth < 1300 && (window.location.href = '/preparing');
+      window.innerWidth < 1300 && replace('/preparing');
     };
   }, []);
 
