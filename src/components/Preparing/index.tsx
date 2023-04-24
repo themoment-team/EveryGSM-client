@@ -16,7 +16,7 @@ export default function preparing() {
         css={css`
           margin-bottom: 20px;
         `}
-        src="/images/LogoIcon.png"
+        src="/images/LogoIcon.svg"
         alt="logo"
         width={200}
         height={200}
