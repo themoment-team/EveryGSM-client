@@ -24,7 +24,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
     <>
       <S.NavContainer
         css={css`
-          @media (max-width: 620px) {
+          @media (max-width: 38.75rem) {
             border: none;
             background-color: ${isDark ? '#191919' : '#f1f1f5'};
           }
