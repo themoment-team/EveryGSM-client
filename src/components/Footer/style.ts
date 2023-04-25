@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 
 export const FooterContainer = styled.footer`
-  /* position: absolute; */
-  /* bottom: 0; */
   width: 100vw;
   height: 5rem;
   border: 0;
@@ -11,6 +9,11 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[1]};
+
+  @media (min-height: 1000px) {
+    position: absolute;
+    bottom: 0;
+  }
 `;
 
 export const FootText = styled.p`
