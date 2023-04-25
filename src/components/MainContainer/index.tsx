@@ -2,7 +2,7 @@ import * as C from 'components';
 import * as S from './style';
 import project from '../../../public/data/project.json';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 
 const MainContainer = ({ isDark }: { isDark: boolean }) => {

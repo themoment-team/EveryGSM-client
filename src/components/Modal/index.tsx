@@ -5,17 +5,15 @@ import Image from 'next/image';
 import project from '../../../public/data/project.json';
 import Link from 'next/link';
 import { css } from '@emotion/react';
-const Modal = ({
-  show,
-  onClose,
-  index,
-  isDark,
-}: {
+
+interface Props {
   show: boolean;
   onClose: () => void;
   index: string;
   isDark: boolean;
-}) => {
+}
+
+const Modal = ({ show, onClose, index, isDark }: Props) => {
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
     <S.ModalContainer show={show}>

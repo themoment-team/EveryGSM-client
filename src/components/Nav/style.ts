@@ -15,8 +15,8 @@ export const NavContainer = styled.nav`
 export const ItemContainer = styled.div`
   width: 71rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const IconContainer = styled.div`

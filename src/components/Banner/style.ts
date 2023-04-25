@@ -10,24 +10,24 @@ export const TextContainer = styled.div`
 `;
 
 export const SmallText = styled.p`
-  margin-top: 4rem;
   font-size: 1.5rem;
+  margin-top: 4rem;
 `;
 
 export const BigText = styled.p`
-  margin-top: 3.25rem;
   font-size: 5.3125rem;
+  margin-top: 3.25rem;
 `;
 
 export const BannerContainer = styled.div`
   width: 71rem;
   height: 18.75rem;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
   background: linear-gradient(
     275.95deg,
     ${({ theme: { primary } }) =>
       `${primary.pale_yellow} -8.73%, ${primary.magenta} 102.76%`}
   );
-  border-radius: 1.25rem;
-  display: flex;
-  justify-content: space-between;
 `;
