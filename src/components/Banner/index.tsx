@@ -3,12 +3,14 @@ import * as S from './style';
 import { Rocket } from 'assets/imgs';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { useWidthState } from 'Stores';
 
 const Home = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const width = useWidthState(state => state.width);
+  const setWidth = useWidthState(state => state.setWidth);
 
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
+    setWidth(window.innerWidth);
   };
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const Home = () => {
   return (
     <S.BannerContainer>
       <S.TextContainer>
-        {windowWidth > 620 ? (
+        {width > 620 ? (
           <>
             <S.SmallText className="roboto">
               GSM의 모든 프로젝트를 한 곳에

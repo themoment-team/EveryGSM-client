@@ -7,7 +7,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  /* transition: ease-in-out 0.3s; */
   background-color: ${({ theme: { mode } }) => mode.nav};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
@@ -44,7 +44,7 @@ export const Title = styled.h2`
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
     font-size: 1.25rem;
-  } ;
+  }
 `;
 
 export const LogoImg = styled.div`
@@ -55,7 +55,7 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  transition: ease-in-out 0.3s;
+  /* transition: ease-in-out 0.3s; */
   color: ${({ theme: { mode } }) => mode.title};
 `;
 
@@ -87,7 +87,7 @@ export const ToggleIcon = styled.div<{ isDark: boolean }>`
   align-items: center;
   justify-content: center;
   border-radius: 0.875rem;
-  transition: ease-in-out 0.3s;
+  /* transition: ease-in-out 0.3s; */
   background-color: ${({ theme: { mode } }) => mode.toggle};
   translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
 
