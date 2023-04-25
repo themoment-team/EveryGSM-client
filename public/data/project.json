@@ -78,8 +78,13 @@
     "projectDescription": "GSM 교내 계정 통합 소셜 로그인 서비스.",
     "imageURL": "/images/projects/Gauth.png",
     "createrDescription": "https://matsogeum.notion.site/MSG-7ac3204e54e0484c9b1a63f472aa3e95",
-    "projectUrl": "https://github.com/GSM-MSG/GAuthSignin-Swift.git",
-    "githubRepoURL": ["https://github.com/GSM-MSG/GAuthSignin-Swift"],
+    "projectUrl": "https://gauth.co.kr/",
+    "githubRepoURL": [
+      "https://github.com/GSM-MSG/GAUTH_frontend",
+      "https://github.com/GSM-MSG/GAUTH_BackEnd",
+      "https://github.com/GSM-MSG/GAuth-Signin-Android",
+      "https://github.com/GSM-MSG/GAuthSignin-Swift"
+    ],
     "githubURL": "https://github.com/GSM-MSG",
     "githubProfileURL": "https://github.com/GSM-MSG.png",
     "createrName": "MSG",
@@ -148,6 +153,6 @@
     "githubURL": "https://github.com/yoosion030",
     "githubProfileURL": "https://github.com/yoosion030.png",
     "createrName": "유시온, 김준",
-    "categories": ["#Next", "#TypeScript"]
+    "categories": ["#Next.js", "#TypeScript"]
   }
 ]
