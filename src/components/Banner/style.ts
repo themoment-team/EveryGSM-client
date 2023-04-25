@@ -59,11 +59,6 @@ export const BigText = styled.p`
     font-size: 3.25rem;
     margin-top: 1.5rem;
   }
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    font-size: 1.3125rem;
-    margin: 0;
-  }
 `;
 
 export const MobileText = styled.p`
