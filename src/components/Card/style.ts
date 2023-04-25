@@ -1,5 +1,13 @@
 import styled from '@emotion/styled';
 
+export const Categories = styled.div`
+  overflow: scroll;
+  margin-top: 3.75rem;
+  height: 1.875rem;
+  display: flex;
+  white-space: nowrap;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -126,13 +134,6 @@ export const Creater = styled.div`
   color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#e3e3e3' : '#999999'};
   transition: ease-in-out 0.3s;
-`;
-
-export const Categories = styled.div`
-  overflow: scroll;
-  margin-top: 3.75rem;
-  height: 1.875rem;
-  display: flex;
 `;
 
 export const Description = styled.div`

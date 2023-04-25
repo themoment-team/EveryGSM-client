@@ -70,7 +70,7 @@ const Card = ({
               <S.CardContents>
                 <S.Logo>
                   <Image
-                    src={data.imageURL}
+                    src={data.projectLogoUri}
                     width={72}
                     height={72}
                     alt="로고이미지"
