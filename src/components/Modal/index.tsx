@@ -30,7 +30,7 @@ const Modal = ({
         </S.Back>
         <S.Img>
           <Image
-            src={selectedProject?.imageURL ?? ''}
+            src={selectedProject?.projectLogoUri ?? ''}
             width={80}
             height={80}
             alt="로고이미지"
