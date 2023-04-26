@@ -12,7 +12,6 @@ interface Props {
 
 const Nav = ({ isDark, setIsDark }: Props) => {
   const width = useWidthState(state => state.width);
-  const [svgSize, setSvgSize] = useState<number>(17.89);
 
   const handleClick = () => {
     setIsDark(!isDark);
