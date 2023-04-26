@@ -7,19 +7,27 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.nav};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     height: 5.5rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    height: 3.5rem;
+  }
 `;
 
 export const ItemContainer = styled.div`
-  width: 71rem;
+  width: 71.85rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 81%;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 81%;
   }
@@ -55,7 +63,7 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   color: ${({ theme: { mode } }) => mode.title};
 `;
 
@@ -87,7 +95,7 @@ export const ToggleIcon = styled.div<{ isDark: boolean }>`
   align-items: center;
   justify-content: center;
   border-radius: 0.875rem;
-  /* transition: ease-in-out 0.3s; */
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme: { mode } }) => mode.toggle};
   translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
 
