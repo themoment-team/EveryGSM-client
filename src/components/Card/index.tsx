@@ -66,7 +66,7 @@ const Card = ({
                 alt="Vector"
               />
             </S.DetailBtn>
-            <Link href={data.projectUrl}>
+            <Link href={data.projectUrl} target="_blank">
               <S.CardContents>
                 <S.Logo>
                   <Image
