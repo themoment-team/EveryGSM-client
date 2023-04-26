@@ -19,7 +19,6 @@ export const NavContainer = styled.nav`
 
   background-color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#191919' : '#ffffff'};
-
 `;
 
 export const ItemContainer = styled.div`
@@ -36,7 +35,6 @@ export const ItemContainer = styled.div`
   }
 
   justify-content: space-between;
-
 `;
 
 export const IconContainer = styled.div`
@@ -51,6 +49,7 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
+  color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     font-size: 1.5rem;
@@ -93,7 +92,6 @@ export const ToggleButton = styled.div`
   }
 
   background-color: ${({ theme: { gray } }) => gray[1]};
-
 `;
 
 export const ToggleIcon = styled.div<{ isDark: boolean }>`
@@ -104,6 +102,7 @@ export const ToggleIcon = styled.div<{ isDark: boolean }>`
   justify-content: center;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
+  background-color: ${({ isDark }) => (isDark ? '#999999' : '#ffffff')};
 
   translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
 
@@ -154,5 +153,4 @@ export const ToggleContainer = styled.div`
 
   background-color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#999999' : '#ffffff'};
-
 `;
