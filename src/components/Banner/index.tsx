@@ -6,8 +6,7 @@ import { useEffect, useState } from 'react';
 import { useWidthState } from 'Stores';
 
 const Home = () => {
-  const width = useWidthState(state => state.width);
-  const setWidth = useWidthState(state => state.setWidth);
+  const { width, setWidth } = useWidthState();
 
   const handleResize = () => {
     setWidth(window.innerWidth);

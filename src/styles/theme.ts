@@ -62,7 +62,7 @@ export const darktheme: ThemeType = {
   },
   breakPoint: {
     mobile: '38.75rem',
-    tablet: '71.875rem',
+    tablet: '71.875remz',
   },
   mode: {
     nav: '#191919',

@@ -1,8 +1,9 @@
 import * as S from './style';
 import * as I from 'assets/imgs';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
+import { useWidthState } from 'Stores';
 
 interface Props {
   isDark: boolean;
@@ -10,6 +11,9 @@ interface Props {
 }
 
 const Nav = ({ isDark, setIsDark }: Props) => {
+  const width = useWidthState(state => state.width);
+  const [svgSize, setSvgSize] = useState<number>(17.89);
+
   const handleClick = () => {
     setIsDark(!isDark);
     localStorage.setItem('dark', String(isDark));
@@ -39,7 +43,13 @@ const Nav = ({ isDark, setIsDark }: Props) => {
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
-              <Image src={isDark ? I.Moon : I.Sun} alt="" fill />
+              <Image
+                src={isDark ? I.Moon : I.Sun}
+                alt=""
+                width={width < 1150 ? (width > 390 ? 16.5 : 15.12) : 17.89}
+                height={width < 1150 ? (width > 390 ? 16.5 : 15.12) : 17.89}
+                // height={svgSize}
+              />
             </S.ToggleIcon>
           </S.ToggleButton>
         </S.ItemContainer>
