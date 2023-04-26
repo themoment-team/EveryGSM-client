@@ -46,7 +46,7 @@ export const ToggleButton = styled.div`
   background-color: ${({ theme: { gray } }) => gray[1]};
 `;
 
-export const ToggleIcon = styled.div`
+export const ToggleIcon = styled.div<{ isDark: boolean }>`
   width: 1.75rem;
   height: 1.75rem;
   display: flex;
@@ -54,7 +54,6 @@ export const ToggleIcon = styled.div`
   justify-content: center;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
-  translate: ${({ isDark }: { isDark: boolean }) => isDark && '2.4375rem'};
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#999999' : '#ffffff'};
+  translate: ${({ isDark }) => isDark && '2.4375rem'};
+  background-color: ${({ isDark }) => (isDark ? '#999999' : '#ffffff')};
 `;

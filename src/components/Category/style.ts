@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-export const Categories = styled.div`
+export const Categories = styled.div<{ isDark: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +10,6 @@ export const Categories = styled.div`
   border-radius: 3.125rem;
   padding: 0rem 0.625rem;
   transition: ease-in-out 0.3s;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#f1f1f5' : '#999999'};
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#636363' : '#f1f1f5'};
+  color: ${({ isDark }) => (isDark ? '#f1f1f5' : '#999999')};
+  background-color: ${({ isDark }) => (isDark ? '#636363' : '#f1f1f5')};
 `;
