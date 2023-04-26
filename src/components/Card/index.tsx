@@ -85,11 +85,13 @@ const Card = ({
                   <S.Creater isDark={isDark}>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
-                  {data.categories.map(i => (
-                    <div key={i}>
-                      <C.Category data={i} isDark={isDark} />
-                    </div>
-                  ))}
+                  <S.Slide>
+                    {data.categories.map(i => (
+                      <div key={i}>
+                        <C.Category data={i} isDark={isDark} />
+                      </div>
+                    ))}
+                  </S.Slide>
                 </S.Categories>
               </S.CardContents>
             </Link>

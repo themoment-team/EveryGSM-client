@@ -1,13 +1,27 @@
 import styled from '@emotion/styled';
-
+import { keyframes } from '@emotion/react';
+const slide = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }`;
 export const Categories = styled.div`
   overflow: scroll;
   margin-top: 3.75rem;
   height: 1.875rem;
-  display: flex;
-  white-space: nowrap;
 `;
-
+export const Slide = styled.div`
+  width: 25rem;
+  height: 1.875rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  white-space: nowrap;
+  animation: ${slide} 15s linear infinite;
+`;
 export const Container = styled.div`
   display: flex;
   justify-content: center;
