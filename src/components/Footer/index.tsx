@@ -2,7 +2,7 @@ import * as S from './style';
 import useDarkState from 'Stores/useDarkStore';
 
 const Footer = () => {
-  const { isDark, setIsDark } = useDarkState();
+  const { isDark } = useDarkState();
 
   return (
     <div>

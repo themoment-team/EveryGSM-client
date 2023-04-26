@@ -4,8 +4,11 @@ import project from '../../../public/data/project.json';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
+import useDarkState from 'Stores/useDarkStore';
 
-const MainContainer = ({ isDark }: { isDark: boolean }) => {
+const MainContainer = () => {
+  const { isDark } = useDarkState();
+
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [projectLength, setProjectLength] = useState<number>(
     Math.floor(project.length / 3),

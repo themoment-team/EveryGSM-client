@@ -1,13 +1,11 @@
+import useDarkState from 'Stores/useDarkStore';
 import * as S from './style';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-interface Props {
-  isDark: boolean;
-  setIsDark: Function;
-}
+const Nav = () => {
+  const { isDark, setIsDark } = useDarkState();
 
-const Nav = ({ isDark, setIsDark }: Props) => {
   const handleClick = () => {
     setIsDark(!isDark);
     localStorage.setItem('dark', String(isDark));
