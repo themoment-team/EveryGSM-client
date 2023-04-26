@@ -1,10 +1,13 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
 
 export const BannerContainer = styled.div`
   width: 71rem;
   height: 18.75rem;
-  background: linear-gradient(275.95deg, #ffe870 -8.73%, #e23c96 102.76%);
+   background: linear-gradient(
+    275.95deg,
+    ${({ theme: { primary } }) =>
+      `${primary.pale_yellow} -8.73%, ${primary.magenta} 102.76%`}
+  );
   border-radius: 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -45,6 +48,7 @@ export const TextContainer = styled.div`
 
 export const SmallText = styled.p`
   font-size: 1.5rem;
+
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     font-size: 1rem;
@@ -105,4 +109,7 @@ export const BannerImg = styled.div`
     height: 74.3%;
     bottom: 0.4688rem;
   }
+
+
 `;
+

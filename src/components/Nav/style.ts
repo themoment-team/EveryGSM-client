@@ -8,7 +8,6 @@ export const NavContainer = styled.nav`
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
-  background-color: ${({ theme: { mode } }) => mode.nav};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     height: 5.5rem;
@@ -17,13 +16,17 @@ export const NavContainer = styled.nav`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     height: 3.5rem;
   }
+
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#191919' : '#ffffff'};
+
 `;
 
 export const ItemContainer = styled.div`
   width: 71.85rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 81%;
   }
@@ -31,6 +34,9 @@ export const ItemContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 81%;
   }
+
+  justify-content: space-between;
+
 `;
 
 export const IconContainer = styled.div`
@@ -64,7 +70,7 @@ export const LogoImg = styled.div`
   }
 
   transition: ease-in-out 0.3s;
-  color: ${({ theme: { mode } }) => mode.title};
+  color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
 `;
 
 export const ToggleButton = styled.div`
@@ -75,7 +81,6 @@ export const ToggleButton = styled.div`
   align-items: center;
   padding: 0 0.25rem;
   cursor: pointer;
-  background-color: ${({ theme: { mode } }) => mode.footer};
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     width: 4.125rem;
@@ -86,6 +91,9 @@ export const ToggleButton = styled.div`
     width: 3.625rem;
     height: 1.75rem;
   }
+
+  background-color: ${({ theme: { gray } }) => gray[1]};
+
 `;
 
 export const ToggleIcon = styled.div<{ isDark: boolean }>`
@@ -96,7 +104,7 @@ export const ToggleIcon = styled.div<{ isDark: boolean }>`
   justify-content: center;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
-  background-color: ${({ theme: { mode } }) => mode.toggle};
+
   translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
@@ -143,4 +151,8 @@ export const ToggleContainer = styled.div`
     width: 1.0313rem;
     height: 1.0313rem;
   }
+
+  background-color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#999999' : '#ffffff'};
+
 `;

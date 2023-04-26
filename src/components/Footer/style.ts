@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 
 export const FooterContainer = styled.footer`
-  position: absolute;
-  bottom: 0;
   width: 100vw;
   height: 5rem;
   border: 0;
@@ -14,7 +12,12 @@ export const FooterContainer = styled.footer`
     display: none;
   }
   transition: ease-in-out 0.3s;
-  background-color: ${({ theme: { mode } }) => mode.footer};
+  background-color: ${({ theme: { gray } }) => gray[1]};
+
+  @media (min-height: 1000px) {
+    position: absolute;
+    bottom: 0;
+  }
 `;
 
 export const FootText = styled.p`
@@ -24,5 +27,6 @@ export const FootText = styled.p`
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
   transition: ease-in-out 0.3s;
-  color: ${({ theme: { mode } }) => mode.text};
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#ffffff' : '#191919'};
 `;

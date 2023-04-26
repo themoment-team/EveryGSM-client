@@ -1,6 +1,5 @@
 'use client';
 import * as S from './style';
-import { Rocket } from 'assets/imgs';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useWidthState } from 'Stores';
@@ -37,9 +36,13 @@ const Home = () => {
           </S.MobileText>
         )}
       </S.TextContainer>
+
       <S.BannerImg>
-        <Image src={Rocket} fill alt="Rocket" />
+        <Image
+        src="/images/projects/Rocket.png"
+        fill alt="Rocket" />
       </S.BannerImg>
+
     </S.BannerContainer>
   );
 };

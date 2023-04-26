@@ -1,9 +1,10 @@
 import * as S from './style';
-import * as I from 'assets/imgs';
 import Image from 'next/image';
+
 import { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
+
 
 interface Props {
   isDark: boolean;
@@ -26,6 +27,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
   return (
     <>
       <S.NavContainer
+      isDark={isDark}
         css={css`
           @media (max-width: 38.75rem) {
             border: none;
@@ -36,14 +38,15 @@ const Nav = ({ isDark, setIsDark }: Props) => {
         <S.ItemContainer>
           <S.IconContainer>
             <S.LogoContainer>
-              <Image src={I.LogoIcon} alt="" />
+              <Image   src="/images/LogoIcon.svg" alt="logo" />
             </S.LogoContainer>
-            <S.Title>EveryGSM</S.Title>
+            <S.Title isDark={isDark}>EveryGSM</S.Title>
+
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
               <Image
-                src={isDark ? I.Moon : I.Sun}
+                src={isDark ? '/images/Moon.svg' : '/images/Sun.svg'}
                 alt=""
                 width={width < 1150 ? (width > 390 ? 16.5 : 15.12) : 17.89}
                 height={width < 1150 ? (width > 390 ? 16.5 : 15.12) : 17.89}
