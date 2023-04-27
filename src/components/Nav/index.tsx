@@ -1,7 +1,7 @@
 import * as S from './style';
 import Image from 'next/image';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
 
