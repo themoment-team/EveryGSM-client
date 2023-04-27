@@ -52,13 +52,11 @@ export const Creater = styled.span`
   margin-top: 1.3125rem;
 `;
 
-export const Desc = styled.div`
+export const Desc = styled.div<{ isDark: boolean }>`
   width: 25.5rem;
   height: 12.75rem;
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#636363' : '#f1f1f5'};
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#f1f1f5' : '#636363'};
+  background-color: ${({ isDark }) => (isDark ? '#636363' : '#f1f1f5')};
+  color: ${({ isDark }) => (isDark ? '#f1f1f5' : '#636363')};
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
