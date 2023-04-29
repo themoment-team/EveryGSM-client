@@ -7,6 +7,10 @@ export const MainBox = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 3.25rem;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    padding-top: 0;
+  }
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
