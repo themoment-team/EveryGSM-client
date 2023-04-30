@@ -1,6 +1,9 @@
 'use client';
 import 'styles/global.css';
-
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import * as gtag from 'lib/gtag';
+import Script from 'next/script';
 const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 export default function RootLayout({
@@ -8,14 +11,27 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('hashChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('hashChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
   return (
     <html lang="ko">
       <head>
-        <script
+        <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        ></script>
-        <script
+        ></Script>
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
