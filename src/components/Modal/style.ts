@@ -25,6 +25,7 @@ export const ModalContent = styled.div`
   align-items: center;
   position: absolute;
   height: 50rem;
+  background-color: ${({ theme }) => theme.exception.nav};
 `;
 
 export const Title = styled.div`
@@ -34,9 +35,10 @@ export const Title = styled.div`
   line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
-  color: #000000;
+  color: ${({ theme }) => theme.exception.modalTitle};
   margin-top: 1.875rem;
 `;
+
 export const Creater = styled.span`
   font-size: 1.125rem;
   font-weight: bolder;
@@ -50,13 +52,15 @@ export const Creater = styled.span`
 export const Desc = styled.div`
   width: 25.5rem;
   height: 12.75rem;
-  background-color: #f1f1f5;
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 300;
+  color: ${({ theme }) => theme.exception.desc};
+  background-color: ${({ theme }) => theme.exception.back};
 `;
+
 export const Profile = styled.div`
   display: flex;
   margin-top: 2.75rem;
@@ -72,6 +76,7 @@ export const ProfileImg = styled.div`
   justify-content: center;
   margin-right: 0.625rem;
 `;
+
 export const ProjectName = styled.div`
   font-family: Pretendard;
   font-size: 1.125rem;
@@ -80,7 +85,9 @@ export const ProjectName = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: #000000;
+  color: ${({ theme }) => theme.exception.teamTitle};
 `;
+
 export const GithubBox = styled.div`
   display: flex;
   flex-direction: column;

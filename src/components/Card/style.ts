@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import Image from 'next/image';
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -11,6 +11,7 @@ export const SlideBtn = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 export const Cards = styled.div`
   width: 71.25rem;
   height: 21.5625rem;
@@ -20,17 +21,17 @@ export const Cards = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
 export const Card = styled.div`
   height: 21.25rem;
   width: 22.5rem;
-  background-color: #ffffff;
   display: flex;
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
   flex-direction: column;
   float: left;
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#505050' : '#ffffff'};
+  transition: ease-in-out 0.3s;
+  background-color: ${({ theme }) => theme.exception.card};
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
@@ -105,8 +106,8 @@ export const Title = styled.div`
   font-size: 2rem;
   font-weight: 600;
   margin-top: 1rem;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#ffffff' : '#000000'};
+  transition: ease-in-out 0.3s;
+  color: ${({ theme }) => theme.exception.cardTitle};
 `;
 
 export const Create = styled.div`
@@ -121,8 +122,8 @@ export const Creater = styled.div`
   color: #999999;
   font-size: 1.25rem;
   font-weight: 600;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#e3e3e3' : '#999999'};
+  transition: ease-in-out 0.3s;
+  color: ${({ theme }) => theme.exception.creater};
 `;
 
 export const Categories = styled.div`

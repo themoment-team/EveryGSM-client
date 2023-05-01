@@ -20,6 +20,5 @@ export const FootText = styled.p`
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
   transition: ease-in-out 0.3s;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#ffffff' : '#191919'};
+  color: ${({ theme }) => theme.exception.footText};
 `;

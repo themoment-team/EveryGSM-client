@@ -33,7 +33,6 @@ const Card = ({
   return (
     <div /* style={{ perspective: '10000px' }}*/>
       <S.Card
-        isDark={isDark}
         /* isFlip={isFlip}*/
         css={css`
           margin-right: ${(index + 1) % 3 === 0 ? '3px' : '25px'};
@@ -75,15 +74,20 @@ const Card = ({
                     `}
                   ></Image>
                 </S.Logo>
-                <S.Title isDark={isDark}>{data.projectName}</S.Title>
+                <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
-                  <I.Person isDark={isDark} />
-                  <S.Creater isDark={isDark}>{data.createrName}</S.Creater>
+                  <I.Person
+                    css={css`
+                      transition: ease-in-out 0.3s;
+                    `}
+                    isDark={isDark}
+                  />
+                  <S.Creater>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
                   {data.categories.map(i => (
                     <div key={i}>
-                      <C.Category data={i} isDark={isDark} />
+                      <C.Category data={i} />
                     </div>
                   ))}
                 </S.Categories>

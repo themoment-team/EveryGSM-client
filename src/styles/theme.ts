@@ -10,6 +10,20 @@ export interface ThemeType {
     navy_blue: string;
   };
   breakPoint: {};
+  exception: {
+    card: string;
+    cardTitle: string;
+    creater: string;
+    categories: string;
+    footText: string;
+    nav: string;
+    navTitle: string;
+    toggle: string;
+    modalTitle: string;
+    desc: string;
+    teamTitle: string;
+    back: string;
+  };
   otherProp?: any;
 }
 
@@ -25,6 +39,20 @@ export const theme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {},
+  exception: {
+    card: '#ffffff',
+    cardTitle: '#000000',
+    creater: '#999999',
+    categories: '#999999',
+    back: '#f1f1f5',
+    footText: '#191919',
+    nav: '#ffffff',
+    navTitle: '#000000',
+    toggle: '#ffffff',
+    modalTitle: '#636363',
+    desc: '#636363',
+    teamTitle: '#000000',
+  },
 } as const;
 
 export const darktheme: ThemeType = {
@@ -39,4 +67,18 @@ export const darktheme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {},
+  exception: {
+    card: '#505050',
+    cardTitle: '#ffffff',
+    creater: '#e3e3e3',
+    categories: '#f1f1f5',
+    back: '#636363',
+    footText: '#ffffff',
+    nav: '#191919',
+    navTitle: '#ffffff',
+    toggle: '#999999',
+    modalTitle: '#ffffff',
+    desc: '#f1f1f5',
+    teamTitle: '#f1f1f5',
+  },
 } as const;
