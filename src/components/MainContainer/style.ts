@@ -20,6 +20,10 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 92px;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    margin-top: 50px;
+  }
 `;
 
 export const Container = styled.div`
@@ -36,6 +40,29 @@ export const Cards = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: red;
   overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 660px;
+    height: 660px;
+  }
+  /* 
+  @media (max-width: 834px) {
+    width: 570px;
+    height: 570px;
+  } */
 `;
-export const SlideBox = styled.div``;
+export const SlideBox = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    /* width: 2100px;
+    height: 700px;
+    flex-wrap: wrap; */
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+`;

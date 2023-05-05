@@ -43,8 +43,8 @@ export const Cards = styled.div`
   overflow: hidden;
 `;
 export const Card = styled.div`
-  height: 21.25rem;
-  width: 22.5rem;
+  height: 340px;
+  width: 360px;
   background-color: #ffffff;
   display: flex;
   border-radius: 1rem;
@@ -54,6 +54,16 @@ export const Card = styled.div`
   background-color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#505050' : '#ffffff'};
   transition: ease-in-out 0.3s;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 320px;
+    height: 320px;
+  }
+
+  /* @media (max-width: 834px) {
+    width: 280px;
+    height: 280px;
+  } */
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
@@ -147,7 +157,7 @@ export const Creater = styled.div`
   font-weight: 600;
   color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#e3e3e3' : '#999999'};
-  transition: ease-in-out 0.3s;
+  /* transition: ease-in-out 0.3s; */
 `;
 
 export const Description = styled.div`

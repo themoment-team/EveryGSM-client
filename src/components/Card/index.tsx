@@ -7,6 +7,7 @@ import projectData from 'interface/projectData';
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
+import { useWidthState } from 'Stores';
 
 const Card = ({
   data,
@@ -19,10 +20,12 @@ const Card = ({
 }) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const { width } = useWidthState();
   const handleOpenModal = (id: string) => {
     setSelectedId(id);
     setShowModal(true);
   };
+
   const handleCloseModal = () => {
     setShowModal(false);
   };
@@ -37,7 +40,11 @@ const Card = ({
         isDark={isDark}
         /* isFlip={isFlip}*/
         css={css`
-          margin-right: ${(index + 1) % 3 === 0 ? '0.1875rem' : '1.5625rem'};
+          margin-right: ${width > 1150
+            ? (index + 1) % 3 === 0
+              ? '0.1875rem'
+              : '1.5625rem'
+            : '20px'};
         `}
       >
         <S.Front>

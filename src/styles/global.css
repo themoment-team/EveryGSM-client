@@ -19,7 +19,7 @@ body {
 @media (min-height: 1000px) {
   html,
   body {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
 }
 

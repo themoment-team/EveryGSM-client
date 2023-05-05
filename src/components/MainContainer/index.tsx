@@ -4,31 +4,34 @@ import project from '../../../public/data/project.json';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
+import { useWidthState } from 'Stores';
 
 const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
-  const [projectLength, setProjectLength] = useState<number>(
-    Math.floor(project.length / 3),
-  );
+  const [tabletCardBox, setTabletCardBox] = useState<number>(3);
+  const { width } = useWidthState();
 
   useEffect(() => {
-    setProjectLength(Math.floor(project.length / 3) + 1);
-  }, [project.length]);
+    if (width <= 1150) {
+      setTabletCardBox(4);
+    }
+  }, [width]);
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex(projectLength - 1);
+      return;
     } else {
       setSlideIndex(slideIndex - 1);
     }
   };
   const handleNextSlide = () => {
-    if (slideIndex === projectLength - 1) {
+    if (slideIndex > Math.floor(project.length / tabletCardBox) - 1) {
       setSlideIndex(0);
     } else {
       setSlideIndex(slideIndex + 1);
     }
   };
+
   return (
     <S.MainBox>
       <C.Banner />
@@ -42,6 +45,9 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-right: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
+              @media (max-width: 1150px) {
+                margin-right: 1.875rem;
+              }
             `}
             alt=""
             onClick={handlePrevSlide}
@@ -51,7 +57,10 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               style={{
                 display: 'flex',
                 position: 'absolute',
-                left: `${-slideIndex * 100}%`, // 슬라이드 이동에 따라 left 값을 변경
+                // left: `${-(slideIndex * 100)}%`, // 슬라이드 이동에 따라 left 값을 변경
+                left: `${
+                  width > 1150 ? -(slideIndex * 100) : -(slideIndex * 103)
+                }% `,
                 top: '0',
                 transition: 'left 0.3s ease-in-out',
               }}
@@ -73,6 +82,9 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-left: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
+              @media (max-width: 1150px) {
+                margin-left: 1.875rem;
+              }
             `}
             onClick={handleNextSlide}
           />

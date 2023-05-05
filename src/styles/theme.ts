@@ -31,7 +31,6 @@ export const theme: ThemeType = {
     mobile: '38.75rem',
     tablet: '71.875rem',
   },
-
 } as const;
 
 export const darktheme: ThemeType = {
