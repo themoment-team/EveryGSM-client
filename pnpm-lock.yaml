@@ -7,6 +7,9 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.10.6
     version: 11.10.6(@emotion/react@11.10.6)(@types/react@18.0.33)(react@18.2.0)
+  '@types/gtag.js':
+    specifier: ^0.0.11
+    version: 0.0.11
   '@types/node':
     specifier: 18.15.11
     version: 18.15.11
@@ -330,6 +333,10 @@ packages:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
       tslib: 2.5.0
+    dev: false
+
+  /@types/gtag.js@0.0.11:
+    resolution: {integrity: sha512-rUuSDedDjcuUpoc2zf6eX6zRrxqALNgwrmMBfVFopkLH7YGM52C7tt6j9GsYIvaxn+ioVRpOKoHnN1DXzHEqIg==}
     dev: false
 
   /@types/node@18.15.11:
