@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+
 const Person = ({ isDark }: { isDark: boolean }) => {
   return (
     <svg
@@ -6,6 +7,7 @@ const Person = ({ isDark }: { isDark: boolean }) => {
         width: 25px;
         height: 24px;
         margin-right: 13px;
+        transition: ease-in-out 0.3s;
       `}
       width="25"
       height="24"

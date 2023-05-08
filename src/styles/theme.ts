@@ -9,7 +9,10 @@ export interface ThemeType {
     dusty_blue: string;
     navy_blue: string;
   };
-  breakPoint: {};
+  breakPoint: {
+    mobile: string;
+    tablet: string;
+    };
   exception: {
     card: string;
     cardTitle: string;
@@ -38,7 +41,10 @@ export const theme: ThemeType = {
     dusty_blue: '#7090B0',
     navy_blue: '#225087',
   },
-  breakPoint: {},
+  breakPoint: {
+    mobile: '38.75rem',
+    tablet: '71.875rem',
+  },
   exception: {
     card: '#ffffff',
     cardTitle: '#000000',
@@ -66,7 +72,10 @@ export const darktheme: ThemeType = {
     dusty_blue: '#7090B0',
     navy_blue: '#225087',
   },
-  breakPoint: {},
+  breakPoint: {
+    mobile: '38.75rem',
+    tablet: '71.875remz',
+    },
   exception: {
     card: '#505050',
     cardTitle: '#ffffff',

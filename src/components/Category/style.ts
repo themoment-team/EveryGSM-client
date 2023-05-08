@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-export const Categories = styled.div`
+export const Categories = styled.div<{ isDark: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;

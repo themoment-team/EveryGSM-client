@@ -4,27 +4,31 @@ import * as C from 'components';
 import Image from 'next/image';
 import project from '../../../public/data/project.json';
 import Link from 'next/link';
-import { Back } from 'assets/imgs';
 import { css } from '@emotion/react';
-const Modal = ({
-  show,
-  onClose,
-  index,
-}: {
+
+interface Props {
   show: boolean;
   onClose: () => void;
   index: string;
-}) => {
+  isDark: boolean;
+}
+
+const Modal = ({ show, onClose, index, isDark }: Props) => {
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
     <S.ModalContainer show={show}>
       <S.ModalContent>
         <S.Back onClick={onClose}>
-          <Image src={Back} width={18} height={18} alt="로고이미지" />
+          <Image
+            src="/images/Back.svg"
+            width={18}
+            height={18}
+            alt="로고이미지"
+          />
         </S.Back>
         <S.Img>
           <Image
-            src={selectedProject?.imageURL ?? ''}
+            src={selectedProject?.projectLogoUri ?? ''}
             width={80}
             height={80}
             alt="로고이미지"
@@ -33,16 +37,16 @@ const Modal = ({
             `}
           ></Image>
         </S.Img>
-        <S.Title>{selectedProject?.projectName}</S.Title>
+        <S.Title isDark={isDark}>{selectedProject?.projectName}</S.Title>
         <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
           {selectedProject?.categories.map(category => (
             <div key={category}>
-              <C.Category data={category} />
+              <C.Category isDark={isDark} data={category} />
             </div>
           ))}
         </S.Categories>
-        <S.Desc>
+        <S.Desc isDark={isDark}>
           <div
             css={css`
               width: 21.875rem;

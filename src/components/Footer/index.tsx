@@ -1,6 +1,9 @@
 import * as S from './style';
+import useDarkState from 'Stores/useDarkStore';
 
 const Footer = ({ isDark }: { isDark: boolean }) => {
+  // const { isDark, setIsDark } = useDarkState();
+
   return (
     <div>
       <S.FooterContainer id="footer">

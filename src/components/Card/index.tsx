@@ -1,12 +1,13 @@
 'use client';
 import * as S from './style';
-import * as I from 'assets/imgs';
+import { Person } from '../../../public/images';
 import * as C from 'components';
 import Image from 'next/image';
 import projectData from 'interface/projectData';
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
+
 const Card = ({
   data,
   index,
@@ -31,17 +32,18 @@ const Card = ({
   // };
   // const [isFlip, setIsFlip] = useState(false);
   return (
-    <div /* style={{ perspective: '10000px' }}*/>
+    <div /* style={{ perspective: '625rem' }}*/>
       <S.Card
         /* isFlip={isFlip}*/
         css={css`
-          margin-right: ${(index + 1) % 3 === 0 ? '3px' : '25px'};
+          margin-right: ${(index + 1) % 3 === 0 ? '0.1875rem' : '1.5625rem'};
         `}
       >
         <S.Front>
           <S.Desc>
             {showModal && selectedId === data.id && (
               <C.Modal
+                isDark={isDark}
                 show={showModal}
                 onClose={handleCloseModal}
                 index={selectedId}
@@ -49,11 +51,13 @@ const Card = ({
             )}
             <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
               <Image
-                src={I.Detail}
+                src="/images/Detail.svg"
+                width={22}
+                height={22}
                 css={css`
-                  width: 19.5008px;
-                  height: 19.5008px;
-                  margin-left: 12px;
+                  width: 1.2188rem;
+                  height: 1.2188rem;
+                  margin-left: 0.75rem;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -61,11 +65,11 @@ const Card = ({
                 alt="Vector"
               />
             </S.DetailBtn>
-            <Link href={data.projectUrl}>
+            <Link href={data.projectUrl} target="_blank">
               <S.CardContents>
                 <S.Logo>
                   <Image
-                    src={data.imageURL}
+                    src={data.projectLogoUri}
                     width={72}
                     height={72}
                     alt="로고이미지"
@@ -76,20 +80,17 @@ const Card = ({
                 </S.Logo>
                 <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
-                  <I.Person
-                    css={css`
-                      transition: ease-in-out 0.3s;
-                    `}
-                    isDark={isDark}
-                  />
+                  <Person isDark={isDark} />
                   <S.Creater>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
-                  {data.categories.map(i => (
-                    <div key={i}>
-                      <C.Category data={i} />
-                    </div>
-                  ))}
+                  <S.Slide>
+                    {data.categories.map(i => (
+                      <div key={i}>
+                        <C.Category data={i} isDark={isDark} />
+                      </div>
+                    ))}
+                  </S.Slide>
                 </S.Categories>
               </S.CardContents>
             </Link>
@@ -103,10 +104,10 @@ const Card = ({
             <Image
               src={I.Vector}
               style={{
-                width: '6.2496px',
-                height: '12.5008px',
+                width: '0.3906rem',
+                height: '0.7813rem',
                 transform: 'rotateY(180deg)',
-                marginLeft: '12px',
+                marginLeft: '0.75rem',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

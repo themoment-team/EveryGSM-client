@@ -1,5 +1,6 @@
 'use client';
 import styled from '@emotion/styled';
+
 export const ModalContainer = styled.div<{ show: boolean }>`
   display: flex;
   justify-content: center;
@@ -13,8 +14,8 @@ export const ModalContainer = styled.div<{ show: boolean }>`
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 `;
+
 export const ModalContent = styled.div`
-  background-color: white;
   border-radius: 0.3125rem;
   padding: 1.25rem;
   width: 32.5rem;
@@ -37,6 +38,8 @@ export const Title = styled.div`
   text-align: left;
   color: ${({ theme }) => theme.exception.modalTitle};
   margin-top: 1.875rem;
+  color: ${({ isDark }: { isDark: boolean }) =>
+    isDark ? '#ffffff' : '#000000'};
 `;
 
 export const Creater = styled.span`
@@ -49,7 +52,7 @@ export const Creater = styled.span`
   margin-top: 1.3125rem;
 `;
 
-export const Desc = styled.div`
+export const Desc = styled.div<{ isDark: boolean }>`
   width: 25.5rem;
   height: 12.75rem;
   border-radius: 0.625rem;
@@ -66,6 +69,7 @@ export const Profile = styled.div`
   margin-top: 2.75rem;
   width: 25.6875rem;
 `;
+
 export const ProfileImg = styled.div`
   width: 1.5rem;
   height: 1.5rem;
@@ -121,7 +125,7 @@ export const Repo = styled.div`
 export const Categories = styled.div`
   z-index: 10000000000000;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   width: 25.4375rem;
   margin: 1.5rem 0rem;

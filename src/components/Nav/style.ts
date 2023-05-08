@@ -8,14 +8,32 @@ export const NavContainer = styled.nav`
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    height: 5.5rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    height: 3.5rem;
+  }
+
   background-color: ${({ theme }) => theme.exception.nav};
 `;
 
 export const ItemContainer = styled.div`
-  width: 71rem;
+  width: 71.85rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 81%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 81%;
+  }
+
+  justify-content: space-between;
 `;
 
 export const IconContainer = styled.div`
@@ -30,6 +48,25 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   margin-top: 0.6875rem;
+  color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    font-size: 1.5rem;
+  }
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const LogoImg = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
   transition: ease-in-out 0.3s;
   color: ${({ theme }) => theme.exception.navTitle};
 `;
@@ -42,10 +79,21 @@ export const ToggleButton = styled.div`
   align-items: center;
   padding: 0 0.25rem;
   cursor: pointer;
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    width: 4.125rem;
+    height: 2rem;
+  }
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    width: 3.625rem;
+    height: 1.75rem;
+  }
+
   background-color: ${({ theme: { gray } }) => gray[1]};
 `;
 
-export const ToggleIcon = styled.div`
+export const ToggleIcon = styled.div<{ isDark: boolean }>`
   width: 1.75rem;
   height: 1.75rem;
   display: flex;
@@ -53,6 +101,53 @@ export const ToggleIcon = styled.div`
   justify-content: center;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
-  translate: ${({ isDark }: { isDark: boolean }) => isDark && '2.4375rem'};
+
+  translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
+    translate: ${({ isDark }) => isDark && '2.125rem'};
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
+    translate: ${({ isDark }) => isDark && '1.75rem'};
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+`;
+
+export const LogoContainer = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+`;
+
+export const ToggleContainer = styled.div`
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  object-fit: cover;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 1.0313rem;
+    height: 1.0313rem;
+  }
+
   background-color: ${({ theme }) => theme.exception.toggle};
 `;

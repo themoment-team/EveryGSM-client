@@ -2,7 +2,7 @@ export default interface DataType {
   id: string;
   projectName: string;
   projectDescription: string;
-  imageURL: string;
+  projectLogoUri: string;
   createrDescription: string;
   projectUrl: string;
   githubRepoURL: string[];
