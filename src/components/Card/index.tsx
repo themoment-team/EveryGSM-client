@@ -34,7 +34,6 @@ const Card = ({
   return (
     <div /* style={{ perspective: '625rem' }}*/>
       <S.Card
-        isDark={isDark}
         /* isFlip={isFlip}*/
         css={css`
           margin-right: ${(index + 1) % 3 === 0 ? '0.1875rem' : '1.5625rem'};
@@ -79,7 +78,7 @@ const Card = ({
                     `}
                   ></Image>
                 </S.Logo>
-                <S.Title isDark={isDark}>{data.projectName}</S.Title>
+                <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
                   <Person isDark={isDark} />
                   <S.Creater isDark={isDark}>{data.createrName}</S.Creater>
@@ -92,6 +91,7 @@ const Card = ({
                       </div>
                     ))}
                   </S.Slide>
+
                 </S.Categories>
               </S.CardContents>
             </Link>

@@ -10,6 +10,6 @@ export const Categories = styled.div<{ isDark: boolean }>`
   border-radius: 3.125rem;
   padding: 0rem 0.625rem;
   transition: ease-in-out 0.3s;
-  color: ${({ isDark }) => (isDark ? '#f1f1f5' : '#999999')};
-  background-color: ${({ isDark }) => (isDark ? '#636363' : '#f1f1f5')};
+  color: ${({ theme }) => theme.exception.categories};
+  background-color: ${({ theme }) => theme.exception.back};
 `;

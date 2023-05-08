@@ -45,6 +45,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
               />
             </S.LogoContainer>
             <S.Title isDark={isDark}>EveryGSM</S.Title>
+
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>

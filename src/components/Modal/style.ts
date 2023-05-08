@@ -26,8 +26,7 @@ export const ModalContent = styled.div`
   align-items: center;
   position: absolute;
   height: 50rem;
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#191919' : '#FFFFFF'};
+  background-color: ${({ theme }) => theme.exception.nav};
 `;
 
 export const Title = styled.div`
@@ -37,6 +36,7 @@ export const Title = styled.div`
   line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
+  color: ${({ theme }) => theme.exception.modalTitle};
   margin-top: 1.875rem;
   color: ${({ isDark }: { isDark: boolean }) =>
     isDark ? '#ffffff' : '#000000'};
@@ -55,13 +55,13 @@ export const Creater = styled.span`
 export const Desc = styled.div<{ isDark: boolean }>`
   width: 25.5rem;
   height: 12.75rem;
-  background-color: ${({ isDark }) => (isDark ? '#636363' : '#f1f1f5')};
-  color: ${({ isDark }) => (isDark ? '#f1f1f5' : '#636363')};
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 300;
+  color: ${({ theme }) => theme.exception.desc};
+  background-color: ${({ theme }) => theme.exception.back};
 `;
 
 export const Profile = styled.div`
@@ -88,8 +88,8 @@ export const ProjectName = styled.div`
   line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#f1f1f5' : '#000000'};
+  color: #000000;
+  color: ${({ theme }) => theme.exception.teamTitle};
 `;
 
 export const GithubBox = styled.div`
