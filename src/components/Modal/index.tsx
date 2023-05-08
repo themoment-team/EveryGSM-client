@@ -17,7 +17,7 @@ const Modal = ({ show, onClose, index, isDark }: Props) => {
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
     <S.ModalContainer show={show}>
-      <S.ModalContent isDark={isDark}>
+      <S.ModalContent>
         <S.Back onClick={onClose}>
           <Image
             src="/images/Back.svg"
@@ -68,9 +68,7 @@ const Modal = ({ show, onClose, index, isDark }: Props) => {
               `}
             ></Image>
           </S.ProfileImg>
-          <S.ProjectName isDark={isDark}>
-            {selectedProject?.projectName}
-          </S.ProjectName>
+          <S.ProjectName>{selectedProject?.projectName}</S.ProjectName>
         </S.Profile>
         <S.GithubBox>
           {selectedProject?.githubRepoURL.map((data, i) => {

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+
 const slide = keyframes`
   0% {
     transform: translateX(0);
@@ -7,11 +8,14 @@ const slide = keyframes`
   100% {
     transform: translateX(-100%);
   }`;
+
 export const Categories = styled.div`
   overflow: scroll;
   margin-top: 3.75rem;
   height: 1.875rem;
+  display: flex;
 `;
+
 export const Slide = styled.div`
   width: 25rem;
   height: 1.875rem;
@@ -147,13 +151,6 @@ export const Creater = styled.div`
   font-weight: 600;
   transition: ease-in-out 0.3s;
   color: ${({ theme }) => theme.exception.creater};
-`;
-
-export const Categories = styled.div`
-  overflow: scroll;
-  margin-top: 3.75rem;
-  height: 1.875rem;
-  display: flex;
 `;
 
 export const Description = styled.div`

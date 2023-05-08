@@ -26,7 +26,6 @@ const Nav = ({ isDark, setIsDark }: Props) => {
   return (
     <>
       <S.NavContainer
-        isDark={isDark}
         css={css`
           @media (max-width: 38.75rem) {
             border: none;
@@ -45,7 +44,6 @@ const Nav = ({ isDark, setIsDark }: Props) => {
               />
             </S.LogoContainer>
             <S.Title isDark={isDark}>EveryGSM</S.Title>
-
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>

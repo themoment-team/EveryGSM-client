@@ -81,7 +81,7 @@ const Card = ({
                 <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
                   <Person isDark={isDark} />
-                  <S.Creater isDark={isDark}>{data.createrName}</S.Creater>
+                  <S.Creater>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
                   <S.Slide>
@@ -91,7 +91,6 @@ const Card = ({
                       </div>
                     ))}
                   </S.Slide>
-
                 </S.Categories>
               </S.CardContents>
             </Link>
