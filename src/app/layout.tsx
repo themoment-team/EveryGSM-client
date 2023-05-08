@@ -1,9 +1,11 @@
 'use client';
 import 'styles/global.css';
+
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import * as gtag from 'lib/gtag';
 import Script from 'next/script';
+
 const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 export default function RootLayout({
@@ -14,7 +16,7 @@ export default function RootLayout({
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url: URL) => {
+    const handleRouteChange = (url: any) => {
       gtag.pageview(url);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
@@ -24,6 +26,7 @@ export default function RootLayout({
       router.events.off('hashChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+
   return (
     <html lang="ko">
       <head>

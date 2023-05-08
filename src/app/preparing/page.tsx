@@ -1,7 +1,7 @@
 'use client';
 
 import { Preparing } from 'components';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 export default function preparing() {
