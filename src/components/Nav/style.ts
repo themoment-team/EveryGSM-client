@@ -101,6 +101,7 @@ export const ToggleIcon = styled.div<{ isDark: boolean }>`
   justify-content: center;
   border-radius: 0.875rem;
   transition: ease-in-out 0.3s;
+  background-color: ${({ theme }) => theme.exception.toggle};
 
   translate: ${({ isDark }) => (isDark ? '2.4375rem' : '0')};
 
@@ -143,11 +144,10 @@ export const ToggleContainer = styled.div`
   }
 
   object-fit: cover;
+  background-color: ${({ theme }) => theme.gray[1]};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 1.0313rem;
     height: 1.0313rem;
   }
-
-  background-color: ${({ theme }) => theme.exception.toggle};
 `;
