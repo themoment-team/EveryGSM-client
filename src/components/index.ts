@@ -6,4 +6,4 @@ export { default as Card } from './Card';
 export { default as Category } from './Category';
 export { default as Modal } from './Modal';
 export { default as Preparing } from './Preparing';
-export { default as MobileCard } from './MobileCard';
+// export { default as MobileCard } from './MobileCard';

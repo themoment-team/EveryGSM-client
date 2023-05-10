@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+// import styled from '@emotion/styled';
 // export const Card = styled.div`
 //   width: 38.75rem;
 //   height: 7.8125rem;
