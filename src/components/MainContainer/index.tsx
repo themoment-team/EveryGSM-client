@@ -44,8 +44,6 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
     return arr;
   };
 
-  console.log('sex', slideProject(project, 4));
-
   const tabletCardShow = () => {
     return slideProject(project, 4).map(array => {
       return (
@@ -87,7 +85,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-right: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 1150px) {
+              @media (max-width: 71.875rem) {
                 margin-right: 1.875rem;
               }
             `}
@@ -131,7 +129,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-left: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 1150px) {
+              @media (max-width: 71.875rem) {
                 margin-left: 1.875rem;
               }
             `}
