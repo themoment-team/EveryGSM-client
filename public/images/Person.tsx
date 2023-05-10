@@ -8,6 +8,12 @@ const Person = ({ isDark }: { isDark: boolean }) => {
         height: 24px;
         margin-right: 13px;
         transition: ease-in-out 0.3s;
+
+        @media screen and (max-width: 834px) {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
       `}
       width="25"
       height="24"

@@ -5,11 +5,13 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
+import projectData from 'interface/projectData';
 
 const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [tabletCardBox, setTabletCardBox] = useState<number>(3);
   const { width } = useWidthState();
+  const [dlwjddn, setDlwjddn] = useState([{}]);
 
   useEffect(() => {
     if (width <= 1150) {
@@ -30,6 +32,46 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
     } else {
       setSlideIndex(slideIndex + 1);
     }
+  };
+
+  const slideProject = (data = [{}], size = 1) => {
+    const arr = [];
+
+    for (let i = 0; i < data.length; i += size) {
+      arr.push(data.slice(i, i + size));
+    }
+
+    return arr;
+  };
+
+  console.log('sex', slideProject(project, 4));
+
+  const tabletCardShow = () => {
+    return slideProject(project, 4).map(array => {
+      return (
+        <div
+          css={css`
+            display: flex;
+
+            width: 81vw;
+            height: 81vw;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+          `}
+        >
+          {array.map((item, i) => {
+            return (
+              <C.Card
+                isDark={isDark}
+                data={item as projectData}
+                index={i}
+              ></C.Card>
+            );
+          })}
+        </div>
+      );
+    });
   };
 
   return (
@@ -58,18 +100,25 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
                 display: 'flex',
                 position: 'absolute',
                 // left: `${-(slideIndex * 100)}%`, // 슬라이드 이동에 따라 left 값을 변경
-                left: `${
-                  width > 1150 ? -(slideIndex * 100) : -(slideIndex * 103)
-                }% `,
+                // left: `${
+                //   width > 1150 ? -(slideIndex * 100) : -(slideIndex * 104)
+                // }% `,
+                left: `${-(slideIndex * 100)}%`,
                 top: '0',
                 transition: 'left 0.3s ease-in-out',
               }}
             >
-              {project.map((data, slideIndex) => (
-                <div key={slideIndex}>
-                  <C.Card isDark={isDark} data={data} index={slideIndex} />
-                </div>
-              ))}
+              {width > 1150 ? (
+                project.map((data, slideIndex) => (
+                  <div key={slideIndex}>
+                    <C.Card isDark={isDark} data={data} index={slideIndex} />
+                  </div>
+                ))
+              ) : width <= 620 ? (
+                <div></div>
+              ) : (
+                tabletCardShow()
+              )}
             </S.SlideBox>
           </S.Cards>
           <Image

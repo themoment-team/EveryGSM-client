@@ -44,7 +44,7 @@ const Card = ({
             ? (index + 1) % 3 === 0
               ? '0.1875rem'
               : '1.5625rem'
-            : '20px'};
+            : 0};
         `}
       >
         <S.Front>
@@ -60,10 +60,9 @@ const Card = ({
             <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
               <Image
                 src="/images/Detail.svg"
-                width={22}
-                height={22}
+                fill
                 css={css`
-                  width: 1.2188rem;
+                  width: 3.2188rem;
                   height: 1.2188rem;
                   margin-left: 0.75rem;
                   display: flex;
@@ -78,8 +77,7 @@ const Card = ({
                 <S.Logo>
                   <Image
                     src={data.projectLogoUri}
-                    width={72}
-                    height={72}
+                    fill
                     alt="로고이미지"
                     css={css`
                       border-radius: 100%;
