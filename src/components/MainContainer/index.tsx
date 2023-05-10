@@ -11,7 +11,6 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [tabletCardBox, setTabletCardBox] = useState<number>(3);
   const { width } = useWidthState();
-  const [dlwjddn, setDlwjddn] = useState([{}]);
 
   useEffect(() => {
     if (width <= 1150) {
