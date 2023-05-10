@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+
 const slide = keyframes`
   0% {
     transform: translateX(0);
@@ -7,16 +8,20 @@ const slide = keyframes`
   100% {
     transform: translateX(-100%);
   }`;
+
 export const Categories = styled.div`
   overflow: scroll;
   margin-top: 3.75rem;
   height: 1.875rem;
 
+
   @media (max-width: 897px) {
     width: 30vw;
     margin-top: 2rem;
   }
+
 `;
+
 export const Slide = styled.div`
   width: 25rem;
   height: 1.875rem;
@@ -27,6 +32,7 @@ export const Slide = styled.div`
   white-space: nowrap;
   animation: ${slide} 15s linear infinite;
 `;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -38,6 +44,7 @@ export const SlideBtn = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 export const Cards = styled.div`
   width: 71.25rem;
   height: 21.5625rem;
@@ -47,24 +54,25 @@ export const Cards = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
 export const Card = styled.div`
+
   height: 340px;
   width: 360px;
-  background-color: #ffffff;
   display: flex;
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
   flex-direction: column;
   float: left;
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#505050' : '#ffffff'};
   transition: ease-in-out 0.3s;
   position: relative;
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+  background-color: ${({ theme }) => theme.exception.card};
+  
+   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 38vw;
     height: 38vw;
   }
+
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
@@ -160,11 +168,10 @@ export const Title = styled.div`
   font-size: 2rem;
   font-weight: 600;
   margin-top: 1rem;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#ffffff' : '#000000'};
   transition: ease-in-out 0.3s;
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+  color: ${({ theme }) => theme.exception.cardTitle};
+  
+   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 1.75rem;
   }
 `;
@@ -182,16 +189,13 @@ export const Create = styled.div`
 `;
 
 export const Creater = styled.div`
-  color: #999999;
+  color: ${({ theme }) => theme.exception.creater};
   font-size: 1.25rem;
   font-weight: 600;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#e3e3e3' : '#999999'};
-  /* transition: ease-in-out 0.3s; */
-
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 16px;
   }
+  transition: ease-in-out 0.3s;
 `;
 
 export const Description = styled.div`
