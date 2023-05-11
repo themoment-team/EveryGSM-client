@@ -29,6 +29,14 @@ const Card = ({
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  const responsiveCardMargin = () => {
+    return width > 1150
+      ? (index + 1) % 3 === 0
+        ? '0.1875rem'
+        : '1.5626rem'
+      : 0;
+  };
   /* flip 애니메이션(논의중) */
   // const handleFlip = () => {
   //   setIsFlip(!isFlip);
@@ -39,11 +47,7 @@ const Card = ({
       <S.Card
         /* isFlip={isFlip}*/
         css={css`
-          margin-right: ${width > 1150
-            ? (index + 1) % 3 === 0
-              ? '0.1875rem'
-              : '1.5625rem'
-            : 0};
+          margin-right: ${responsiveCardMargin()};
         `}
       >
         <S.Front>
