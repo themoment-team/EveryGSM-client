@@ -20,6 +20,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 5.75rem;
+
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-top: 3.125rem;
   }

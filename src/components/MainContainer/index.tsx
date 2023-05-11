@@ -84,7 +84,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-right: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 71.875rem) {
+              @media (max-width: 1150px) {
                 margin-right: 1.875rem;
               }
             `}
@@ -128,7 +128,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-left: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 71.875rem) {
+              @media (max-width: 1150px) {
                 margin-left: 1.875rem;
               }
             `}

@@ -6,12 +6,14 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     display: none;
   }
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[1]};
-  @media (min-height: 62.5rem) {
+
+  @media (min-height: 1000px) {
     position: absolute;
     bottom: 0;
   }

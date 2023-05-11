@@ -74,7 +74,7 @@ export const MobileText = styled.p`
     font-size: 1.3125rem;
   }
 
-  @media (max-width: 24.375rem) {
+  @media (max-width: 390px) {
     font-size: 6vw;
   }
 `;
@@ -102,7 +102,7 @@ export const BannerImg = styled.div`
     right: 0;
   }
 
-  @media (max-width: 24.375rem) {
+  @media (max-width: 390px) {
     position: absolute;
     width: 40.6%;
     height: 74.3%;

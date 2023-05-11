@@ -14,12 +14,10 @@ export const Categories = styled.div`
   margin-top: 3.75rem;
   height: 1.875rem;
 
-
   @media (max-width: 897px) {
     width: 30vw;
     margin-top: 2rem;
   }
-
 `;
 
 export const Slide = styled.div`
@@ -56,7 +54,6 @@ export const Cards = styled.div`
 `;
 
 export const Card = styled.div`
-
   height: 340px;
   width: 360px;
   display: flex;
@@ -67,12 +64,11 @@ export const Card = styled.div`
   transition: ease-in-out 0.3s;
   position: relative;
   background-color: ${({ theme }) => theme.exception.card};
-  
-   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 38vw;
     height: 38vw;
   }
-
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
@@ -170,8 +166,8 @@ export const Title = styled.div`
   margin-top: 1rem;
   transition: ease-in-out 0.3s;
   color: ${({ theme }) => theme.exception.cardTitle};
-  
-   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 1.75rem;
   }
 `;
@@ -183,7 +179,7 @@ export const Create = styled.div`
   height: 1.5rem;
   margin-top: 1.5rem;
 
-  @media (max-width: 834px) {
+  @media (max-width: 52.125rem) {
     margin-top: 0.5rem;
   }
 `;
