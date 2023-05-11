@@ -20,13 +20,13 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      return;
+      setSlideIndex(project.length % tabletCardBox);
     } else {
       setSlideIndex(slideIndex - 1);
     }
   };
   const handleNextSlide = () => {
-    if (slideIndex > Math.floor(project.length / tabletCardBox) - 1) {
+    if (slideIndex > Math.floor(project.length / tabletCardBox)) {
       setSlideIndex(0);
     } else {
       setSlideIndex(slideIndex + 1);
