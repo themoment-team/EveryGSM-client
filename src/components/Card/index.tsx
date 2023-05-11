@@ -31,11 +31,15 @@ const Card = ({
   };
 
   const responsiveCardMargin = () => {
-    return width > 1150
-      ? (index + 1) % 3 === 0
-        ? '0.1875rem'
-        : '1.5626rem'
-      : 0;
+    if (width > 1150) {
+      if ((index + 1) % 3 === 0) {
+        return '0.1875rem';
+      } else {
+        return '1.5626rem';
+      }
+    } else {
+      return '0';
+    }
   };
   /* flip 애니메이션(논의중) */
   // const handleFlip = () => {
