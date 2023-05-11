@@ -33,18 +33,14 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
     }
   };
 
-  const slideProject = (data = [{}], size = 1) => {
+  const tabletCardShow = (data = [{}], size = 1) => {
     const arr = [];
 
     for (let i = 0; i < data.length; i += size) {
       arr.push(data.slice(i, i + size));
     }
 
-    return arr;
-  };
-
-  const tabletCardShow = () => {
-    return slideProject(project, 4).map(array => {
+    return arr.map(array => {
       return (
         <div
           css={css`
@@ -114,7 +110,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               ) : width <= 620 ? (
                 <div></div>
               ) : (
-                tabletCardShow()
+                tabletCardShow(project, 4)
               )}
             </S.SlideBox>
           </S.Cards>
@@ -128,7 +124,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-left: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 1150px) {
+              @media (max-width: 71.875rem) {
                 margin-left: 1.875rem;
               }
             `}
