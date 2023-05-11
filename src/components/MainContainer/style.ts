@@ -8,10 +8,12 @@ export const MainBox = styled.div`
   padding-top: 3.25rem;
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     padding-top: 2rem;
+    height: 95vh !important;
   }
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     padding-top: 0;
   }
+
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
@@ -23,7 +25,9 @@ export const CardContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-top: 3.125rem;
+    padding-bottom: 50px;
   }
+  background-color: ${({ theme: { gray } }) => gray[0]};
 `;
 export const Container = styled.div`
   display: flex;
