@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 export const FooterContainer = styled.footer`
   width: 100vw;
   height: 5rem;
@@ -19,7 +18,6 @@ export const FooterContainer = styled.footer`
     bottom: 0;
   }
 `;
-
 export const FootText = styled.p`
   font-style: normal;
   font-weight: 400;

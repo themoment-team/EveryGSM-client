@@ -12,7 +12,7 @@ export interface ThemeType {
   breakPoint: {
     mobile: string;
     tablet: string;
-    };
+  };
   exception: {
     card: string;
     cardTitle: string;
@@ -42,9 +42,10 @@ export const theme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {
-    mobile: '38.75rem',
-    tablet: '71.875rem',
+    mobile: '620px',
+    tablet: '1150px',
   },
+
   exception: {
     card: '#ffffff',
     cardTitle: '#000000',
@@ -73,9 +74,9 @@ export const darktheme: ThemeType = {
     navy_blue: '#225087',
   },
   breakPoint: {
-    mobile: '38.75rem',
-    tablet: '71.875remz',
-    },
+    mobile: '620px',
+    tablet: '1150px',
+  },
   exception: {
     card: '#505050',
     cardTitle: '#ffffff',

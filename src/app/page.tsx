@@ -11,13 +11,6 @@ function Home() {
 
   const { replace } = useRouter();
 
-  useEffect(() => {
-    window.innerWidth < 1300 && replace('/preparing');
-    window.onresize = () => {
-      window.innerWidth < 1300 && replace('/preparing');
-    };
-  }, []);
-
   return (
     <ThemeProvider theme={isDark ? darktheme : theme}>
       <NextSeo
