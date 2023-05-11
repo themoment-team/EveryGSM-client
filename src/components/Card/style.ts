@@ -54,8 +54,8 @@ export const Cards = styled.div`
 `;
 
 export const Card = styled.div`
-  height: 340px;
-  width: 360px;
+  height: 21.25rem;
+  width: 22.5rem;
   display: flex;
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
