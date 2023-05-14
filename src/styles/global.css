@@ -16,6 +16,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (min-height: 1000px) {
+  html,
+  body {
+    overflow-y: hidden;
+  }
+}
+
 @media (prefers-color-scheme: whilte) {
   html {
     color-scheme: white;
