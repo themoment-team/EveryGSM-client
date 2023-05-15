@@ -1,15 +1,17 @@
 import styled from '@emotion/styled';
 export const MainBox = styled.div`
   width: 100vw;
-  height: 90vh;
+  height: calc(100vh - 7.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 3.25rem;
+
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     padding-top: 2rem;
     height: 95vh !important;
   }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     padding-top: 0;
   }

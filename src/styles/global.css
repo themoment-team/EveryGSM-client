@@ -16,7 +16,13 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-height: 1000px) {
+@media all and (min-width: 1150px) and (min-height: 1000px) {
+  html,
+  body {
+    overflow-y: hidden;
+  }
+}
+@media all and (max-width: 620px) {
   html,
   body {
     overflow-y: hidden;
