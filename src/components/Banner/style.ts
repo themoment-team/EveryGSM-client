@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const BannerContainer = styled.div`
   width: 71rem;
   height: 18.75rem;
-   background: linear-gradient(
+  background: linear-gradient(
     275.95deg,
     ${({ theme: { primary } }) =>
       `${primary.pale_yellow} -8.73%, ${primary.magenta} 102.76%`}
@@ -49,7 +49,6 @@ export const TextContainer = styled.div`
 export const SmallText = styled.p`
   font-size: 1.5rem;
 
-
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     font-size: 1rem;
   }
@@ -75,7 +74,7 @@ export const MobileText = styled.p`
     font-size: 1.3125rem;
   }
 
-  @media (max-width: 24.375rem) {
+  @media (max-width: 390px) {
     font-size: 6vw;
   }
 `;
@@ -90,7 +89,6 @@ export const BannerImg = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    position: absolute;
     right: 0rem;
     width: 13.75rem;
     height: 13.75rem;
@@ -98,18 +96,16 @@ export const BannerImg = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    position: absolute;
     width: 9.5rem;
     height: 9.5rem;
-    position: absolute;
     right: 0;
   }
 
-  @media (max-width: 24.375rem) {
+  @media (max-width: 390px) {
+    position: absolute;
     width: 40.6%;
     height: 74.3%;
     bottom: 0.4688rem;
   }
-
-
 `;
-

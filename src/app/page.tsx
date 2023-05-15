@@ -22,6 +22,9 @@ export const metadata: Metadata = {
 };
 
 function Home() {
+  const [isDark, setIsDark] = useState<boolean>(false);
+  const { replace } = useRouter();
+
   return (
     <>
       <C.Nav />

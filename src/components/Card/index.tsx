@@ -7,6 +7,7 @@ import projectData from 'interface/projectData';
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
+import { useWidthState } from 'Stores';
 
 const Card = ({
   data,
@@ -19,12 +20,26 @@ const Card = ({
 }) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const { width } = useWidthState();
   const handleOpenModal = (id: string) => {
     setSelectedId(id);
     setShowModal(true);
   };
+
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const responsiveCardMargin = () => {
+    if (width > 1150) {
+      if ((index + 1) % 3 === 0) {
+        return '0.1875rem';
+      } else {
+        return '1.5626rem';
+      }
+    } else {
+      return '0';
+    }
   };
   /* flip 애니메이션(논의중) */
   // const handleFlip = () => {
@@ -34,10 +49,9 @@ const Card = ({
   return (
     <div /* style={{ perspective: '625rem' }}*/>
       <S.Card
-        isDark={isDark}
         /* isFlip={isFlip}*/
         css={css`
-          margin-right: ${(index + 1) % 3 === 0 ? '0.1875rem' : '1.5625rem'};
+          margin-right: ${responsiveCardMargin()};
         `}
       >
         <S.Front>
@@ -53,10 +67,9 @@ const Card = ({
             <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
               <Image
                 src="/images/Detail.svg"
-                width={22}
-                height={22}
+                fill
                 css={css`
-                  width: 1.2188rem;
+                  width: 3.2188rem;
                   height: 1.2188rem;
                   margin-left: 0.75rem;
                   display: flex;
@@ -71,18 +84,17 @@ const Card = ({
                 <S.Logo>
                   <Image
                     src={data.projectLogoUri}
-                    width={72}
-                    height={72}
+                    fill
                     alt="로고이미지"
                     css={css`
                       border-radius: 100%;
                     `}
                   ></Image>
                 </S.Logo>
-                <S.Title isDark={isDark}>{data.projectName}</S.Title>
+                <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
                   <Person isDark={isDark} />
-                  <S.Creater isDark={isDark}>{data.createrName}</S.Creater>
+                  <S.Creater>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
                   <S.Slide>

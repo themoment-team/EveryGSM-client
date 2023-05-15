@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+
 const slide = keyframes`
   0% {
     transform: translateX(0);
@@ -7,11 +8,18 @@ const slide = keyframes`
   100% {
     transform: translateX(-100%);
   }`;
+
 export const Categories = styled.div`
   overflow: scroll;
   margin-top: 3.75rem;
   height: 1.875rem;
+
+  @media (max-width: 897px) {
+    width: 30vw;
+    margin-top: 2rem;
+  }
 `;
+
 export const Slide = styled.div`
   width: 25rem;
   height: 1.875rem;
@@ -22,6 +30,7 @@ export const Slide = styled.div`
   white-space: nowrap;
   animation: ${slide} 15s linear infinite;
 `;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -33,6 +42,7 @@ export const SlideBtn = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 export const Cards = styled.div`
   width: 71.25rem;
   height: 21.5625rem;
@@ -42,18 +52,23 @@ export const Cards = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
 export const Card = styled.div`
   height: 21.25rem;
   width: 22.5rem;
-  background-color: #ffffff;
   display: flex;
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
   flex-direction: column;
   float: left;
-  background-color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#505050' : '#ffffff'};
   transition: ease-in-out 0.3s;
+  position: relative;
+  background-color: ${({ theme }) => theme.exception.card};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 38vw;
+    height: 38vw;
+  }
 `;
 // export const Card = styled.div<{ isFlip: boolean }>`
 //   height: 21.25rem;
@@ -82,6 +97,8 @@ export const Desc = styled.div`
   margin-left: 2rem;
 `;
 export const DetailBtn = styled.div`
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,13 +106,23 @@ export const DetailBtn = styled.div`
   z-index: 10000000;
   position: absolute;
   left: 18.125rem;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    left: 31vw;
+    width: 6%;
+    height: 6%;
+  }
 `;
 export const CardContents = styled.div`
   width: 18.875rem;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 0.625rem;
+
+  @media (max-width: 834px) {
+    margin-top: 0;
+  }
 `;
 export const Front = styled.div`
   width: 100%;
@@ -122,15 +149,27 @@ export const Logo = styled.div`
   width: 4.5rem;
   position: relative;
   border-radius: 100%;
+
+  img {
+    object-fit: cover;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 8vw;
+    height: 8vw;
+  }
 `;
 
 export const Title = styled.div`
   font-size: 2rem;
   font-weight: 600;
   margin-top: 1rem;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#ffffff' : '#000000'};
   transition: ease-in-out 0.3s;
+  color: ${({ theme }) => theme.exception.cardTitle};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    font-size: 1.75rem;
+  }
 `;
 
 export const Create = styled.div`
@@ -139,14 +178,19 @@ export const Create = styled.div`
   width: 9.0625rem;
   height: 1.5rem;
   margin-top: 1.5rem;
+
+  @media (max-width: 52.125rem) {
+    margin-top: 0.5rem;
+  }
 `;
 
 export const Creater = styled.div`
-  color: #999999;
+  color: ${({ theme }) => theme.exception.creater};
   font-size: 1.25rem;
   font-weight: 600;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#e3e3e3' : '#999999'};
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    font-size: 16px;
+  }
   transition: ease-in-out 0.3s;
 `;
 

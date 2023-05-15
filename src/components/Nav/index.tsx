@@ -24,9 +24,8 @@ const Nav = () => {
   return (
     <>
       <S.NavContainer
-        isDark={isDark}
         css={css`
-          @media (max-width: 38.75rem) {
+          @media (max-width: 620px) {
             border: none;
             background-color: ${isDark ? '#191919' : '#f1f1f5'};
           }

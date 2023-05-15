@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 export const FooterContainer = styled.footer`
   width: 100vw;
   height: 5rem;
@@ -16,10 +15,9 @@ export const FooterContainer = styled.footer`
 
   @media (min-height: 1000px) {
     position: absolute;
-    bottom: 0;
+    top: calc(100vh - 5rem);
   }
 `;
-
 export const FootText = styled.p`
   font-style: normal;
   font-weight: 400;
@@ -27,6 +25,5 @@ export const FootText = styled.p`
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
   transition: ease-in-out 0.3s;
-  color: ${({ isDark }: { isDark: boolean }) =>
-    isDark ? '#ffffff' : '#191919'};
+  color: ${({ theme }) => theme.exception.footText};
 `;
