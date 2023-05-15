@@ -15,7 +15,7 @@ export const FooterContainer = styled.footer`
 
   @media (min-height: 1000px) {
     position: absolute;
-    bottom: 0;
+    top: calc(100vh - 5rem);
   }
 `;
 export const FootText = styled.p`
