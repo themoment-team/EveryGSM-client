@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 export const MainBox = styled.div`
   width: 100vw;
   height: calc(100vh - 7.25rem);
@@ -19,6 +20,7 @@ export const MainBox = styled.div`
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
+
 export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -31,12 +33,14 @@ export const CardContainer = styled.div`
   }
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 79.0625rem;
 `;
+
 export const Cards = styled.div`
   width: 71.25rem;
   height: 21.5625rem;
@@ -50,4 +54,11 @@ export const Cards = styled.div`
     height: 81vw;
   }
 `;
-export const SlideBox = styled.div``;
+
+export const SlideBox = styled.div`
+  display: flex;
+  position: absolute;
+  left: ${({ slideIndex }: { slideIndex: number }) => -(slideIndex * 100)}%;
+  top: 0;
+  transition: left 0.3s ease-in-out;
+`;
