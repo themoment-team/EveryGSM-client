@@ -29,8 +29,7 @@ const Modal = ({ show, onClose, index, isDark }: Props) => {
         <S.Img>
           <Image
             src={selectedProject?.projectLogoUri ?? ''}
-            width={80}
-            height={80}
+            fill
             alt="로고이미지"
             css={css`
               border-radius: 100%;
