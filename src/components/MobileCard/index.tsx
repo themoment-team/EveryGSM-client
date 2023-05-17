@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 import Image from 'next/image';
 import * as C from 'components';
 import { useState } from 'react';
+
 export const MobileCard = ({
   data,
   isDark,
@@ -27,6 +28,7 @@ export const MobileCard = ({
     <>
       {showModal && selectedId === data.id && (
         <C.Modal
+          data={data}
           isDark={isDark}
           show={showModal}
           onClose={handleCloseModal}
@@ -38,7 +40,8 @@ export const MobileCard = ({
         <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
           상세보기
         </S.DetailBtn>
-        <S.ContentWrap>
+
+        <S.ContentWrap onClick={() => window.open(`${data.projectUrl}`)}>
           <S.Logo>
             <Image
               src={data.projectLogoUri}
@@ -62,6 +65,7 @@ export const MobileCard = ({
             </S.Categories>
           </S.CardContents>
         </S.ContentWrap>
+        {/* </Link> */}
       </S.MobileCard>
     </>
   );

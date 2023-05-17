@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
 import projectData from 'interface/projectData';
+import Link from 'next/link';
 
 const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
@@ -45,7 +46,6 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
         <div
           css={css`
             display: flex;
-
             width: 81vw;
             height: 81vw;
             flex-wrap: wrap;
@@ -80,6 +80,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-right: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
+
               @media (max-width: 1150px) {
                 margin-right: 1.875rem;
               }
@@ -149,7 +150,8 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-left: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 71.875rem) {
+
+              @media (max-width: 1150px) {
                 margin-left: 1.875rem;
               }
 

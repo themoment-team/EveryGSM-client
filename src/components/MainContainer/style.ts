@@ -9,6 +9,7 @@ export const MainBox = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     padding-top: 2rem;
+    height: 100vh;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -19,6 +20,7 @@ export const MainBox = styled.div`
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
+
 export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -27,7 +29,7 @@ export const CardContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-top: 3.125rem;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -41,6 +43,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 79.0625rem;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+  }
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     display: flex;
     flex-direction: column;
@@ -56,7 +60,7 @@ export const Cards = styled.div`
   overflow: hidden;
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 81vw;
-    height: 100vh;
+    height: 81vw;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -71,10 +75,10 @@ export const MobileCardTitle = styled.h2`
   font-style: normal;
   font-weight: 600;
   font-size: 5vw;
-  line-height: 25px;
+  line-height: 1.5625rem;
   letter-spacing: -0.03em;
   color: ${({ theme }) => theme.exception.cardTitle};
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   width: 71.25rem;
   width: 87.6vw;
 `;

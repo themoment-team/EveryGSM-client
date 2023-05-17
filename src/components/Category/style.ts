@@ -15,6 +15,7 @@ export const Categories = styled.div<{ isDark: boolean }>`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     height: 5vw;
+    border-radius: 2.5vw;
     font-size: 2vw;
   }
 `;

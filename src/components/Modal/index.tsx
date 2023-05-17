@@ -5,15 +5,18 @@ import Image from 'next/image';
 import project from '../../../public/data/project.json';
 import Link from 'next/link';
 import { css } from '@emotion/react';
+import projectData from 'interface/projectData';
 
 interface Props {
   show: boolean;
   onClose: () => void;
   index: string;
   isDark: boolean;
+  data?: projectData;
 }
 
-const Modal = ({ show, onClose, index, isDark }: Props) => {
+const Modal = ({ show, onClose, index, isDark, data }: Props) => {
+  console.log(data);
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
     <S.ModalContainer show={show}>
@@ -39,17 +42,20 @@ const Modal = ({ show, onClose, index, isDark }: Props) => {
         <S.Title isDark={isDark}>{selectedProject?.projectName}</S.Title>
         <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
-          {selectedProject?.categories.map(category => (
-            <div key={category}>
-              <C.Category isDark={isDark} data={category} />
-            </div>
-          ))}
+          <S.Slide>
+            {data?.categories.map(i => (
+              <div key={i}>
+                <C.Category data={i} isDark={isDark} />
+              </div>
+            ))}
+          </S.Slide>
         </S.Categories>
         <S.Desc isDark={isDark}>
           <div
             css={css`
               width: 21.875rem;
               text-align: left;
+              font-size: 0.0625rem;
             `}
           >
             {selectedProject?.projectDescription}
@@ -73,7 +79,7 @@ const Modal = ({ show, onClose, index, isDark }: Props) => {
           {selectedProject?.githubRepoURL.map((data, i) => {
             return (
               <Link href={data} target="_blank" key={i}>
-                <S.Repo>{data}</S.Repo>
+                <S.Repo isDark={isDark}>{data}</S.Repo>
               </Link>
             );
           })}
