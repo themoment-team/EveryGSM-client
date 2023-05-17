@@ -75,7 +75,8 @@ export const MobileText = styled.p`
   }
 
   @media (max-width: 390px) {
-    font-size: 6vw;
+    font-size: 5vw;
+    line-height: 1.5rem;
   }
 `;
 
