@@ -83,6 +83,10 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               @media (max-width: 1150px) {
                 margin-right: 1.875rem;
               }
+
+              @media (max-width: 620px) {
+                display: none;
+              }
             `}
             alt=""
             onClick={handlePrevSlide}
@@ -108,7 +112,28 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
                   </div>
                 ))
               ) : width <= 620 ? (
-                <div></div>
+                <div
+                  css={css`
+                    width: 100%;
+                    height: 100%;
+                  `}
+                >
+                  <S.MobileCardTitle>등록된 프로젝트</S.MobileCardTitle>
+                  <S.MobileCardWrap>
+                    {project.map((data, slideIndex) => {
+                      return (
+                        <div
+                          key={slideIndex}
+                          css={css`
+                            width: 100%;
+                          `}
+                        >
+                          <C.MobileCard isDark={isDark} data={data} />
+                        </div>
+                      );
+                    })}
+                  </S.MobileCardWrap>
+                </div>
               ) : (
                 tabletCardShow(project, 4)
               )}
@@ -126,6 +151,10 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               cursor: pointer;
               @media (max-width: 71.875rem) {
                 margin-left: 1.875rem;
+              }
+
+              @media (max-width: 620px) {
+                display: none;
               }
             `}
             onClick={handleNextSlide}
