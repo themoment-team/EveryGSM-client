@@ -27,6 +27,11 @@ export const ModalContent = styled.div`
   position: absolute;
   height: 50rem;
   background-color: ${({ theme }) => theme.exception.nav};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 80vw;
+    height: 100vw;
+  }
 `;
 
 export const Title = styled.div`
@@ -62,6 +67,12 @@ export const Desc = styled.div<{ isDark: boolean }>`
   font-weight: 300;
   color: ${({ theme }) => theme.exception.desc};
   background-color: ${({ theme }) => theme.exception.back};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 90%;
+    /* height: 20vh; */
+    font-size: 3vw;
+  }
 `;
 
 export const Profile = styled.div`
@@ -96,6 +107,10 @@ export const GithubBox = styled.div`
   display: flex;
   flex-direction: column;
   width: 25.6875rem;
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    display: flex;
+  }
 `;
 
 export const Img = styled.div`
@@ -104,6 +119,17 @@ export const Img = styled.div`
   border-radius: 100%;
   background-color: lightgray;
   margin-top: 2.75rem;
+  position: relative;
+
+  img {
+    object-fit: cover;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    margin: 0;
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 
 export const Repo = styled.div`
@@ -119,6 +145,10 @@ export const Repo = styled.div`
   &:hover {
     box-shadow: 0rem 0rem 0.1875rem 0.0625rem #f2f2f2;
     border-color: #6e6e6e;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 20rem;
   }
 `;
 
