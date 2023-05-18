@@ -74,7 +74,7 @@ export const SlideBox = styled.div``;
 export const MobileCardTitle = styled.h2`
   font-style: normal;
   font-weight: 600;
-  font-size: 5vw;
+  font-size: 4vw;
   line-height: 1.5625rem;
   letter-spacing: -0.03em;
   color: ${({ theme }) => theme.exception.cardTitle};

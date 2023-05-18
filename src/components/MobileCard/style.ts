@@ -37,8 +37,8 @@ export const ContentWrap = styled.div`
 `;
 
 export const Logo = styled.div`
-  width: 15vw;
-  height: 15vw;
+  width: 13vw;
+  height: 13vw;
   position: relative;
 
   img {
@@ -48,17 +48,21 @@ export const Logo = styled.div`
 
 export const CardContents = styled.div`
   width: 50vw;
-  height: 13.5vw;
+  height: 12vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 340px) {
+    height: 15vw;
+  }
 `;
 
 export const Title = styled.h2`
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 600;
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 1.5625rem;
 `;
 
@@ -88,7 +92,7 @@ export const DetailBtn = styled.h2`
   font-weight: 400;
   position: absolute;
   font-size: 2.5vw;
-  top: 9%;
+  top: 7%;
   right: 3.5%;
   z-index: 99999;
   line-height: 1.125rem;
