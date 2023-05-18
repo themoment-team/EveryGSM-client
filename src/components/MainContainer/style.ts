@@ -35,6 +35,7 @@ export const CardContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     margin-top: 2.5rem;
   }
+  transition: ease-in-out 0.3s;
 
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;

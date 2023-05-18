@@ -72,7 +72,6 @@ export const Title = styled.h2`
 
 export const Slide = styled.div`
   width: 25rem;
-  height: 5vw;
   position: relative;
   display: flex;
   align-items: center;
@@ -82,9 +81,11 @@ export const Slide = styled.div`
 `;
 
 export const Categories = styled.div`
-  overflow: scroll;
   height: 1.875rem;
-
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 897px) {
     width: 100%;
   }

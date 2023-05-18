@@ -11,13 +11,10 @@ const slide = keyframes`
   }`;
 
 export const Categories = styled.div`
-  overflow: scroll;
-  margin-top: 3.75rem;
   height: 1.875rem;
 
   @media (max-width: 897px) {
     width: 30vw;
-    margin-top: 2rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -33,7 +30,14 @@ export const Slide = styled.div`
   align-items: center;
   justify-content: left;
   white-space: nowrap;
-  animation: ${slide} 15s linear infinite;
+  /* animation: ${slide} 15s linear infinite; */
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 65vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ModalContainer = styled.div<{ show: boolean }>`
@@ -65,10 +69,11 @@ export const ModalContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 80vw;
-    height: 70vh;
+    height: 50vh;
+    padding-top: 32px;
   }
 
-  @media (max-width: 620px) and (max-height: 915px) {
+  @media (max-width: 300px) and (max-height: 915px) {
     height: 90vh;
   }
 `;
@@ -87,6 +92,7 @@ export const Title = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     font-size: 5vw;
+    margin-top: 0.9375rem;
   }
 `;
 
@@ -101,6 +107,7 @@ export const Creater = styled.span`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     font-size: 3vw;
+    margin: 0.625rem;
   }
 `;
 
@@ -124,7 +131,7 @@ export const Desc = styled.div<{ isDark: boolean }>`
 
 export const Profile = styled.div`
   display: flex;
-  margin-top: 2.75rem;
+
   width: 25.6875rem;
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
@@ -151,6 +158,9 @@ export const ProjectName = styled.div`
   text-align: left;
   color: #000000;
   color: ${({ theme }) => theme.exception.teamTitle};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+  }
 `;
 
 export const GithubBox = styled.div`
@@ -161,8 +171,8 @@ export const GithubBox = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     display: flex;
     align-items: center;
+    height: 30%;
 
-    height: 6.25rem;
     overflow-y: scroll;
   }
 `;
@@ -171,8 +181,7 @@ export const Img = styled.div`
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
-  background-color: lightgray;
-  margin-top: 2.75rem;
+
   position: relative;
 
   img {
@@ -196,14 +205,14 @@ export const Repo = styled.div<{ isDark: boolean }>`
   border-radius: 0.625rem;
   padding-left: 0.625rem;
   transition: ease-in-out 0.1s;
-  &:hover {
-    box-shadow: 0rem 0rem 0.1875rem 0.0625rem #f2f2f2;
-    border-color: #6e6e6e;
-  }
-
+  text-align: center;
+  color: #999999;
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    display: flex;
+    justify-content: center;
     width: 65vw;
     font-size: 2.5vw;
+    padding: 3px 0 4px;
   }
 `;
 

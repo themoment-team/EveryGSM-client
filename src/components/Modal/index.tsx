@@ -6,6 +6,7 @@ import project from '../../../public/data/project.json';
 import Link from 'next/link';
 import { css } from '@emotion/react';
 import projectData from 'interface/projectData';
+import { useWidthState } from 'Stores';
 
 interface Props {
   show: boolean;
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const Modal = ({ show, onClose, index, isDark, data }: Props) => {
+  const { width } = useWidthState();
   console.log(data);
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
@@ -32,11 +34,12 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
         <S.Img>
           <Image
             src={selectedProject?.projectLogoUri ?? ''}
-            fill
-            alt="로고이미지"
+            width={70}
+            height={70}
             css={css`
               border-radius: 100%;
             `}
+            alt="로고이미지"
           ></Image>
         </S.Img>
         <S.Title isDark={isDark}>{selectedProject?.projectName}</S.Title>
@@ -50,30 +53,77 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
             ))}
           </S.Slide>
         </S.Categories>
-        <S.Desc isDark={isDark}>
-          <div
+        {width >= 620 ? (
+          <S.Desc
+            isDark={isDark}
             css={css`
-              width: 21.875rem;
-              text-align: left;
-              font-size: 3vw;
+              @media (min-width: 630px) {
+                margin-bottom: 23px;
+              }
             `}
           >
-            {selectedProject?.projectDescription}
-          </div>
-        </S.Desc>
-        <S.Profile>
-          <S.ProfileImg>
-            <Image
-              src={selectedProject?.githubProfileURL || ''}
-              width={24}
-              height={24}
-              alt="로고이미지"
+            <div
               css={css`
-                border-radius: 100%;
+                width: 21.875rem;
+                text-align: left;
+                font-size: 18px;
               `}
-            ></Image>
-          </S.ProfileImg>
-          <S.ProjectName>{selectedProject?.projectName}</S.ProjectName>
+            >
+              {selectedProject?.projectDescription}
+            </div>
+          </S.Desc>
+        ) : (
+          <>
+            <S.Profile
+              css={css`
+                margin-top: 23px;
+              `}
+            >
+              {/* <S.ProfileImg>
+                <Image
+                  src={selectedProject?.githubProfileURL || ''}
+                  width={24}
+                  height={24}
+                  alt="로고이미지"
+                  css={css`
+                    border-radius: 100%;
+                  `}
+                ></Image>
+              </S.ProfileImg> */}
+              <S.ProjectName>Github profile</S.ProjectName>
+            </S.Profile>
+            <S.GithubBox>
+              <Link href={selectedProject?.githubURL as string} target="_blank">
+                <S.Repo isDark={isDark}>{selectedProject?.githubURL}</S.Repo>
+              </Link>
+            </S.GithubBox>
+          </>
+        )}
+
+        <S.Profile
+          css={css`
+            margin-top: 0;
+          `}
+        >
+          {width >= 620 ? (
+            <S.ProfileImg>
+              <Image
+                src={selectedProject?.githubProfileURL || ''}
+                width={24}
+                height={24}
+                alt="로고이미지"
+                css={css`
+                  border-radius: 100%;
+                `}
+              ></Image>
+            </S.ProfileImg>
+          ) : (
+            ''
+          )}
+
+          <S.ProjectName>
+            {width >= 620 ? selectedProject?.createrName : 'Repository'}
+          </S.ProjectName>
         </S.Profile>
         <S.GithubBox>
           {selectedProject?.githubRepoURL.map((data, i) => {
