@@ -39,6 +39,7 @@ export const ItemContainer = styled.div`
 export const IconContainer = styled.div`
   display: flex;
   cursor: pointer;
+  align-items: center;
 `;
 
 export const Title = styled.h2`
@@ -56,6 +57,7 @@ export const Title = styled.h2`
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.mobile})) {
     font-size: 1.25rem;
+    margin-top: 0;
   }
 `;
 
