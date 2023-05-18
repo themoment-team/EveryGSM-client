@@ -116,7 +116,7 @@ export const Desc = styled.div<{ isDark: boolean }>`
   background-color: ${({ theme }) => theme.exception.back};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 100%;
+    width: 65vw;
     height: 6rem;
     overflow-y: auto;
   }
@@ -127,7 +127,7 @@ export const Profile = styled.div`
   margin-top: 2.75rem;
   width: 25.6875rem;
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 70vw;
+    width: 65vw;
   }
 `;
 
@@ -202,8 +202,8 @@ export const Repo = styled.div<{ isDark: boolean }>`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 70vw;
-    font-size: 4vw;
+    width: 65vw;
+    font-size: 2.5vw;
   }
 `;
 

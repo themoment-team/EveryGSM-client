@@ -55,7 +55,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
             css={css`
               width: 21.875rem;
               text-align: left;
-              font-size: 0.0625rem;
+              font-size: 3vw;
             `}
           >
             {selectedProject?.projectDescription}
