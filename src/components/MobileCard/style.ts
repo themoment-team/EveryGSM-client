@@ -54,7 +54,7 @@ export const CardContents = styled.div`
   justify-content: space-between;
 
   @media (max-width: 340px) {
-    height: 15vw;
+    height: 100%;
   }
 `;
 
@@ -62,8 +62,12 @@ export const Title = styled.h2`
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 4vw;
   line-height: 1.5625rem;
+
+  @media (max-width: 390px) {
+    font-size: 5.13vw;
+  }
 `;
 
 export const Slide = styled.div`

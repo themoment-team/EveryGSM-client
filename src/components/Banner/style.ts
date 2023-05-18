@@ -83,6 +83,8 @@ export const MobileText = styled.p`
 export const BannerImg = styled.div`
   width: 21.875rem;
   height: 100%;
+  display: flex;
+  position: relative;
 
   img {
     position: relative !important;
@@ -108,5 +110,6 @@ export const BannerImg = styled.div`
     width: 40.6%;
     height: 74.3%;
     bottom: 0.4688rem;
+    right: 0;
   }
 `;
