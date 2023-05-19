@@ -11,7 +11,7 @@ const slide = keyframes`
   }`;
 
 export const Categories = styled.div`
-  margin: 24px 0 24px 0;
+  margin: 1.5rem 0 1.5rem 0;
   height: 1.875rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
@@ -71,7 +71,7 @@ export const ModalContent = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 80vw;
     height: 50vh;
-    padding-top: 32px;
+    padding-top: 2rem;
   }
 
   @media (max-width: 300px) and (max-height: 915px) {
@@ -214,7 +214,7 @@ export const Repo = styled.div<{ isDark: boolean }>`
     justify-content: center;
     width: 65vw;
     font-size: 2.5vw;
-    padding: 3px 0 4px;
+    padding: 0.1875rem 0 0.25rem;
   }
 `;
 
