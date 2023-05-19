@@ -60,6 +60,7 @@ const Card = ({
               <C.Modal
                 isDark={isDark}
                 show={showModal}
+                data={data}
                 onClose={handleCloseModal}
                 index={selectedId}
               />

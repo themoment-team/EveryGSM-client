@@ -11,11 +11,8 @@ const slide = keyframes`
   }`;
 
 export const Categories = styled.div`
+  margin: 24px 0 24px 0;
   height: 1.875rem;
-
-  @media (max-width: 897px) {
-    width: 30vw;
-  }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
@@ -31,9 +28,13 @@ export const Slide = styled.div`
   justify-content: left;
   white-space: nowrap;
   /* animation: ${slide} 15s linear infinite; */
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    justify-content: center;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,6 +182,7 @@ export const Img = styled.div`
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
+  margin-top: 2.75rem;
 
   position: relative;
 
