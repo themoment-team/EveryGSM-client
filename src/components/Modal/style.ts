@@ -16,6 +16,7 @@ export const Categories = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
+    margin: 8px 0 1.5rem 0;
   }
 `;
 
@@ -74,6 +75,10 @@ export const ModalContent = styled.div`
     padding-top: 2rem;
   }
 
+  @media (max-width: 360px) or (max-height: 667px) {
+    height: 60vh;
+  }
+
   @media (max-width: 300px) and (max-height: 915px) {
     height: 90vh;
   }
@@ -108,7 +113,7 @@ export const Creater = styled.span`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     font-size: 3vw;
-    margin: 0.625rem;
+    margin-top: 0.5rem;
   }
 `;
 
@@ -161,6 +166,7 @@ export const ProjectName = styled.div`
   color: ${({ theme }) => theme.exception.teamTitle};
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    font-size: 3.7vw;
   }
 `;
 
@@ -172,7 +178,7 @@ export const GithubBox = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     display: flex;
     align-items: center;
-    height: 30%;
+    height: 20%;
 
     overflow-y: scroll;
   }
@@ -207,12 +213,14 @@ export const Repo = styled.div<{ isDark: boolean }>`
   border-radius: 0.625rem;
   padding-left: 0.625rem;
   transition: ease-in-out 0.1s;
-  text-align: center;
+  text-align: left;
   color: #999999;
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    text-align: center;
     display: flex;
     justify-content: center;
     width: 65vw;
+    height: 5vh;
     font-size: 2.5vw;
     padding: 0.1875rem 0 0.25rem;
   }

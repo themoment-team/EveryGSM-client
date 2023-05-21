@@ -38,6 +38,11 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
             height={70}
             css={css`
               border-radius: 100%;
+
+              @media (max-width: 620px) {
+                width: 64px;
+                height: 64px;
+              }
             `}
             alt="로고이미지"
           ></Image>
@@ -74,11 +79,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
           </S.Desc>
         ) : (
           <>
-            <S.Profile
-              css={css`
-                margin-top: 23px;
-              `}
-            >
+            <S.Profile>
               {/* <S.ProfileImg>
                 <Image
                   src={selectedProject?.githubProfileURL || ''}
@@ -92,7 +93,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
               </S.ProfileImg> */}
               <S.ProjectName>Github profile</S.ProjectName>
             </S.Profile>
-            <S.GithubBox>
+            <S.GithubBox css={css``}>
               <Link href={selectedProject?.githubURL as string} target="_blank">
                 <S.Repo isDark={isDark}>{selectedProject?.githubURL}</S.Repo>
               </Link>
@@ -125,7 +126,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
             {width >= 620 ? selectedProject?.createrName : 'Repository'}
           </S.ProjectName>
         </S.Profile>
-        <S.GithubBox>
+        <S.GithubBox css={css``}>
           {selectedProject?.githubRepoURL.map((data, i) => {
             return (
               <Link href={data} target="_blank" key={i}>
