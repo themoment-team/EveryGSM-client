@@ -227,7 +227,7 @@ export const Repo = styled.div<{ isDark: boolean }>`
     justify-content: center;
     width: 65vw;
     height: 5vh;
-    font-size: 2.5vw;
+    font-size: 3.2vw;
     padding: 0.1875rem 0 0.25rem;
   }
 `;
