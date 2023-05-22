@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 export const MainBox = styled.div`
   width: 100vw;
   height: calc(100vh - 7.25rem);
@@ -26,6 +27,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 5.75rem;
+  transition: ease-in-out 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-top: 3.125rem;
@@ -39,6 +41,7 @@ export const CardContainer = styled.div`
 
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -51,6 +54,7 @@ export const Container = styled.div`
     flex-direction: column;
   }
 `;
+
 export const Cards = styled.div`
   width: 71.25rem;
   height: 21.5625rem;
@@ -70,6 +74,7 @@ export const Cards = styled.div`
     overflow: scroll;
   }
 `;
+
 export const SlideBox = styled.div``;
 
 export const MobileCardTitle = styled.h2`
@@ -87,4 +92,5 @@ export const MobileCardTitle = styled.h2`
 export const MobileCardWrap = styled.div`
   width: 87.6vw;
   height: 10vh;
+
 `;

@@ -93,19 +93,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
             onClick={handlePrevSlide}
           />
           <S.Cards>
-            <S.SlideBox
-              style={{
-                display: 'flex',
-                position: 'absolute',
-                // left: `${-(slideIndex * 100)}%`, // 슬라이드 이동에 따라 left 값을 변경
-                // left: `${
-                //   width > 1150 ? -(slideIndex * 100) : -(slideIndex * 104)
-                // }% `,
-                left: `${-(slideIndex * 100)}%`,
-                top: '0',
-                transition: 'left 0.3s ease-in-out',
-              }}
-            >
+            <S.SlideBox slideIndex={slideIndex}>
               {width > 1150 ? (
                 project.map((data, slideIndex) => (
                   <div key={slideIndex}>
