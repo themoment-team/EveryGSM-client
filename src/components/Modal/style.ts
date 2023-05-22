@@ -80,7 +80,7 @@ export const ModalContent = styled.div`
   }
 
   @media (max-width: 300px) and (max-height: 915px) {
-    height: 90vh;
+    height: 60vh;
   }
 `;
 
