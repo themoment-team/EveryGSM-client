@@ -26,7 +26,7 @@ export const Slide = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   white-space: nowrap;
   /* animation: ${slide} 15s linear infinite; */
 
