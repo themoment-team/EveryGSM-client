@@ -215,6 +215,12 @@ export const Repo = styled.div<{ isDark: boolean }>`
   transition: ease-in-out 0.1s;
   text-align: left;
   color: #999999;
+
+  &:hover {
+    box-shadow: 0rem 0rem 0.1875rem 0.0625rem #f2f2f2;
+    border-color: #6e6e6e;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     text-align: center;
     display: flex;
