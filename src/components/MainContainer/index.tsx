@@ -27,7 +27,10 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
     }
   };
   const handleNextSlide = () => {
-    if (slideIndex > Math.floor(project.length / tabletCardBox) - 1) {
+    if (
+      slideIndex >
+      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 0 : 1)
+    ) {
       setSlideIndex(0);
     } else {
       setSlideIndex(slideIndex + 1);

@@ -75,8 +75,6 @@ export const Cards = styled.div`
   }
 `;
 
-export const SlideBox = styled.div``;
-
 export const MobileCardTitle = styled.h2`
   font-style: normal;
   font-weight: 600;
@@ -92,5 +90,12 @@ export const MobileCardTitle = styled.h2`
 export const MobileCardWrap = styled.div`
   width: 87.6vw;
   height: 10vh;
+`;
 
+export const SlideBox = styled.div`
+  display: flex;
+  position: absolute;
+  left: ${({ slideIndex }: { slideIndex: number }) => -(slideIndex * 100)}%;
+  top: 0;
+  transition: left 0.3s ease-in-out;
 `;
