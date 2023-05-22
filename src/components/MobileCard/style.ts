@@ -19,6 +19,7 @@ export const MobileCard = styled.div<{ isDark: boolean }>`
   box-sizing: border-box;
   background-color: #fff;
   margin-bottom: 0.75rem;
+  transition: ease-in-out 0.3s;
   background-color: ${({ theme }) => theme.exception.card};
 `;
 
@@ -64,6 +65,7 @@ export const Title = styled.h2`
   font-weight: 600;
   font-size: 4vw;
   line-height: 1.5625rem;
+  color: ${({ theme }) => theme.exception.cardTitle};
 
   @media (max-width: 390px) {
     font-size: 5.13vw;

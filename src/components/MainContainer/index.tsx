@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
 import projectData from 'interface/projectData';
-import Link from 'next/link';
 
 const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
