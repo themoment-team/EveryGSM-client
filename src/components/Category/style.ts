@@ -12,4 +12,10 @@ export const Categories = styled.div<{ isDark: boolean }>`
   transition: ease-in-out 0.3s;
   color: ${({ theme }) => theme.exception.categories};
   background-color: ${({ theme }) => theme.exception.back};
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    border-radius: 2.8vw;
+    font-size: 2.5vw;
+    height: 2.5vh;
+  }
 `;

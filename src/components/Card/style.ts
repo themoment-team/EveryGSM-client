@@ -97,8 +97,8 @@ export const Desc = styled.div`
   margin-left: 2rem;
 `;
 export const DetailBtn = styled.div`
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height: 1.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,7 +189,7 @@ export const Creater = styled.div`
   font-size: 1.25rem;
   font-weight: 600;
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
   transition: ease-in-out 0.3s;
 `;

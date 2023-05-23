@@ -10,11 +10,12 @@ export const MainBox = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     padding-top: 2rem;
-    height: 95vh !important;
+    height: 100vh;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     padding-top: 0;
+    height: 100vh;
   }
 
   transition: ease-in-out 0.3s;
@@ -30,8 +31,14 @@ export const CardContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-top: 3.125rem;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    margin-top: 2.5rem;
+  }
+  transition: ease-in-out 0.3s;
+
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
 
@@ -40,6 +47,12 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 79.0625rem;
+  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+  }
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Cards = styled.div`
@@ -54,6 +67,29 @@ export const Cards = styled.div`
     width: 81vw;
     height: 81vw;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 87.6vw;
+    height: 75vh;
+    overflow: scroll;
+  }
+`;
+
+export const MobileCardTitle = styled.h2`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4vw;
+  line-height: 1.5625rem;
+  letter-spacing: -0.03em;
+  color: ${({ theme }) => theme.exception.cardTitle};
+  margin-bottom: 0.75rem;
+  width: 71.25rem;
+  width: 87.6vw;
+`;
+
+export const MobileCardWrap = styled.div`
+  width: 87.6vw;
+  height: 10vh;
 `;
 
 export const SlideBox = styled.div`

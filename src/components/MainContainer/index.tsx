@@ -20,13 +20,16 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex(project.length % tabletCardBox);
+      setSlideIndex((project.length % tabletCardBox) - 1);
     } else {
       setSlideIndex(slideIndex - 1);
     }
   };
   const handleNextSlide = () => {
-    if (slideIndex > Math.floor(project.length / tabletCardBox)) {
+    if (
+      slideIndex >
+      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 0 : 1)
+    ) {
       setSlideIndex(0);
     } else {
       setSlideIndex(slideIndex + 1);
@@ -45,7 +48,6 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
         <div
           css={css`
             display: flex;
-
             width: 81vw;
             height: 81vw;
             flex-wrap: wrap;
@@ -80,8 +82,13 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-right: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
+
               @media (max-width: 1150px) {
                 margin-right: 1.875rem;
+              }
+
+              @media (max-width: 620px) {
+                display: none;
               }
             `}
             alt=""
@@ -96,7 +103,28 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
                   </div>
                 ))
               ) : width <= 620 ? (
-                <div></div>
+                <div
+                  css={css`
+                    width: 100%;
+                    height: 100%;
+                  `}
+                >
+                  <S.MobileCardTitle>등록된 프로젝트</S.MobileCardTitle>
+                  <S.MobileCardWrap>
+                    {project.map((data, slideIndex) => {
+                      return (
+                        <div
+                          key={slideIndex}
+                          css={css`
+                            width: 100%;
+                          `}
+                        >
+                          <C.MobileCard isDark={isDark} data={data} />
+                        </div>
+                      );
+                    })}
+                  </S.MobileCardWrap>
+                </div>
               ) : (
                 tabletCardShow(project, 4)
               )}
@@ -112,8 +140,13 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               margin-left: 3.125rem;
               z-index: 1000000000;
               cursor: pointer;
-              @media (max-width: 71.875rem) {
+
+              @media (max-width: 1150px) {
                 margin-left: 1.875rem;
+              }
+
+              @media (max-width: 620px) {
+                display: none;
               }
             `}
             onClick={handleNextSlide}
