@@ -43,9 +43,10 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
       arr.push(data.slice(i, i + size));
     }
 
-    return arr.map(array => {
+    return arr.map((array, i) => {
       return (
         <div
+          key={i}
           css={css`
             display: flex;
             width: 81vw;
@@ -58,6 +59,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
           {array.map((item, i) => {
             return (
               <C.Card
+                key={i}
                 isDark={isDark}
                 data={item as projectData}
                 index={i}
