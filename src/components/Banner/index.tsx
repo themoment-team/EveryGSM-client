@@ -38,7 +38,12 @@ const Home = () => {
       </S.TextContainer>
 
       <S.BannerImg>
-        <Image src="/images/projects/Rocket.png" fill alt="Rocket" />
+        <Image
+          src="/images/projects/Rocket.png"
+          fill
+          alt="Rocket"
+          sizes="1000"
+        />
       </S.BannerImg>
     </S.BannerContainer>
   );

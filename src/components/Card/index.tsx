@@ -86,6 +86,7 @@ const Card = ({
                   <Image
                     src={data.projectLogoUri}
                     fill
+                    sizes="10000"
                     alt="로고이미지"
                     css={css`
                       border-radius: 100%;
