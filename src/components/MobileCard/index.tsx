@@ -46,6 +46,7 @@ export const MobileCard = ({
             <Image
               src={data.projectLogoUri}
               fill
+              sizes="1000"
               alt="11"
               css={css`
                 border-radius: 100%;
