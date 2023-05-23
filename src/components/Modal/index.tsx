@@ -18,7 +18,6 @@ interface Props {
 
 const Modal = ({ show, onClose, index, isDark, data }: Props) => {
   const { width } = useWidthState();
-  console.log(data);
   const selectedProject = project.find(item => item.id === `${index}`);
   return (
     <S.ModalContainer show={show}>
