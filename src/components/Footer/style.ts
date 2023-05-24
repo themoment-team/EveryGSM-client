@@ -10,6 +10,7 @@ export const FooterContainer = styled.footer`
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     display: none;
   }
+
   transition: ease-in-out 0.3s;
   background-color: ${({ theme: { gray } }) => gray[1]};
 
@@ -17,7 +18,12 @@ export const FooterContainer = styled.footer`
     position: absolute;
     top: calc(100vh - 5rem);
   }
+
+  @media (max-height: 1000px) {
+    margin-top: 6.25rem;
+  }
 `;
+
 export const FootText = styled.p`
   font-style: normal;
   font-weight: 400;

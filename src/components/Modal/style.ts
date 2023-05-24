@@ -16,7 +16,7 @@ export const Categories = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
-    margin: 8px 0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
   }
 `;
 

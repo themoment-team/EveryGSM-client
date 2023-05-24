@@ -39,8 +39,8 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
               border-radius: 100%;
 
               @media (max-width: 620px) {
-                width: 64px;
-                height: 64px;
+                width: 4rem;
+                height: 4rem;
               }
             `}
             alt="로고이미지"
@@ -62,7 +62,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
             isDark={isDark}
             css={css`
               @media (min-width: 630px) {
-                margin-bottom: 23px;
+                margin-bottom: 1.4375rem;
               }
             `}
           >
@@ -70,7 +70,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
               css={css`
                 width: 21.875rem;
                 text-align: left;
-                font-size: 18px;
+                font-size: 1.125rem;
               `}
             >
               {selectedProject?.projectDescription}
