@@ -21,6 +21,7 @@ export const BannerContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 87.6%;
     height: 9.5rem;
+    align-items: center;
   }
 `;
 
@@ -70,13 +71,17 @@ export const MobileText = styled.p`
   font-weight: 700;
   letter-spacing: -0.03em;
 
+  @media (max-height: 750px) {
+    line-height: 1.5rem;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    font-size: 1.3125rem;
+    font-size: 5vw;
   }
 
   @media (max-width: 390px) {
     font-size: 5vw;
-    line-height: 1.5rem;
+    line-height: 1rem;
   }
 `;
 
@@ -101,7 +106,7 @@ export const BannerImg = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     position: absolute;
     width: 9.5rem;
-    height: 9.5rem;
+    height: 100%;
     right: 0;
   }
 
