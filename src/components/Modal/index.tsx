@@ -92,7 +92,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
               </S.ProfileImg> */}
               <S.ProjectName>Github profile</S.ProjectName>
             </S.Profile>
-            <S.GithubBox css={css``}>
+            <S.GithubBox>
               <Link href={selectedProject?.githubURL as string} target="_blank">
                 <S.Repo isDark={isDark}>{selectedProject?.githubURL}</S.Repo>
               </Link>
@@ -125,7 +125,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
             {width >= 620 ? selectedProject?.createrName : 'Repository'}
           </S.ProjectName>
         </S.Profile>
-        <S.GithubBox css={css``}>
+        <S.GithubBox>
           {selectedProject?.githubRepoURL.map((data, i) => {
             return (
               <Link href={data} target="_blank" key={i}>

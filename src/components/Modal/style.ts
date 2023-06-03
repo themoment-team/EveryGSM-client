@@ -213,7 +213,6 @@ export const Repo = styled.div<{ isDark: boolean }>`
   border-radius: 0.625rem;
   padding-left: 0.625rem;
   transition: ease-in-out 0.1s;
-  text-align: left;
   color: #999999;
 
   &:hover {
