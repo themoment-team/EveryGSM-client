@@ -16,14 +16,14 @@
     "jsxImportSource": "@emotion/react",
     "incremental": true,
     "types": ["@emotion/react/types/css-prop"],
-    "baseUrl": "./src",
+    "baseUrl": "apps/client/src",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["apps/client/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
