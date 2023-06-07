@@ -1,8 +1,8 @@
 'use client';
-import * as C from 'components';
+import * as C from '../components';
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { theme, darktheme } from 'styles/theme';
+import { theme, darktheme } from '../styles/theme';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/navigation';
 
