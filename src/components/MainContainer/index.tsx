@@ -20,7 +20,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex((project.length % tabletCardBox) - 1);
+      setSlideIndex(project.length % tabletCardBox);
     } else {
       setSlideIndex(slideIndex - 1);
     }
