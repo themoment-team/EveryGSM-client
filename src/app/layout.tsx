@@ -1,8 +1,10 @@
+import { Suspense } from 'react';
+
 import 'styles/global.css';
 import { GA_TRACKING_ID } from 'libs';
-import Script from 'next/script';
-import { Suspense } from 'react';
 import { NavigationEvents } from 'components';
+
+import Script from 'next/script';
 
 export default function RootLayout({
   children,
