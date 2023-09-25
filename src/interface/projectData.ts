@@ -9,5 +9,5 @@ export interface DataType {
   githubURL: string;
   githubProfileURL: string;
   createrName: string;
-  categories: any[];
+  categories: string[];
 }

@@ -3,7 +3,7 @@
 import * as S from './style';
 
 interface CardProps {
-  data: any;
+  data: string;
   isDark: boolean;
 }
 
