@@ -1,4 +1,4 @@
-import './globals.css';
+import 'styles/globals.css';
 import * as C from 'components';
 import { GA_TRACKING_ID } from 'libs';
 import Script from 'next/script';
