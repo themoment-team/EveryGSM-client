@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import * as C from 'components';
 import * as S from './style';
 import project from '../../../public/data/project.json';

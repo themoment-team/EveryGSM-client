@@ -1,10 +1,12 @@
 'use client';
 
-import * as C from 'components';
 import { useState } from 'react';
+
 import { ThemeProvider } from '@emotion/react';
-import { theme, darktheme } from 'styles/theme';
 import styled from '@emotion/styled';
+
+import { theme, darktheme } from 'styles/theme';
+import * as C from 'components';
 
 const AppWrapper = styled.div`
   background-color: ${({ theme }) => theme.gray[0]};

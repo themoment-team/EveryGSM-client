@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 'use client';
 import * as S from './style';
 import projectData from 'interface/projectData';

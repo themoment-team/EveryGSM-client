@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import * as S from './style';
 import Image from 'next/image';
 

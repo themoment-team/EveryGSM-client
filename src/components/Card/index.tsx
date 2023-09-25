@@ -1,4 +1,7 @@
+/** @jsxImportSource @emotion/react */
+
 'use client';
+
 import * as S from './style';
 import { Person } from '../../../public/images';
 import * as C from 'components';
