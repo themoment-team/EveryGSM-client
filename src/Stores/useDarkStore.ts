@@ -6,7 +6,7 @@ interface DarkState {
 }
 
 const useDarkState = create<DarkState>(set => ({
-  isDark: localStorage.getItem('dark') === 'false',
+  isDark: false,
   setIsDark: value => set({ isDark: value }),
 }));
 

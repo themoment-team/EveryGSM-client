@@ -2,11 +2,14 @@
 
 'use client';
 
-import * as S from './style';
 import Image from 'next/image';
 
 import { css } from '@emotion/react';
+
+import * as S from './style';
 import { useWidthState, useDarkState } from 'Stores';
+
+import { useEffect } from 'react';
 
 const Nav = () => {
   const { isDark, setIsDark } = useDarkState();
@@ -16,6 +19,10 @@ const Nav = () => {
     setIsDark(!isDark);
     localStorage.setItem('dark', String(isDark));
   };
+
+  useEffect(() => {
+    setIsDark(localStorage.getItem('dark') === 'false');
+  }, []);
 
   return (
     <>
