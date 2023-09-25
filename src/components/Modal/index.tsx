@@ -1,11 +1,12 @@
 'use client';
+
 import * as S from './style';
 import * as C from 'components';
 import Image from 'next/image';
 import project from '../../../public/data/project.json';
 import Link from 'next/link';
 import { css } from '@emotion/react';
-import projectData from 'interface/projectData';
+import { DataType } from 'interface';
 import { useWidthState } from 'Stores';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
   onClose: () => void;
   index: string;
   isDark: boolean;
-  data?: projectData;
+  data?: DataType;
 }
 
 const Modal = ({ show, onClose, index, isDark, data }: Props) => {

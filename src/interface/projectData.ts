@@ -1,4 +1,4 @@
-export default interface DataType {
+export interface DataType {
   id: string;
   projectName: string;
   projectDescription: string;
