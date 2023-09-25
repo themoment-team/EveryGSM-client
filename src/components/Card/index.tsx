@@ -1,6 +1,6 @@
 'use client';
 import * as S from './style';
-import { Person } from '../../../public/images';
+import { PersonIcon } from 'assets';
 import * as C from 'components';
 import Image from 'next/image';
 import projectData from 'interface/projectData';
@@ -95,7 +95,7 @@ const Card = ({
                 </S.Logo>
                 <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>
-                  <Person isDark={isDark} />
+                  <PersonIcon isDark={isDark} />
                   <S.Creater>{data.createrName}</S.Creater>
                 </S.Create>
                 <S.Categories>
