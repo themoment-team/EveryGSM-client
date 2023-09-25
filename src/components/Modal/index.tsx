@@ -11,14 +11,14 @@ import { css } from '@emotion/react';
 import { DataType } from 'interface';
 import { useDarkState, useWidthState } from 'Stores';
 
-interface Props {
+interface ModalProps {
   show: boolean;
   onClose: () => void;
   index: string;
   data?: DataType;
 }
 
-const Modal = ({ show, onClose, index, data }: Props) => {
+const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
   const { isDark } = useDarkState();
   const { width } = useWidthState();
   const selectedProject = project.find(item => item.id === `${index}`);

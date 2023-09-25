@@ -2,7 +2,12 @@
 
 import * as S from './style';
 
-const Category = ({ data, isDark }: { data: any; isDark: boolean }) => {
+interface CardProps {
+  data: any;
+  isDark: boolean;
+}
+
+const Category: React.FC<CardProps> = ({ data, isDark }) => {
   return <S.Categories isDark={isDark}>#{data}</S.Categories>;
 };
 

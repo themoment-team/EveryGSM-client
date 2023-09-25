@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { useWidthState } from 'Stores';
 
-const Home = () => {
+const Banner = () => {
   const { width, setWidth } = useWidthState();
 
   const handleResize = () => {
@@ -49,4 +49,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Banner;

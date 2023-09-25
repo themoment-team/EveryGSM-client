@@ -13,7 +13,12 @@ import { css } from '@emotion/react';
 import Link from 'next/link';
 import { useDarkState, useWidthState } from 'Stores';
 
-const Card = ({ data, index }: { data: DataType; index: number }) => {
+interface CardProps {
+  data: DataType;
+  index: number;
+}
+
+const Card: React.FC<CardProps> = ({ data, index }) => {
   const { isDark } = useDarkState();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);

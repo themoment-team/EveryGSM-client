@@ -10,7 +10,11 @@ import * as C from 'components';
 import { useState } from 'react';
 import { useDarkState } from 'Stores';
 
-export const MobileCard = ({ data }: { data: DataType }) => {
+interface MobileCardProps {
+  data: DataType;
+}
+
+export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
   const { isDark } = useDarkState();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
