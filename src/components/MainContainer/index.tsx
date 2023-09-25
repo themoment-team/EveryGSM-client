@@ -60,9 +60,9 @@ const MainContainer = () => {
             align-content: space-between;
           `}
         >
-          {array.map((item, i) => {
-            return <C.Card key={i} data={item as DataType} index={i}></C.Card>;
-          })}
+          {array.map((item, i) => (
+            <C.Card key={i} data={item as DataType} index={i} />
+          ))}
         </div>
       );
     });
