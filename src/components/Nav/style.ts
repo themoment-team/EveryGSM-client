@@ -39,7 +39,16 @@ export const ItemContainer = styled.div`
 export const IconContainer = styled.div`
   display: flex;
   cursor: pointer;
-  align-items: center;
+  align-items: end;
+
+  @media (max-width: 620px) {
+    align-items: center;
+
+    svg {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -48,7 +57,6 @@ export const Title = styled.h2`
   font-size: 1.75rem;
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
-  margin-top: 0.6875rem;
   color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {

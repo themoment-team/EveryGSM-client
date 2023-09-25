@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
+import { LogoIcon } from 'assets';
 
 interface Props {
   isDark: boolean;
@@ -35,14 +36,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
       >
         <S.ItemContainer>
           <S.IconContainer>
-            <S.LogoContainer>
-              <Image
-                src="/images/LogoIcon.svg"
-                width={20}
-                height={20}
-                alt="logo"
-              />
-            </S.LogoContainer>
+            <LogoIcon />
             <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
