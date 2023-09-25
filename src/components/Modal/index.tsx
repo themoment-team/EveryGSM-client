@@ -9,19 +9,20 @@ import project from '../../../public/data/project.json';
 import Link from 'next/link';
 import { css } from '@emotion/react';
 import { DataType } from 'interface';
-import { useWidthState } from 'Stores';
+import { useDarkState, useWidthState } from 'Stores';
 
 interface Props {
   show: boolean;
   onClose: () => void;
   index: string;
-  isDark: boolean;
   data?: DataType;
 }
 
-const Modal = ({ show, onClose, index, isDark, data }: Props) => {
+const Modal = ({ show, onClose, index, data }: Props) => {
+  const { isDark } = useDarkState();
   const { width } = useWidthState();
   const selectedProject = project.find(item => item.id === `${index}`);
+
   return (
     <S.ModalContainer show={show}>
       <S.ModalContent>

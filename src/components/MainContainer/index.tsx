@@ -62,14 +62,7 @@ const MainContainer = () => {
           `}
         >
           {array.map((item, i) => {
-            return (
-              <C.Card
-                key={i}
-                isDark={isDark}
-                data={item as DataType}
-                index={i}
-              ></C.Card>
-            );
+            return <C.Card key={i} data={item as DataType} index={i}></C.Card>;
           })}
         </div>
       );
@@ -106,7 +99,7 @@ const MainContainer = () => {
               {width > 1150 ? (
                 project.map((data, slideIndex) => (
                   <div key={slideIndex}>
-                    <C.Card isDark={isDark} data={data} index={slideIndex} />
+                    <C.Card data={data} index={slideIndex} />
                   </div>
                 ))
               ) : width <= 620 ? (
@@ -126,7 +119,7 @@ const MainContainer = () => {
                             width: 100%;
                           `}
                         >
-                          <C.MobileCard isDark={isDark} data={data} />
+                          <C.MobileCard data={data} />
                         </div>
                       );
                     })}

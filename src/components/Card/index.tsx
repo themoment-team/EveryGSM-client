@@ -11,17 +11,10 @@ import { DataType } from 'interface';
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
-import { useWidthState } from 'Stores';
+import { useDarkState, useWidthState } from 'Stores';
 
-const Card = ({
-  data,
-  index,
-  isDark,
-}: {
-  data: DataType;
-  index: number;
-  isDark: boolean;
-}) => {
+const Card = ({ data, index }: { data: DataType; index: number }) => {
+  const { isDark } = useDarkState();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const { width } = useWidthState();
@@ -62,7 +55,6 @@ const Card = ({
           <S.Desc>
             {showModal && selectedId === data.id && (
               <C.Modal
-                isDark={isDark}
                 show={showModal}
                 data={data}
                 onClose={handleCloseModal}

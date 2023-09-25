@@ -8,14 +8,10 @@ import { css } from '@emotion/react';
 import Image from 'next/image';
 import * as C from 'components';
 import { useState } from 'react';
+import { useDarkState } from 'Stores';
 
-export const MobileCard = ({
-  data,
-  isDark,
-}: {
-  data: DataType;
-  isDark: boolean;
-}) => {
+export const MobileCard = ({ data }: { data: DataType }) => {
+  const { isDark } = useDarkState();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -32,7 +28,6 @@ export const MobileCard = ({
       {showModal && selectedId === data.id && (
         <C.Modal
           data={data}
-          isDark={isDark}
           show={showModal}
           onClose={handleCloseModal}
           index={selectedId}
