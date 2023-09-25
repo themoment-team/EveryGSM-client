@@ -2,6 +2,8 @@ import 'styles/global.css';
 
 import type { Metadata } from 'next';
 
+import Providers from './providers';
+
 const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 export const metadata: Metadata = {
@@ -52,7 +54,9 @@ export default function RootLayout({
       </head>
       <title>EveryGSM</title>
       <link rel="icon" href="/images/Favicon.png" />
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

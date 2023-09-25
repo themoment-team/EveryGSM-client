@@ -5,14 +5,10 @@ import Image from 'next/image';
 
 import { useEffect } from 'react';
 import { css } from '@emotion/react';
-import { useWidthState } from 'Stores';
+import { useWidthState, useDarkState } from 'Stores';
 
-interface Props {
-  isDark: boolean;
-  setIsDark: Function;
-}
-
-const Nav = ({ isDark, setIsDark }: Props) => {
+const Nav = () => {
+  const { isDark, setIsDark } = useDarkState();
   const width = useWidthState(state => state.width);
 
   const handleClick = () => {

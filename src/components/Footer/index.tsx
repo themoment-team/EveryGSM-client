@@ -1,8 +1,8 @@
 import * as S from './style';
-import useDarkState from 'Stores/useDarkStore';
+import { useDarkState } from 'Stores';
 
-const Footer = ({ isDark }: { isDark: boolean }) => {
-  // const { isDark, setIsDark } = useDarkState();
+const Footer = () => {
+  const { isDark, setIsDark } = useDarkState();
 
   return (
     <div>
