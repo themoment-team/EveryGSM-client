@@ -4,8 +4,6 @@ import Script from 'next/script';
 import { Suspense } from 'react';
 import { NavigationEvents } from 'components';
 
-const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
-
 export default function RootLayout({
   children,
 }: {
