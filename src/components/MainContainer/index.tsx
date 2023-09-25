@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
-import projectData from 'interface/projectData';
+import { DataType } from 'interface';
 
 const MainContainer = ({ isDark }: { isDark: boolean }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
@@ -63,7 +63,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               <C.Card
                 key={i}
                 isDark={isDark}
-                data={item as projectData}
+                data={item as DataType}
                 index={i}
               ></C.Card>
             );

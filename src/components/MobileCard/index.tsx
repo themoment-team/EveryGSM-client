@@ -2,7 +2,8 @@
 
 'use client';
 import * as S from './style';
-import projectData from 'interface/projectData';
+import { DataType } from 'interface';
+
 import { css } from '@emotion/react';
 import Image from 'next/image';
 import * as C from 'components';
@@ -12,7 +13,7 @@ export const MobileCard = ({
   data,
   isDark,
 }: {
-  data: projectData;
+  data: DataType;
   isDark: boolean;
 }) => {
   const [showModal, setShowModal] = useState<boolean>(false);

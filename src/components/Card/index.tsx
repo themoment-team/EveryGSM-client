@@ -6,7 +6,8 @@ import * as S from './style';
 import { Person } from '../../../public/images';
 import * as C from 'components';
 import Image from 'next/image';
-import projectData from 'interface/projectData';
+import { DataType } from 'interface';
+
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
@@ -17,7 +18,7 @@ const Card = ({
   index,
   isDark,
 }: {
-  data: projectData;
+  data: DataType;
   index: number;
   isDark: boolean;
 }) => {
