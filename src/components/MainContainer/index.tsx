@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+'use client';
+
 import * as C from 'components';
 import * as S from './style';
 import project from '../../../public/data/project.json';

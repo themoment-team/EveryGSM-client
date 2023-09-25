@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+'use client';
+
 import * as S from './style';
 import Image from 'next/image';
 
