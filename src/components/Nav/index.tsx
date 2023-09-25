@@ -5,7 +5,6 @@
 import * as S from './style';
 import Image from 'next/image';
 
-import { useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState, useDarkState } from 'Stores';
 
@@ -17,11 +16,6 @@ const Nav = () => {
     setIsDark(!isDark);
     localStorage.setItem('dark', String(isDark));
   };
-
-  useEffect(() => {
-    const darkOption = localStorage.getItem('dark') === 'false';
-    setIsDark(darkOption ?? true);
-  }, []);
 
   return (
     <>
