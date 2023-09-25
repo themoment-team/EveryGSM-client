@@ -1,7 +1,7 @@
 'use client';
 import * as S from './style';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useWidthState } from 'Stores';
 
 const Home = () => {

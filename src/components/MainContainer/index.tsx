@@ -8,11 +8,10 @@ import project from '../../../public/data/project.json';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
-import { useDarkState, useWidthState } from 'Stores';
+import { useWidthState } from 'Stores';
 import { DataType } from 'interface';
 
 const MainContainer = () => {
-  const { isDark } = useDarkState();
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [tabletCardBox, setTabletCardBox] = useState<number>(3);
   const { width } = useWidthState();

@@ -1,4 +1,5 @@
 'use client';
+
 import * as S from './style';
 
 const Category = ({ data, isDark }: { data: any; isDark: boolean }) => {
