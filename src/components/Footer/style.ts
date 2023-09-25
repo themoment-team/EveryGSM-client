@@ -1,16 +1,27 @@
 import styled from '@emotion/styled';
-import theme from 'assets/palette';
-
 export const FooterContainer = styled.footer`
-  position: absolute;
-  bottom: 0;
   width: 100vw;
   height: 5rem;
   border: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${theme.color.gray[1]};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    display: none;
+  }
+
+  transition: ease-in-out 0.3s;
+  background-color: ${({ theme: { gray } }) => gray[1]};
+
+  @media (min-height: 1000px) {
+    position: absolute;
+    top: calc(100vh - 5rem);
+  }
+
+  @media (max-height: 1000px) {
+    margin-top: 6.25rem;
+  }
 `;
 
 export const FootText = styled.p`
@@ -19,5 +30,6 @@ export const FootText = styled.p`
   font-size: 1.125rem;
   line-height: 1.3125rem;
   letter-spacing: -0.03em;
-  color: ${theme.color.gray[3]};
+  transition: ease-in-out 0.3s;
+  color: ${({ theme }) => theme.exception.footText};
 `;
