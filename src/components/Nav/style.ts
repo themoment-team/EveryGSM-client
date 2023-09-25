@@ -126,6 +126,11 @@ export const ToggleIcon = styled.div<{ isDark: boolean }>`
     width: 1.375rem;
     height: 1.375rem;
   }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const LogoContainer = styled.div`
