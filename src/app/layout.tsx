@@ -6,12 +6,12 @@ const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 export const metadata: Metadata = {
   applicationName: 'EveryGSM',
-  description: '광주소프트웨어마이스터고등학교 공식 홈페이지입니다.',
+  description: '교내 프로젝트를 하나로 연결해주는 서비스.',
   openGraph: {
-    title: '광주소프트웨어마이스터고등학교',
-    description: '광주소프트웨어마이스터고등학교 공식 홈페이지입니다.',
-    url: 'https://official.hellogsm.kr/',
-    siteName: 'official GSM',
+    title: 'EveryGSM',
+    description: '교내 프로젝트를 하나로 연결해주는 서비스.',
+    url: 'https://every.hellogsm.kr/',
+    siteName: 'EveryGSM',
     images: [
       {
         url: '/public/images/Favicon.png',
