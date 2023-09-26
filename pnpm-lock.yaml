@@ -39,6 +39,11 @@ dependencies:
     specifier: ^4.3.7
     version: 4.3.7(react@18.2.0)
 
+devDependencies:
+  '@types/gtag.js':
+    specifier: ^0.0.14
+    version: 0.0.14
+
 packages:
 
   /@babel/code-frame@7.21.4:
@@ -296,6 +301,10 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: false
+
+  /@types/gtag.js@0.0.14:
+    resolution: {integrity: sha512-NcR9rf3B93ie5T086NIpXGTtoIJeOeQ14+IBIBwfNBztb175e/0gONc60ywUU4+f9dwctgz9L3I4h5Gs/hl31g==}
+    dev: true
 
   /@types/node@18.15.11:
     resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
