@@ -2,14 +2,18 @@
 
 'use client';
 
-import * as S from './style';
-import * as C from 'components';
 import Image from 'next/image';
-import project from '../../../public/data/project.json';
 import Link from 'next/link';
+
 import { css } from '@emotion/react';
-import { DataType } from 'interface';
-import { useDarkState, useWidthState } from 'Stores';
+
+import * as C from 'components';
+import project from 'constants/project.json';
+import { useDarkState, useWidthState } from 'stores';
+
+import * as S from './style';
+
+import type { DataType } from 'interface';
 
 interface ModalProps {
   show: boolean;
@@ -48,7 +52,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
               }
             `}
             alt="로고이미지"
-          ></Image>
+          />
         </S.Img>
         <S.Title isDark={isDark}>{selectedProject?.projectName}</S.Title>
         <S.Creater>{selectedProject?.createrName}</S.Creater>
@@ -119,7 +123,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
                 css={css`
                   border-radius: 100%;
                 `}
-              ></Image>
+              />
             </S.ProfileImg>
           ) : (
             ''
@@ -130,13 +134,11 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
           </S.ProjectName>
         </S.Profile>
         <S.GithubBox css={css``}>
-          {selectedProject?.githubRepoURL.map((data, i) => {
-            return (
-              <Link href={data} target="_blank" key={i}>
-                <S.Repo isDark={isDark}>{data}</S.Repo>
-              </Link>
-            );
-          })}
+          {selectedProject?.githubRepoURL.map((data, i) => (
+            <Link href={data} target="_blank" key={i}>
+              <S.Repo isDark={isDark}>{data}</S.Repo>
+            </Link>
+          ))}
         </S.GithubBox>
       </S.ModalContent>
     </S.ModalContainer>

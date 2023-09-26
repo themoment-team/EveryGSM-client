@@ -23,7 +23,14 @@
     "zustand": "^4.3.7"
   },
   "devDependencies": {
-    "@types/gtag.js": "^0.0.14"
+    "@types/gtag.js": "^0.0.14",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^13.5.3",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-sort-exports": "^0.8.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.3"
   },
   "packageManager": "pnpm@8.2.0"
 }

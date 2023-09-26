@@ -1,12 +1,15 @@
 import { Suspense } from 'react';
 
 import 'styles/global.css';
-import { GA_TRACKING_ID } from 'libs';
-import { NavigationEvents } from 'components';
-
 import Script from 'next/script';
+
+import { NavigationEvents } from 'components';
+import { GA_TRACKING_ID } from 'libs';
+
+
 import Providers from './providers';
-import { Metadata } from 'next';
+
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   applicationName: 'EveryGSM',

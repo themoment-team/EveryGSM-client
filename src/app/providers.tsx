@@ -1,10 +1,9 @@
 'use client';
 
-import { useDarkState } from 'Stores';
-
 import { ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 
+import { useDarkState } from 'stores';
 import { theme, darktheme } from 'styles/theme';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
