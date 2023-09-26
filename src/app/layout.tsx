@@ -1,7 +1,33 @@
-'use client';
 import 'styles/global.css';
 
+import type { Metadata } from 'next';
+
+import Providers from './providers';
+
 const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
+
+export const metadata: Metadata = {
+  applicationName: 'EveryGSM',
+  description: '교내 프로젝트를 하나로 연결해주는 서비스.',
+  openGraph: {
+    title: 'EveryGSM',
+    description: '교내 프로젝트를 하나로 연결해주는 서비스.',
+    url: 'https://every.hellogsm.kr/',
+    siteName: 'EveryGSM',
+    images: [
+      {
+        url: '/public/images/Favicon.png',
+        width: 800,
+        height: 800,
+      },
+    ],
+    locale: 'ko',
+    type: 'website',
+  },
+  icons: {
+    icon: '/public/images/Favicon.png',
+  },
+};
 
 export default function RootLayout({
   children,
@@ -28,7 +54,9 @@ export default function RootLayout({
       </head>
       <title>EveryGSM</title>
       <link rel="icon" href="/images/Favicon.png" />
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

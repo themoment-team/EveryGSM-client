@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import { css } from '@emotion/react';
 
 const Person = ({ isDark }: { isDark: boolean }) => {

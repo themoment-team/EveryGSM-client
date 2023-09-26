@@ -1,18 +1,17 @@
+/** @jsxImportSource @emotion/react */
+
+'use client';
+
+import { css } from '@emotion/react';
+
+import { LogoIcon, MoonIcon, SunIcon } from 'assets';
+import { useWidthState, useDarkState } from 'Stores';
 import * as S from './style';
-import Image from 'next/image';
 
 import { useEffect } from 'react';
-import { css } from '@emotion/react';
-import { useWidthState } from 'Stores';
-import { LogoIcon, MoonIcon, SunIcon } from 'assets';
 
-interface Props {
-  isDark: boolean;
-  setIsDark: Function;
-}
-
-const Nav = ({ isDark, setIsDark }: Props) => {
-  const width = useWidthState(state => state.width);
+const Nav = () => {
+  const { isDark, setIsDark } = useDarkState();
 
   const handleClick = () => {
     setIsDark(!isDark);
@@ -20,8 +19,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
   };
 
   useEffect(() => {
-    const darkOption = localStorage.getItem('dark') === 'false';
-    setIsDark(darkOption ?? true);
+    setIsDark(localStorage.getItem('dark') === 'false');
   }, []);
 
   return (

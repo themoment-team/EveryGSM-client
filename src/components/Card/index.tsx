@@ -1,23 +1,25 @@
+/** @jsxImportSource @emotion/react */
+
 'use client';
+
 import * as S from './style';
 import { PersonIcon } from 'assets';
 import * as C from 'components';
 import Image from 'next/image';
-import projectData from 'interface/projectData';
+import { DataType } from 'interface';
+
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Link from 'next/link';
-import { useWidthState } from 'Stores';
+import { useDarkState, useWidthState } from 'Stores';
 
-const Card = ({
-  data,
-  index,
-  isDark,
-}: {
-  data: projectData;
+interface CardProps {
+  data: DataType;
   index: number;
-  isDark: boolean;
-}) => {
+}
+
+const Card: React.FC<CardProps> = ({ data, index }) => {
+  const { isDark } = useDarkState();
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const { width } = useWidthState();
@@ -58,7 +60,6 @@ const Card = ({
           <S.Desc>
             {showModal && selectedId === data.id && (
               <C.Modal
-                isDark={isDark}
                 show={showModal}
                 data={data}
                 onClose={handleCloseModal}
@@ -100,10 +101,12 @@ const Card = ({
                 </S.Create>
                 <S.Categories>
                   <S.Slide>
-                    {data.categories.map(i => (
-                      <div key={i}>
-                        <C.Category data={i} isDark={isDark} />
-                      </div>
+                    {data.categories.map(category => (
+                      <C.Category
+                        key={category}
+                        category={category}
+                        isDark={isDark}
+                      />
                     ))}
                   </S.Slide>
                 </S.Categories>

@@ -1,3 +1,7 @@
+/** @jsxImportSource @emotion/react */
+
+'use client';
+
 import * as C from 'components';
 import * as S from './style';
 import project from '../../../public/data/project.json';
@@ -5,9 +9,9 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { css } from '@emotion/react';
 import { useWidthState } from 'Stores';
-import projectData from 'interface/projectData';
+import { DataType } from 'interface';
 
-const MainContainer = ({ isDark }: { isDark: boolean }) => {
+const MainContainer = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [tabletCardBox, setTabletCardBox] = useState<number>(3);
   const { width } = useWidthState();
@@ -37,38 +41,29 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
   };
 
   const tabletCardShow = (data = [{}], size = 1) => {
-    const arr = [];
+    const cardDatas = [];
 
     for (let i = 0; i < data.length; i += size) {
-      arr.push(data.slice(i, i + size));
+      cardDatas.push(data.slice(i, i + size));
     }
 
-    return arr.map((array, i) => {
-      return (
-        <div
-          key={i}
-          css={css`
-            display: flex;
-            width: 81vw;
-            height: 81vw;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: space-between;
-          `}
-        >
-          {array.map((item, i) => {
-            return (
-              <C.Card
-                key={i}
-                isDark={isDark}
-                data={item as projectData}
-                index={i}
-              ></C.Card>
-            );
-          })}
-        </div>
-      );
-    });
+    return cardDatas.map((array, i) => (
+      <div
+        key={i}
+        css={css`
+          display: flex;
+          width: 81vw;
+          height: 81vw;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-content: space-between;
+        `}
+      >
+        {array.map((item, i) => (
+          <C.Card key={i} data={item as DataType} index={i} />
+        ))}
+      </div>
+    ));
   };
 
   return (
@@ -101,7 +96,11 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               {width > 1150 ? (
                 project.map((data, slideIndex) => (
                   <div key={slideIndex}>
-                    <C.Card isDark={isDark} data={data} index={slideIndex} />
+                    <C.Card
+                      key={slideIndex + data.id}
+                      data={data}
+                      index={slideIndex}
+                    />
                   </div>
                 ))
               ) : width <= 620 ? (
@@ -121,7 +120,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
                             width: 100%;
                           `}
                         >
-                          <C.MobileCard isDark={isDark} data={data} />
+                          <C.MobileCard data={data} />
                         </div>
                       );
                     })}
