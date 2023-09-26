@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/components/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -18,5 +18,19 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  babel: async config => ({
+    ...config,
+    presets: [
+      [
+        'next/babel',
+        {
+          'preset-react': {
+            runtime: 'automatic',
+            importSource: '@emotion/react',
+          },
+        },
+      ],
+    ],
+  }),
 };
 export default config;

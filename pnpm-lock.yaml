@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^7.1.0
     version: 7.4.5(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.3)
   '@storybook/testing-library':
-    specifier: ^0.2.1
-    version: 0.2.1
+    specifier: 0.2.1-next.1
+    version: 0.2.1-next.1
 
 packages:
 
@@ -1421,7 +1421,7 @@ packages:
     resolution: {integrity: sha512-p2dAqtVrkhSa7xz1u/m9eHYdLi+en8NowrmXeF/dKtJpU8lCWli8RUAati7NcSl0afsBott48pdnANuD0wh9QQ==}
     dependencies:
       '@babel/helper-module-imports': 7.21.4
-      '@babel/runtime': 7.21.0
+      '@babel/runtime': 7.23.1
       '@emotion/hash': 0.9.0
       '@emotion/memoize': 0.8.0
       '@emotion/serialize': 1.1.1
@@ -3648,8 +3648,8 @@ packages:
       - encoding
       - supports-color
 
-  /@storybook/testing-library@0.2.1:
-    resolution: {integrity: sha512-AdbfLCm1C2nEFrhA3ScdicfW6Fjcorehr6RlGwECMiWwaXisnP971Wd4psqtWxlAqQo4tYBZ0f6rJ3J78JLtsg==}
+  /@storybook/testing-library@0.2.1-next.1:
+    resolution: {integrity: sha512-l4BJ2ZLzVycxeByrBGKYf8hoD7GevYt8IbWcqYH9QbBPCsfNkLd9lt/6AAtOI9CLpsHqTPtf1QpSFExP3bKzcw==}
     dependencies:
       '@testing-library/dom': 9.3.3
       '@testing-library/user-event': 14.4.3(@testing-library/dom@9.3.3)
