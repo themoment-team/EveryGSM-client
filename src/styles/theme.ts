@@ -29,6 +29,37 @@ export interface ThemeType {
   };
 }
 
+export const darktheme: ThemeType = {
+  gray: ['#191919', '#636363', '#999999', '#E3E3E3', '#F1F1F5'],
+  primary: {
+    magenta: '#E23C96',
+    pale_yellow: '#FFE870',
+  },
+  secondary: {
+    vivid_yellow: '#FFE900',
+    dusty_blue: '#7090B0',
+    navy_blue: '#225087',
+  },
+  breakPoint: {
+    mobile: '620px',
+    tablet: '1150px',
+  },
+  exception: {
+    card: '#505050',
+    cardTitle: '#ffffff',
+    creater: '#e3e3e3',
+    categories: '#f1f1f5',
+    back: '#636363',
+    footText: '#ffffff',
+    nav: '#191919',
+    navTitle: '#ffffff',
+    toggle: '#999999',
+    modalTitle: '#ffffff',
+    desc: '#f1f1f5',
+    teamTitle: '#f1f1f5',
+  },
+} as const;
+
 export const theme: ThemeType = {
   gray: ['#F1F1F5', '#E3E3E3', '#999999', '#636363', '#191919'],
   primary: {
@@ -58,36 +89,5 @@ export const theme: ThemeType = {
     modalTitle: '#636363',
     desc: '#636363',
     teamTitle: '#000000',
-  },
-} as const;
-
-export const darktheme: ThemeType = {
-  gray: ['#191919', '#636363', '#999999', '#E3E3E3', '#F1F1F5'],
-  primary: {
-    magenta: '#E23C96',
-    pale_yellow: '#FFE870',
-  },
-  secondary: {
-    vivid_yellow: '#FFE900',
-    dusty_blue: '#7090B0',
-    navy_blue: '#225087',
-  },
-  breakPoint: {
-    mobile: '620px',
-    tablet: '1150px',
-  },
-  exception: {
-    card: '#505050',
-    cardTitle: '#ffffff',
-    creater: '#e3e3e3',
-    categories: '#f1f1f5',
-    back: '#636363',
-    footText: '#ffffff',
-    nav: '#191919',
-    navTitle: '#ffffff',
-    toggle: '#999999',
-    modalTitle: '#ffffff',
-    desc: '#f1f1f5',
-    teamTitle: '#f1f1f5',
   },
 } as const;

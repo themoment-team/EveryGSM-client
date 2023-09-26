@@ -1,11 +1,12 @@
 'use client';
 
-import emotionReset from 'emotion-reset';
 import { Global, css } from "@emotion/react";
+
+import emotionReset from 'emotion-reset';
 
 export function GlobalStyle() {
   return (
-    <Global 
+    <Global
       styles={css`
         ${emotionReset}
 
@@ -56,7 +57,7 @@ export function GlobalStyle() {
         .roboto {
           font-family: 'roboto';
         }
-        
+
         ::-webkit-scrollbar {
           display: none;
         }
