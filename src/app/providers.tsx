@@ -5,13 +5,15 @@ import { useDarkState } from 'Stores';
 import { ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { theme, darktheme } from 'styles/theme';
+import { theme, darkTheme } from 'styles';
+import { GlobalStyle } from 'styles/GlobalStyle';
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const { isDark } = useDarkState();
 
   return (
-    <ThemeProvider theme={isDark ? darktheme : theme}>
+    <ThemeProvider theme={isDark ? darkTheme : theme}>
+      <GlobalStyle />
       <AppWrapper>{children}</AppWrapper>
     </ThemeProvider>
   );

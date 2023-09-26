@@ -1,4 +1,7 @@
+import { ThemeProvider } from '@emotion/react';
 import type { Preview } from '@storybook/react';
+import { withThemeFromJSXProvider } from '@storybook/addon-styling';
+import {darkTheme, theme, GlobalStyle} from 'styles'
 
 const preview: Preview = {
   parameters: {
@@ -26,6 +29,17 @@ const preview: Preview = {
       appDirectory: true,
     },
   },
+  decorators: [
+    withThemeFromJSXProvider({
+      themes: {
+        light: theme,
+        dark: darkTheme,
+      },
+      defaultTheme: 'light',
+      Provider: ThemeProvider,
+      GlobalStyles: GlobalStyle
+    })
+  ],
 };
 
 export default preview;
