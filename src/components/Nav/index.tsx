@@ -12,7 +12,6 @@ import { useEffect } from 'react';
 
 const Nav = () => {
   const { isDark, setIsDark } = useDarkState();
-  const width = useWidthState(state => state.width);
 
   const handleClick = () => {
     setIsDark(!isDark);

@@ -101,10 +101,12 @@ const Card: React.FC<CardProps> = ({ data, index }) => {
                 </S.Create>
                 <S.Categories>
                   <S.Slide>
-                    {data.categories.map(i => (
-                      <div key={i}>
-                        <C.Category data={i} isDark={isDark} />
-                      </div>
+                    {data.categories.map(category => (
+                      <C.Category
+                        key={category}
+                        category={category}
+                        isDark={isDark}
+                      />
                     ))}
                   </S.Slide>
                 </S.Categories>

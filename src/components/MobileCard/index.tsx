@@ -16,6 +16,7 @@ interface MobileCardProps {
 
 export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
   const { isDark } = useDarkState();
+
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -27,6 +28,7 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
   return (
     <>
       {showModal && selectedId === data.id && (
@@ -59,16 +61,17 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
             <S.Title>{data.projectName}</S.Title>
             <S.Categories>
               <S.Slide>
-                {data.categories.map(index => (
-                  <div key={index}>
-                    <C.Category data={index} isDark={isDark} />
-                  </div>
+                {data.categories.map(category => (
+                  <C.Category
+                    key={category}
+                    category={category}
+                    isDark={isDark}
+                  />
                 ))}
               </S.Slide>
             </S.Categories>
           </S.CardContents>
         </S.ContentWrap>
-        {/* </Link> */}
       </S.MobileCard>
     </>
   );

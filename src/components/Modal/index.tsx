@@ -54,9 +54,9 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
         <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
           <S.Slide>
-            {data?.categories.map(i => (
-              <div key={i}>
-                <C.Category data={i} isDark={isDark} />
+            {data?.categories.map(category => (
+              <div key={category}>
+                <C.Category category={category} isDark={isDark} />
               </div>
             ))}
           </S.Slide>

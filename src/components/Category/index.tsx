@@ -3,12 +3,12 @@
 import * as S from './style';
 
 interface CardProps {
-  data: string;
+  category: string;
   isDark: boolean;
 }
 
-const Category: React.FC<CardProps> = ({ data, isDark }) => {
-  return <S.Categories isDark={isDark}>#{data}</S.Categories>;
+const Category: React.FC<CardProps> = ({ category, isDark }) => {
+  return <S.Categories isDark={isDark}>#{category}</S.Categories>;
 };
 
 export default Category;

@@ -41,31 +41,29 @@ const MainContainer = () => {
   };
 
   const tabletCardShow = (data = [{}], size = 1) => {
-    const arr = [];
+    const cardDatas = [];
 
     for (let i = 0; i < data.length; i += size) {
-      arr.push(data.slice(i, i + size));
+      cardDatas.push(data.slice(i, i + size));
     }
 
-    return arr.map((array, i) => {
-      return (
-        <div
-          key={i}
-          css={css`
-            display: flex;
-            width: 81vw;
-            height: 81vw;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: space-between;
-          `}
-        >
-          {array.map((item, i) => (
-            <C.Card key={i} data={item as DataType} index={i} />
-          ))}
-        </div>
-      );
-    });
+    return cardDatas.map((array, i) => (
+      <div
+        key={i}
+        css={css`
+          display: flex;
+          width: 81vw;
+          height: 81vw;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-content: space-between;
+        `}
+      >
+        {array.map((item, i) => (
+          <C.Card key={i} data={item as DataType} index={i} />
+        ))}
+      </div>
+    ));
   };
 
   return (
@@ -98,7 +96,11 @@ const MainContainer = () => {
               {width > 1150 ? (
                 project.map((data, slideIndex) => (
                   <div key={slideIndex}>
-                    <C.Card data={data} index={slideIndex} />
+                    <C.Card
+                      key={slideIndex + data.id}
+                      data={data}
+                      index={slideIndex}
+                    />
                   </div>
                 ))
               ) : width <= 620 ? (
