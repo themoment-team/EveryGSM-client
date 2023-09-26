@@ -1,6 +1,5 @@
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 
-
 // 이벤트 전송
 export const event = (
   action: Gtag.EventNames,
@@ -8,7 +7,6 @@ export const event = (
 ) => {
   window.gtag('event', action, eventParams);
 };
-
 
 // 페이지뷰 이벤트 전송
 export const pageview = (url: string) => {

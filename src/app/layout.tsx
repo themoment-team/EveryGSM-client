@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 
-import 'styles/global.css';
 import Script from 'next/script';
 
 import { NavigationEvents } from 'components';
