@@ -2,16 +2,20 @@
 
 'use client';
 
-import * as S from './style';
+import { useState } from 'react';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { css } from '@emotion/react';
+
 import { PersonIcon } from 'assets';
 import * as C from 'components';
-import Image from 'next/image';
-import { DataType } from 'interface';
+import { useDarkState, useWidthState } from 'stores';
 
-import { useState } from 'react';
-import { css } from '@emotion/react';
-import Link from 'next/link';
-import { useDarkState, useWidthState } from 'Stores';
+import * as S from './style';
+
+import type { DataType } from 'interface';
 
 interface CardProps {
   data: DataType;
@@ -92,7 +96,7 @@ const Card: React.FC<CardProps> = ({ data, index }) => {
                     css={css`
                       border-radius: 100%;
                     `}
-                  ></Image>
+                  />
                 </S.Logo>
                 <S.Title>{data.projectName}</S.Title>
                 <S.Create style={{ display: 'flex' }}>

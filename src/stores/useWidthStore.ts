@@ -6,7 +6,7 @@ interface WidthState {
 }
 
 const useWidthState = create<WidthState>(set => ({
-  width: 0,
+  width: 1920,
   setWidth: value => set({ width: value }),
 }));
 

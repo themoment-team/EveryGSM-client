@@ -2,14 +2,19 @@
 
 'use client';
 
-import * as C from 'components';
-import * as S from './style';
-import project from '../../../public/data/project.json';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
+
+import Image from 'next/image';
+
 import { css } from '@emotion/react';
-import { useWidthState } from 'Stores';
-import { DataType } from 'interface';
+
+import * as C from 'components';
+import project from 'constants/project.json';
+import { useWidthState } from 'stores';
+
+import * as S from './style';
+
+import type { DataType } from 'interface';
 
 const MainContainer = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
@@ -24,15 +29,16 @@ const MainContainer = () => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex(project.length % tabletCardBox);
+      setSlideIndex((project.length % tabletCardBox) + 1);
     } else {
       setSlideIndex(slideIndex - 1);
     }
   };
+
   const handleNextSlide = () => {
     if (
       slideIndex >
-      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 0 : 1)
+      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 1 : 1)
     ) {
       setSlideIndex(0);
     } else {
@@ -112,18 +118,16 @@ const MainContainer = () => {
                 >
                   <S.MobileCardTitle>등록된 프로젝트</S.MobileCardTitle>
                   <S.MobileCardWrap>
-                    {project.map((data, slideIndex) => {
-                      return (
-                        <div
-                          key={slideIndex}
-                          css={css`
-                            width: 100%;
-                          `}
-                        >
-                          <C.MobileCard data={data} />
-                        </div>
-                      );
-                    })}
+                    {project.map((data, slideIndex) => (
+                      <div
+                        key={slideIndex}
+                        css={css`
+                          width: 100%;
+                        `}
+                      >
+                        <C.MobileCard data={data} />
+                      </div>
+                    ))}
                   </S.MobileCardWrap>
                 </div>
               ) : (

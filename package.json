@@ -20,7 +20,6 @@
     "emotion-reset": "^3.0.1",
     "init": "^0.1.2",
     "next": "^13.5.2",
-    "next-seo": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.4.5",
@@ -37,6 +36,14 @@
     "@storybook/blocks": "^7.4.5",
     "@storybook/nextjs": "^7.4.5",
     "@storybook/react": "^7.1.0",
-    "@storybook/testing-library": "0.2.1-next.1"
+    "@storybook/testing-library": "0.2.1-next.1",
+    "@types/gtag.js": "^0.0.14",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^13.5.3",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-sort-exports": "^0.8.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.3"
   }
 }

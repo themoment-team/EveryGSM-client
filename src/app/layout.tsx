@@ -1,8 +1,14 @@
-import type { Metadata } from 'next';
+import { Suspense } from 'react';
+
+import 'styles/global.css';
+import Script from 'next/script';
+
+import { NavigationEvents } from 'components';
+import { GA_TRACKING_ID } from 'libs';
 
 import Providers from './providers';
 
-const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   applicationName: 'EveryGSM',
@@ -35,25 +41,32 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <script
+        <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        ></script>
-        <script
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_TRACKING_ID}');
+              gtag('config', '${GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
             `,
           }}
         />
       </head>
-      <title>EveryGSM</title>
-      <link rel="icon" href="/images/Favicon.png" />
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Suspense fallback={null}>
+            <NavigationEvents />
+          </Suspense>
+        </Providers>
       </body>
     </html>
   );

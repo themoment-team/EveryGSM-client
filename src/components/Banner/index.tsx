@@ -1,8 +1,11 @@
 'use client';
-import * as S from './style';
-import Image from 'next/image';
 import { useEffect } from 'react';
-import { useWidthState } from 'Stores';
+
+import Image from 'next/image';
+
+import { useWidthState } from 'stores';
+
+import * as S from './style';
 
 const Banner = () => {
   const { width, setWidth } = useWidthState();
@@ -17,6 +20,7 @@ const Banner = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
