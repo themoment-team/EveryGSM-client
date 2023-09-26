@@ -62,7 +62,7 @@ export const theme: ThemeType = {
   },
 } as const;
 
-export const darktheme: ThemeType = {
+export const darkTheme: ThemeType = {
   gray: ['#191919', '#636363', '#999999', '#E3E3E3', '#F1F1F5'],
   primary: {
     magenta: '#E23C96',
