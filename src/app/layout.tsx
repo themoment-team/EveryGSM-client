@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'EveryGSM',
     images: [
       {
-        url: '/public/images/Favicon.png',
+        url: '/images/Favicon.png',
         width: 800,
         height: 800,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/public/images/Favicon.png',
+    icon: '/images/Favicon.png',
   },
 };
 
