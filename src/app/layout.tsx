@@ -1,11 +1,9 @@
 import { Suspense } from 'react';
 
-import 'styles/global.css';
 import Script from 'next/script';
 
 import { NavigationEvents } from 'components';
 import { GA_TRACKING_ID } from 'libs';
-
 
 import Providers from './providers';
 
