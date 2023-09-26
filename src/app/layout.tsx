@@ -5,6 +5,31 @@ import { GA_TRACKING_ID } from 'libs';
 import { NavigationEvents } from 'components';
 
 import Script from 'next/script';
+import Providers from './providers';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  applicationName: 'EveryGSM',
+  description: '교내 프로젝트를 하나로 연결해주는 서비스.',
+  openGraph: {
+    title: 'EveryGSM',
+    description: '교내 프로젝트를 하나로 연결해주는 서비스.',
+    url: 'https://every.hellogsm.kr/',
+    siteName: 'EveryGSM',
+    images: [
+      {
+        url: '/public/images/Favicon.png',
+        width: 800,
+        height: 800,
+      },
+    ],
+    locale: 'ko',
+    type: 'website',
+  },
+  icons: {
+    icon: '/public/images/Favicon.png',
+  },
+};
 
 export default function RootLayout({
   children,
@@ -34,10 +59,12 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
-        <Suspense fallback={null}>
-          <NavigationEvents />
-        </Suspense>
+        <Providers>
+          {children}
+          <Suspense fallback={null}>
+            <NavigationEvents />
+          </Suspense>
+        </Providers>
       </body>
     </html>
   );

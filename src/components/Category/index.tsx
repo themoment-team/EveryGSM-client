@@ -1,8 +1,14 @@
 'use client';
+
 import * as S from './style';
 
-const Category = ({ data, isDark }: { data: any; isDark: boolean }) => {
-  return <S.Categories isDark={isDark}>#{data}</S.Categories>;
+interface CardProps {
+  category: string;
+  isDark: boolean;
+}
+
+const Category: React.FC<CardProps> = ({ category, isDark }) => {
+  return <S.Categories isDark={isDark}>#{category}</S.Categories>;
 };
 
 export default Category;

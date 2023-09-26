@@ -1,17 +1,17 @@
+/** @jsxImportSource @emotion/react */
+
+'use client';
+
+import { css } from '@emotion/react';
+
+import { LogoIcon, MoonIcon, SunIcon } from 'assets';
+import { useWidthState, useDarkState } from 'Stores';
 import * as S from './style';
-import Image from 'next/image';
 
 import { useEffect } from 'react';
-import { css } from '@emotion/react';
-import { useWidthState } from 'Stores';
 
-interface Props {
-  isDark: boolean;
-  setIsDark: Function;
-}
-
-const Nav = ({ isDark, setIsDark }: Props) => {
-  const width = useWidthState(state => state.width);
+const Nav = () => {
+  const { isDark, setIsDark } = useDarkState();
 
   const handleClick = () => {
     setIsDark(!isDark);
@@ -19,8 +19,7 @@ const Nav = ({ isDark, setIsDark }: Props) => {
   };
 
   useEffect(() => {
-    const darkOption = localStorage.getItem('dark') === 'false';
-    setIsDark(darkOption ?? true);
+    setIsDark(localStorage.getItem('dark') === 'false');
   }, []);
 
   return (
@@ -35,25 +34,12 @@ const Nav = ({ isDark, setIsDark }: Props) => {
       >
         <S.ItemContainer>
           <S.IconContainer>
-            <S.LogoContainer>
-              <Image
-                src="/images/LogoIcon.svg"
-                width={20}
-                height={20}
-                alt="logo"
-              />
-            </S.LogoContainer>
+            <LogoIcon />
             <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
-              <Image
-                src={isDark ? '/images/Moon.svg' : '/images/Sun.svg'}
-                alt="icon"
-                width={width < 1150 ? (width > 390 ? 16.5 : 15.12) : 17.89}
-                height={width < 1150 ? (width > 390 ? 16.5 : 15.12) : 17.89}
-                // height={svgSize}
-              />
+              {isDark ? <MoonIcon /> : <SunIcon />}
             </S.ToggleIcon>
           </S.ToggleButton>
         </S.ItemContainer>
