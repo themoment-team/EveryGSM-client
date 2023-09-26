@@ -29,15 +29,16 @@ const MainContainer = () => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex(project.length % tabletCardBox);
+      setSlideIndex((project.length % tabletCardBox) + 1);
     } else {
       setSlideIndex(slideIndex - 1);
     }
   };
+
   const handleNextSlide = () => {
     if (
       slideIndex >
-      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 0 : 1)
+      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 1 : 1)
     ) {
       setSlideIndex(0);
     } else {
