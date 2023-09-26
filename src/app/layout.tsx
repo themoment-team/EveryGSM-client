@@ -12,7 +12,9 @@ import Providers from './providers';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://every.hellogsm.kr'),
   applicationName: 'EveryGSM',
+  title: 'EveryGSM',
   description: '교내 프로젝트를 하나로 연결해주는 서비스.',
   openGraph: {
     title: 'EveryGSM',
