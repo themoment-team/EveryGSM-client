@@ -2,13 +2,14 @@
 
 'use client';
 
+import { useEffect } from 'react';
+
 import { css } from '@emotion/react';
 
 import { LogoIcon, MoonIcon, SunIcon } from 'assets';
-import { useWidthState, useDarkState } from 'Stores';
-import * as S from './style';
+import { useDarkState } from 'stores';
 
-import { useEffect } from 'react';
+import * as S from './style';
 
 const Nav = () => {
   const { isDark, setIsDark } = useDarkState();
@@ -20,6 +21,7 @@ const Nav = () => {
 
   useEffect(() => {
     setIsDark(localStorage.getItem('dark') === 'false');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -2,8 +2,7 @@
 
 import { css } from '@emotion/react';
 
-const Person = ({ isDark }: { isDark: boolean }) => {
-  return (
+const Person = ({ isDark }: { isDark: boolean }) => (
     <svg
       css={css`
         width: 1.5625rem;
@@ -40,6 +39,5 @@ const Person = ({ isDark }: { isDark: boolean }) => {
       />
     </svg>
   );
-};
 
 export default Person;

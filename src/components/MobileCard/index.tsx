@@ -1,14 +1,19 @@
 /** @jsxImportSource @emotion/react */
 
 'use client';
-import * as S from './style';
-import { DataType } from 'interface';
+
+import { useState } from 'react';
+
+import Image from 'next/image';
 
 import { css } from '@emotion/react';
-import Image from 'next/image';
+
 import * as C from 'components';
-import { useState } from 'react';
-import { useDarkState } from 'Stores';
+import { useDarkState } from 'stores';
+
+import * as S from './style';
+
+import type { DataType } from 'interface';
 
 interface MobileCardProps {
   data: DataType;
@@ -55,7 +60,7 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
               css={css`
                 border-radius: 100%;
               `}
-            ></Image>
+            />
           </S.Logo>
           <S.CardContents>
             <S.Title>{data.projectName}</S.Title>
