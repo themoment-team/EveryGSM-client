@@ -29,20 +29,17 @@ const MainContainer = () => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex((project.length % tabletCardBox) + 1);
+      setSlideIndex(Math.floor((project.length - 1) / tabletCardBox));
     } else {
-      setSlideIndex(slideIndex - 1);
+      setSlideIndex(curIndex => curIndex - 1);
     }
   };
 
   const handleNextSlide = () => {
-    if (
-      slideIndex >
-      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 1 : 1)
-    ) {
+    if (Math.floor((project.length - 1) / tabletCardBox) === slideIndex) {
       setSlideIndex(0);
     } else {
-      setSlideIndex(slideIndex + 1);
+      setSlideIndex(curIndex => curIndex + 1);
     }
   };
 
