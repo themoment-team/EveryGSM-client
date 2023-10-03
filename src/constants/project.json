@@ -46,6 +46,25 @@
     "categories": ["React", "NestJS", "Spring", "TypeScript", "Kotlin"]
   },
   {
+    "id": "3",
+    "projectName": "SMS",
+    "projectDescription": "학생과 기업이 직접 만나는 학생들의 이력 관리와 기업 매칭 도우미 서비스.",
+    "projectLogoUri": "/images/projects/sms-appicon.png",
+    "createrDescription": "더욱 감칠맛나는 세상을 위해 나아가는 MSG 팀입니다!",
+    "projectUrl": "https://sms.msg-team.com",
+    "githubRepoURL": [
+      "https://github.com/GSM-MSG/SMS-Android",
+      "https://github.com/GSM-MSG/SMS-iOS",
+      "https://github.com/GSM-MSG/SMS-FrontEnd",
+      "https://github.com/GSM-MSG/SMS-BackEnd",
+      "https://github.com/GSM-MSG/SMS-DevOps"
+    ],
+    "githubURL": "https://github.com/GSM-MSG",
+    "githubProfileURL": "https://github.com/GSM-MSG.png",
+    "createrName": "MSG",
+    "categories": ["Kotlin", "Swift", "SpringBoot", "Terraform", "NestJS"]
+  },
+  {
     "id": "1",
     "projectName": "GCMS",
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
