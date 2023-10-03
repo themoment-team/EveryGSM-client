@@ -29,7 +29,22 @@
     "createrName": "더모먼트",
     "categories": ["NextJS", "Spring", "React"]
   },
-
+  {
+    "id": "2",
+    "projectName": "GSM Networking",
+    "projectDescription": "광주소프트웨어마이스터고등학교의 졸업생과 재학생 간의 동문 커뮤니티 서비스.",
+    "projectLogoUri": "/images/projects/GSM-Networking.jpg",
+    "createrDescription": "사용자의 니즈를 고민하고 모든 일에 높은 비즈니스 임팩트를 창출합니다.",
+    "projectUrl": "https://gsm.moip.shop/",
+    "githubRepoURL": [
+      "https://github.com/themoment-team/GSM-Networking-front",
+      "https://github.com/themoment-team/GSM-Networking-server"
+    ],
+    "githubURL": "https://github.com/themoment-team",
+    "githubProfileURL": "https://github.com/themoment-team.png",
+    "createrName": "더모먼트",
+    "categories": ["React", "NestJS", "Spring", "TypeScript", "Kotlin"]
+  },
   {
     "id": "1",
     "projectName": "GCMS",
