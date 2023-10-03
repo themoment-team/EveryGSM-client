@@ -65,6 +65,19 @@
     "categories": ["Kotlin", "Swift", "SpringBoot", "Terraform", "NestJS"]
   },
   {
+    "id": "4",
+    "projectName": "GOMS",
+    "projectDescription": "GSM 학생들의 수요 외출제 관리를 위한 서비스 입니다.",
+    "projectLogoUri": "/images/projects/GOMS.png",
+    "createrDescription": "Team GOMS",
+    "projectUrl": "https://play.google.com/store/apps/details?id=com.goms.presentation&hl=en-KR",
+    "githubRepoURL": ["https://github.com/team-haribo"],
+    "githubURL": "https://github.com/team-haribo",
+    "githubProfileURL": "https://github.com/team-haribo.png",
+    "createrName": "Team GOMS",
+    "categories": ["Spring", "iOS", "Android", "AWS", "Kotlin", "Swift"]
+  },
+  {
     "id": "1",
     "projectName": "GCMS",
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
