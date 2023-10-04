@@ -99,39 +99,6 @@ export const Slide = styled.div`
   animation: ${slide} 15s linear infinite;
 `;
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 79.0625rem;
-`;
-
-export const SlideBtn = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const Cards = styled.div`
-  width: 71.25rem;
-  height: 21.5625rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-`;
-export const SlideBox = styled.div``;
-export const Desc = styled.div`
-  color: #999999;
-  font-size: 1.125rem;
-  font-weight: 200;
-  font-size: 1.125rem;
-  display: flex;
-  justify-content: left;
-  margin-top: 1.875rem;
-  width: 100%;
-  margin-left: 2rem;
-`;
 export const DetailBtn = styled.div`
   width: 1.375rem;
   height: 1.375rem;
@@ -148,55 +115,4 @@ export const DetailBtn = styled.div`
     width: 6%;
     height: 6%;
   }
-`;
-export const CardContents = styled.div`
-  width: 18.875rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.625rem;
-
-  @media (max-width: 834px) {
-    margin-top: 0;
-  }
-`;
-export const Front = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-`;
-// export const Back = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   position: absolute;
-//   backface-visibility: hidden;
-//   background: #ffff;
-//   border-radius: 1rem;
-//   transform: rotateX(-180deg);
-//   text-align: center;
-// `;
-
-export const Logo = styled.div`
-  height: 4.5rem;
-  width: 4.5rem;
-  position: relative;
-  border-radius: 100%;
-
-  img {
-    object-fit: cover;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 8vw;
-    height: 8vw;
-  }
-`;
-
-export const Description = styled.div`
-  font-size: 1.375rem;
-  margin-top: 1.5rem;
 `;
