@@ -14,6 +14,71 @@
   },
   {
     "id": "1",
+    "projectName": "Official GSM",
+    "projectDescription": "광주소프트웨어마이스터고등학교의 홈페이지입니다.",
+    "projectLogoUri": "/images/projects/OfficialGSM.png",
+    "createrDescription": "https://themoment-team.notion.site/2b3875e62b2a4002beb9db71c85db262",
+    "projectUrl": "https://official.hellogsm.kr",
+    "githubRepoURL": [
+      "https://github.com/themoment-team/official-gsm-front",
+      "https://github.com/themoment-team/official-gsm-client-server",
+      "https://github.com/themoment-team/official-gsm-admin-server"
+    ],
+    "githubURL": "https://github.com/themoment-team",
+    "githubProfileURL": "https://github.com/themoment-team.png",
+    "createrName": "더모먼트",
+    "categories": ["NextJS", "Spring", "React"]
+  },
+  {
+    "id": "2",
+    "projectName": "GSM Networking",
+    "projectDescription": "광주소프트웨어마이스터고등학교의 졸업생과 재학생 간의 동문 커뮤니티 서비스.",
+    "projectLogoUri": "/images/projects/GSM-Networking.jpg",
+    "createrDescription": "사용자의 니즈를 고민하고 모든 일에 높은 비즈니스 임팩트를 창출합니다.",
+    "projectUrl": "https://gsm.moip.shop/",
+    "githubRepoURL": [
+      "https://github.com/themoment-team/GSM-Networking-front",
+      "https://github.com/themoment-team/GSM-Networking-server"
+    ],
+    "githubURL": "https://github.com/themoment-team",
+    "githubProfileURL": "https://github.com/themoment-team.png",
+    "createrName": "더모먼트",
+    "categories": ["React", "NestJS", "Spring", "TypeScript", "Kotlin"]
+  },
+  {
+    "id": "3",
+    "projectName": "SMS",
+    "projectDescription": "학생과 기업이 직접 만나는 학생들의 이력 관리와 기업 매칭 도우미 서비스.",
+    "projectLogoUri": "/images/projects/sms-appicon.png",
+    "createrDescription": "더욱 감칠맛나는 세상을 위해 나아가는 MSG 팀입니다!",
+    "projectUrl": "https://sms.msg-team.com",
+    "githubRepoURL": [
+      "https://github.com/GSM-MSG/SMS-Android",
+      "https://github.com/GSM-MSG/SMS-iOS",
+      "https://github.com/GSM-MSG/SMS-FrontEnd",
+      "https://github.com/GSM-MSG/SMS-BackEnd",
+      "https://github.com/GSM-MSG/SMS-DevOps"
+    ],
+    "githubURL": "https://github.com/GSM-MSG",
+    "githubProfileURL": "https://github.com/GSM-MSG.png",
+    "createrName": "MSG",
+    "categories": ["Kotlin", "Swift", "SpringBoot", "Terraform", "NestJS"]
+  },
+  {
+    "id": "4",
+    "projectName": "GOMS",
+    "projectDescription": "GSM 학생들의 수요 외출제 관리를 위한 서비스 입니다.",
+    "projectLogoUri": "/images/projects/GOMS.png",
+    "createrDescription": "Team GOMS",
+    "projectUrl": "https://play.google.com/store/apps/details?id=com.goms.presentation&hl=en-KR",
+    "githubRepoURL": ["https://github.com/team-haribo"],
+    "githubURL": "https://github.com/team-haribo",
+    "githubProfileURL": "https://github.com/team-haribo.png",
+    "createrName": "Team GOMS",
+    "categories": ["Spring", "iOS", "Android", "AWS", "Kotlin", "Swift"]
+  },
+  {
+    "id": "5",
     "projectName": "GCMS",
     "projectDescription": "광주소프트웨어마이스터고의 동아리를 관리해주는 서비스입니다",
     "projectLogoUri": "/images/projects/GCMS.png",
@@ -31,7 +96,7 @@
     "categories": ["React", "Spring", "Kotlin", "Swift"]
   },
   {
-    "id": "2",
+    "id": "6",
     "projectName": "DOTORI",
     "projectDescription": "DOTORI는 GSM 기숙사 관리 시스템으로, 학생들이 주체적으로 개발한 웹사이트입니다. 광주 소프트웨어마이스터고등학교 앰퍼샌드 동아리 부원들이 직접 개발하여, 효율적인 서비스 제공을 목적으로 합니다. 이 작은 서비스가 우리 학교의 인식을 바꿀 좋은 마케팅 거리가 될 수 있도록 만들어졌습니다.",
     "projectLogoUri": "/images/projects/DOTORI.png",
@@ -47,7 +112,7 @@
     "categories": ["SpringBoot", "Kotlin", "NextJS", "TypeScript"]
   },
   {
-    "id": "3",
+    "id": "7",
     "projectName": "오늘 뭐임",
     "projectDescription": "애플워치, 아이폰/맥의 위젯, 맥의 Menubar에서도 편리하게 급식/시간표를 확인할 수 있는 서비스",
     "projectLogoUri": "/images/projects/오늘뭐임.png",
@@ -60,7 +125,7 @@
     "categories": ["Swift"]
   },
   {
-    "id": "4",
+    "id": "8",
     "projectName": "GRIG-iOS",
     "projectDescription": "Github Rank In GSM - GRIG Open API를 사용하여 만든 iOS 앱입니다. GSM 학생들의 깃허브 활동으로 랭킹을 세워놓았으며 이를 iOS에서 볼 수 있습니다",
     "projectLogoUri": "/images/projects/Grig.png",
@@ -73,7 +138,7 @@
     "categories": ["Swift", "iOS"]
   },
   {
-    "id": "5",
+    "id": "9",
     "projectName": "GAuth",
     "projectDescription": "GSM 교내 계정 통합 소셜 로그인 서비스.",
     "projectLogoUri": "/images/projects/Gauth.png",
@@ -91,7 +156,7 @@
     "categories": ["Swift", "Kotlin", "Android"]
   },
   {
-    "id": "6",
+    "id": "10",
     "projectName": "moip",
     "projectDescription": "MZ세대의 패션 동향을 파악하기 위한 서비스입니다.",
     "projectLogoUri": "/images/projects/moip.png",
@@ -104,7 +169,7 @@
     "categories": ["React", "Next.js"]
   },
   {
-    "id": "7",
+    "id": "11",
     "projectName": "world-quiz",
     "projectDescription": "세계 여러 나라 국기에 해당하는 국가 이름을 맞추는 퀴즈 게임입니다. 재미있게 즐겨주세요~",
     "projectLogoUri": "/images/projects/worldQuiz.png",
@@ -117,7 +182,7 @@
     "categories": ["React", "Next.js", "TypeScript", "GraphQL"]
   },
   {
-    "id": "8",
+    "id": "12",
     "projectName": "포켓몬 퀴즈",
     "projectDescription": "포켓몬들의 이름을 맞춰서 포켓몬에 대해 흥미를 깨우게 하는 프로젝트입니다.",
     "projectLogoUri": "/images/projects/포켓몬퀴즈.png",
@@ -130,7 +195,7 @@
     "categories": ["React"]
   },
   {
-    "id": "9",
+    "id": "13",
     "projectName": "GFC",
     "projectDescription": "키보드로 간단히 조작하여 즐길 수 있는 PC용 웹 파이팅게임 입니다. Next.JS, Typescript를 사용하였습니다.",
     "projectLogoUri": "/images/projects/Glub.png",
@@ -143,7 +208,7 @@
     "categories": ["React", "NextJS", "Typescript"]
   },
   {
-    "id": "10",
+    "id": "14",
     "projectName": "GGV",
     "projectDescription": "Gsm Golden Village, 해외 영화 소개 서비스입니다. ",
     "projectLogoUri": "/images/projects/GGV.png",

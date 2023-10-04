@@ -21,6 +21,8 @@ const MainContainer = () => {
   const [tabletCardBox, setTabletCardBox] = useState<number>(3);
   const { width } = useWidthState();
 
+  const getMaxIndex = () => Math.ceil(project.length / tabletCardBox) - 1;
+
   useEffect(() => {
     if (width <= 1150) {
       setTabletCardBox(4);
@@ -29,20 +31,17 @@ const MainContainer = () => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex((project.length % tabletCardBox) + 1);
+      setSlideIndex(getMaxIndex());
     } else {
-      setSlideIndex(slideIndex - 1);
+      setSlideIndex(curIndex => curIndex - 1);
     }
   };
 
   const handleNextSlide = () => {
-    if (
-      slideIndex >
-      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 1 : 1)
-    ) {
+    if (getMaxIndex() === slideIndex) {
       setSlideIndex(0);
     } else {
-      setSlideIndex(slideIndex + 1);
+      setSlideIndex(curIndex => curIndex + 1);
     }
   };
 
