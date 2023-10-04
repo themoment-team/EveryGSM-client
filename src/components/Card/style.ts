@@ -23,8 +23,9 @@ export const CardWrapper = styled.div`
 export const LogoWrapper = styled.div`
   height: 4.5rem;
   width: 4.5rem;
-  position: relative;
   border-radius: 50%;
+  overflow: hidden;
+  position: relative;
 
   img {
     object-fit: cover;
