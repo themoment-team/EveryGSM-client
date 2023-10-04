@@ -31,6 +31,5 @@ export const Primary: Story = {
       createrName: '더모먼트',
       categories: ['NextJS', 'NestJS', 'React'],
     },
-    index: 0,
   },
 };
