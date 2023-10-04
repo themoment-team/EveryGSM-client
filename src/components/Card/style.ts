@@ -12,6 +12,7 @@ export const CardWrapper = styled.div`
   box-shadow: rgba(112, 144, 176, 0.2);
   transition: ease-in-out 0.3s;
   background-color: ${({ theme }) => theme.exception.card};
+  box-shadow: 0px 4px 16px 0px rgba(112, 144, 176, 0.2);
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 38vw;
