@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/react';
 export const CardWrapper = styled.div`
   height: 21.25rem;
   width: 22.5rem;
-  padding: 28px 32px;
+  padding: 1.75rem 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@ export const CardWrapper = styled.div`
   box-shadow: rgba(112, 144, 176, 0.2);
   transition: ease-in-out 0.3s;
   background-color: ${({ theme }) => theme.exception.card};
-  box-shadow: 0px 4px 16px 0px rgba(112, 144, 176, 0.2);
+  box-shadow: 0.25rem 0.25rem 0.4375rem rgba(112, 144, 176, 0.2);
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 38vw;
@@ -83,7 +83,7 @@ export const Categories = styled.div`
   margin-top: 3.75rem;
   height: 1.875rem;
 
-  @media (max-width: 897px) {
+  @media (max-width: 56.0625rem) {
     width: 30vw;
     margin-top: 2rem;
   }
