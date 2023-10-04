@@ -66,7 +66,7 @@ const MainContainer = () => {
         `}
       >
         {array.map((item, i) => (
-          <C.Card key={i} data={item as DataType} index={i} />
+          <C.Card key={i} data={item as DataType} />
         ))}
       </div>
     ));
@@ -102,11 +102,7 @@ const MainContainer = () => {
               {width > 1150 ? (
                 project.map((data, slideIndex) => (
                   <div key={slideIndex}>
-                    <C.Card
-                      key={slideIndex + data.id}
-                      data={data}
-                      index={slideIndex}
-                    />
+                    <C.Card key={slideIndex + data.id} data={data} />
                   </div>
                 ))
               ) : width <= 620 ? (

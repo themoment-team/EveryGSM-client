@@ -2,10 +2,11 @@
 
 'use client';
 
-import Image from 'next/image';
-// import Link from 'next/link';
+import { useState } from 'react';
 
-// import { css } from '@emotion/react';
+import Image from 'next/image';
+
+import { css } from '@emotion/react';
 
 import { PersonIcon } from 'assets';
 import * as C from 'components';
@@ -17,37 +18,47 @@ import type { DataType } from 'interface';
 
 interface CardProps {
   data: DataType;
-  index: number;
 }
 
-const Card: React.FC<CardProps> = ({ data, index }) => {
+const Card: React.FC<CardProps> = ({ data }) => {
   const { isDark } = useDarkState();
-  // const [showModal, setShowModal] = useState<boolean>(false);
-  // const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   // const { width } = useWidthState();
-  console.log();
-  // const handleOpenModal = (id: string) => {
-  //   setSelectedId(id);
-  //   setShowModal(true);
-  // };
+  const handleOpenModal = (id: string) => {
+    setSelectedId(id);
+    setShowModal(true);
+  };
 
-  // const handleCloseModal = () => {
-  //   setShowModal(false);
-  // };
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
-  // const responsiveCardMargin = () => {
-  //   if (width > 1150) {
-  //     if ((index + 1) % 3 === 0) {
-  //       return '0.1875rem';
-  //     } else {
-  //       return '1.5626rem';
-  //     }
-  //   } else {
-  //     return '0';
-  //   }
-  // };
   return (
     <S.CardWrapper>
+      {showModal && selectedId === data.id && (
+        <C.Modal
+          show={showModal}
+          data={data}
+          onClose={handleCloseModal}
+          index={selectedId}
+        />
+      )}
+      <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
+        <Image
+          src="/images/Detail.svg"
+          fill
+          css={css`
+            width: 3.2188rem;
+            height: 1.2188rem;
+            margin-left: 0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          `}
+          alt="Vector"
+        />
+      </S.DetailBtn>
       <S.LogoWrapper>
         <Image src={data.projectLogoUri} alt={data.projectName + 'Logo'} fill />
       </S.LogoWrapper>
@@ -68,28 +79,3 @@ const Card: React.FC<CardProps> = ({ data, index }) => {
 };
 
 export default Card;
-
-// {showModal && selectedId === data.id && (
-//   <C.Modal
-//     show={showModal}
-//     data={data}
-//     onClose={handleCloseModal}
-//     index={selectedId}
-//   />
-// )}
-
-// <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
-// <Image
-//   src="/images/Detail.svg"
-//   fill
-//   css={css`
-//     width: 3.2188rem;
-//     height: 1.2188rem;
-//     margin-left: 0.75rem;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   `}
-//   alt="Vector"
-// />
-// </S.DetailBtn>
