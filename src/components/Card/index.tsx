@@ -22,9 +22,10 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ data }) => {
   const { isDark } = useDarkState();
+
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  // const { width } = useWidthState();
+
   const handleOpenModal = (id: string) => {
     setSelectedId(id);
     setShowModal(true);
