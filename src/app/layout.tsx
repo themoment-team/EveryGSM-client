@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     siteName: 'EveryGSM',
     images: [
       {
-        url: '/images/openGraph.png',
+        url: '/images/Favicon.jpg',
       },
     ],
     locale: 'ko',
     type: 'website',
   },
   icons: {
-    icon: '/images/Favicon.jpg',
+    icon: '/images/Favicon.png',
   },
 };
 
