@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react';
 import type { Preview } from '@storybook/react';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
-import {darkTheme, theme, GlobalStyle} from 'styles'
+import { darkTheme, theme, GlobalStyle } from '../src/styles';
 
 const preview: Preview = {
   parameters: {
@@ -37,8 +37,8 @@ const preview: Preview = {
       },
       defaultTheme: 'light',
       Provider: ThemeProvider,
-      GlobalStyles: GlobalStyle
-    })
+      GlobalStyles: GlobalStyle,
+    }),
   ],
 };
 
