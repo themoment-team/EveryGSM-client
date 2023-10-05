@@ -18,13 +18,11 @@ export const MobileCard = styled.div<{ isDark: boolean }>`
   position: relative;
   box-sizing: border-box;
   background-color: #fff;
-  margin-bottom: 0.75rem;
   transition: ease-in-out 0.3s;
   background-color: ${({ theme }) => theme.exception.card};
 `;
 
 export const ContentWrap = styled.div`
-  position: absolute;
   left: 5.6%;
   width: 73vw;
   height: 15vw;

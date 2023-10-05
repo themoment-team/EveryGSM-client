@@ -2,7 +2,9 @@ import styled from '@emotion/styled';
 
 export const MobileCardWrap = styled.div`
   width: 87.6vw;
-  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 export const MobileCardTitle = styled.h2`
