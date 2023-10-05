@@ -2,9 +2,13 @@ import styled from '@emotion/styled';
 
 export const MobileCardWrap = styled.div`
   width: 87.6vw;
+  height: 100vh;
+  position: relative;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
+  padding-bottom: 5rem;
 `;
 
 export const MobileCardTitle = styled.h2`
