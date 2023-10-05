@@ -102,4 +102,5 @@ export const DetailBtn = styled.h2`
   z-index: 99999;
   line-height: 1.125rem;
   color: #999999;
+  cursor: pointer;
 `;
