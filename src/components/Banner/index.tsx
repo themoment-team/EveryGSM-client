@@ -1,10 +1,13 @@
 'use client';
-import * as S from './style';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { useWidthState } from 'Stores';
+import { useEffect } from 'react';
 
-const Home = () => {
+import Image from 'next/image';
+
+import { useWidthState } from 'stores';
+
+import * as S from './style';
+
+const Banner = () => {
   const { width, setWidth } = useWidthState();
 
   const handleResize = () => {
@@ -17,6 +20,7 @@ const Home = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -49,4 +53,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Banner;

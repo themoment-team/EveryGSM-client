@@ -98,4 +98,5 @@ export const SlideBox = styled.div`
   left: ${({ slideIndex }: { slideIndex: number }) => -(slideIndex * 100)}%;
   top: 0;
   transition: left 0.3s ease-in-out;
+  gap: 1.75rem;
 `;

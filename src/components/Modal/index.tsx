@@ -1,24 +1,32 @@
-'use client';
-import * as S from './style';
-import * as C from 'components';
-import Image from 'next/image';
-import project from '../../../public/data/project.json';
-import Link from 'next/link';
-import { css } from '@emotion/react';
-import projectData from 'interface/projectData';
-import { useWidthState } from 'Stores';
+/** @jsxImportSource @emotion/react */
 
-interface Props {
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { css } from '@emotion/react';
+
+import * as C from 'components';
+import project from 'constants/project.json';
+import { useDarkState, useWidthState } from 'stores';
+
+import * as S from './style';
+
+import type { DataType } from 'interface';
+
+interface ModalProps {
   show: boolean;
   onClose: () => void;
   index: string;
-  isDark: boolean;
-  data?: projectData;
+  data?: DataType;
 }
 
-const Modal = ({ show, onClose, index, isDark, data }: Props) => {
+const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
+  const { isDark } = useDarkState();
   const { width } = useWidthState();
   const selectedProject = project.find(item => item.id === `${index}`);
+
   return (
     <S.ModalContainer show={show}>
       <S.ModalContent>
@@ -44,15 +52,15 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
               }
             `}
             alt="로고이미지"
-          ></Image>
+          />
         </S.Img>
         <S.Title isDark={isDark}>{selectedProject?.projectName}</S.Title>
         <S.Creater>{selectedProject?.createrName}</S.Creater>
         <S.Categories>
           <S.Slide>
-            {data?.categories.map(i => (
-              <div key={i}>
-                <C.Category data={i} isDark={isDark} />
+            {data?.categories.map(category => (
+              <div key={category}>
+                <C.Category category={category} isDark={isDark} />
               </div>
             ))}
           </S.Slide>
@@ -115,7 +123,7 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
                 css={css`
                   border-radius: 100%;
                 `}
-              ></Image>
+              />
             </S.ProfileImg>
           ) : (
             ''
@@ -126,13 +134,11 @@ const Modal = ({ show, onClose, index, isDark, data }: Props) => {
           </S.ProjectName>
         </S.Profile>
         <S.GithubBox css={css``}>
-          {selectedProject?.githubRepoURL.map((data, i) => {
-            return (
-              <Link href={data} target="_blank" key={i}>
-                <S.Repo isDark={isDark}>{data}</S.Repo>
-              </Link>
-            );
-          })}
+          {selectedProject?.githubRepoURL.map((data, i) => (
+            <Link href={data} target="_blank" key={i}>
+              <S.Repo isDark={isDark}>{data}</S.Repo>
+            </Link>
+          ))}
         </S.GithubBox>
       </S.ModalContent>
     </S.ModalContainer>

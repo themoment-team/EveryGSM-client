@@ -1,18 +1,27 @@
+/** @jsxImportSource @emotion/react */
+
 'use client';
-import * as S from './style';
-import projectData from 'interface/projectData';
-import { css } from '@emotion/react';
-import Image from 'next/image';
-import * as C from 'components';
+
 import { useState } from 'react';
 
-export const MobileCard = ({
-  data,
-  isDark,
-}: {
-  data: projectData;
-  isDark: boolean;
-}) => {
+import Image from 'next/image';
+
+import { css } from '@emotion/react';
+
+import * as C from 'components';
+import { useDarkState } from 'stores';
+
+import * as S from './style';
+
+import type { DataType } from 'interface';
+
+interface MobileCardProps {
+  data: DataType;
+}
+
+export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
+  const { isDark } = useDarkState();
+
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -24,12 +33,12 @@ export const MobileCard = ({
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
   return (
     <>
       {showModal && selectedId === data.id && (
         <C.Modal
           data={data}
-          isDark={isDark}
           show={showModal}
           onClose={handleCloseModal}
           index={selectedId}
@@ -51,22 +60,23 @@ export const MobileCard = ({
               css={css`
                 border-radius: 100%;
               `}
-            ></Image>
+            />
           </S.Logo>
           <S.CardContents>
             <S.Title>{data.projectName}</S.Title>
             <S.Categories>
               <S.Slide>
-                {data.categories.map(index => (
-                  <div key={index}>
-                    <C.Category data={index} isDark={isDark} />
-                  </div>
+                {data.categories.map(category => (
+                  <C.Category
+                    key={category}
+                    category={category}
+                    isDark={isDark}
+                  />
                 ))}
               </S.Slide>
             </S.Categories>
           </S.CardContents>
         </S.ContentWrap>
-        {/* </Link> */}
       </S.MobileCard>
     </>
   );

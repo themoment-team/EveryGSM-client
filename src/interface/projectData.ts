@@ -1,4 +1,4 @@
-export default interface DataType {
+export interface DataType {
   id: string;
   projectName: string;
   projectDescription: string;
@@ -9,5 +9,5 @@ export default interface DataType {
   githubURL: string;
   githubProfileURL: string;
   createrName: string;
-  categories: any[];
+  categories: string[];
 }

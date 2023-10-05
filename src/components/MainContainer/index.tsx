@@ -1,13 +1,22 @@
-import * as C from 'components';
-import * as S from './style';
-import project from '../../../public/data/project.json';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { css } from '@emotion/react';
-import { useWidthState } from 'Stores';
-import projectData from 'interface/projectData';
+/** @jsxImportSource @emotion/react */
 
-const MainContainer = ({ isDark }: { isDark: boolean }) => {
+'use client';
+
+import { useState, useEffect } from 'react';
+
+import Image from 'next/image';
+
+import { css } from '@emotion/react';
+
+import * as C from 'components';
+import project from 'constants/project.json';
+import { useWidthState } from 'stores';
+
+import * as S from './style';
+
+import type { DataType } from 'interface';
+
+const MainContainer = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [tabletCardBox, setTabletCardBox] = useState<number>(3);
   const { width } = useWidthState();
@@ -20,15 +29,16 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex(project.length % tabletCardBox);
+      setSlideIndex((project.length % tabletCardBox) + 1);
     } else {
       setSlideIndex(slideIndex - 1);
     }
   };
+
   const handleNextSlide = () => {
     if (
       slideIndex >
-      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 0 : 1)
+      Math.floor(project.length / tabletCardBox) - (width > 1150 ? 1 : 1)
     ) {
       setSlideIndex(0);
     } else {
@@ -37,38 +47,29 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
   };
 
   const tabletCardShow = (data = [{}], size = 1) => {
-    const arr = [];
+    const cardDatas = [];
 
     for (let i = 0; i < data.length; i += size) {
-      arr.push(data.slice(i, i + size));
+      cardDatas.push(data.slice(i, i + size));
     }
 
-    return arr.map((array, i) => {
-      return (
-        <div
-          key={i}
-          css={css`
-            display: flex;
-            width: 81vw;
-            height: 81vw;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: space-between;
-          `}
-        >
-          {array.map((item, i) => {
-            return (
-              <C.Card
-                key={i}
-                isDark={isDark}
-                data={item as projectData}
-                index={i}
-              ></C.Card>
-            );
-          })}
-        </div>
-      );
-    });
+    return cardDatas.map((array, i) => (
+      <div
+        key={i}
+        css={css`
+          display: flex;
+          width: 81vw;
+          height: 81vw;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-content: space-between;
+        `}
+      >
+        {array.map((item, i) => (
+          <C.Card key={i} data={item as DataType} />
+        ))}
+      </div>
+    ));
   };
 
   return (
@@ -101,7 +102,7 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
               {width > 1150 ? (
                 project.map((data, slideIndex) => (
                   <div key={slideIndex}>
-                    <C.Card isDark={isDark} data={data} index={slideIndex} />
+                    <C.Card key={slideIndex + data.id} data={data} />
                   </div>
                 ))
               ) : width <= 620 ? (
@@ -113,18 +114,16 @@ const MainContainer = ({ isDark }: { isDark: boolean }) => {
                 >
                   <S.MobileCardTitle>등록된 프로젝트</S.MobileCardTitle>
                   <S.MobileCardWrap>
-                    {project.map((data, slideIndex) => {
-                      return (
-                        <div
-                          key={slideIndex}
-                          css={css`
-                            width: 100%;
-                          `}
-                        >
-                          <C.MobileCard isDark={isDark} data={data} />
-                        </div>
-                      );
-                    })}
+                    {project.map((data, slideIndex) => (
+                      <div
+                        key={slideIndex}
+                        css={css`
+                          width: 100%;
+                        `}
+                      >
+                        <C.MobileCard data={data} />
+                      </div>
+                    ))}
                   </S.MobileCardWrap>
                 </div>
               ) : (

@@ -1,2 +1,2 @@
+export { default as useDarkState } from './useDarkStore';
 export { default as useWidthState } from './useWidthStore';
-export { default as useDarkStore } from './useDarkStore';
