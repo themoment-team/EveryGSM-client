@@ -2,13 +2,19 @@
 
 'use client';
 
-import { useState } from 'react';
+import { MobileCard } from 'components';
+import project from 'constants/project.json';
 
-const Moblie = () => {
-  const [slideIndex, setSlideIndex] = useState<number>(0);
-  const [tabletCardBox, setTabletCardBox] = useState<number>(3);
-
-  return <></>;
-};
+import * as S from './style';
+const Moblie = () => (
+  <>
+    <S.MobileCardTitle>등록된 프로젝트</S.MobileCardTitle>
+    <S.MobileCardWrap>
+      {project.map(data => (
+        <MobileCard key={data.id} data={data} />
+      ))}
+    </S.MobileCardWrap>
+  </>
+);
 
 export default Moblie;
