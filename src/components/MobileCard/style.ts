@@ -11,7 +11,6 @@ const slide = keyframes`
 
 export const MobileCard = styled.div<{ isDark: boolean }>`
   width: 100%;
-  height: 10vh;
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
@@ -19,6 +18,7 @@ export const MobileCard = styled.div<{ isDark: boolean }>`
   box-sizing: border-box;
   background-color: #fff;
   transition: ease-in-out 0.3s;
+  padding: 1rem 0 1rem 1rem;
   background-color: ${({ theme }) => theme.exception.card};
 `;
 
