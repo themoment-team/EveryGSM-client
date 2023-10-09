@@ -81,14 +81,11 @@ export const Slide = styled.div`
 `;
 
 export const Categories = styled.div`
-  height: 1.875rem;
-  overflow-y: hidden;
+  width: 100%;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 897px) {
-    width: 100%;
-  }
 `;
 
 export const DetailBtn = styled.h2`
