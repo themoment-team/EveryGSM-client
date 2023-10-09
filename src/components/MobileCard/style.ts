@@ -11,20 +11,18 @@ const slide = keyframes`
 
 export const MobileCard = styled.div<{ isDark: boolean }>`
   width: 100%;
-  height: 10vh;
   border-radius: 0.625rem;
   display: flex;
   align-items: center;
   position: relative;
   box-sizing: border-box;
   background-color: #fff;
-  margin-bottom: 0.75rem;
   transition: ease-in-out 0.3s;
+  padding: 1rem 0 1rem 1rem;
   background-color: ${({ theme }) => theme.exception.card};
 `;
 
 export const ContentWrap = styled.div`
-  position: absolute;
   left: 5.6%;
   width: 73vw;
   height: 15vw;
@@ -83,14 +81,11 @@ export const Slide = styled.div`
 `;
 
 export const Categories = styled.div`
-  height: 1.875rem;
-  overflow-y: hidden;
+  width: 100%;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 897px) {
-    width: 100%;
-  }
 `;
 
 export const DetailBtn = styled.h2`
@@ -104,4 +99,5 @@ export const DetailBtn = styled.h2`
   z-index: 99999;
   line-height: 1.125rem;
   color: #999999;
+  cursor: pointer;
 `;
