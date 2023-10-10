@@ -34,25 +34,27 @@ const PC = () => {
 
   return (
     <S.CardContainer>
-      <S.Container>
+      <S.VectorWrapper>
         <Image
+          fill
           src="/images/Vector.svg"
           alt="Vector"
           onClick={handlePrevSlide}
         />
-        <S.Cards>
-          {project.map((data, slideIndex) => (
-            <div key={slideIndex}>
-              <Card key={slideIndex + data.id} data={data} />
-            </div>
-          ))}
-        </S.Cards>
+      </S.VectorWrapper>
+      <S.Cards>
+        {project.map((data, slideIndex) => (
+          <Card key={slideIndex + data.id} data={data} />
+        ))}
+      </S.Cards>
+      <S.VectorWrapper isRight={true}>
         <Image
+          fill
           src="/images/Vector.svg"
           alt="Vector"
           onClick={handleNextSlide}
         />
-      </S.Container>
+      </S.VectorWrapper>
     </S.CardContainer>
   );
 };
