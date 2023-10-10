@@ -43,9 +43,11 @@ const PC = () => {
         />
       </S.VectorWrapper>
       <S.Cards>
-        {project.map((data, slideIndex) => (
-          <Card key={slideIndex + data.id} data={data} />
-        ))}
+        <S.MoveContainer slideIndex={slideIndex}>
+          {project.map((data, slideIndex) => (
+            <Card key={slideIndex + data.id} data={data} />
+          ))}
+        </S.MoveContainer>
       </S.Cards>
       <S.VectorWrapper isRight={true}>
         <Image
