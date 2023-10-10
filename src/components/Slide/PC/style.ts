@@ -9,8 +9,8 @@ export const CardContainer = styled.div`
 `;
 
 export const VectorWrapper = styled.div<{ isRight?: boolean }>`
-  width: 40px;
-  height: 48px;
+  width: 2.5rem;
+  height: 3rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -28,8 +28,6 @@ export const MoveContainer = styled.div<{ slideIndex: number }>`
   display: flex;
   gap: 1.75rem;
   position: absolute;
-  left: -${({ slideIndex }) => slideIndex * 1164}px;
+  left: -${({ slideIndex }) => slideIndex * 72.75}rem;
   transition: ease-in-out 0.3s;
 `;
-
-1164;
