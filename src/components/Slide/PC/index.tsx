@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 
+import { Card } from 'components';
 import project from 'constants/project.json';
 
 import * as S from './style';
@@ -13,19 +14,21 @@ import * as S from './style';
 const PC = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
 
+  const getMaxIndex = () => Math.ceil(project.length / 3) - 1;
+
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex((project.length % 3) + 1);
+      setSlideIndex(getMaxIndex());
     } else {
-      setSlideIndex(slideIndex - 1);
+      setSlideIndex(curIndex => curIndex - 1);
     }
   };
 
   const handleNextSlide = () => {
-    if (slideIndex > Math.floor(project.length / 3) - 1) {
+    if (getMaxIndex() === slideIndex) {
       setSlideIndex(0);
     } else {
-      setSlideIndex(slideIndex + 1);
+      setSlideIndex(curIndex => curIndex + 1);
     }
   };
 
@@ -40,7 +43,7 @@ const PC = () => {
         <S.Cards>
           {project.map((data, slideIndex) => (
             <div key={slideIndex}>
-              <C.Card key={slideIndex + data.id} data={data} />
+              <Card key={slideIndex + data.id} data={data} />
             </div>
           ))}
         </S.Cards>
