@@ -43,11 +43,13 @@ const Tablet = () => {
         />
       </S.VectorWrapper>
       <S.Cards>
-        <S.MoveContainer slideIndex={slideIndex}>
-          {project.map((data, slideIndex) => (
-            <Card key={slideIndex + data.id} data={data} />
-          ))}
-        </S.MoveContainer>
+        <S.Slider slideIndex={slideIndex}>
+          <S.MoveContainer>
+            {project.map((data, slideIndex) => (
+              <Card key={slideIndex + data.id} data={data} />
+            ))}
+          </S.MoveContainer>
+        </S.Slider>
       </S.Cards>
       <S.VectorWrapper isRight={true}>
         <Image

@@ -10,7 +10,6 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
-  transition: ease-in-out 0.3s;
   background-color: ${({ theme }) => theme.exception.card};
   box-shadow: 0.25rem 0.25rem 0.4375rem rgba(112, 144, 176, 0.2);
 

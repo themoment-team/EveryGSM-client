@@ -28,12 +28,16 @@ export const Cards = styled.div`
   overflow: hidden;
 `;
 
-export const MoveContainer = styled.div<{ slideIndex: number }>`
+export const Slider = styled.div<{ slideIndex: number }>`
+  position: absolute;
+  left: ${({ slideIndex }) =>
+    `calc(${slideIndex * -76}vw + ${slideIndex * -3.5}rem)`};
+  transition: ease-in-out 0.3s;
+`;
+
+export const MoveContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1.75rem;
-  position: absolute;
-  /* left: -${({ slideIndex }) => slideIndex * 72.75}rem; */
-  transition: ease-in-out 0.3s;
 `;
