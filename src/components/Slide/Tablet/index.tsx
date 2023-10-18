@@ -14,18 +14,18 @@ import * as S from './style';
 const Tablet = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
 
-  const getMaxIndex = () => Math.ceil(project.length / 4) - 1;
+  const maxIndex = Math.ceil(project.length / 4) - 1;
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
-      setSlideIndex(getMaxIndex());
+      setSlideIndex(maxIndex);
     } else {
       setSlideIndex(curIndex => curIndex - 1);
     }
   };
 
   const handleNextSlide = () => {
-    if (getMaxIndex() === slideIndex) {
+    if (maxIndex === slideIndex) {
       setSlideIndex(0);
     } else {
       setSlideIndex(curIndex => curIndex + 1);
@@ -44,7 +44,7 @@ const Tablet = () => {
       </S.VectorWrapper>
       <S.Cards>
         <S.Slider slideIndex={slideIndex}>
-          <S.MoveContainer>
+          <S.MoveContainer maxIndex={maxIndex}>
             {project.map((data, slideIndex) => (
               <Card key={slideIndex + data.id} data={data} />
             ))}
