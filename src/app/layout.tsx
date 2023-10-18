@@ -21,9 +21,7 @@ export const metadata: Metadata = {
     siteName: 'EveryGSM',
     images: [
       {
-        url: '/images/Favicon.png',
-        width: 800,
-        height: 800,
+        url: '/images/openGraph.jpg',
       },
     ],
     locale: 'ko',
