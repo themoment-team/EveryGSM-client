@@ -11,12 +11,12 @@ import project from 'constants/project.json';
 
 import * as S from './style';
 
-const CARDSPERPAGE = 4 as const;
+const CARDS_PER_PAGE = 4 as const;
 
 const Tablet = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
 
-  const maxIndex = Math.ceil(project.length / CARDSPERPAGE) - 1;
+  const maxIndex = Math.ceil(project.length / CARDS_PER_PAGE) - 1;
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
