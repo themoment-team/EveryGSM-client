@@ -1,27 +1,16 @@
 'use client';
-import { useEffect } from 'react';
 
 import Image from 'next/image';
 
+import { useWindowResizeEffect } from 'hooks';
 import { useWidthState } from 'stores';
 
 import * as S from './style';
 
 const Banner = () => {
-  const { width, setWidth } = useWidthState();
+  const { width } = useWidthState();
 
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useWindowResizeEffect();
 
   return (
     <S.BannerContainer>
