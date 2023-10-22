@@ -3,10 +3,11 @@ import { useEffect } from 'react';
 import { useWidthState } from 'stores';
 
 const useWindowResizeEffect = () => {
+  const { setWidth } = useWidthState();
+
   const handleResize = () => {
     setWidth(window.innerWidth);
   };
-  const { setWidth } = useWidthState();
 
   useEffect(() => {
     handleResize();
