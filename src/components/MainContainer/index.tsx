@@ -4,11 +4,9 @@
 
 import { useState, useEffect } from 'react';
 
-import Image from 'next/image';
-
 import { css } from '@emotion/react';
 
-import * as C from 'components';
+import { Banner, TabletSlide, PCSlide, MobileSlide } from 'components';
 import project from 'constants/project.json';
 import { useWidthState } from 'stores';
 
@@ -22,6 +20,16 @@ const MainContainer = () => {
   const { width } = useWidthState();
 
   const getMaxIndex = () => Math.ceil(project.length / tabletCardBox) - 1;
+
+  function getComponentByWidth(width: number) {
+    if (width > 1150) {
+      return <PCSlide />;
+    } else if (width > 620) {
+      return <TabletSlide />;
+    } else {
+      return <MobileSlide />;
+    }
+  }
 
   useEffect(() => {
     if (width <= 1150) {
@@ -73,86 +81,8 @@ const MainContainer = () => {
 
   return (
     <S.MainBox>
-      <C.Banner />
-      <S.CardContainer>
-        <S.Container>
-          <Image
-            src="/images/Vector.svg"
-            width={16}
-            height={34}
-            css={css`
-              margin-right: 3.125rem;
-              z-index: 1000000000;
-              cursor: pointer;
-
-              @media (max-width: 1150px) {
-                margin-right: 1.875rem;
-              }
-
-              @media (max-width: 620px) {
-                display: none;
-              }
-            `}
-            alt=""
-            onClick={handlePrevSlide}
-          />
-          <S.Cards>
-            <S.SlideBox slideIndex={slideIndex}>
-              {width > 1150 ? (
-                project.map((data, slideIndex) => (
-                  <div key={slideIndex}>
-                    <C.Card key={slideIndex + data.id} data={data} />
-                  </div>
-                ))
-              ) : width <= 620 ? (
-                <div
-                  css={css`
-                    width: 100%;
-                    height: 100%;
-                  `}
-                >
-                  <S.MobileCardTitle>등록된 프로젝트</S.MobileCardTitle>
-                  <S.MobileCardWrap>
-                    {project.map((data, slideIndex) => (
-                      <div
-                        key={slideIndex}
-                        css={css`
-                          width: 100%;
-                        `}
-                      >
-                        <C.MobileCard data={data} />
-                      </div>
-                    ))}
-                  </S.MobileCardWrap>
-                </div>
-              ) : (
-                tabletCardShow(project, 4)
-              )}
-            </S.SlideBox>
-          </S.Cards>
-          <Image
-            src="/images/Vector.svg"
-            width={16}
-            height={34}
-            alt=""
-            css={css`
-              transform: matrix(-1, 0, 0, 1, 0, 0);
-              margin-left: 3.125rem;
-              z-index: 1000000000;
-              cursor: pointer;
-
-              @media (max-width: 1150px) {
-                margin-left: 1.875rem;
-              }
-
-              @media (max-width: 620px) {
-                display: none;
-              }
-            `}
-            onClick={handleNextSlide}
-          />
-        </S.Container>
-      </S.CardContainer>
+      <Banner />
+      <S.CardContainer>{getComponentByWidth(width)}</S.CardContainer>
     </S.MainBox>
   );
 };
