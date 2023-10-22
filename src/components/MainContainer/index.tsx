@@ -7,23 +7,26 @@ import { useWidthState } from 'stores';
 
 import * as S from './style';
 
+const TABLET_SIZE = 1150;
+const MOBILE_SIZE = 620;
+
 const MainContainer = () => {
   const { width } = useWidthState();
 
-  function getComponentByWidth(width: number) {
-    if (width > 1150) {
+  const getComponentByWidth = () => {
+    if (width > TABLET_SIZE) {
       return <PCSlide />;
-    } else if (width > 620) {
+    } else if (width > MOBILE_SIZE) {
       return <TabletSlide />;
     } else {
       return <MobileSlide />;
     }
-  }
+  };
 
   return (
     <S.MainBox>
       <Banner />
-      <S.CardContainer>{getComponentByWidth(width)}</S.CardContainer>
+      <S.CardContainer>{getComponentByWidth()}</S.CardContainer>
     </S.MainBox>
   );
 };
