@@ -13,7 +13,7 @@ const MOBILE_SIZE = 620;
 const MainContainer = () => {
   const { width } = useWidthState();
 
-  const getComponentByWidth = () => {
+  const getSlideByWidth = () => {
     if (width > TABLET_SIZE) {
       return <PCSlide />;
     } else if (width > MOBILE_SIZE) {
@@ -26,7 +26,7 @@ const MainContainer = () => {
   return (
     <S.MainBox>
       <Banner />
-      <S.CardContainer>{getComponentByWidth()}</S.CardContainer>
+      <S.CardContainer>{getSlideByWidth()}</S.CardContainer>
     </S.MainBox>
   );
 };
