@@ -1,10 +1,11 @@
 'use client';
 
-import { Global, css } from "@emotion/react";
+import { Global, css, useTheme } from '@emotion/react';
 
 import emotionReset from 'emotion-reset';
 
 export function GlobalStyle() {
+  const theme = useTheme();
   return (
     <Global
       styles={css`
@@ -14,10 +15,22 @@ export function GlobalStyle() {
         @import url('https://use.typekit.net/cei0oyt.css');
 
         * {
-          font-family: 'Pretendard Variable', Pretendard, -apple-system,
-            BlinkMacSystemFont, system-ui, roboto, 'Helvetica Neue', 'Segoe UI',
-            'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
-            'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+          font-family:
+            'Pretendard Variable',
+            Pretendard,
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            roboto,
+            'Helvetica Neue',
+            'Segoe UI',
+            'Apple SD Gothic Neo',
+            'Noto Sans KR',
+            'Malgun Gothic',
+            'Apple Color Emoji',
+            'Segoe UI Emoji',
+            'Segoe UI Symbol',
+            sans-serif;
           box-sizing: border-box;
           padding: 0;
           margin: 0;
@@ -27,6 +40,7 @@ export function GlobalStyle() {
         body {
           max-width: 100vw;
           overflow-x: hidden;
+          background-color: ${theme.gray[0]};
         }
 
         @media all and (min-width: 1150px) and (min-height: 1000px) {
@@ -63,5 +77,5 @@ export function GlobalStyle() {
         }
       `}
     />
-  )
+  );
 }
