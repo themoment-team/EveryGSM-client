@@ -2,20 +2,17 @@ import styled from '@emotion/styled';
 
 export const MainBox = styled.div`
   width: 100vw;
-  height: calc(100vh - 7.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3.25rem;
+  padding: 3.25rem 0;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     padding-top: 2rem;
-    height: 100vh;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     padding-top: 0;
-    height: 100vh;
   }
 
   transition: ease-in-out 0.3s;
@@ -52,6 +49,40 @@ export const Container = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     display: flex;
     flex-direction: column;
+  }
+`;
+
+export const PrevController = styled.button`
+  border: none;
+  margin-right: 3.125rem;
+  z-index: 1000000000;
+  cursor: pointer;
+
+  @media (max-width: 1150px) {
+    margin-right: 1.875rem;
+  }
+
+  @media (max-width: 620px) {
+    display: none;
+  }
+`;
+
+export const NextController = styled.button`
+  border: none;
+  margin-left: 3.125rem;
+  z-index: 1000000000;
+  cursor: pointer;
+
+  @media (max-width: 1150px) {
+    margin-left: 1.875rem;
+  }
+
+  @media (max-width: 620px) {
+    display: none;
+  }
+
+  svg {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 `;
 
