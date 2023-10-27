@@ -14,7 +14,7 @@ export const BannerContainer = styled.div`
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 81%;
+    width: calc(76vw + 1.75rem);
     height: 13.75rem;
   }
 

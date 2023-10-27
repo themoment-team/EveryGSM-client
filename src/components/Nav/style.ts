@@ -24,16 +24,11 @@ export const ItemContainer = styled.div`
   width: 71.85rem;
   display: flex;
   align-items: center;
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 81%;
-  }
+  justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 81%;
+    width: calc(76vw + 1.75rem);
   }
-
-  justify-content: space-between;
 `;
 
 export const IconContainer = styled.div`
