@@ -1,6 +1,6 @@
 'use client';
 
-import { Global, css } from "@emotion/react";
+import { Global, css } from '@emotion/react';
 
 import emotionReset from 'emotion-reset';
 
@@ -14,10 +14,22 @@ export function GlobalStyle() {
         @import url('https://use.typekit.net/cei0oyt.css');
 
         * {
-          font-family: 'Pretendard Variable', Pretendard, -apple-system,
-            BlinkMacSystemFont, system-ui, roboto, 'Helvetica Neue', 'Segoe UI',
-            'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
-            'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+          font-family:
+            'Pretendard Variable',
+            Pretendard,
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            roboto,
+            'Helvetica Neue',
+            'Segoe UI',
+            'Apple SD Gothic Neo',
+            'Noto Sans KR',
+            'Malgun Gothic',
+            'Apple Color Emoji',
+            'Segoe UI Emoji',
+            'Segoe UI Symbol',
+            sans-serif;
           box-sizing: border-box;
           padding: 0;
           margin: 0;
@@ -43,9 +55,9 @@ export function GlobalStyle() {
           }
         }
 
-        @media (prefers-color-scheme: white) {
+        @media (prefers-color-scheme: #F1F1F5) {
           html {
-            color-scheme: white;
+            color-scheme: #f1f1f5;
           }
         }
 
@@ -63,5 +75,5 @@ export function GlobalStyle() {
         }
       `}
     />
-  )
+  );
 }

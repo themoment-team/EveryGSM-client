@@ -5,7 +5,7 @@ import { useWidthState } from 'stores';
 
 import * as S from './style';
 
-const TABLET_SIZE = 1150;
+const TABLET_SIZE = 1280;
 const MOBILE_SIZE = 620;
 
 const MainContainer = () => {

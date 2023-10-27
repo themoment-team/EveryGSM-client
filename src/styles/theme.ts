@@ -42,7 +42,7 @@ export const darkTheme: ThemeType = {
   },
   breakPoint: {
     mobile: '620px',
-    tablet: '1150px',
+    tablet: '1280px',
   },
   exception: {
     card: '#505050',
@@ -73,7 +73,7 @@ export const theme: ThemeType = {
   },
   breakPoint: {
     mobile: '620px',
-    tablet: '1150px',
+    tablet: '1280px',
   },
 
   exception: {
