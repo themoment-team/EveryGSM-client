@@ -27,7 +27,9 @@ export const ItemContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: calc(76vw + 1.75rem);
+    width: calc(
+      76vw + 1.75rem
+    ); // 한페이지의 카드 width * 카드 개수 + 카드 사이 gap
   }
 `;
 
