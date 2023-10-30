@@ -1,10 +1,11 @@
 'use client';
 
-import { Global, css } from '@emotion/react';
+import { Global, css, useTheme } from '@emotion/react';
 
 import emotionReset from 'emotion-reset';
 
 export function GlobalStyle() {
+  const theme = useTheme();
   return (
     <Global
       styles={css`
@@ -39,6 +40,7 @@ export function GlobalStyle() {
         body {
           max-width: 100vw;
           overflow-x: hidden;
+          background-color: ${theme.gray[0]};
         }
 
         @media all and (min-width: 1150px) and (min-height: 1000px) {
