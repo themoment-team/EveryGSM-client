@@ -25,6 +25,7 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
   const { isDark } = useDarkState();
   const { width } = useWidthState();
+
   const selectedProject = project.find(item => item.id === `${index}`);
 
   return (
@@ -87,20 +88,9 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
         ) : (
           <>
             <S.Profile>
-              {/* <S.ProfileImg>
-                <Image
-                  src={selectedProject?.githubProfileURL || ''}
-                  width={24}
-                  height={24}
-                  alt="로고이미지"
-                  css={css`
-                    border-radius: 100%;
-                  `}
-                ></Image>
-              </S.ProfileImg> */}
               <S.ProjectName>Github profile</S.ProjectName>
             </S.Profile>
-            <S.GithubBox css={css``}>
+            <S.GithubBox>
               <Link href={selectedProject?.githubURL as string} target="_blank">
                 <S.Repo isDark={isDark}>{selectedProject?.githubURL}</S.Repo>
               </Link>

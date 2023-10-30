@@ -1,14 +1,5 @@
-'use client';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-
-const slide = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }`;
 
 export const Categories = styled.div`
   margin: 1.5rem 0 1.5rem 0;
@@ -28,7 +19,6 @@ export const Slide = styled.div`
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  /* animation: ${slide} 15s linear infinite; */
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     justify-content: center;
@@ -231,23 +221,6 @@ export const Repo = styled.div<{ isDark: boolean }>`
     padding: 0.1875rem 0 0.25rem;
   }
 `;
-
-// export const Categories = styled.div`
-//   z-index: 10000000000000;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 25.4375rem;
-//   margin: 1.5rem 0rem;
-//   position: relative;
-//   overflow: scroll;
-
-//   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-//     width: 70vw;
-//     height: 5vw;
-//     overflow-x: scroll;
-//   }
-// `;
 
 export const Back = styled.div`
   position: absolute;
