@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
+import Link from 'next/link';
 
 export const Categories = styled.div`
   margin: 1.5rem 0 1.5rem 0;
@@ -117,6 +117,10 @@ export const Desc = styled.div<{ isDark: boolean }>`
   font-weight: 300;
   color: ${({ theme }) => theme.exception.desc};
   background-color: ${({ theme }) => theme.exception.back};
+  margin-bottom: 1.4375rem;
+  padding: 0 1.5625rem;
+  text-align: left;
+  font-size: 1.125rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
@@ -143,6 +147,8 @@ export const ProfileImg = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 0.625rem;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ProjectName = styled.div`
@@ -193,7 +199,7 @@ export const Img = styled.div`
   }
 `;
 
-export const Repo = styled.div<{ isDark: boolean }>`
+export const Repo = styled(Link)<{ isDark: boolean }>`
   margin: 0.3125rem 0rem;
   display: flex;
   align-items: center;
