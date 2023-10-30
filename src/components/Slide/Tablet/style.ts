@@ -45,3 +45,37 @@ export const MoveContainer = styled.div<{ maxIndex: number }>`
   grid-template-rows: repeat(2, 1fr);
   gap: 1.75rem;
 `;
+
+export const PrevController = styled.button`
+  border: none;
+  margin-right: 3.125rem;
+  z-index: 1000000000;
+  cursor: pointer;
+
+  @media (max-width: 1150px) {
+    margin-right: 1.875rem;
+  }
+
+  @media (max-width: 620px) {
+    display: none;
+  }
+`;
+
+export const NextController = styled.button`
+  border: none;
+  margin-left: 3.125rem;
+  z-index: 1000000000;
+  cursor: pointer;
+
+  @media (max-width: 1150px) {
+    margin-left: 1.875rem;
+  }
+
+  @media (max-width: 620px) {
+    display: none;
+  }
+
+  svg {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+`;

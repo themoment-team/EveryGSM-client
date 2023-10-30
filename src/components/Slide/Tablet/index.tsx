@@ -4,8 +4,7 @@
 
 import { useState } from 'react';
 
-import Image from 'next/image';
-
+import { Vector } from 'assets';
 import { Card } from 'components';
 import project from 'constants/project.json';
 
@@ -36,14 +35,9 @@ const Tablet = () => {
 
   return (
     <S.CardContainer>
-      <S.VectorWrapper>
-        <Image
-          fill
-          src="/images/Vector.svg"
-          alt="Vector"
-          onClick={handlePrevSlide}
-        />
-      </S.VectorWrapper>
+      <S.PrevController type="button" onClick={handlePrevSlide}>
+        <Vector />
+      </S.PrevController>
       <S.Cards>
         <S.Slider slideIndex={slideIndex}>
           <S.MoveContainer maxIndex={maxIndex}>
@@ -53,14 +47,9 @@ const Tablet = () => {
           </S.MoveContainer>
         </S.Slider>
       </S.Cards>
-      <S.VectorWrapper isRight={true}>
-        <Image
-          fill
-          src="/images/Vector.svg"
-          alt="Vector"
-          onClick={handleNextSlide}
-        />
-      </S.VectorWrapper>
+      <S.NextController type="button" onClick={handleNextSlide}>
+        <Vector />
+      </S.NextController>
     </S.CardContainer>
   );
 };
