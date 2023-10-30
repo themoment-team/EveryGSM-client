@@ -6,7 +6,6 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.25rem;
-  transition: ease-in-out 0.3s;
 
   @media (max-width: 900px) {
     gap: 0;

@@ -21,7 +21,7 @@ export const BannerContainer = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 87.6%;
+    width: 87.6vw;
     height: 9.5rem;
     align-items: center;
   }

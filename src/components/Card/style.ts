@@ -41,7 +41,7 @@ export const Title = styled.span`
   font-weight: 600;
   margin-top: 1rem;
   color: ${({ theme }) => theme.exception.cardTitle};
-  transition: ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 1.75rem;
@@ -67,7 +67,7 @@ export const Creater = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 1rem;
   }
-  transition: ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out;
 `;
 
 const slide = keyframes`

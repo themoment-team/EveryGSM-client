@@ -7,7 +7,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     height: 5.5rem;
@@ -74,7 +74,7 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  transition: ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out;
   color: ${({ theme }) => theme.exception.navTitle};
 `;
 

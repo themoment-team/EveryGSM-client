@@ -18,7 +18,7 @@ export const MainBox = styled.div`
     height: 100vh;
   }
 
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s ease-in-out;
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;
 
@@ -27,7 +27,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 5.75rem;
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     margin-top: 3.125rem;
@@ -37,7 +37,6 @@ export const CardContainer = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     margin-top: 2.5rem;
   }
-  transition: ease-in-out 0.3s;
 
   background-color: ${({ theme: { gray } }) => gray[0]};
 `;

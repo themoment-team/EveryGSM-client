@@ -29,7 +29,6 @@ const Banner = () => {
           </S.MobileText>
         )}
       </S.TextContainer>
-
       <S.BannerImg>
         <Image
           src="/images/projects/Rocket.png"
