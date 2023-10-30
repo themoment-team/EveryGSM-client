@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 
+export const MobileContainer = styled.div``;
+
 export const MobileCardWrap = styled.div`
   width: 87.6vw;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   overflow: scroll;
   display: flex;

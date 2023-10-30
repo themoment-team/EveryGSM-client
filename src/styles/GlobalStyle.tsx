@@ -57,9 +57,9 @@ export function GlobalStyle() {
           }
         }
 
-        @media (prefers-color-scheme: white) {
+        @media (prefers-color-scheme: #F1F1F5) {
           html {
-            color-scheme: white;
+            color-scheme: #f1f1f5;
           }
         }
 

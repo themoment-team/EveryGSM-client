@@ -11,6 +11,7 @@ export const CardWrapper = styled.div`
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
   background-color: ${({ theme }) => theme.exception.card};
+  transition: background-color 0.3s;
   box-shadow: 0.25rem 0.25rem 0.4375rem rgba(112, 144, 176, 0.2);
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
@@ -41,7 +42,7 @@ export const Title = styled.span`
   font-weight: 600;
   margin-top: 1rem;
   color: ${({ theme }) => theme.exception.cardTitle};
-  transition: ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 1.75rem;
@@ -55,6 +56,11 @@ export const Create = styled.div`
   height: 1.5rem;
   margin-top: 1.5rem;
 
+  path {
+    transition: fill 0.3s ease-in-out;
+    fill: ${({ theme }) => theme.exception.creater};
+  }
+
   @media (max-width: 52.125rem) {
     margin-top: 0.5rem;
   }
@@ -67,7 +73,7 @@ export const Creater = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     font-size: 1rem;
   }
-  transition: ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out;
 `;
 
 const slide = keyframes`

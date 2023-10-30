@@ -16,8 +16,7 @@ export const MobileCard = styled.div<{ isDark: boolean }>`
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  background-color: #fff;
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s ease-in-out;
   padding: 1rem 0 1rem 1rem;
   background-color: ${({ theme }) => theme.exception.card};
 `;
