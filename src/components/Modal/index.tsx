@@ -70,7 +70,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
             </S.Profile>
             <S.GithubBox>
               <S.Repo
-                href={selectedProject?.githubURL as string}
+                href={selectedProject?.githubURL ?? ''}
                 target="_blank"
                 isDark={isDark}
               >
