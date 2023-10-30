@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import { css } from '@emotion/react';
 
+import { XIcon } from 'assets';
 import * as C from 'components';
 import project from 'constants/project.json';
 import { useDarkState, useWidthState } from 'stores';
@@ -32,12 +33,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
     <S.ModalContainer show={show}>
       <S.ModalContent>
         <S.Back onClick={onClose}>
-          <Image
-            src="/images/Back.svg"
-            width={18}
-            height={18}
-            alt="로고이미지"
-          />
+          <XIcon />
         </S.Back>
         <S.Img>
           <Image
