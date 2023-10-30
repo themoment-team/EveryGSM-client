@@ -65,7 +65,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
       </S.LogoWrapper>
       <S.Title>{data.projectName}</S.Title>
       <S.Create>
-        <PersonIcon isDark={isDark} />
+        <PersonIcon />
         <S.Creater>{data.createrName}</S.Creater>
       </S.Create>
       <S.Categories>

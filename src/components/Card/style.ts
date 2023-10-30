@@ -11,6 +11,7 @@ export const CardWrapper = styled.div`
   border-radius: 1rem;
   box-shadow: rgba(112, 144, 176, 0.2);
   background-color: ${({ theme }) => theme.exception.card};
+  transition: background-color 0.3s;
   box-shadow: 0.25rem 0.25rem 0.4375rem rgba(112, 144, 176, 0.2);
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
@@ -54,6 +55,11 @@ export const Create = styled.div`
   width: 9.0625rem;
   height: 1.5rem;
   margin-top: 1.5rem;
+
+  path {
+    transition: fill 0.3s ease-in-out;
+    fill: ${({ theme }) => theme.exception.creater};
+  }
 
   @media (max-width: 52.125rem) {
     margin-top: 0.5rem;
