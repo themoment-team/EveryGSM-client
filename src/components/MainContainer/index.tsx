@@ -4,10 +4,9 @@
 
 import { useState, useEffect } from 'react';
 
-import Image from 'next/image';
-
 import { css } from '@emotion/react';
 
+import { Vector } from 'assets';
 import * as C from 'components';
 import project from 'constants/project.json';
 import { useWidthState } from 'stores';
@@ -76,26 +75,9 @@ const MainContainer = () => {
       <C.Banner />
       <S.CardContainer>
         <S.Container>
-          <Image
-            src="/images/Vector.svg"
-            width={16}
-            height={34}
-            css={css`
-              margin-right: 3.125rem;
-              z-index: 1000000000;
-              cursor: pointer;
-
-              @media (max-width: 1150px) {
-                margin-right: 1.875rem;
-              }
-
-              @media (max-width: 620px) {
-                display: none;
-              }
-            `}
-            alt=""
-            onClick={handlePrevSlide}
-          />
+          <S.PrevController type="button" onClick={handlePrevSlide}>
+            <Vector />
+          </S.PrevController>
           <S.Cards>
             <S.SlideBox slideIndex={slideIndex}>
               {width > 1150 ? (
@@ -130,27 +112,9 @@ const MainContainer = () => {
               )}
             </S.SlideBox>
           </S.Cards>
-          <Image
-            src="/images/Vector.svg"
-            width={16}
-            height={34}
-            alt=""
-            css={css`
-              transform: matrix(-1, 0, 0, 1, 0, 0);
-              margin-left: 3.125rem;
-              z-index: 1000000000;
-              cursor: pointer;
-
-              @media (max-width: 1150px) {
-                margin-left: 1.875rem;
-              }
-
-              @media (max-width: 620px) {
-                display: none;
-              }
-            `}
-            onClick={handleNextSlide}
-          />
+          <S.NextController type="button" onClick={handleNextSlide}>
+            <Vector />
+          </S.NextController>
         </S.Container>
       </S.CardContainer>
     </S.MainBox>
