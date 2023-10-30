@@ -8,6 +8,8 @@ export const Categories = styled.div`
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
     margin: 0.5rem 0 1.5rem 0;
+    position: relative;
+    overflow: scroll;
   }
 `;
 
@@ -61,16 +63,8 @@ export const ModalContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 80vw;
-    height: 50vh;
+    height: fit-content;
     padding-top: 2rem;
-  }
-
-  @media (max-width: 360px) or (max-height: 667px) {
-    height: 60vh;
-  }
-
-  @media (max-width: 300px) and (max-height: 915px) {
-    height: 60vh;
   }
 `;
 
@@ -126,6 +120,7 @@ export const Desc = styled.div<{ isDark: boolean }>`
     width: 65vw;
     height: 6rem;
     overflow-y: auto;
+    font-size: 3vw;
   }
 `;
 
@@ -175,7 +170,6 @@ export const GithubBox = styled.div`
     display: flex;
     align-items: center;
     height: 20%;
-
     overflow-y: scroll;
   }
 `;
@@ -185,7 +179,6 @@ export const Img = styled.div`
   height: 5rem;
   border-radius: 100%;
   margin-top: 2.75rem;
-
   position: relative;
 
   img {
