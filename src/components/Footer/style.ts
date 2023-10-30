@@ -17,9 +17,7 @@ export const FooterContainer = styled.footer`
 
   @media (min-height: 1000px) {
     position: absolute;
-    top: calc(
-      100vh - 5rem
-    ); // 화면 전체에서 맨 아래에 footer가 위치되도록 -> 화면 높이 - footer 높이
+    bottom: 0;
   }
 
   @media (max-height: 1000px) {
