@@ -11,7 +11,7 @@
     "githubProfileURL": "https://github.com/themoment-team.png",
     "createrName": "더모먼트",
     "categories": ["NextJS", "NestJS", "React"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "1",
@@ -29,7 +29,7 @@
     "githubProfileURL": "https://github.com/themoment-team.png",
     "createrName": "더모먼트",
     "categories": ["NextJS", "Spring", "React"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "2",
@@ -46,7 +46,7 @@
     "githubProfileURL": "https://github.com/themoment-team.png",
     "createrName": "더모먼트",
     "categories": ["React", "NestJS", "Spring", "TypeScript", "Kotlin"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "3",
@@ -66,7 +66,7 @@
     "githubProfileURL": "https://github.com/GSM-MSG.png",
     "createrName": "MSG",
     "categories": ["Kotlin", "Swift", "SpringBoot", "Terraform", "NestJS"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "4",
@@ -80,7 +80,7 @@
     "githubProfileURL": "https://github.com/team-haribo.png",
     "createrName": "Team GOMS",
     "categories": ["Spring", "iOS", "Android", "AWS", "Kotlin", "Swift"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "5",
@@ -99,7 +99,7 @@
     "githubProfileURL": "https://github.com/GSM-MSG.png",
     "createrName": "MSG",
     "categories": ["React", "Spring", "Kotlin", "Swift"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "6",
@@ -116,7 +116,7 @@
     "githubProfileURL": "https://github.com/Team-Ampersand.png",
     "createrName": "&mpersand",
     "categories": ["SpringBoot", "Kotlin", "NextJS", "TypeScript"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "7",
@@ -130,7 +130,7 @@
     "githubProfileURL": "https://github.com/baekteun.png",
     "createrName": "최형우",
     "categories": ["Swift"],
-    "service": "personal"
+    "serviceType": "personal"
   },
   {
     "id": "8",
@@ -144,7 +144,7 @@
     "githubProfileURL": "https://github.com/baekteun.png",
     "createrName": "최형우",
     "categories": ["Swift", "iOS"],
-    "service": "personal"
+    "serviceType": "personal"
   },
   {
     "id": "9",
@@ -163,7 +163,7 @@
     "githubProfileURL": "https://github.com/GSM-MSG.png",
     "createrName": "MSG",
     "categories": ["Swift", "Kotlin", "Android"],
-    "service": "public"
+    "serviceType": "public"
   },
   {
     "id": "10",
@@ -177,7 +177,7 @@
     "githubProfileURL": "https://github.com/hyeongrok7874.png",
     "createrName": "김형록",
     "categories": ["React", "Next.js"],
-    "service": "personal"
+    "serviceType": "personal"
   },
   {
     "id": "11",
@@ -191,7 +191,7 @@
     "githubProfileURL": "https://github.com/hyeongrok7874.png",
     "createrName": "김형록",
     "categories": ["React", "Next.js", "TypeScript", "GraphQL"],
-    "service": "personal"
+    "serviceType": "personal"
   },
   {
     "id": "12",
@@ -205,7 +205,7 @@
     "githubProfileURL": "https://github.com/handsomejeongwoo.png",
     "createrName": "이정우",
     "categories": ["React"],
-    "service": "personal"
+    "serviceType": "personal"
   },
   {
     "id": "13",
@@ -219,7 +219,7 @@
     "githubProfileURL": "https://github.com/Lee-Seungje.png",
     "createrName": "이승제",
     "categories": ["React", "NextJS", "Typescript"],
-    "service": "personal"
+    "serviceType": "personal"
   },
   {
     "id": "14",
@@ -233,6 +233,6 @@
     "githubProfileURL": "https://github.com/yoosion030.png",
     "createrName": "유시온, 김준",
     "categories": ["NextJS", "TypeScript"],
-    "service": "personal"
+    "serviceType": "personal"
   }
 ]
