@@ -48,7 +48,7 @@ export const MoveContainer = styled.div<{ maxIndex: number }>`
 
 export const Controller = styled.button`
   border: none;
-  z-index: 1000000000;
+  z-index: 1;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   background-color: ${({ theme }) => theme.gray[0]};

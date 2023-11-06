@@ -113,7 +113,7 @@ export const DetailBtn = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10000000;
+  z-index: 1;
   position: absolute;
   left: 18.125rem;
 

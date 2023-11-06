@@ -39,7 +39,7 @@ export const ModalContainer = styled.div<{ show: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999999999999;
+  z-index: 2;
   cursor: default;
   position: fixed;
   top: 0;
@@ -226,6 +226,6 @@ export const Back = styled.div`
   position: absolute;
   right: 1.25rem;
   top: 1.25rem;
-  z-index: 1000000000000;
+  z-index: 2;
   cursor: pointer;
 `;
