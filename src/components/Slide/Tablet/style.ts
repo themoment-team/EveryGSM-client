@@ -51,7 +51,7 @@ export const Controller = styled.button`
   z-index: 1000000000;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  background-color: ${({ theme }) => theme.exception.nav};
+  background-color: ${({ theme }) => theme.gray[0]};
 `;
 
 export const PrevController = styled(Controller)`
