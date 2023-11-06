@@ -2,25 +2,26 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 
 export const Categories = styled.div`
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 1.5rem 0 2.5rem 0;
   height: 1.875rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
-    margin: 0.5rem 0 1.5rem 0;
+    margin-top: 0.5rem;
     position: relative;
-    overflow: scroll;
+    flex-flow: row wrap;
   }
 `;
 
 export const Slide = styled.div`
   width: 25rem;
-  height: 1.875rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  flex-flow: row wrap;
+  gap: 0.625rem 0;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     justify-content: center;
