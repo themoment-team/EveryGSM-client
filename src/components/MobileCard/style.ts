@@ -95,7 +95,7 @@ export const DetailBtn = styled.h2`
   font-size: 2.5vw;
   top: 7%;
   right: 3.5%;
-  z-index: 99999;
+  z-index: 1;
   line-height: 1.125rem;
   color: #999999;
   cursor: pointer;

@@ -46,34 +46,20 @@ export const MoveContainer = styled.div<{ maxIndex: number }>`
   gap: 1.75rem;
 `;
 
-export const PrevController = styled.button`
+export const Controller = styled.button`
   border: none;
-  margin-right: 3.125rem;
-  z-index: 1000000000;
+  z-index: 1;
   cursor: pointer;
-
-  @media (max-width: 1150px) {
-    margin-right: 1.875rem;
-  }
-
-  @media (max-width: 620px) {
-    display: none;
-  }
+  transition: background-color 0.3s ease-in-out;
+  background-color: ${({ theme }) => theme.gray[0]};
 `;
 
-export const NextController = styled.button`
-  border: none;
-  margin-left: 3.125rem;
-  z-index: 1000000000;
-  cursor: pointer;
+export const PrevController = styled(Controller)`
+  margin-right: 1.875rem;
+`;
 
-  @media (max-width: 1150px) {
-    margin-left: 1.875rem;
-  }
-
-  @media (max-width: 620px) {
-    display: none;
-  }
+export const NextController = styled(Controller)`
+  margin-left: 1.875rem;
 
   svg {
     transform: matrix(-1, 0, 0, 1, 0, 0);

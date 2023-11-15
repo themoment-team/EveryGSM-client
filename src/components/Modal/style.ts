@@ -1,34 +1,27 @@
-'use client';
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/react';
-
-const slide = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }`;
+import Link from 'next/link';
 
 export const Categories = styled.div`
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 1.5rem 0 2.5rem 0;
   height: 1.875rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
-    margin: 0.5rem 0 1.5rem 0;
+    margin-top: 0.5rem;
+    position: relative;
+    flex-flow: row wrap;
   }
 `;
 
 export const Slide = styled.div`
   width: 25rem;
-  height: 1.875rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  /* animation: ${slide} 15s linear infinite; */
+  flex-flow: row wrap;
+  gap: 0.625rem 0;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     justify-content: center;
@@ -46,7 +39,7 @@ export const ModalContainer = styled.div<{ show: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999999999999;
+  z-index: 2;
   cursor: default;
   position: fixed;
   top: 0;
@@ -71,16 +64,8 @@ export const ModalContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 80vw;
-    height: 50vh;
+    height: fit-content;
     padding-top: 2rem;
-  }
-
-  @media (max-width: 360px) or (max-height: 667px) {
-    height: 60vh;
-  }
-
-  @media (max-width: 300px) and (max-height: 915px) {
-    height: 60vh;
   }
 `;
 
@@ -127,11 +112,16 @@ export const Desc = styled.div<{ isDark: boolean }>`
   font-weight: 300;
   color: ${({ theme }) => theme.exception.desc};
   background-color: ${({ theme }) => theme.exception.back};
+  margin-bottom: 1.4375rem;
+  padding: 0 1.5625rem;
+  text-align: left;
+  font-size: 1.125rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
     height: 6rem;
     overflow-y: auto;
+    font-size: 3vw;
   }
 `;
 
@@ -153,6 +143,8 @@ export const ProfileImg = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 0.625rem;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const ProjectName = styled.div`
@@ -179,7 +171,6 @@ export const GithubBox = styled.div`
     display: flex;
     align-items: center;
     height: 20%;
-
     overflow-y: scroll;
   }
 `;
@@ -189,7 +180,6 @@ export const Img = styled.div`
   height: 5rem;
   border-radius: 100%;
   margin-top: 2.75rem;
-
   position: relative;
 
   img {
@@ -203,7 +193,7 @@ export const Img = styled.div`
   }
 `;
 
-export const Repo = styled.div<{ isDark: boolean }>`
+export const Repo = styled(Link)<{ isDark: boolean }>`
   margin: 0.3125rem 0rem;
   display: flex;
   align-items: center;
@@ -232,27 +222,10 @@ export const Repo = styled.div<{ isDark: boolean }>`
   }
 `;
 
-// export const Categories = styled.div`
-//   z-index: 10000000000000;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 25.4375rem;
-//   margin: 1.5rem 0rem;
-//   position: relative;
-//   overflow: scroll;
-
-//   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-//     width: 70vw;
-//     height: 5vw;
-//     overflow-x: scroll;
-//   }
-// `;
-
 export const Back = styled.div`
   position: absolute;
   right: 1.25rem;
   top: 1.25rem;
-  z-index: 1000000000000;
+  z-index: 2;
   cursor: pointer;
 `;

@@ -11,6 +11,7 @@ export const MobileCardWrap = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   padding-bottom: 5rem;
+  padding-bottom: 10.25rem;
 `;
 
 export const MobileCardTitle = styled.h2`
