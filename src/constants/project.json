@@ -212,7 +212,7 @@
     "projectName": "GFC",
     "projectDescription": "키보드로 간단히 조작하여 즐길 수 있는 PC용 웹 파이팅게임 입니다. Next.JS, Typescript를 사용하였습니다.",
     "projectLogoUri": "/images/projects/Glub.png",
-    "createrDescription": "2학년 프론트엔드를 전공하고 있는 이승제입니다.",
+    "createrDescription": "프론트엔드를 전공하고 있는 이승제입니다.",
     "projectUrl": "https://gsm-fc.vercel.app/",
     "githubRepoURL": ["https://github.com/Lee-Seungje/FightGame"],
     "githubURL": "https://github.com/Lee-Seungje",
@@ -233,6 +233,26 @@
     "githubProfileURL": "https://github.com/yoosion030.png",
     "createrName": "유시온, 김준",
     "categories": ["NextJS", "TypeScript"],
+    "serviceType": "personal"
+  },
+  {
+    "id": "15",
+    "projectName": "Spike",
+    "projectDescription": "토스를 이은 스파이크 명함제작.",
+    "projectLogoUri": "/images/projects/Spike.png",
+    "createrDescription": "안녕하십니까, 저는 이승제입니다.",
+    "projectUrl": "https://toss-next-spike.vercel.app/",
+    "githubRepoURL": ["https://github.com/Lee-Seungje/Spike"],
+    "githubURL": "https://github.com/Lee-Seungje",
+    "githubProfileURL": "https://github.com/Lee-Seungje.png",
+    "createrName": "이승제",
+    "categories": [
+      "JavaScript",
+      "NextJS",
+      "TailWind",
+      "Zustand",
+      "react-web-cam"
+    ],
     "serviceType": "personal"
   }
 ]
