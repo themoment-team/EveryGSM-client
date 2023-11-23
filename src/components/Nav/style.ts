@@ -31,6 +31,10 @@ export const ItemContainer = styled.div`
       76vw + 1.75rem
     ); // 한페이지의 카드 width * 카드 개수 + 카드 사이 gap
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 87.6vw;
+  }
 `;
 
 export const IconContainer = styled.div`
