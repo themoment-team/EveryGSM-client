@@ -9,7 +9,7 @@ const slide = keyframes`
     transform: translateX(-100%);
   }`;
 
-export const MobileCard = styled.div<{ isDark: boolean }>`
+export const MobileCard = styled.a<{ isDark: boolean }>`
   width: 100%;
   border-radius: 0.625rem;
   display: flex;
