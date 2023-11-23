@@ -259,7 +259,7 @@
     "id": "16",
     "projectName": "WTM",
     "projectDescription": "오늘 볼 영화/드라마를 추천해주는 사이트",
-    "projectLogoUri": "/images/projects/Spike.png",
+    "projectLogoUri": "/images/projects/WTM.png",
     "createrDescription": "프론트엔드전공",
     "projectUrl": "https://tim-v2.netlify.app/",
     "githubRepoURL": ["https://github.com/WTM-whatTodayMedia/front-v2"],
