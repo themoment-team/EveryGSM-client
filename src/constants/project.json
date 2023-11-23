@@ -254,5 +254,19 @@
       "react-web-cam"
     ],
     "serviceType": "personal"
+  },
+  {
+    "id": "16",
+    "projectName": "WTM",
+    "projectDescription": "오늘 볼 영화/드라마를 추천해주는 사이트",
+    "projectLogoUri": "/images/projects/Spike.png",
+    "createrDescription": "프론트엔드전공",
+    "projectUrl": "https://tim-v2.netlify.app/",
+    "githubRepoURL": ["https://github.com/WTM-whatTodayMedia/front-v2"],
+    "githubURL": "https://github.com/WTM-whatTodayMedia",
+    "githubProfileURL": "https://github.com/HWANBINYOO.png",
+    "createrName": "유환빈",
+    "categories": ["NextJS"],
+    "serviceType": "personal"
   }
 ]
