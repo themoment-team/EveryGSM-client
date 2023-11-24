@@ -8,12 +8,15 @@ import { css } from '@emotion/react';
 
 import { LogoIcon, MoonIcon, SunIcon } from 'assets';
 import { SearchBar } from 'components';
-import { useDarkState } from 'stores';
+import { useDarkState, useWidthState } from 'stores';
 
 import * as S from './style';
 
+const PERMIT_SEARCHBAR = 750;
+
 const Nav = () => {
   const { isDark, setIsDark } = useDarkState();
+  const { width } = useWidthState();
 
   const handleClick = () => {
     setIsDark(!isDark);
@@ -40,7 +43,7 @@ const Nav = () => {
             <LogoIcon />
             <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
-          <SearchBar />
+          {width > PERMIT_SEARCHBAR && <SearchBar />}
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
               {isDark ? <MoonIcon /> : <SunIcon />}

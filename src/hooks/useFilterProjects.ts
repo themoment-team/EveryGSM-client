@@ -1,0 +1,35 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+import project from 'constants/project.json';
+import { useSearchState } from 'stores';
+
+const useFilterProjects = () => {
+  const { searchKeyword } = useSearchState();
+
+  const [filteredProjects, setFilteredProjects] = useState(project);
+
+  useEffect(() => {
+    setFilteredProjects(
+      project.filter(data => {
+        const values = Object.values(data).flatMap(value => {
+          if (typeof value === 'object' && value !== null) {
+            return Object.values(value);
+          }
+          return value;
+        });
+
+        return values.some(value => {
+          if (typeof value === 'string' && value.includes(searchKeyword)) {
+            return true;
+          }
+        });
+      }),
+    );
+  }, [searchKeyword]);
+
+  return filteredProjects;
+};
+
+export default useFilterProjects;
