@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.a`
   height: 21.25rem;
   width: 22.5rem;
   padding: 1.75rem 2rem;
@@ -13,6 +13,7 @@ export const CardWrapper = styled.div`
   background-color: ${({ theme }) => theme.exception.card};
   transition: background-color 0.3s;
   box-shadow: 0.25rem 0.25rem 0.4375rem rgba(112, 144, 176, 0.2);
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     width: 38vw;

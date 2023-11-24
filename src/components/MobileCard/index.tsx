@@ -45,7 +45,7 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
         />
       )}
 
-      <S.MobileCard isDark={isDark}>
+      <S.MobileCard target="_blank" href={data.projectUrl} isDark={isDark}>
         <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
           상세보기
         </S.DetailBtn>
