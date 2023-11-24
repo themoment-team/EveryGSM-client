@@ -9,7 +9,6 @@ export const SearchBarWrapper = styled.div<{ isDark: boolean }>`
   gap: 0.5rem;
   align-items: center;
   padding: 0 1rem;
-  border: ${({ isDark }) => (isDark ? 'border: 1px solid #4F4F4F' : '0')};
   transition: background ease-in-out 0.3s;
 `;
 

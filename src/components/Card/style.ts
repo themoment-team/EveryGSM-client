@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
-export const CardWrapper = styled.a`
+export const CardWrapper = styled.div`
   height: 21.25rem;
   width: 22.5rem;
   padding: 1.75rem 2rem;

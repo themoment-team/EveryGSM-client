@@ -193,7 +193,7 @@ export const Img = styled.div`
   }
 `;
 
-export const Repo = styled(Link)<{ isDark: boolean }>`
+export const Repo = styled.a<{ isDark: boolean }>`
   margin: 0.3125rem 0rem;
   display: flex;
   align-items: center;
