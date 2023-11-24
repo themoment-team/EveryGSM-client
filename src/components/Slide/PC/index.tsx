@@ -4,8 +4,7 @@ import { useState } from 'react';
 
 import { Vector } from 'assets';
 import { Card } from 'components';
-import project from 'constants/project.json';
-import { useSearchState } from 'stores';
+import { useFilterProjects } from 'hooks';
 
 import * as S from './style';
 
@@ -14,9 +13,9 @@ const CARDS_PER_PAGE = 3 as const;
 const PC = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
 
-  const { searchKeyword } = useSearchState();
+  const projects = useFilterProjects({ setSlideIndex });
 
-  const maxIndex = Math.ceil(project.length / CARDS_PER_PAGE) - 1;
+  const maxIndex = Math.ceil(projects.length / CARDS_PER_PAGE) - 1;
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
@@ -34,21 +33,6 @@ const PC = () => {
     }
   };
 
-  const filteredProjects = project.filter(data => {
-    const values = Object.values(data).flatMap(value => {
-      if (typeof value === 'object' && value !== null) {
-        return Object.values(value);
-      }
-      return value;
-    });
-
-    return values.some(value => {
-      if (typeof value === 'string' && value.includes(searchKeyword)) {
-        return true;
-      }
-    });
-  });
-
   return (
     <S.CardContainer>
       <S.PrevController type="button" onClick={handlePrevSlide}>
@@ -56,7 +40,7 @@ const PC = () => {
       </S.PrevController>
       <S.Cards>
         <S.MoveContainer slideIndex={slideIndex}>
-          {filteredProjects.map((data, slideIndex) => (
+          {projects.map((data, slideIndex) => (
             <Card key={slideIndex + data.id} data={data} />
           ))}
         </S.MoveContainer>
