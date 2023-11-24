@@ -26,6 +26,7 @@ export interface ThemeType {
     desc: string;
     teamTitle: string;
     back: string;
+    searchBar: string;
   };
 }
 
@@ -57,6 +58,7 @@ export const darkTheme: ThemeType = {
     modalTitle: '#ffffff',
     desc: '#f1f1f5',
     teamTitle: '#f1f1f5',
+    searchBar: '#4f4f4f',
   },
 } as const;
 
@@ -89,5 +91,6 @@ export const theme: ThemeType = {
     modalTitle: '#636363',
     desc: '#636363',
     teamTitle: '#000000',
+    searchBar: '#ededed',
   },
 } as const;
