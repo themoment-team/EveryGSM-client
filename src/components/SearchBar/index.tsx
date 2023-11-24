@@ -1,20 +1,19 @@
-import { useState } from 'react';
+'use client';
 
 import { SearchIcon } from 'assets';
-import { useDarkState } from 'stores';
+import { useDarkState, useSearchState } from 'stores';
 
 import * as S from './style';
 
 const SearchBar = () => {
-  const [searchKeyword, setSearchKeyword] = useState('');
+  const { searchKeyword, setSearchKeyword } = useSearchState();
 
   const { isDark } = useDarkState();
 
   return (
-    <S.SearchBarWrapper>
+    <S.SearchBarWrapper isDark={isDark}>
       <SearchIcon />
       <S.Input
-        isDark={isDark}
         value={searchKeyword}
         onChange={e => setSearchKeyword(e.target.value)}
         placeholder="검색"

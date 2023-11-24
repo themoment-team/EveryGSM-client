@@ -59,6 +59,7 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
+  transition: color ease-in-out 0.3s;
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     font-size: 1.5rem;

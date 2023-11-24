@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { css } from '@emotion/react';
 
 import { LogoIcon, MoonIcon, SunIcon } from 'assets';
+import { SearchBar } from 'components';
 import { useDarkState } from 'stores';
 
 import * as S from './style';
@@ -39,6 +40,7 @@ const Nav = () => {
             <LogoIcon />
             <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
+          <SearchBar />
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
               {isDark ? <MoonIcon /> : <SunIcon />}
