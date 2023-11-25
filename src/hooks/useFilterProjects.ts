@@ -25,16 +25,9 @@ const useFilterProjects = ({ setSlideIndex }: Props) => {
           return value;
         });
 
-        return values.some(value => {
-          if (
-            typeof value === 'string' &&
-            value
-              .toLocaleLowerCase()
-              .includes(searchKeyword.toLocaleLowerCase())
-          ) {
-            return true;
-          }
-        });
+        return values.some(value =>
+          value.toLocaleLowerCase().includes(searchKeyword.toLocaleLowerCase()),
+        );
       }),
     );
 
