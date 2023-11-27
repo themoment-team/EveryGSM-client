@@ -36,15 +36,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
   };
 
   return (
-    <S.CardWrapper target="_blank" href={data.projectUrl}>
-      {showModal && selectedId === data.id && (
-        <C.Modal
-          show={showModal}
-          data={data}
-          onClose={handleCloseModal}
-          index={selectedId}
-        />
-      )}
+    <S.CardWrapper>
       <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
         <Image
           src="/images/Detail.svg"
@@ -60,21 +52,35 @@ const Card: React.FC<CardProps> = ({ data }) => {
           alt="Vector"
         />
       </S.DetailBtn>
-      <S.LogoWrapper>
-        <Image src={data.projectLogoUri} alt={data.projectName + 'Logo'} fill />
-      </S.LogoWrapper>
-      <S.Title>{data.projectName}</S.Title>
-      <S.Create>
-        <PersonIcon />
-        <S.Creater>{data.createrName}</S.Creater>
-      </S.Create>
-      <S.Categories>
-        <S.Slide>
-          {data.categories.map(category => (
-            <C.Category key={category} category={category} isDark={isDark} />
-          ))}
-        </S.Slide>
-      </S.Categories>
+      {showModal && selectedId === data.id && (
+        <C.Modal
+          show={showModal}
+          data={data}
+          onClose={handleCloseModal}
+          index={selectedId}
+        />
+      )}
+      <S.CardLinker target="_blank" href={data.projectUrl}>
+        <S.LogoWrapper>
+          <Image
+            src={data.projectLogoUri}
+            alt={data.projectName + 'Logo'}
+            fill
+          />
+        </S.LogoWrapper>
+        <S.Title>{data.projectName}</S.Title>
+        <S.Create>
+          <PersonIcon />
+          <S.Creater>{data.createrName}</S.Creater>
+        </S.Create>
+        <S.Categories>
+          <S.Slide>
+            {data.categories.map(category => (
+              <C.Category key={category} category={category} isDark={isDark} />
+            ))}
+          </S.Slide>
+        </S.Categories>
+      </S.CardLinker>
     </S.CardWrapper>
   );
 };
