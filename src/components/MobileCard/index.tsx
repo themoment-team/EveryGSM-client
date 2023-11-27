@@ -35,7 +35,10 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
   };
 
   return (
-    <>
+    <S.CardWrapper>
+      <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
+        상세보기
+      </S.DetailBtn>
       {showModal && selectedId === data.id && (
         <C.Modal
           data={data}
@@ -46,11 +49,7 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
       )}
 
       <S.MobileCard target="_blank" href={data.projectUrl} isDark={isDark}>
-        <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
-          상세보기
-        </S.DetailBtn>
-
-        <S.ContentWrap onClick={() => window.open(`${data.projectUrl}`)}>
+        <S.ContentWrap>
           <S.Logo>
             <Image
               src={data.projectLogoUri}
@@ -78,7 +77,7 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
           </S.CardContents>
         </S.ContentWrap>
       </S.MobileCard>
-    </>
+    </S.CardWrapper>
   );
 };
 

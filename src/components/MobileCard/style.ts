@@ -9,6 +9,10 @@ const slide = keyframes`
     transform: translateX(-100%);
   }`;
 
+export const CardWrapper = styled.div`
+  position: relative;
+`;
+
 export const MobileCard = styled.a<{ isDark: boolean }>`
   width: 100%;
   border-radius: 0.625rem;
