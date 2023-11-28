@@ -9,4 +9,5 @@ export { default as Modal } from './Modal';
 export { default as Nav } from './Nav';
 export { default as NavigationEvents } from './NavigationEvents';
 export { default as PCSlide } from './Slide/PC';
+export { default as SearchBar } from './SearchBar';
 export { default as TabletSlide } from './Slide/Tablet';

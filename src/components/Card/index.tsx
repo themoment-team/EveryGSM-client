@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
   };
 
   return (
-    <S.CardWrapper target="_blank" href={data.projectUrl}>
+    <S.CardWrapper /*target="_blank" href={data.projectUrl}*/>
       {showModal && selectedId === data.id && (
         <C.Modal
           show={showModal}

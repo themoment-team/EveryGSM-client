@@ -30,6 +30,7 @@ export const Primary: Story = {
       githubProfileURL: 'https://github.com/themoment-team.png',
       createrName: '더모먼트',
       categories: ['NextJS', 'NestJS', 'React'],
+      serviceType: 'public',
     },
   },
 };
