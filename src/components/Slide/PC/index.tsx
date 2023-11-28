@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { Vector } from 'assets';
 import { Card } from 'components';
-import project from 'constants/project.json';
+import { useFilterProjects } from 'hooks';
 
 import * as S from './style';
 
@@ -13,7 +13,9 @@ const CARDS_PER_PAGE = 3 as const;
 const PC = () => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
 
-  const maxIndex = Math.ceil(project.length / CARDS_PER_PAGE) - 1;
+  const projects = useFilterProjects({ setSlideIndex });
+
+  const maxIndex = Math.ceil(projects.length / CARDS_PER_PAGE) - 1;
 
   const handlePrevSlide = () => {
     if (slideIndex === 0) {
@@ -38,7 +40,7 @@ const PC = () => {
       </S.PrevController>
       <S.Cards>
         <S.MoveContainer slideIndex={slideIndex}>
-          {project.map((data, slideIndex) => (
+          {projects.map((data, slideIndex) => (
             <Card key={slideIndex + data.id} data={data} />
           ))}
         </S.MoveContainer>
