@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
 export const CardWrapper = styled.div`
+  position: relative;
+`;
+
+export const CardLinker = styled.a`
   height: 21.25rem;
   width: 22.5rem;
   padding: 1.75rem 2rem;
@@ -108,6 +112,7 @@ export const Slide = styled.div`
 `;
 
 export const DetailBtn = styled.div`
+  position: absolute;
   width: 1.375rem;
   height: 1.375rem;
   display: flex;
@@ -115,11 +120,10 @@ export const DetailBtn = styled.div`
   justify-content: center;
   cursor: pointer;
   z-index: 1;
-  position: absolute;
-  left: 18.125rem;
+  right: 2rem;
+  top: 1.5rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    left: 31vw;
     width: 6%;
     height: 6%;
   }
