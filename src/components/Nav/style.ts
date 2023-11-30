@@ -7,7 +7,7 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s ease-in-out;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     height: 5.5rem;
@@ -24,16 +24,17 @@ export const ItemContainer = styled.div`
   width: 71.85rem;
   display: flex;
   align-items: center;
-
-  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 81%;
-  }
+  justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 81%;
+    width: calc(
+      76vw + 1.75rem
+    ); // 한페이지의 카드 width * 카드 개수 + 카드 사이 gap
   }
 
-  justify-content: space-between;
+  @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
+    width: 87.6vw;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -58,6 +59,7 @@ export const Title = styled.h2`
   line-height: 2.0625rem;
   letter-spacing: -0.03em;
   color: ${({ isDark }: { isDark: boolean }) => isDark && '#ffffff'};
+  transition: color ease-in-out 0.3s;
 
   @media ((max-width: ${({ theme }) => theme.breakPoint.tablet})) {
     font-size: 1.5rem;
@@ -77,7 +79,7 @@ export const LogoImg = styled.div`
     object-fit: cover;
   }
 
-  transition: ease-in-out 0.3s;
+  transition: color 0.3s ease-in-out;
   color: ${({ theme }) => theme.exception.navTitle};
 `;
 

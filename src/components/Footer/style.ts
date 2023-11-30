@@ -17,7 +17,7 @@ export const FooterContainer = styled.footer`
 
   @media (min-height: 1000px) {
     position: absolute;
-    top: calc(100vh - 5rem);
+    bottom: 0;
   }
 
   @media (max-height: 1000px) {

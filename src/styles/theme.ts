@@ -26,10 +26,11 @@ export interface ThemeType {
     desc: string;
     teamTitle: string;
     back: string;
+    searchBar: string;
   };
 }
 
-export const darktheme: ThemeType = {
+export const darkTheme: ThemeType = {
   gray: ['#191919', '#636363', '#999999', '#E3E3E3', '#F1F1F5'],
   primary: {
     magenta: '#E23C96',
@@ -42,7 +43,7 @@ export const darktheme: ThemeType = {
   },
   breakPoint: {
     mobile: '620px',
-    tablet: '1150px',
+    tablet: '1280px',
   },
   exception: {
     card: '#505050',
@@ -57,6 +58,7 @@ export const darktheme: ThemeType = {
     modalTitle: '#ffffff',
     desc: '#f1f1f5',
     teamTitle: '#f1f1f5',
+    searchBar: '#4f4f4f',
   },
 } as const;
 
@@ -73,7 +75,7 @@ export const theme: ThemeType = {
   },
   breakPoint: {
     mobile: '620px',
-    tablet: '1150px',
+    tablet: '1280px',
   },
 
   exception: {
@@ -89,5 +91,6 @@ export const theme: ThemeType = {
     modalTitle: '#636363',
     desc: '#636363',
     teamTitle: '#000000',
+    searchBar: '#ededed',
   },
 } as const;

@@ -10,4 +10,5 @@ export interface DataType {
   githubProfileURL: string;
   createrName: string;
   categories: string[];
+  serviceType: string;
 }

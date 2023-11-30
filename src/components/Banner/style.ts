@@ -14,14 +14,15 @@ export const BannerContainer = styled.div`
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 81%;
+    width: calc(
+      76vw + 1.75rem
+    ); // 한페이지의 카드 width * 카드 개수 + 카드 사이 gap
     height: 13.75rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    width: 87.6%;
+    width: 87.6vw;
     height: 9.5rem;
-    align-items: center;
   }
 `;
 
@@ -39,10 +40,7 @@ export const TextContainer = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
-    position: absolute;
-    left: 7%;
-    top: 18%;
-    margin: 0;
+    margin: 1.75rem 0 0 1.5rem;
     padding: 0;
   }
 `;
@@ -71,17 +69,19 @@ export const MobileText = styled.p`
   font-weight: 700;
   letter-spacing: -0.03em;
 
-  @media (max-height: 750px) {
-    line-height: 1.5rem;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     font-size: 5vw;
+    line-height: 7vw;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.3125rem;
+    line-height: 2rem;
   }
 
   @media (max-width: 390px) {
     font-size: 5vw;
-    line-height: 1rem;
+    line-height: 6.5vw;
   }
 `;
 

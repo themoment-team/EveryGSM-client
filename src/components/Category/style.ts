@@ -9,7 +9,9 @@ export const Categories = styled.div<{ isDark: boolean }>`
   margin-right: 0.3125rem;
   border-radius: 3.125rem;
   padding: 0rem 0.625rem;
-  transition: ease-in-out 0.3s;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
   color: ${({ theme }) => theme.exception.categories};
   background-color: ${({ theme }) => theme.exception.back};
 
