@@ -10,7 +10,7 @@
     "githubURL": "https://github.com/themoment-team",
     "githubProfileURL": "https://github.com/themoment-team.png",
     "createrName": "더모먼트",
-    "categories": ["NextJS", "NestJS", "React"],
+    "categories": ["NextJS", "Spring", "React"],
     "serviceType": "public"
   },
   {
@@ -45,7 +45,7 @@
     "githubURL": "https://github.com/themoment-team",
     "githubProfileURL": "https://github.com/themoment-team.png",
     "createrName": "더모먼트",
-    "categories": ["React", "NestJS", "Spring", "TypeScript", "Kotlin"],
+    "categories": ["React", "NextJS", "Spring", "TypeScript", "Kotlin"],
     "serviceType": "public"
   },
   {
