@@ -70,7 +70,7 @@ export function GlobalStyle() {
         }
 
         .roboto {
-          font-family: 'roboto';
+          font-family: 'Roboto';
         }
 
         ::-webkit-scrollbar {
