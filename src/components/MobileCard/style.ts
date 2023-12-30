@@ -63,7 +63,7 @@ export const CardContents = styled.div`
 export const Title = styled.h2`
   font-family: 'Pretendard';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 4vw;
   line-height: 1.5625rem;
   color: ${({ theme }) => theme.exception.cardTitle};
