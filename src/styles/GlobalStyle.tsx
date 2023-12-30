@@ -14,6 +14,7 @@ export function GlobalStyle() {
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css');
         @import url('https://use.typekit.net/cei0oyt.css');
 
+        body,
         * {
           font-family:
             'Pretendard Variable',
@@ -21,7 +22,7 @@ export function GlobalStyle() {
             -apple-system,
             BlinkMacSystemFont,
             system-ui,
-            roboto,
+            Roboto,
             'Helvetica Neue',
             'Segoe UI',
             'Apple SD Gothic Neo',
