@@ -44,7 +44,7 @@ export const LogoWrapper = styled.div`
 
 export const Title = styled.span`
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 1rem;
   color: ${({ theme }) => theme.exception.cardTitle};
   transition: color 0.3s ease-in-out;

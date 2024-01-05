@@ -72,7 +72,7 @@ export const ModalContent = styled.div`
 export const Title = styled.div`
   font-family: Pretendard;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5625rem;
   letter-spacing: 0em;
   text-align: left;
