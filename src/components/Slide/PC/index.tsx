@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 
-import { Vector } from 'assets';
-import { Card } from 'components';
+import { Card, SlideController } from 'components';
 import { useFilterProjects, useHandleSlide } from 'hooks';
 
 import * as S from './style';
@@ -24,9 +23,7 @@ const PC = () => {
 
   return (
     <S.CardContainer>
-      <S.PrevController type="button" onClick={handlePrevSlide}>
-        <Vector />
-      </S.PrevController>
+      <SlideController view="PC" onClick={handlePrevSlide} direction="left" />
       <S.Cards>
         <S.MoveContainer slideIndex={slideIndex}>
           {projects.map((data, slideIndex) => (
@@ -34,9 +31,7 @@ const PC = () => {
           ))}
         </S.MoveContainer>
       </S.Cards>
-      <S.NextController type="button" onClick={handleNextSlide}>
-        <Vector />
-      </S.NextController>
+      <SlideController view="PC" onClick={handleNextSlide} direction="left" />
     </S.CardContainer>
   );
 };
