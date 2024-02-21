@@ -18,6 +18,7 @@ export const Left: Story = {
   args: {
     direction: 'left',
     onClick: () => {},
+    view: 'TABLET',
   },
 };
 
@@ -25,5 +26,14 @@ export const Right: Story = {
   args: {
     direction: 'right',
     onClick: () => {},
+    view: 'TABLET',
+  },
+};
+
+export const PC: Story = {
+  args: {
+    direction: 'right',
+    onClick: () => {},
+    view: 'PC',
   },
 };
