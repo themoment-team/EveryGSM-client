@@ -22,22 +22,6 @@ const Tablet = () => {
     setSlideIndex,
   );
 
-  const handlePrevSlide = () => {
-    if (slideIndex === 0) {
-      setSlideIndex(maxIndex);
-    } else {
-      setSlideIndex(curIndex => curIndex - 1);
-    }
-  };
-
-  const handleNextSlide = () => {
-    if (maxIndex === slideIndex) {
-      setSlideIndex(0);
-    } else {
-      setSlideIndex(curIndex => curIndex + 1);
-    }
-  };
-
   return (
     <S.CardContainer>
       <S.PrevController type="button" onClick={handlePrevSlide}>

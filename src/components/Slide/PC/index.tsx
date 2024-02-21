@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { Vector } from 'assets';
 import { Card } from 'components';
-import { useFilterProjects } from 'hooks';
+import { useFilterProjects, useHandleSlide } from 'hooks';
 
 import * as S from './style';
 
@@ -17,21 +17,10 @@ const PC = () => {
 
   const maxIndex = Math.ceil(projects.length / CARDS_PER_PAGE) - 1;
 
-  const handlePrevSlide = () => {
-    if (slideIndex === 0) {
-      setSlideIndex(maxIndex);
-    } else {
-      setSlideIndex(curIndex => curIndex - 1);
-    }
-  };
-
-  const handleNextSlide = () => {
-    if (maxIndex === slideIndex) {
-      setSlideIndex(0);
-    } else {
-      setSlideIndex(curIndex => curIndex + 1);
-    }
-  };
+  const { handleNextSlide, handlePrevSlide } = useHandleSlide(
+    maxIndex,
+    setSlideIndex,
+  );
 
   return (
     <S.CardContainer>
