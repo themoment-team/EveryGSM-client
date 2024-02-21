@@ -31,7 +31,7 @@ const PC = () => {
           ))}
         </S.MoveContainer>
       </S.Cards>
-      <SlideController view="PC" onClick={handleNextSlide} direction="left" />
+      <SlideController view="PC" onClick={handleNextSlide} direction="right" />
     </S.CardContainer>
   );
 };
