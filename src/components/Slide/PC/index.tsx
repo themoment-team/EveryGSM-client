@@ -2,9 +2,8 @@
 
 import { useState } from 'react';
 
-import { Vector } from 'assets';
-import { Card } from 'components';
-import { useFilterProjects } from 'hooks';
+import { Card, SlideController } from 'components';
+import { useFilterProjects, useHandleSlide } from 'hooks';
 
 import * as S from './style';
 
@@ -17,27 +16,14 @@ const PC = () => {
 
   const maxIndex = Math.ceil(projects.length / CARDS_PER_PAGE) - 1;
 
-  const handlePrevSlide = () => {
-    if (slideIndex === 0) {
-      setSlideIndex(maxIndex);
-    } else {
-      setSlideIndex(curIndex => curIndex - 1);
-    }
-  };
-
-  const handleNextSlide = () => {
-    if (maxIndex === slideIndex) {
-      setSlideIndex(0);
-    } else {
-      setSlideIndex(curIndex => curIndex + 1);
-    }
-  };
+  const { handleNextSlide, handlePrevSlide } = useHandleSlide(
+    maxIndex,
+    setSlideIndex,
+  );
 
   return (
     <S.CardContainer>
-      <S.PrevController type="button" onClick={handlePrevSlide}>
-        <Vector />
-      </S.PrevController>
+      <SlideController view="PC" onClick={handlePrevSlide} direction="left" />
       <S.Cards>
         <S.MoveContainer slideIndex={slideIndex}>
           {projects.map((data, slideIndex) => (
@@ -45,9 +31,7 @@ const PC = () => {
           ))}
         </S.MoveContainer>
       </S.Cards>
-      <S.NextController type="button" onClick={handleNextSlide}>
-        <Vector />
-      </S.NextController>
+      <SlideController view="PC" onClick={handleNextSlide} direction="right" />
     </S.CardContainer>
   );
 };
