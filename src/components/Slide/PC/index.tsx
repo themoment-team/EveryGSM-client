@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Card, SlideController } from 'components';
 import { useFilterProjects, useHandleSlide } from 'hooks';
 import { Device } from 'utils';
+import { Direction } from 'utils';
 
 import * as S from './style';
 
@@ -27,7 +28,7 @@ const PC = () => {
       <SlideController
         view={Device.PC}
         onClick={handlePrevSlide}
-        direction="left"
+        direction={Direction.LEFT}
       />
       <S.Cards>
         <S.MoveContainer slideIndex={slideIndex}>
@@ -39,7 +40,7 @@ const PC = () => {
       <SlideController
         view={Device.PC}
         onClick={handleNextSlide}
-        direction="right"
+        direction={Direction.RIGHT}
       />
     </S.CardContainer>
   );

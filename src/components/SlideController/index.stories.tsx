@@ -1,4 +1,5 @@
 import { Device } from 'utils';
+import { Direction } from 'utils';
 
 import SlideController from '.';
 
@@ -15,11 +16,6 @@ export default {
 } as Meta<typeof SlideController>;
 
 type Story = StoryObj<typeof SlideController>;
-
-enum Direction {
-  LEFT = 'left',
-  RIGHT = 'right',
-}
 
 export const Left: Story = {
   args: {
