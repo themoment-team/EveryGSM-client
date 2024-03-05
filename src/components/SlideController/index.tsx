@@ -4,10 +4,12 @@ import { Vector } from 'assets';
 
 import * as S from './style';
 
+import type { Device } from 'enums';
+
 interface Props {
   direction: 'left' | 'right';
   onClick: () => void;
-  view: 'PC' | 'TABLET';
+  view: Device;
 }
 
 const SlideController: React.FC<Props> = ({ direction, onClick, view }) => {

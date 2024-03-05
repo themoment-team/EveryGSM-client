@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { Card, SlideController } from 'components';
+import { Device } from 'enums';
 import { useFilterProjects, useHandleSlide } from 'hooks';
 
 import * as S from './style';
@@ -23,7 +24,11 @@ const PC = () => {
 
   return (
     <S.CardContainer>
-      <SlideController view="PC" onClick={handlePrevSlide} direction="left" />
+      <SlideController
+        view={Device.PC}
+        onClick={handlePrevSlide}
+        direction="left"
+      />
       <S.Cards>
         <S.MoveContainer slideIndex={slideIndex}>
           {projects.map((data, slideIndex) => (
@@ -31,7 +36,11 @@ const PC = () => {
           ))}
         </S.MoveContainer>
       </S.Cards>
-      <SlideController view="PC" onClick={handleNextSlide} direction="right" />
+      <SlideController
+        view={Device.PC}
+        onClick={handleNextSlide}
+        direction="right"
+      />
     </S.CardContainer>
   );
 };
