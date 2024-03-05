@@ -1,3 +1,5 @@
+import { Device } from 'enums';
+
 import SlideController from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -23,7 +25,7 @@ export const Left: Story = {
   args: {
     direction: Direction.LEFT,
     onClick: () => {},
-    view: 'TABLET',
+    view: Device.TABLET,
   },
 };
 
@@ -31,7 +33,7 @@ export const Right: Story = {
   args: {
     direction: Direction.RIGHT,
     onClick: () => {},
-    view: 'TABLET',
+    view: Device.TABLET,
   },
 };
 
@@ -39,6 +41,6 @@ export const PC: Story = {
   args: {
     direction: Direction.RIGHT,
     onClick: () => {},
-    view: 'PC',
+    view: Device.PC,
   },
 };

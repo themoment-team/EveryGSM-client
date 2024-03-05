@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { Card, SlideController } from 'components';
+import { Device } from 'enums';
 import { useFilterProjects, useHandleSlide } from 'hooks';
 
 import * as S from './style';
@@ -24,7 +25,7 @@ const Tablet = () => {
   return (
     <S.CardContainer>
       <SlideController
-        view="TABLET"
+        view={Device.TABLET}
         onClick={handlePrevSlide}
         direction="left"
       />
@@ -38,7 +39,7 @@ const Tablet = () => {
         </S.Slider>
       </S.Cards>
       <SlideController
-        view="TABLET"
+        view={Device.TABLET}
         onClick={handleNextSlide}
         direction="right"
       />
