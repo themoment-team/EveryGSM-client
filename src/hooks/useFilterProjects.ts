@@ -1,16 +1,11 @@
 'use client';
 
-import type { Dispatch, SetStateAction } from 'react';
 import { useEffect, useState } from 'react';
 
 import project from 'constants/project.json';
 import { useSearchState } from 'stores';
 
-interface Props {
-  setSlideIndex: Dispatch<SetStateAction<number>>;
-}
-
-const useFilterProjects = ({ setSlideIndex }: Props) => {
+const useFilterProjects = () => {
   const { searchKeyword } = useSearchState();
 
   const [filteredProjects, setFilteredProjects] = useState(project);
@@ -30,8 +25,6 @@ const useFilterProjects = ({ setSlideIndex }: Props) => {
         );
       }),
     );
-
-    setSlideIndex(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchKeyword]);
 
