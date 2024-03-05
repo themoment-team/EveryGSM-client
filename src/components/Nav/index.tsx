@@ -24,7 +24,13 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    setIsDark(localStorage.getItem('dark') === 'false');
+    const initialIsDark = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
+    const localDark = localStorage.getItem('dark');
+
+    if (localDark) setIsDark(localStorage.getItem('dark') === 'false');
+    else setIsDark(initialIsDark);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
