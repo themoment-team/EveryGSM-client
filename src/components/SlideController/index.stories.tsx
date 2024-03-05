@@ -14,9 +14,14 @@ export default {
 
 type Story = StoryObj<typeof SlideController>;
 
+enum Direction {
+  LEFT = 'left',
+  RIGHT = 'right',
+}
+
 export const Left: Story = {
   args: {
-    direction: 'left',
+    direction: Direction.LEFT,
     onClick: () => {},
     view: 'TABLET',
   },
@@ -24,7 +29,7 @@ export const Left: Story = {
 
 export const Right: Story = {
   args: {
-    direction: 'right',
+    direction: Direction.RIGHT,
     onClick: () => {},
     view: 'TABLET',
   },
@@ -32,7 +37,7 @@ export const Right: Story = {
 
 export const PC: Story = {
   args: {
-    direction: 'right',
+    direction: Direction.RIGHT,
     onClick: () => {},
     view: 'PC',
   },
