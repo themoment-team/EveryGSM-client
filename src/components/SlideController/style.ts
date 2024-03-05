@@ -1,6 +1,16 @@
 import styled from '@emotion/styled';
 
-export const Controller = styled.button<{ view: 'PC' | 'TABLET' }>`
+enum Device {
+  PC = 'PC',
+  TABLET = 'TABLET',
+}
+
+enum Margin {
+  PC = '3.125rem',
+  TABLET = '1.875rem',
+}
+
+export const Controller = styled.button<{ view: Device }>`
   border: none;
   z-index: 1;
   cursor: pointer;
@@ -9,11 +19,11 @@ export const Controller = styled.button<{ view: 'PC' | 'TABLET' }>`
 `;
 
 export const PrevController = styled(Controller)`
-  margin-right: ${({ view }) => (view === 'PC' ? '3.125rem' : '1.875rem')};
+  margin-right: ${({ view }) => Margin[view]};
 `;
 
 export const NextController = styled(Controller)`
-  margin-left: ${({ view }) => (view === 'PC' ? '3.125rem' : '1.875rem')};
+  margin-left: ${({ view }) => Margin[view]};
 
   svg {
     transform: matrix(-1, 0, 0, 1, 0, 0);
