@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 import { Card, SlideController } from 'components';
-import { Device } from 'enums';
 import { useFilterProjects, useHandleSlide } from 'hooks';
+import { Device } from 'utils';
 
 import * as S from './style';
 

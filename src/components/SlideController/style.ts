@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import type { Device } from 'enums';
+import type { Device } from 'utils';
 
 enum Margin {
   PC = '3.125rem',

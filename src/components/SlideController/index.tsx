@@ -4,7 +4,7 @@ import { Vector } from 'assets';
 
 import * as S from './style';
 
-import type { Device } from 'enums';
+import type { Device } from 'utils';
 
 interface Props {
   direction: 'left' | 'right';
