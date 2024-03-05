@@ -1,3 +1,6 @@
+import { Device } from 'utils';
+import { Direction } from 'utils';
+
 import SlideController from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -16,24 +19,24 @@ type Story = StoryObj<typeof SlideController>;
 
 export const Left: Story = {
   args: {
-    direction: 'left',
+    direction: Direction.LEFT,
     onClick: () => {},
-    view: 'TABLET',
+    view: Device.TABLET,
   },
 };
 
 export const Right: Story = {
   args: {
-    direction: 'right',
+    direction: Direction.RIGHT,
     onClick: () => {},
-    view: 'TABLET',
+    view: Device.TABLET,
   },
 };
 
 export const PC: Story = {
   args: {
-    direction: 'right',
+    direction: Direction.RIGHT,
     onClick: () => {},
-    view: 'PC',
+    view: Device.PC,
   },
 };
