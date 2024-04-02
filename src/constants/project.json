@@ -268,5 +268,22 @@
     "createrName": "유환빈",
     "categories": ["NextJS"],
     "serviceType": "personal"
+  },
+  {
+    "id": "17",
+    "projectName": "HI",
+    "projectDescription": "광주소프트웨어마이스터고등학교에는 홈베이스라는 학생들이 공부할 수 있는 시설이 있습니다. 홈베이스 예약을 위해 학생은 수기로 예약을 해야 할 뿐만 아니라, 선생님은 이를 확인하기 위해 직접 홈베이스를 이동하며 인원체크를 해야 합니다. 또한 홈베이스의 소음 및 쓰레기 처리와 같은 홈베이스 관리에 종종 문제가 생겼습니다. 이러한 문제를 해결하고자 Hi 라는 프로젝트를 개발하게 되었습니다.",
+    "projectLogoUri": "/images/projects/Hi.png",
+    "createrDescription": "프론트엔드전공",
+    "projectUrl": "https://msg-hi.vercel.app/",
+    "githubRepoURL": [
+      "https://github.com/GSM-MSG/Hi-v2-BackEnd",
+      "https://github.com/GSM-MSG/Hi-v2-FrontEnd"
+    ],
+    "githubURL": "https://github.com/GSM-MSG",
+    "githubProfileURL": "https://github.com/GSM-MSG.png",
+    "createrName": "MSG",
+    "categories": ["Kotlin", "Spring", "NextJS", "React"],
+    "serviceType": "public"
   }
 ]
