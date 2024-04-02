@@ -28,7 +28,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
   const { isDark } = useDarkState();
   const { width } = useWidthState();
 
-  const isMobile = width >= MOBILE_SIZE;
+  const isMobile = width <= MOBILE_SIZE;
 
   const selectedProject = project.find(item => item.id === `${index}`);
 
