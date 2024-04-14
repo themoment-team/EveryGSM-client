@@ -7,9 +7,14 @@
   "background_color": "#f1f1f5",
   "icons": [
     {
-      "src": "images/Manifest.png",
+      "src": "images/192Manifest.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "images/512Manifest.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
