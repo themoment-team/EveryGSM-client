@@ -5,6 +5,7 @@
   "display": "standalone",
   "theme_color": "#E23C96",
   "background_color": "#f1f1f5",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "images/192Manifest.png",
