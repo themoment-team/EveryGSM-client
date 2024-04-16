@@ -42,6 +42,7 @@ export function GlobalStyle() {
           max-width: 100vw;
           overflow-x: hidden;
           background-color: ${theme.gray[0]};
+          transition: background-color 0.3s ease-in-out;
         }
 
         @media all and (min-width: 1150px) and (min-height: 1000px) {

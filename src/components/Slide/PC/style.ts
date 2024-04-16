@@ -19,15 +19,13 @@ export const VectorWrapper = styled.div<{ isRight?: boolean }>`
 export const Cards = styled.div`
   width: 71rem;
   height: 21.5625rem;
-  position: relative;
   overflow: hidden;
 `;
 
 export const MoveContainer = styled.div<{ slideIndex: number }>`
   display: flex;
   gap: 1.75rem;
-  position: absolute;
-  left: -${({ slideIndex }) => slideIndex * 72.75}rem;
+  transform: translateX(-${({ slideIndex }) => slideIndex * 72.75}rem);
   transition: ease-in-out 0.3s;
 `;
 
