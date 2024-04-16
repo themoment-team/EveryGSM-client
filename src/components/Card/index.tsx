@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
         />
       </S.DetailBtn>
       <S.ModalWrapper ref={dialog}>
-        <C.Modal data={data} index={selectedId ?? ''} />
+        {selectedId === data.id && <C.Modal data={data} index={selectedId} />}
       </S.ModalWrapper>
 
       <S.CardLinker target="_blank" href={data.projectUrl}>
