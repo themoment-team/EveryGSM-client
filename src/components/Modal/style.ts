@@ -227,4 +227,8 @@ export const BackButton = styled.button`
   top: 1.25rem;
   z-index: 2;
   cursor: pointer;
+
+  background: none;
+  border: none;
+  outline: none;
 `;

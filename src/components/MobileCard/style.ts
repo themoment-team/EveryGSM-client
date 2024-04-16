@@ -73,6 +73,11 @@ export const Title = styled.h2`
   }
 `;
 
+export const ModalWrapper = styled.dialog`
+  border: 0;
+  padding: 0;
+`;
+
 export const Slide = styled.div`
   width: 25rem;
   position: relative;
