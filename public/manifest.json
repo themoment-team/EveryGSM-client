@@ -1,0 +1,21 @@
+{
+  "name": "EveryGSM",
+  "short_name": "EveryGSM",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#E23C96",
+  "background_color": "#f1f1f5",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "images/192Manifest.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/512Manifest.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
