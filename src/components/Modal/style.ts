@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import Link from 'next/link';
 
 export const Categories = styled.div`
   margin: 1.5rem 0 2.5rem 0;
@@ -35,7 +34,7 @@ export const Slide = styled.div`
   }
 `;
 
-export const ModalContainer = styled.div<{ show: boolean }>`
+export const ModalContainer = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,10 +221,14 @@ export const Repo = styled.a<{ isDark: boolean }>`
   }
 `;
 
-export const Back = styled.div`
+export const BackButton = styled.button`
   position: absolute;
   right: 1.25rem;
   top: 1.25rem;
   z-index: 2;
   cursor: pointer;
+
+  background: none;
+  border: none;
+  outline: none;
 `;

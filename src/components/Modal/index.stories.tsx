@@ -12,8 +12,6 @@ type Story = StoryObj<typeof Modal>;
 
 export const Primary: Story = {
   args: {
-    show: true,
-    onClose: () => {},
     index: '0',
   },
 };

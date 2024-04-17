@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -20,18 +20,15 @@ interface MobileCardProps {
 }
 
 export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
+  const dialog = useRef<HTMLDialogElement>(null);
+
   const { isDark } = useDarkState();
 
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const handleOpenModal = (id: string) => {
     setSelectedId(id);
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
+    dialog.current?.showModal();
   };
 
   return (
@@ -39,14 +36,9 @@ export const MobileCard: React.FC<MobileCardProps> = ({ data }) => {
       <S.DetailBtn onClick={() => handleOpenModal(data.id)}>
         상세보기
       </S.DetailBtn>
-      {showModal && selectedId === data.id && (
-        <C.Modal
-          data={data}
-          show={showModal}
-          onClose={handleCloseModal}
-          index={selectedId}
-        />
-      )}
+      <S.ModalWrapper ref={dialog}>
+        {selectedId === data.id && <C.Modal data={data} index={selectedId} />}
+      </S.ModalWrapper>
 
       <S.MobileCard target="_blank" href={data.projectUrl} isDark={isDark}>
         <S.ContentWrap>

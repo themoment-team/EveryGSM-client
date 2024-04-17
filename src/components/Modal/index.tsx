@@ -16,15 +16,13 @@ import * as S from './style';
 import type { DataType } from 'interface';
 
 interface ModalProps {
-  show: boolean;
-  onClose: () => void;
   index: string;
-  data?: DataType;
+  data: DataType;
 }
 
 const MOBILE_SIZE = 620 as const;
 
-const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
+const Modal: React.FC<ModalProps> = ({ index, data }) => {
   const { isDark } = useDarkState();
   const { width } = useWidthState();
 
@@ -33,11 +31,11 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, index, data }) => {
   const selectedProject = project.find(item => item.id === `${index}`);
 
   return (
-    <S.ModalContainer show={show}>
+    <S.ModalContainer method="dialog">
       <S.ModalContent>
-        <S.Back onClick={onClose}>
+        <S.BackButton>
           <XIcon />
-        </S.Back>
+        </S.BackButton>
         <S.Img>
           <Image
             src={selectedProject?.projectLogoUri ?? ''}

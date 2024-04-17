@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
+export const ModalWrapper = styled.dialog`
+  border: 0;
+  padding: 0;
+`;
+
 export const CardWrapper = styled.div`
   position: relative;
 `;
