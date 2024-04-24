@@ -39,8 +39,9 @@ export const Slider = styled.div<{ slideIndex: number }>`
 `;
 
 export const MoveContainer = styled.div<{ maxIndex: number }>`
-  display: grid;
-  grid-template-columns: repeat(${({ maxIndex }) => (maxIndex + 1) * 2}, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1.75rem;
+  height: 63.75rem;
 `;

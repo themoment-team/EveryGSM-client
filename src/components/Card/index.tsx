@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -21,18 +21,15 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ data }) => {
+  const dialog = useRef<HTMLDialogElement>(null);
+
   const { isDark } = useDarkState();
 
-  const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const handleOpenModal = (id: string) => {
     setSelectedId(id);
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
+    dialog.current?.showModal();
   };
 
   return (
@@ -52,14 +49,10 @@ const Card: React.FC<CardProps> = ({ data }) => {
           alt="Vector"
         />
       </S.DetailBtn>
-      {showModal && selectedId === data.id && (
-        <C.Modal
-          show={showModal}
-          data={data}
-          onClose={handleCloseModal}
-          index={selectedId}
-        />
-      )}
+      <S.ModalWrapper ref={dialog}>
+        {selectedId === data.id && <C.Modal data={data} index={selectedId} />}
+      </S.ModalWrapper>
+
       <S.CardLinker target="_blank" href={data.projectUrl}>
         <S.LogoWrapper>
           <Image

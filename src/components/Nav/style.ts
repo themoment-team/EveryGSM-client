@@ -39,8 +39,8 @@ export const ItemContainer = styled.div`
 
 export const IconContainer = styled.div`
   display: flex;
-  cursor: pointer;
   align-items: end;
+  cursor: default;
 
   @media (max-width: 620px) {
     align-items: center;
