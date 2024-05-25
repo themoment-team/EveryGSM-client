@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const useHandleSlide = (maxIndex: number) => {
+import type { DataType } from 'interface';
+
+const useHandleSlide = (maxIndex: number, projects: DataType[]) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
 
   const increaseIndex = (index: number) => index + 1;
@@ -19,6 +21,10 @@ const useHandleSlide = (maxIndex: number) => {
       curIndex === maxIndex ? 0 : increaseIndex(curIndex),
     );
   };
+
+  useEffect(() => {
+    setSlideIndex(0);
+  }, [projects]);
 
   return {
     slideIndex,
