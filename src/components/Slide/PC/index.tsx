@@ -14,8 +14,10 @@ const PC = () => {
 
   const maxIndex = Math.ceil(projects.length / CARDS_PER_PAGE) - 1;
 
-  const { slideIndex, handleNextSlide, handlePrevSlide } =
-    useHandleSlide(maxIndex);
+  const { slideIndex, handleNextSlide, handlePrevSlide } = useHandleSlide(
+    maxIndex,
+    projects,
+  );
 
   return (
     <S.CardContainer>
