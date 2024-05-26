@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Categories = styled.div`
-  margin: 1.5rem 0 2.5rem 0;
-  height: 1.875rem;
+  margin-top: 1.5rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {
     width: 65vw;
@@ -111,7 +110,7 @@ export const Desc = styled.div<{ isDark: boolean }>`
   font-weight: 300;
   color: ${({ theme }) => theme.exception.desc};
   background-color: ${({ theme }) => theme.exception.back};
-  margin-bottom: 1.4375rem;
+  margin: 1.4375rem 0;
   padding: 0 1.5625rem;
   text-align: left;
   font-size: 1.125rem;
