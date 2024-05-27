@@ -12,7 +12,7 @@ import { useDarkState, useWidthState } from 'stores';
 
 import * as S from './style';
 
-const PERMIT_SEARCHBAR = 750;
+const PERMIT_SEARCH_BAR = 750 as const;
 
 const Nav = () => {
   const { isDark, setIsDark } = useDarkState();
@@ -49,7 +49,7 @@ const Nav = () => {
             <LogoIcon />
             <S.Title isDark={isDark}>EveryGSM</S.Title>
           </S.IconContainer>
-          {width > PERMIT_SEARCHBAR && <SearchBar />}
+          {width > PERMIT_SEARCH_BAR && <SearchBar />}
           <S.ToggleButton onClick={handleClick}>
             <S.ToggleIcon isDark={isDark}>
               {isDark ? <MoonIcon /> : <SunIcon />}
