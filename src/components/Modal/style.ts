@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Categories = styled.div`
-  margin: 1.5rem 0 2.5rem 0;
+  margin: 1.5rem 0 3.125rem 0;
   height: 1.875rem;
 
   @media (max-width: ${({ theme }) => theme.breakPoint.mobile}) {

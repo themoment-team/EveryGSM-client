@@ -8,7 +8,7 @@ export const Categories = styled.div<{ isDark: boolean }>`
   height: 1.875rem;
   margin-right: 0.3125rem;
   border-radius: 3.125rem;
-  padding: 0rem 0.625rem;
+  padding: 0rem 1.25rem;
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
