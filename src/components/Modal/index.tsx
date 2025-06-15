@@ -2,13 +2,15 @@
 
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 
 import { css } from '@emotion/react';
 
+import { fetchDisplayProjects } from 'api/project';
 import { XIcon } from 'assets';
 import * as C from 'components';
-import project from 'constants/project.json';
 import { useDarkState, useWidthState } from 'stores';
 
 import * as S from './style';
@@ -28,7 +30,18 @@ const Modal: React.FC<ModalProps> = ({ index, data }) => {
 
   const isMobile = width <= MOBILE_SIZE;
 
-  const selectedProject = project.find(item => item.id === `${index}`);
+  const [projects, setProjects] = useState<DataType[]>([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const data = await fetchDisplayProjects();
+      setProjects(data);
+    };
+
+    fetchProjects();
+  }, []);
+
+  const selectedProject = projects.find(item => item.id === `${index}`);
 
   return (
     <S.ModalContainer method="dialog">
