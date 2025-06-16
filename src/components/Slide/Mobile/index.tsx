@@ -1,25 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-import { fetchDisplayProjects } from 'api/project';
 import { MobileCard } from 'components';
+import { useDisplayProjectStore } from 'stores/useDisplayProjectStore';
 
 import * as S from './style';
 
-import type { DataType } from 'interface';
-
 const Moblie = () => {
-  const [projects, setProjects] = useState<DataType[]>([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await fetchDisplayProjects();
-      setProjects(data);
-    };
-
-    fetchProjects();
-  }, []);
+  const { projects } = useDisplayProjectStore();
 
   return (
     <S.MobileContainer>

@@ -2,26 +2,16 @@
 
 import { useEffect, useState } from 'react';
 
-import { fetchDisplayProjects } from 'api/project';
 import { useSearchState } from 'stores';
+import { useDisplayProjectStore } from 'stores/useDisplayProjectStore';
 
 import type { DataType } from 'interface';
 
 const useFilterProjects = () => {
   const { searchKeyword } = useSearchState();
 
-  const [projects, setProjects] = useState<DataType[]>([]);
+  const { projects, loading } = useDisplayProjectStore();
   const [filteredProjects, setFilteredProjects] = useState<DataType[]>([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await fetchDisplayProjects();
-      setProjects(data);
-      setFilteredProjects(data);
-    };
-
-    fetchProjects();
-  }, []);
 
   useEffect(() => {
     setFilteredProjects(
@@ -39,7 +29,7 @@ const useFilterProjects = () => {
       }),
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchKeyword]);
+  }, [searchKeyword, loading]);
 
   return filteredProjects;
 };
