@@ -15,7 +15,7 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = withPWA({
   images: {
-    domains: ['github.com', 'notion.site'],
+    domains: ['github.com', 'notion.site', 's3.ap-northeast-2.amazonaws.com'],
   },
 });
 
